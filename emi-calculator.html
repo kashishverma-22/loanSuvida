@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Calculate your loan EMI, total interest and repayment schedule with Loan Suvidha's free EMI calculator."
+    />
+    <title>EMI Calculator | Loan Suvidha</title>
+    <link rel="icon" href="images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/emi-calculator.css" />
+  </head>
+
+  <body>
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <div class="top-left">
+          <span
+            ><i class="fa-solid fa-shield-halved"></i>Trusted Loan
+            Assistance</span
+          >
+          <span><i class="fa-solid fa-clock"></i>Quick &amp; Easy Process</span>
+        </div>
+        <div class="top-right">
+          <a href="tel:+919999052161"
+            ><i class="fa-solid fa-phone"></i>+91 99990 52161</a
+          ><a href="mailto:info@loansuvida.com"
+            ><i class="fa-solid fa-envelope"></i>info@loansuvida.com</a
+          >
+        </div>
+      </div>
+    </div>
+    <header class="main-header">
+      <div class="container navbar">
+        <a href="index.html" class="logo"
+          ><img src="images/logo.png" alt="Loan Suvidha Logo"
+        /></a>
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-dropdown">
+            <button class="nav-link dropdown-toggle">
+              Loans
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="dropdown-menu">
+              <a href="personal-loan.html">
+                <i class="fa-solid fa-user"></i>
+                <div>
+                  <strong>Personal Loan</strong>
+                  <small>Quick personal funding</small>
+                </div>
+              </a>
+              <a href="business-loan.html">
+                <i class="fa-solid fa-briefcase"></i>
+                <div>
+                  <strong>Business Loan</strong>
+                  <small>Grow your business</small>
+                </div>
+              </a>
+
+              <a href="home-loan.html">
+                <i class="fa-solid fa-house"></i>
+                <div>
+                  <strong>Home Loan</strong>
+                  <small>Make your dream home</small>
+                </div>
+              </a>
+
+              <a href="car-loan.html">
+                <i class="fa-solid fa-car"></i>
+                <div>
+                  <strong>Car Loan</strong>
+                  <small>Drive your dream car</small>
+                </div>
+              </a>
+
+              <a href="loan-against-property.html">
+                <i class="fa-solid fa-building"></i>
+                <div>
+                  <strong>Loan Against Property</strong>
+                  <small>Unlock property value</small>
+                </div>
+              </a>
+              <a href="machinery-loan.html">
+                <i class="fa-solid fa-gears"></i>
+                <div>
+                  <strong>Machinery Loan</strong>
+                  <small>Finance your machinery</small>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="emi-calculator.html" class="nav-link active"
+            >EMI Calculator</a
+          ><a href="about.html" class="nav-link">About Us</a
+          ><a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="navbar-actions">
+          <a href="apply-now.html" class="nav-apply-btn"
+            >Apply Now <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <a href="index.html"><img src="images/logo.png" alt="Loan Suvidha" /></a
+        ><button aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="mobile-nav">
+        <a href="index.html" class="mobile-link">Home</a
+        ><a href="emi-calculator.html" class="mobile-link active"
+          >EMI Calculator</a
+        ><a href="about.html" class="mobile-link">About Us</a
+        ><a href="contact.html" class="mobile-link">Contact</a
+        ><a href="apply-now.html" class="mobile-apply-btn"
+          >Apply Now <i class="fa-solid fa-arrow-right"></i
+        ></a>
+      </div>
+    </div>
+
+
+    <main>
+      <section class="emi-hero">
+        <div class="hero-orb orb-one"></div>
+        <div class="hero-orb orb-two"></div>
+        <div class="container emi-hero-inner">
+          <div class="emi-hero-copy">
+            <div class="emi-badge">
+              <i class="fa-solid fa-calculator"></i>SMART LOAN PLANNING
+            </div>
+            <h1>Plan Your Loan With <span>Confidence.</span></h1>
+            <p>
+              Estimate your monthly EMI, total interest and repayment amount in
+              seconds. No sign-up required.
+            </p>
+            <div class="hero-trust">
+              <span
+                ><i class="fa-solid fa-circle-check"></i>Instant results</span
+              ><span><i class="fa-solid fa-circle-check"></i>100% free</span
+              ><span><i class="fa-solid fa-circle-check"></i>Easy to use</span>
+            </div>
+          </div>
+          <div class="hero-mini-card">
+            <div class="mini-icon">
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+            </div>
+            <span>YOUR MONTHLY EMI</span><strong id="heroEmi">₹ 10,848</strong
+            ><small>Based on the calculator values</small>
+            <div class="mini-bars">
+              <i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="calculator-section">
+        <div class="container">
+          <div class="calculator-shell">
+            <div class="calculator-panel">
+              <div class="panel-heading">
+                <span>LOAN CALCULATOR</span>
+                <h2>Calculate Your EMI</h2>
+                <p>
+                  Adjust the values to see an estimate of your loan repayment.
+                </p>
+              </div>
+              <div class="loan-tabs" role="tablist">
+                <button
+                  class="loan-tab active"
+                  data-principal="500000"
+                  data-rate="11.5"
+                  data-tenure="5"
+                >
+                  Personal Loan</button
+                ><button
+                  class="loan-tab"
+                  data-principal="2500000"
+                  data-rate="8.5"
+                  data-tenure="20"
+                >
+                  Home Loan</button
+                ><button
+                  class="loan-tab"
+                  data-principal="800000"
+                  data-rate="9.5"
+                  data-tenure="7"
+                >
+                  Car Loan
+                </button>
+              </div>
+              <div class="control-group">
+                <div class="control-label">
+                  <label for="loanAmount">Loan Amount</label
+                  ><output id="amountOutput">₹ 5,00,000</output>
+                </div>
+                <input
+                  id="loanAmount"
+                  type="range"
+                  min="100000"
+                  max="10000000"
+                  step="50000"
+                  value="500000"
+                />
+                <div class="range-scale">
+                  <span>₹ 1 Lakh</span><span>₹ 1 Crore</span>
+                </div>
+                <div class="quick-amounts">
+                  <button data-amount="300000">₹3L</button
+                  ><button data-amount="500000" class="selected">₹5L</button
+                  ><button data-amount="1000000">₹10L</button
+                  ><button data-amount="2500000">₹25L</button>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="control-label">
+                  <label for="interestRate"
+                    >Interest Rate <small>(p.a.)</small></label
+                  ><output id="rateOutput">11.50%</output>
+                </div>
+                <input
+                  id="interestRate"
+                  type="range"
+                  min="5"
+                  max="24"
+                  step="0.1"
+                  value="11.5"
+                />
+                <div class="range-scale"><span>5%</span><span>24%</span></div>
+              </div>
+              <div class="control-group tenure-group">
+                <div class="control-label">
+                  <label for="loanTenure">Loan Tenure</label
+                  ><output id="tenureOutput">5 Years</output>
+                </div>
+                <input
+                  id="loanTenure"
+                  type="range"
+                  min="1"
+                  max="30"
+                  step="1"
+                  value="5"
+                />
+                <div class="range-scale">
+                  <span>1 Year</span><span>30 Years</span>
+                </div>
+                <div class="tenure-switch">
+                  <button class="active" data-unit="years">Years</button
+                  ><button data-unit="months">Months</button>
+                </div>
+              </div>
+            </div>
+            <div class="results-panel">
+              <div class="results-head">
+                <div>
+                  <span>REPAYMENT SUMMARY</span>
+                  <h2>Your Loan Breakdown</h2>
+                </div>
+                <button id="resetCalculator" class="reset-btn">
+                  <i class="fa-solid fa-rotate-left"></i> Reset
+                </button>
+              </div>
+              <div class="emi-highlight">
+                <span>Monthly EMI</span><strong id="monthlyEmi">₹ 10,848</strong
+                ><small>for 60 monthly payments</small>
+              </div>
+              <div class="chart-summary">
+                <div class="donut-chart" id="donutChart">
+                  <div>
+                    <strong id="principalPercent">77%</strong
+                    ><span>Principal</span>
+                  </div>
+                </div>
+                <div class="chart-legend">
+                  <div>
+                    <span class="legend-dot principal-dot"></span>
+                    <p>
+                      Principal Amount<strong id="principalValue"
+                        >₹ 5,00,000</strong
+                      >
+                    </p>
+                  </div>
+                  <div>
+                    <span class="legend-dot interest-dot"></span>
+                    <p>
+                      Total Interest<strong id="interestValue"
+                        >₹ 1,50,880</strong
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="summary-total">
+                <span>Total Amount Payable</span
+                ><strong id="totalValue">₹ 6,50,880</strong>
+              </div>
+              <a href="apply-now.html" class="calculator-apply"
+                >Apply for this loan <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="schedule-card">
+            <div>
+              <span>PAYMENT SCHEDULE</span>
+              <h2>Amortization Snapshot</h2>
+            </div>
+            <button id="toggleSchedule">
+              View full schedule <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="schedule-table-wrap" id="scheduleWrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Month</th>
+                    <th>EMI</th>
+                    <th>Principal</th>
+                    <th>Interest</th>
+                    <th>Balance</th>
+                  </tr>
+                </thead>
+                <tbody id="scheduleBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="emi-help">
+        <div class="container">
+          <div class="section-intro">
+            <span>HOW IT WORKS</span>
+            <h2>A Simple Way To <em>Plan Better.</em></h2>
+            <p>
+              Use the calculator as an estimate to understand the cost of your
+              loan before you apply.
+            </p>
+          </div>
+          <div class="help-grid">
+            <article>
+              <i class="fa-solid fa-sliders"></i>
+              <h3>Enter loan details</h3>
+              <p>
+                Choose your loan amount, interest rate and repayment tenure.
+              </p>
+            </article>
+            <article>
+              <i class="fa-solid fa-bolt"></i>
+              <h3>Get instant results</h3>
+              <p>See your estimated EMI and total payment instantly.</p>
+            </article>
+            <article>
+              <i class="fa-solid fa-chart-pie"></i>
+              <h3>Make an informed choice</h3>
+              <p>Compare scenarios and pick a repayment plan that suits you.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-main">
+        <!-- Company -->
+        <div class="footer-company">
+          <a href="index.html" class="footer-logo">
+            <img src="images/logo.png" alt="Loan Suvidha" />
+          </a>
+
+          <p>
+            Your trusted loan assistance partner helping you explore suitable
+            financial solutions with trusted lending partners.
+          </p>
+
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#" aria-label="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <!-- Loans -->
+        <div class="footer-column">
+          <h3>Loan Solutions</h3>
+
+          <a href="personal-loan.html"> Personal Loan </a>
+
+          <a href="business-loan.html"> Business Loan </a>
+
+          <a href="home-loan.html"> Home Loan </a>
+
+          <a href="car-loan.html"> Car Loan </a>
+
+          <a href="loan-against-property.html"> Loan Against Property </a>
+
+          <a href="machinery-loan.html"> Machinery Loan </a>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer-column">
+          <h3>Resources</h3>
+
+          <a href="emi-calculator.html"> EMI Calculator </a>
+
+          <a href="loan-eligibility.html"> Loan Eligibility </a>
+
+          <a href="loan-interest-rate.html"> Interest Rates </a>
+
+          <a href="documents.html"> Documents Required </a>
+
+          <a href="faq.html"> FAQs </a>
+
+          <a href="blog.html"> Loan Knowledge Center </a>
+        </div>
+
+        <!-- Company -->
+
+        <div class="footer-column">
+          <h3>Company</h3>
+
+          <a href="about.html"> About Us </a>
+
+          <a href="contact.html"> Contact Us </a>
+
+          <a href="partners.html"> Lending Partners </a>
+
+          <a href="careers.html"> Careers </a>
+
+          <a href="privacy-policy.html"> Privacy Policy </a>
+          <a href="terms.html"> Terms & Conditions </a>
+        </div>
+        <!-- Contact -->
+        <div class="footer-column footer-contact">
+          <h3>Get In Touch</h3>
+
+          <a href="tel:+919999052161">
+            <i class="fa-solid fa-phone"></i>
+            +91 99990 52161
+          </a>
+          <a href="mailto:info@loansuvida.com">
+            <i class="fa-solid fa-envelope"></i>
+            info@loansuvida.com
+          </a>
+          <div class="footer-address">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>
+              FLAT NO-106, 9/2, Block 9, East Patel Nagar,<br />
+              Patel Nagar, New Delhi, Delhi 110008
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>© 2026 Loan Suvidha. All Rights Reserved.</p>
+
+          <p>Follow your dream.</p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/919999052161"
+      class="whatsapp-btn"
+      target="_blank"
+      aria-label="Chat on WhatsApp"
+      ><i class="fa-brands fa-whatsapp"></i></a
+    ><button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/emi-calculator.js"></script>
+  </body>
+</html>
