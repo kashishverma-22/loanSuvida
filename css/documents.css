@@ -1,0 +1,482 @@
+/* =========================================================
+   LOAN SUVIDHA
+   DOCUMENTS REQUIRED PAGE STYLES
+========================================================= */
+
+/* ===== DOCUMENTS HERO ===== */
+.documents-hero {
+  background: linear-gradient(135deg, #f8fcff 0%, #e9f5ff 100%);
+  padding: 60px 0 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.documents-hero::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  right: -150px;
+  top: -200px;
+  border-radius: 50%;
+  background: rgba(7, 84, 165, 0.04);
+}
+
+.documents-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: var(--white);
+  border: 1px solid rgba(7, 84, 165, 0.12);
+  border-radius: 50px;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.documents-hero-badge i {
+  color: var(--secondary);
+}
+
+.documents-hero h1 {
+  font-size: clamp(36px, 4.5vw, 52px);
+  font-weight: 800;
+  color: var(--dark);
+  margin: 18px 0 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.documents-hero h1 span {
+  color: var(--primary);
+}
+
+.documents-hero p {
+  color: var(--light-text);
+  font-size: 16px;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== DOCUMENTS TABS ===== */
+.documents-tabs-section {
+  padding: 40px 0 0;
+  background: var(--white);
+}
+
+.documents-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.documents-tab {
+  padding: 10px 22px;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  background: var(--white);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: "Poppins", sans-serif;
+}
+
+.documents-tab:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.documents-tab.active {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+/* ===== DOCUMENTS CONTENT ===== */
+.documents-content-section {
+  padding: 50px 0 80px;
+  background: var(--light-bg);
+}
+
+.documents-content-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.documents-group {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 36px 40px;
+  transition: var(--transition);
+}
+
+.documents-group:hover {
+  border-color: rgba(7, 84, 165, 0.15);
+  box-shadow: var(--shadow-sm);
+}
+
+.documents-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.documents-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-light);
+  border-radius: 14px;
+  color: var(--primary);
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.documents-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 2px;
+}
+
+.documents-header p {
+  font-size: 13px;
+  color: var(--light-text);
+  margin: 0;
+}
+
+/* ===== DOCUMENTS LIST ===== */
+.documents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.document-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--light-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.document-item:hover {
+  border-color: var(--primary);
+  transform: translateX(4px);
+}
+
+.document-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border-radius: 10px;
+  color: var(--primary);
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.document-info {
+  flex: 1;
+}
+
+.document-info h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0 0 2px;
+}
+
+.document-info p {
+  font-size: 12px;
+  color: var(--light-text);
+  margin: 0;
+}
+
+.document-tag {
+  display: inline-block;
+  padding: 2px 12px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+/* ===== DOCUMENTS NOTE ===== */
+.documents-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #fef9f0;
+  border-left: 4px solid var(--secondary);
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.documents-note i {
+  color: var(--secondary);
+  font-size: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.documents-note p {
+  font-size: 13px;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ===== DOCUMENTS ACTIONS ===== */
+.documents-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.documents-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  transition: var(--transition);
+  font-family: "Poppins", sans-serif;
+}
+
+.documents-btn.primary {
+  background: var(--orange-gradient);
+  color: var(--white);
+  box-shadow: 0 6px 18px rgba(247, 148, 29, 0.2);
+}
+
+.documents-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(247, 148, 29, 0.3);
+}
+
+.documents-btn.primary i {
+  transition: var(--transition);
+}
+
+.documents-btn.primary:hover i {
+  transform: translateX(4px);
+}
+
+.documents-btn.secondary {
+  background: var(--white);
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+
+.documents-btn.secondary:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.documents-btn.secondary i {
+  transition: var(--transition);
+}
+
+.documents-btn.secondary:hover i {
+  transform: translateX(4px);
+}
+
+/* ===== TIPS SECTION ===== */
+.documents-tips-section {
+  padding: 60px 0 80px;
+  background: var(--white);
+}
+
+.documents-tips-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.documents-tip-card {
+  display: flex;
+  gap: 18px;
+  padding: 24px 28px;
+  background: var(--light-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: var(--transition);
+}
+
+.documents-tip-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.documents-tip-number {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary);
+  opacity: 0.3;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.documents-tip-content h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 4px;
+}
+
+.documents-tip-content p {
+  font-size: 13px;
+  color: var(--light-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 992px) {
+  .documents-tips-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .documents-hero {
+    padding: 40px 0 30px;
+  }
+
+  .documents-content-section {
+    padding: 30px 0 50px;
+  }
+
+  .documents-group {
+    padding: 24px 20px;
+  }
+
+  .documents-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .documents-header h2 {
+    font-size: 20px;
+  }
+
+  .documents-actions {
+    flex-direction: column;
+  }
+
+  .documents-btn {
+    justify-content: center;
+  }
+
+  .documents-tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .documents-tab {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .documents-hero h1 {
+    font-size: 30px;
+  }
+
+  .documents-hero p {
+    font-size: 14px;
+  }
+
+  .documents-group {
+    padding: 18px 14px;
+  }
+
+  .document-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 16px;
+  }
+
+  .document-tag {
+    align-self: flex-start;
+  }
+
+  .documents-tab {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  .documents-tip-card {
+    padding: 18px 16px;
+  }
+
+  .documents-tip-number {
+    font-size: 22px;
+  }
+
+  .documents-tip-content h4 {
+    font-size: 14px;
+  }
+
+  .documents-tip-content p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .documents-group {
+    padding: 14px 12px;
+  }
+
+  .documents-tab {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .document-item {
+    padding: 12px 14px;
+  }
+
+  .document-info h4 {
+    font-size: 13px;
+  }
+
+  .document-info p {
+    font-size: 11px;
+  }
+}
