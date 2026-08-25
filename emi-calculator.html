@@ -44,11 +44,15 @@
     </div>
     <header class="main-header">
       <div class="container navbar">
-        <a href="index.html" class="logo"
-          ><img src="images/logo.png" alt="Loan Suvidha Logo"
-        /></a>
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="Loan Suvidha Logo" />
+        </a>
+        <!-- Desktop Navigation -->
         <nav class="nav-menu">
-          <a href="index.html" class="nav-link">Home</a>
+          <a href="index.html" class="nav-link"> Home </a>
+
+          <!-- Loans Dropdown -->
           <div class="nav-dropdown">
             <button class="nav-link dropdown-toggle">
               Loans
@@ -56,14 +60,15 @@
             </button>
 
             <div class="dropdown-menu">
-              <a href="personal-loan.html">
+              <a href="loans.html?type=personal">
                 <i class="fa-solid fa-user"></i>
                 <div>
                   <strong>Personal Loan</strong>
                   <small>Quick personal funding</small>
                 </div>
               </a>
-              <a href="business-loan.html">
+
+              <a href="loans.html?type=business">
                 <i class="fa-solid fa-briefcase"></i>
                 <div>
                   <strong>Business Loan</strong>
@@ -71,7 +76,7 @@
                 </div>
               </a>
 
-              <a href="home-loan.html">
+              <a href="loans.html?type=home">
                 <i class="fa-solid fa-house"></i>
                 <div>
                   <strong>Home Loan</strong>
@@ -79,7 +84,7 @@
                 </div>
               </a>
 
-              <a href="car-loan.html">
+              <a href="loans.html?type=car">
                 <i class="fa-solid fa-car"></i>
                 <div>
                   <strong>Car Loan</strong>
@@ -87,14 +92,15 @@
                 </div>
               </a>
 
-              <a href="loan-against-property.html">
+              <a href="loans.html?type=property">
                 <i class="fa-solid fa-building"></i>
                 <div>
                   <strong>Loan Against Property</strong>
                   <small>Unlock property value</small>
                 </div>
               </a>
-              <a href="machinery-loan.html">
+
+              <a href="loans.html?type=machinery">
                 <i class="fa-solid fa-gears"></i>
                 <div>
                   <strong>Machinery Loan</strong>
@@ -103,41 +109,74 @@
               </a>
             </div>
           </div>
-          <a href="emi-calculator.html" class="nav-link active"
-            >EMI Calculator</a
-          ><a href="about.html" class="nav-link">About Us</a
-          ><a href="contact.html" class="nav-link">Contact</a>
+
+          <a href="emi-calculator.html" class="nav-link active">
+            EMI Calculator
+          </a>
+
+          <a href="about.html" class="nav-link"> About Us </a>
+
+          <a href="contact.html" class="nav-link"> Contact </a>
         </nav>
+
+        <!-- Navbar CTA -->
+
         <div class="navbar-actions">
-          <a href="apply-now.html" class="nav-apply-btn"
-            >Apply Now <i class="fa-solid fa-arrow-right"></i
-          ></a>
+          <a href="apply-now.html" class="nav-apply-btn">
+            Apply Now
+
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
-          <span></span><span></span><span></span>
+
+        <!-- Mobile Menu Button -->
+
+        <button class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
     </header>
 
     <div class="mobile-menu" id="mobileMenu">
       <div class="mobile-menu-header">
-        <a href="index.html"><img src="images/logo.png" alt="Loan Suvidha" /></a
-        ><button aria-label="Close menu">
+        <a href="index.html"
+          ><img src="images/logo.png" alt="Loan Suvidha"
+        /></a>
+        <button aria-label="Close menu">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
       <div class="mobile-nav">
-        <a href="index.html" class="mobile-link">Home</a
-        ><a href="emi-calculator.html" class="mobile-link active"
+        <a href="index.html" class="mobile-link">Home</a>
+
+        <!-- ✅ Loans Dropdown with toggle -->
+        <div class="mobile-dropdown">
+          <button class="mobile-dropdown-btn">
+            Loans
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="mobile-dropdown-menu">
+            <a href="loans.html?type=personal">Personal Loan</a>
+            <a href="loans.html?type=business">Business Loan</a>
+            <a href="loans.html?type=home">Home Loan</a>
+            <a href="loans.html?type=car">Car Loan</a>
+            <a href="loans.html?type=property">Loan Against Property</a>
+            <a href="loans.html?type=machinery">Machinery Loan</a>
+          </div>
+        </div>
+
+        <a href="emi-calculator.html" class="mobile-link active"
           >EMI Calculator</a
-        ><a href="about.html" class="mobile-link">About Us</a
-        ><a href="contact.html" class="mobile-link">Contact</a
-        ><a href="apply-now.html" class="mobile-apply-btn"
-          >Apply Now <i class="fa-solid fa-arrow-right"></i
-        ></a>
+        >
+        <a href="about.html" class="mobile-link">About Us</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+        <a href="apply-now.html" class="mobile-apply-btn">
+          Apply Now <i class="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
     </div>
-
 
     <main>
       <section class="emi-hero">
@@ -172,7 +211,7 @@
           </div>
         </div>
       </section>
-      
+
       <section class="calculator-section">
         <div class="container">
           <div class="calculator-shell">
@@ -383,91 +422,67 @@
           <a href="index.html" class="footer-logo">
             <img src="images/logo.png" alt="Loan Suvidha" />
           </a>
-
           <p>
             Your trusted loan assistance partner helping you explore suitable
             financial solutions with trusted lending partners.
           </p>
-
           <div class="social-links">
             <a href="#" aria-label="Facebook">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
-
             <a href="#" aria-label="Instagram">
               <i class="fa-brands fa-instagram"></i>
             </a>
-
             <a href="#" aria-label="LinkedIn">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
-
             <a href="#" aria-label="YouTube">
               <i class="fa-brands fa-youtube"></i>
             </a>
           </div>
         </div>
-        <!-- Loans -->
+
+        <!-- ✅ Loans (Updated with dropdown links) -->
         <div class="footer-column">
           <h3>Loan Solutions</h3>
-
-          <a href="personal-loan.html"> Personal Loan </a>
-
-          <a href="business-loan.html"> Business Loan </a>
-
-          <a href="home-loan.html"> Home Loan </a>
-
-          <a href="car-loan.html"> Car Loan </a>
-
-          <a href="loan-against-property.html"> Loan Against Property </a>
-
-          <a href="machinery-loan.html"> Machinery Loan </a>
+          <a href="loans.html?type=personal">Personal Loan</a>
+          <a href="loans.html?type=business">Business Loan</a>
+          <a href="loans.html?type=home">Home Loan</a>
+          <a href="loans.html?type=car">Car Loan</a>
+          <a href="loans.html?type=property">Loan Against Property</a>
+          <a href="loans.html?type=machinery">Machinery Loan</a>
         </div>
 
-        <!-- Resources -->
+        <!-- Resources (Same) -->
         <div class="footer-column">
           <h3>Resources</h3>
-
-          <a href="emi-calculator.html"> EMI Calculator </a>
-
-          <a href="loan-eligibility.html"> Loan Eligibility </a>
-
-          <a href="loan-interest-rate.html"> Interest Rates </a>
-
-          <a href="documents.html"> Documents Required </a>
-
-          <a href="faq.html"> FAQs </a>
-
-          <a href="blog.html"> Loan Knowledge Center </a>
+          <a href="emi-calculator.html">EMI Calculator</a>
+          <a href="loan-eligibility.html">Loan Eligibility</a>
+          <a href="loan-interest-rate.html">Interest Rates</a>
+          <a href="documents.html">Documents Required</a>
+          <a href="faq.html">FAQs</a>
+          <a href="blog.html">Loan Knowledge Center</a>
         </div>
 
-        <!-- Company -->
-
+        <!-- Company (Same) -->
         <div class="footer-column">
           <h3>Company</h3>
-
-          <a href="about.html"> About Us </a>
-
-          <a href="contact.html"> Contact Us </a>
-
-          <a href="partners.html"> Lending Partners </a>
-
-          <a href="careers.html"> Careers </a>
-
-          <a href="privacy-policy.html"> Privacy Policy </a>
-          <a href="terms.html"> Terms & Conditions </a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="partners.html">Lending Partners</a>
+          <a href="careers.html">Careers</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
         </div>
-        <!-- Contact -->
+
+        <!-- Contact (Same) -->
         <div class="footer-column footer-contact">
           <h3>Get In Touch</h3>
-
           <a href="tel:+919999052161">
-            <i class="fa-solid fa-phone"></i>
-            +91 99990 52161
+            <i class="fa-solid fa-phone"></i> +91 99990 52161
           </a>
           <a href="mailto:info@loansuvida.com">
-            <i class="fa-solid fa-envelope"></i>
-            info@loansuvida.com
+            <i class="fa-solid fa-envelope"></i> info@loansuvida.com
           </a>
           <div class="footer-address">
             <i class="fa-solid fa-location-dot"></i>
@@ -479,11 +494,10 @@
         </div>
       </div>
 
-      <!-- Footer Bottom -->
+      <!-- Footer Bottom (Same) -->
       <div class="footer-bottom">
         <div class="container footer-bottom-inner">
           <p>© 2026 Loan Suvidha. All Rights Reserved.</p>
-
           <p>Follow your dream.</p>
         </div>
       </div>

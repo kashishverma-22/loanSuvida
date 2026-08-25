@@ -1,6 +1,6 @@
 /* =========================================================
    LOAN SUVIDHA
-   MAIN JAVASCRIPT
+   MAIN JAVASCRIPT (FIXED)
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -12,34 +12,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const menuToggle = document.querySelector(".menu-toggle");
   const mobileMenu = document.querySelector(".mobile-menu");
-
   const mobileMenuClose = document.querySelector(".mobile-menu-header button");
-
   const mobileDropdownButtons = document.querySelectorAll(
     ".mobile-dropdown-btn",
   );
-
   const mobileLinks = document.querySelectorAll(
     ".mobile-link, .mobile-dropdown-menu a",
   );
-
   const backToTop = document.querySelector(".back-to-top");
-
   const mainHeader = document.querySelector(".main-header");
-
   const loanForm = document.querySelector("#loanForm, .hero-form-card form");
 
   /* =====================================================
-       MOBILE MENU
+       MOBILE MENU - OPEN / CLOSE
     ===================================================== */
 
   function openMobileMenu() {
     if (!mobileMenu) return;
-
     mobileMenu.classList.add("active");
-
     document.body.style.overflow = "hidden";
-
     if (menuToggle) {
       menuToggle.setAttribute("aria-expanded", "true");
     }
@@ -47,20 +38,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function closeMobileMenu() {
     if (!mobileMenu) return;
-
     mobileMenu.classList.remove("active");
-
     document.body.style.overflow = "";
-
     if (menuToggle) {
       menuToggle.setAttribute("aria-expanded", "false");
     }
   }
 
+  // ✅ Toggle button click
   if (menuToggle) {
     menuToggle.addEventListener("click", function (event) {
       event.stopPropagation();
-
       if (mobileMenu.classList.contains("active")) {
         closeMobileMenu();
       } else {
@@ -69,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // ✅ Close button click
   if (mobileMenuClose) {
     mobileMenuClose.addEventListener("click", function () {
       closeMobileMenu();
@@ -76,53 +65,57 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* =====================================================
-       MOBILE DROPDOWNS
+       MOBILE DROPDOWN - FIXED ✅
     ===================================================== */
 
-  mobileDropdownButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      const dropdown = button.nextElementSibling;
+  mobileDropdownButtons.forEach(function (btn) {
+    btn.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
 
-      if (!dropdown) return;
+      const parent = this.closest(".mobile-dropdown");
+      if (!parent) return;
 
-      const isOpen = dropdown.classList.contains("active");
+      const menu = parent.querySelector(".mobile-dropdown-menu");
+      if (!menu) return;
 
-      /* Close other dropdowns */
+      // Toggle current dropdown
+      menu.classList.toggle("active");
 
-      document
-        .querySelectorAll(".mobile-dropdown-menu.active")
-        .forEach(function (menu) {
-          if (menu !== dropdown) {
-            menu.classList.remove("active");
-          }
-        });
-
-      /* Reset other arrows */
-
-      document
-        .querySelectorAll(".mobile-dropdown-btn i")
-        .forEach(function (icon) {
-          icon.style.transform = "rotate(0deg)";
-        });
-
-      /* Open selected dropdown */
-
-      if (!isOpen) {
-        dropdown.classList.add("active");
-
-        const icon = button.querySelector("i");
-
-        if (icon) {
+      // Rotate icon
+      const icon = this.querySelector("i");
+      if (icon) {
+        icon.style.transition = "transform 0.3s ease";
+        if (menu.classList.contains("active")) {
           icon.style.transform = "rotate(180deg)";
+        } else {
+          icon.style.transform = "rotate(0deg)";
         }
-      } else {
-        dropdown.classList.remove("active");
       }
+
+      // Close other dropdowns (optional)
+      mobileDropdownButtons.forEach(function (otherBtn) {
+        if (otherBtn !== btn) {
+          const otherParent = otherBtn.closest(".mobile-dropdown");
+          if (otherParent) {
+            const otherMenu = otherParent.querySelector(
+              ".mobile-dropdown-menu",
+            );
+            if (otherMenu) {
+              otherMenu.classList.remove("active");
+              const otherIcon = otherBtn.querySelector("i");
+              if (otherIcon) {
+                otherIcon.style.transform = "rotate(0deg)";
+              }
+            }
+          }
+        }
+      });
     });
   });
 
   /* =====================================================
-       MOBILE NAV LINK CLICK
+       MOBILE NAV LINK CLICK → Close menu
     ===================================================== */
 
   mobileLinks.forEach(function (link) {
@@ -132,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* =====================================================
-       ESCAPE KEY
+       ESCAPE KEY → Close menu
     ===================================================== */
 
   document.addEventListener("keydown", function (event) {
@@ -142,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* =====================================================
-       OUTSIDE CLICK
+       OUTSIDE CLICK → Close menu
     ===================================================== */
 
   document.addEventListener("click", function (event) {
@@ -151,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const clickedInsideMenu = mobileMenu.contains(event.target);
-
     const clickedToggle = menuToggle && menuToggle.contains(event.target);
 
     if (!clickedInsideMenu && !clickedToggle) {
@@ -166,25 +158,18 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (event) {
       const targetId = this.getAttribute("href");
-
       if (!targetId || targetId === "#" || targetId.length < 2) {
         return;
       }
-
       const target = document.querySelector(targetId);
-
       if (!target) return;
-
       event.preventDefault();
-
       const headerHeight = mainHeader ? mainHeader.offsetHeight : 0;
-
       const targetPosition =
         target.getBoundingClientRect().top +
         window.pageYOffset -
         headerHeight -
         10;
-
       window.scrollTo({
         top: targetPosition,
         behavior: "smooth",
@@ -200,16 +185,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function setActiveNav() {
     const currentPage = window.location.pathname.split("/").pop().toLowerCase();
-
     navLinks.forEach(function (link) {
       const href = link.getAttribute("href");
-
       if (!href) return;
-
       const linkPage = href.split("/").pop().split("#")[0].toLowerCase();
-
       link.classList.remove("active");
-
       if (
         (currentPage === "" &&
           (linkPage === "" || linkPage === "index.html")) ||
@@ -230,25 +210,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateSectionNavigation() {
     if (!sections.length) return;
-
     const scrollPosition = window.scrollY + 150;
-
     sections.forEach(function (section) {
       const sectionTop = section.offsetTop;
-
       const sectionHeight = section.offsetHeight;
-
       const sectionId = section.getAttribute("id");
-
       if (
         scrollPosition >= sectionTop &&
         scrollPosition < sectionTop + sectionHeight
       ) {
         navLinks.forEach(function (link) {
           link.classList.remove("active");
-
           const href = link.getAttribute("href");
-
           if (href && href.includes("#" + sectionId)) {
             link.classList.add("active");
           }
@@ -265,7 +238,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function navbarScrollEffect() {
     if (!mainHeader) return;
-
     if (window.scrollY > 30) {
       mainHeader.style.boxShadow = "0 8px 30px rgba(0, 59, 120, 0.10)";
     } else {
@@ -274,7 +246,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.addEventListener("scroll", navbarScrollEffect);
-
   navbarScrollEffect();
 
   /* =====================================================
@@ -283,7 +254,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function handleBackToTop() {
     if (!backToTop) return;
-
     if (window.scrollY > 500) {
       backToTop.classList.add("active");
     } else {
@@ -292,7 +262,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.addEventListener("scroll", handleBackToTop);
-
   handleBackToTop();
 
   if (backToTop) {
@@ -305,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* =====================================================
-       PHONE INPUT
+       PHONE INPUT - Only digits
     ===================================================== */
 
   const phoneInputs = document.querySelectorAll(
@@ -319,7 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* =====================================================
-       NAME INPUT
+       NAME INPUT - Only letters
     ===================================================== */
 
   const nameInputs = document.querySelectorAll(
@@ -338,30 +307,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showInputError(input, message) {
     removeInputError(input);
-
     input.style.borderColor = "#dc2626";
-
     const error = document.createElement("small");
-
     error.className = "form-error-message";
-
     error.textContent = message;
-
     error.style.display = "block";
     error.style.marginTop = "5px";
     error.style.color = "#dc2626";
     error.style.fontSize = "10px";
-
     input.parentElement.appendChild(error);
   }
 
   function removeInputError(input) {
     input.style.borderColor = "";
-
     const parent = input.parentElement;
-
     const oldError = parent.querySelector(".form-error-message");
-
     if (oldError) {
       oldError.remove();
     }
@@ -369,20 +329,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function validateField(input) {
     if (!input) return true;
-
     const value = input.value.trim();
-
     removeInputError(input);
-
-    /* Required */
 
     if (input.hasAttribute("required") && value === "") {
       showInputError(input, "This field is required.");
-
       return false;
     }
-
-    /* Name */
 
     if (
       input.name === "name" ||
@@ -391,12 +344,9 @@ document.addEventListener("DOMContentLoaded", function () {
     ) {
       if (value.length > 0 && value.length < 3) {
         showInputError(input, "Please enter a valid name.");
-
         return false;
       }
     }
-
-    /* Phone */
 
     if (
       input.type === "tel" ||
@@ -405,19 +355,14 @@ document.addEventListener("DOMContentLoaded", function () {
     ) {
       if (value.length > 0 && !/^[6-9]\d{9}$/.test(value)) {
         showInputError(input, "Enter a valid 10-digit mobile number.");
-
         return false;
       }
     }
 
-    /* Email */
-
     if (input.type === "email" || input.name === "email") {
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
       if (value.length > 0 && !emailPattern.test(value)) {
         showInputError(input, "Enter a valid email address.");
-
         return false;
       }
     }
@@ -431,12 +376,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (loanForm) {
     const formInputs = loanForm.querySelectorAll("input, select, textarea");
-
     formInputs.forEach(function (input) {
       input.addEventListener("blur", function () {
         validateField(input);
       });
-
       input.addEventListener("input", function () {
         if (input.value.trim() !== "") {
           removeInputError(input);
@@ -454,7 +397,6 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
 
       const inputs = loanForm.querySelectorAll("input, select, textarea");
-
       let isValid = true;
 
       inputs.forEach(function (input) {
@@ -465,29 +407,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!isValid) {
         const firstError = loanForm.querySelector(".form-error-message");
-
         if (firstError) {
           firstError.parentElement
             .querySelector("input, select, textarea")
             ?.focus();
         }
-
         return;
       }
-
-      /* =========================================
-                   SUCCESS MESSAGE
-                ========================================= */
 
       const submitButton = loanForm.querySelector(
         'button[type="submit"], input[type="submit"]',
       );
-
       const originalText = submitButton ? submitButton.innerHTML : "";
 
       if (submitButton) {
         submitButton.disabled = true;
-
         submitButton.innerHTML =
           '<i class="fas fa-spinner fa-spin"></i> Processing...';
       }
@@ -495,14 +429,11 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
         if (submitButton) {
           submitButton.disabled = false;
-
           submitButton.innerHTML = originalText;
         }
-
         alert(
           "Thank you! Your loan enquiry has been submitted successfully. Our team will contact you shortly.",
         );
-
         loanForm.reset();
       }, 1000);
     });
@@ -513,7 +444,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ===================================================== */
 
   const selectInputs = document.querySelectorAll("select");
-
   selectInputs.forEach(function (select) {
     function updateSelectColor() {
       if (select.value === "") {
@@ -522,14 +452,12 @@ document.addEventListener("DOMContentLoaded", function () {
         select.style.color = "#14213d";
       }
     }
-
     updateSelectColor();
-
     select.addEventListener("change", updateSelectColor);
   });
 
   /* =====================================================
-       RESIZE HANDLING
+       RESIZE HANDLING - Close mobile menu on desktop
     ===================================================== */
 
   window.addEventListener("resize", function () {
@@ -543,7 +471,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ===================================================== */
 
   const yearElements = document.querySelectorAll("#currentYear, .current-year");
-
   yearElements.forEach(function (element) {
     element.textContent = new Date().getFullYear();
   });
@@ -562,7 +489,6 @@ document.addEventListener("DOMContentLoaded", function () {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add("show-animation");
-
             observer.unobserve(entry.target);
           }
         });
@@ -583,14 +509,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll("form").forEach(function (form) {
     let submitting = false;
-
     form.addEventListener("submit", function () {
       if (submitting) {
         return;
       }
-
       submitting = true;
-
       setTimeout(function () {
         submitting = false;
       }, 3000);
@@ -602,7 +525,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ===================================================== */
 
   console.log(
-    "%c LoanSuvidha Website Loaded Successfully ",
+    "%c LoanSuvidha Website Loaded Successfully ✅ ",
     "background:#0754a5;color:#fff;padding:8px 15px;border-radius:5px;font-weight:bold;",
   );
 });

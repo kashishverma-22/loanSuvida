@@ -1,0 +1,345 @@
+/* ===== LOAN PAGE SPECIFIC STYLES ===== */
+.loans-hero {
+  background: linear-gradient(135deg, #f8fcff 0%, #e9f5ff 100%);
+  padding: 60px 0 50px;
+  text-align: center;
+}
+
+.loans-hero h1 {
+  font-size: clamp(34px, 4.5vw, 52px);
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.loans-hero h1 span {
+  color: var(--primary);
+}
+
+.loans-hero p {
+  color: var(--light-text);
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.loan-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px auto 0;
+  padding: 8px;
+  background: #f2f7fb;
+  border-radius: 14px;
+  max-width: 700px;
+}
+
+.loan-filter-tab {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--light-text);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: "Poppins", sans-serif;
+}
+
+.loan-filter-tab:hover {
+  color: var(--primary);
+}
+
+.loan-filter-tab.active {
+  background: var(--white);
+  color: var(--primary);
+  box-shadow: 0 4px 12px rgba(7, 84, 165, 0.12);
+}
+
+/* ===== LOAN DETAIL SECTION ===== */
+.loan-detail-section {
+  padding: 60px 0 80px;
+  background: var(--white);
+}
+
+.loan-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.loan-detail-left h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.loan-detail-left h2 span {
+  color: var(--primary);
+}
+
+.loan-detail-left .loan-subtitle {
+  color: var(--secondary);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.loan-detail-left .loan-desc {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 16px 0 24px;
+}
+
+.loan-features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.loan-features-list li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--dark);
+  padding: 10px 14px;
+  background: var(--light-bg);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.loan-features-list li i {
+  color: var(--secondary);
+  font-size: 14px;
+  width: 20px;
+}
+
+.loan-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  background: var(--orange-gradient);
+  color: var(--white);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(247, 148, 29, 0.25);
+  transition: var(--transition);
+}
+
+.loan-apply-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(247, 148, 29, 0.35);
+}
+
+/* ===== RIGHT SIDE - INFO CARDS ===== */
+.loan-detail-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.loan-info-card {
+  background: var(--light-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px 26px;
+  transition: var(--transition);
+}
+
+.loan-info-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.loan-info-card .info-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--light-text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.loan-info-card .info-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-top: 4px;
+}
+
+.loan-info-card .info-value small {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--light-text);
+}
+
+.loan-info-card .info-desc {
+  font-size: 12px;
+  color: var(--light-text);
+  margin-top: 4px;
+}
+
+/* ===== EMI CALCULATOR MINI ===== */
+.emi-mini-box {
+  background: var(--blue-gradient);
+  border-radius: 16px;
+  padding: 24px 28px;
+  color: var(--white);
+  margin-top: 10px;
+}
+
+.emi-mini-box h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.emi-mini-box p {
+  font-size: 12px;
+  opacity: 0.85;
+  margin-bottom: 14px;
+}
+
+.emi-mini-box .emi-calc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 2px;
+  transition: var(--transition);
+}
+
+.emi-mini-box .emi-calc-link:hover {
+  opacity: 0.8;
+}
+
+/* ===== ALL LOANS GRID (Bottom) ===== */
+.all-loans-grid-section {
+  padding: 60px 0 80px;
+  background: var(--light-bg);
+}
+
+.all-loans-grid-section .section-heading {
+  margin-bottom: 40px;
+}
+
+.all-loans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.all-loan-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 26px;
+  text-align: center;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.all-loan-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.all-loan-card .card-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-light);
+  border-radius: 14px;
+  color: var(--primary);
+  font-size: 24px;
+  transition: var(--transition);
+}
+
+.all-loan-card:hover .card-icon {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.all-loan-card h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.all-loan-card p {
+  font-size: 12px;
+  color: var(--light-text);
+  line-height: 1.6;
+}
+
+.all-loan-card .card-tag {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 14px;
+  background: var(--secondary-light);
+  color: var(--secondary-dark);
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .loan-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .all-loans-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .loan-filter-tabs {
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .loan-filter-tab {
+    padding: 8px 14px;
+    font-size: 11px;
+  }
+
+  .loan-features-list {
+    grid-template-columns: 1fr;
+  }
+
+  .all-loans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .loan-detail-left h2 {
+    font-size: 26px;
+  }
+
+  .loan-info-card .info-value {
+    font-size: 17px;
+  }
+}
