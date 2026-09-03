@@ -12,25 +12,27 @@
       content="Apply for a loan with LoanSuvida. Submit your requirements and get assistance in finding a suitable loan solution."
     />
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/logo.png" />
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Font Awesome -->
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
 
-    <!-- Main CSS -->
+    <!--  BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Apply Page CSS -->
@@ -38,806 +40,1010 @@
   </head>
 
   <body>
-    <!-- TOP BAR -->
+    <!-- =========================================================
+     TOP BAR
+========================================================== -->
+
     <div class="top-bar">
-      <div class="container top-bar-inner">
-        <div class="top-left">
-          <span>
-            <i class="fa-solid fa-shield-halved"></i>
-            Trusted Loan Assistance
-          </span>
+      <div class="container">
+        <div class="top-bar-inner">
+          <div class="top-contact">
+            <a href="tel:+919999052161">
+              <i class="fa-solid fa-phone"></i>
+              +91 9999052161
+            </a>
 
-          <span>
-            <i class="fa-solid fa-clock"></i>
-            Quick & Easy Process
-          </span>
-        </div>
+            <a href="mailto:info@loansuvida.com">
+              <i class="fa-solid fa-envelope"></i>
+              info@loansuvida.com
+            </a>
+          </div>
 
-        <div class="top-right">
-          <a href="tel:+919999052161">
-            <i class="fa-solid fa-phone"></i>
-            +91 99990 52161
-          </a>
+          <div class="top-social">
+            <a href="#" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
 
-          <a href="mailto:info@loansuvida.com">
-            <i class="fa-solid fa-envelope"></i>
-            info@loansuvida.com
-          </a>
+            <a href="#" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- ===== NAVBAR ===== -->
-    <header class="main-header">
-      <div class="container navbar">
-        <a href="index.html" class="logo">
-          <img src="images/logo.png" alt="Loan Suvidha Logo" />
-        </a>
-        <nav class="nav-menu">
-          <a href="index.html" class="nav-link">Home</a>
-          <div class="nav-dropdown">
-            <button class="nav-link dropdown-toggle">
-              Loans <i class="fa-solid fa-chevron-down"></i>
-            </button>
-            <div class="dropdown-menu">
-              <a href="loans.html?type=personal" class="loan-type-link">
-                <i class="fa-solid fa-user"></i>
-                <div>
-                  <strong>Personal Loan</strong
-                  ><small>Quick personal funding</small>
-                </div>
+    <!-- =========================================================
+     NAVBAR
+========================================================== -->
+
+    <header class="main-navbar">
+      <div class="container">
+        <div class="navbar-wrapper">
+          <!-- Logo -->
+          <a href="index.html" class="brand-logo">
+            <img src="image/logo.png" alt="Loan Suvida" />
+          </a>
+
+          <!-- Mobile Toggle -->
+          <button class="mobile-toggle" id="mobileToggle" type="button">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <!-- Navigation -->
+          <ul class="nav-menu" id="navMenu">
+            <li>
+              <a href="index.html" class="active">Home</a>
+            </li>
+
+            <!-- Personal Loan -->
+            <li class="dropdown">
+              <a href="#">
+                Personal Loan
+                <i class="fa-solid fa-chevron-down"></i>
               </a>
-              <a href="loans.html?type=business" class="loan-type-link">
-                <i class="fa-solid fa-briefcase"></i>
-                <div>
-                  <strong>Business Loan</strong
-                  ><small>Grow your business</small>
-                </div>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="personal-loan.html"> Personal Loan Overview </a>
+                </li>
+
+                <li>
+                  <a href="personal-loan/features-benefits.html">
+                    Features & Benefits
+                  </a>
+                </li>
+
+                <li>
+                  <a href="personal-loan/eligibility.html">
+                    Eligibility & Documents
+                  </a>
+                </li>
+
+                <li>
+                  <a href="personal-loan/interest-rate.html">
+                    Interest Rates & Charges
+                  </a>
+                </li>
+
+                <li>
+                  <a href="personal-loan/emi-calculator.html">
+                    EMI Calculator
+                  </a>
+                </li>
+
+                <!-- Nested Dropdown -->
+                <li class="sub-dropdown">
+                  <a href="#">
+                    Types of Personal Loan
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+
+                  <ul class="sub-dropdown-menu">
+                    <li>
+                      <a href="personal-loan/unsecured.html">
+                        Unsecured Personal Loan
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="personal-loan/urgent.html">
+                        Urgent Personal Loan
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="personal-loan/short-term.html">
+                        Short Term Personal Loan
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="personal-loan/ca.html"> Personal Loan for CA </a>
+                    </li>
+
+                    <li>
+                      <a href="personal-loan/cs.html"> Personal Loan for CS </a>
+                    </li>
+
+                    <li>
+                      <a href="personal-loan/doctors.html">
+                        Personal Loan for Doctors
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="personal-loan/instant.html">
+                        Instant Loan Online
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="personal-loan/women.html">
+                        Personal Loan For Women
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="personal-loan/faqs.html"> FAQs </a>
+                </li>
+
+                <li>
+                  <a href="apply-now.html"> Apply Now </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Business Loan -->
+            <li class="dropdown">
+              <a href="#">
+                Business Loan
+                <i class="fa-solid fa-chevron-down"></i>
               </a>
-              <a href="loans.html?type=home" class="loan-type-link">
-                <i class="fa-solid fa-house"></i>
-                <div>
-                  <strong>Home Loan</strong><small>Make your dream home</small>
-                </div>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="business-loan.html"> Business Loan Overview </a>
+                </li>
+
+                <li>
+                  <a href="business-loan/features-benefits.html">
+                    Features & Benefits
+                  </a>
+                </li>
+
+                <li>
+                  <a href="business-loan/eligibility.html">
+                    Eligibility & Documents
+                  </a>
+                </li>
+
+                <li>
+                  <a href="business-loan/interest-rate.html">
+                    Interest Rates & Charges
+                  </a>
+                </li>
+
+                <li>
+                  <a href="business-loan/emi-calculator.html">
+                    EMI Calculator
+                  </a>
+                </li>
+
+                <li>
+                  <a href="business-loan/faqs.html"> FAQs </a>
+                </li>
+
+                <li>
+                  <a href="apply-now.html"> Apply Now </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Professional Loan -->
+            <li class="dropdown">
+              <a href="#">
+                Professional Loan
+                <i class="fa-solid fa-chevron-down"></i>
               </a>
-              <a href="loans.html?type=car" class="loan-type-link">
-                <i class="fa-solid fa-car"></i>
-                <div>
-                  <strong>Car Loan</strong><small>Drive your dream car</small>
-                </div>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="professional-loan.html"> Overview </a>
+                </li>
+
+                <li>
+                  <a href="professional-loan/eligibility.html">
+                    Eligibility & Documents
+                  </a>
+                </li>
+
+                <li>
+                  <a href="professional-loan/interest-rate.html">
+                    Interest Rates & Charges
+                  </a>
+                </li>
+
+                <li>
+                  <a href="professional-loan/emi-calculator.html">
+                    EMI Calculator
+                  </a>
+                </li>
+
+                <li>
+                  <a href="professional-loan/faqs.html"> FAQs </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Other Loans -->
+            <li class="dropdown">
+              <a href="#">
+                Other Loans
+                <i class="fa-solid fa-chevron-down"></i>
               </a>
-              <a href="loans.html?type=property" class="loan-type-link">
-                <i class="fa-solid fa-building"></i>
-                <div>
-                  <strong>Loan Against Property</strong
-                  ><small>Unlock property value</small>
-                </div>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="car-loan.html"> Car Loan </a>
+                </li>
+
+                <li>
+                  <a href="machinery-loan.html"> Machinery Loan </a>
+                </li>
+
+                <li>
+                  <a href="home-loan.html"> Home Loan </a>
+                </li>
+
+                <li>
+                  <a href="loan-against-property.html">
+                    Loan Against Property
+                  </a>
+                </li>
+
+                <li>
+                  <a href="education-loan.html"> Education Loan </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+
+            <li>
+              <a href="apply-now.html" class="nav-apply-btn">
+                Apply Now
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
-              <a href="loans.html?type=machinery" class="loan-type-link">
-                <i class="fa-solid fa-gears"></i>
-                <div>
-                  <strong>Machinery Loan</strong
-                  ><small>Finance your machinery</small>
-                </div>
-              </a>
-            </div>
-          </div>
-          <a href="emi-calculator.html" class="nav-link">EMI Calculator</a>
-          <a href="about.html" class="nav-link">About Us</a>
-          <a href="contact.html" class="nav-link">Contact</a>
-        </nav>
-        <div class="navbar-actions">
-          <a href="apply-now.html" class="nav-apply-btn"
-            >Apply Now <i class="fa-solid fa-arrow-right"></i
-          ></a>
+            </li>
+          </ul>
         </div>
-        <button class="menu-toggle" id="menuToggle">
-          <span></span><span></span><span></span>
-        </button>
       </div>
     </header>
 
-    <!-- ===== MOBILE MENU ===== -->
-    <div class="mobile-menu" id="mobileMenu">
-      <div class="mobile-menu-header">
-        <a href="index.html"
-          ><img src="images/logo.png" alt="Loan Suvidha"
-        /></a>
-        <button aria-label="Close menu">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-      <div class="mobile-nav">
-        <a href="index.html" class="mobile-link">Home</a>
-        <div class="mobile-dropdown">
-          <button class="mobile-dropdown-btn">
-            Loans <i class="fa-solid fa-chevron-down"></i>
-          </button>
-          <div class="mobile-dropdown-menu active">
-            <a href="loans.html?type=personal">Personal Loan</a>
-            <a href="loans.html?type=business">Business Loan</a>
-            <a href="loans.html?type=home">Home Loan</a>
-            <a href="loans.html?type=car">Car Loan</a>
-            <a href="loans.html?type=property">Loan Against Property</a>
-            <a href="loans.html?type=machinery">Machinery Loan</a>
+    <!-- =========================================================
+     APPLY NOW PAGE CONTENT
+     Header & Footer not included
+========================================================= -->
+
+    <main class="apply-page">
+      <!-- ================= APPLY HERO ================= -->
+      <section class="apply-hero">
+        <div class="apply-hero-overlay"></div>
+
+        <div class="container">
+          <div class="apply-hero-content">
+            <div class="apply-hero-text">
+              <span class="apply-badge">
+                <i class="fa-solid fa-bolt"></i>
+                Quick & Easy Application
+              </span>
+
+              <h1>
+                Apply for Your
+                <span>Loan Today</span>
+              </h1>
+
+              <p>
+                Get the financial support you need with a simple, transparent
+                and hassle-free loan application process.
+              </p>
+
+              <div class="apply-trust">
+                <div class="trust-item">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <span>Secure Application</span>
+                </div>
+
+                <div class="trust-item">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>Quick Processing</span>
+                </div>
+
+                <div class="trust-item">
+                  <i class="fa-solid fa-headset"></i>
+                  <span>Expert Assistance</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= APPLY FORM ================= -->
+            <div class="apply-form-card">
+              <div class="form-card-header">
+                <span class="form-icon">
+                  <i class="fa-solid fa-file-signature"></i>
+                </span>
+
+                <div>
+                  <h2>Apply Now</h2>
+                  <p>Fill in your details and our expert will contact you.</p>
+                </div>
+              </div>
+
+              <form id="loanApplyForm">
+                <div class="apply-form-row">
+                  <div class="apply-form-group">
+                    <label for="fullName"> Full Name <span>*</span> </label>
+
+                    <div class="input-box">
+                      <i class="fa-regular fa-user"></i>
+                      <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                      />
+                    </div>
+
+                    <small class="form-error" id="fullNameError"></small>
+                  </div>
+
+                  <div class="apply-form-group">
+                    <label for="mobileNumber">
+                      Mobile Number <span>*</span>
+                    </label>
+
+                    <div class="input-box">
+                      <i class="fa-solid fa-phone"></i>
+                      <input
+                        type="tel"
+                        id="mobileNumber"
+                        name="mobileNumber"
+                        placeholder="Enter 10 digit mobile number"
+                        maxlength="10"
+                        inputmode="numeric"
+                      />
+                    </div>
+
+                    <small class="form-error" id="mobileError"></small>
+                  </div>
+                </div>
+
+                <div class="apply-form-row">
+                  <div class="apply-form-group">
+                    <label for="email"> Email Address </label>
+
+                    <div class="input-box">
+                      <i class="fa-regular fa-envelope"></i>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                      />
+                    </div>
+
+                    <small class="form-error" id="emailError"></small>
+                  </div>
+
+                  <div class="apply-form-group">
+                    <label for="loanType"> Loan Type <span>*</span> </label>
+
+                    <div class="input-box select-box">
+                      <i class="fa-solid fa-wallet"></i>
+
+                      <select id="loanType" name="loanType">
+                        <option value="">Select Loan Type</option>
+                        <option value="Personal Loan">Personal Loan</option>
+                        <option value="Business Loan">Business Loan</option>
+                        <option value="Professional Loan">
+                          Professional Loan
+                        </option>
+                        <option value="Car Loan">Car Loan</option>
+                        <option value="Machinery Loan">Machinery Loan</option>
+                        <option value="Home Loan">Home Loan</option>
+                        <option value="Loan Against Property">
+                          Loan Against Property
+                        </option>
+                        <option value="Education Loan">Education Loan</option>
+                      </select>
+
+                      <i class="fa-solid fa-chevron-down select-arrow"></i>
+                    </div>
+
+                    <small class="form-error" id="loanTypeError"></small>
+                  </div>
+                </div>
+
+                <div class="apply-form-row">
+                  <div class="apply-form-group">
+                    <label for="loanAmount">
+                      Required Loan Amount <span>*</span>
+                    </label>
+
+                    <div class="input-box">
+                      <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                      <input
+                        type="number"
+                        id="loanAmount"
+                        name="loanAmount"
+                        placeholder="Enter loan amount"
+                        min="10000"
+                      />
+                    </div>
+
+                    <small class="form-error" id="loanAmountError"></small>
+                  </div>
+
+                  <div class="apply-form-group">
+                    <label for="employmentType"> Employment Type </label>
+
+                    <div class="input-box select-box">
+                      <i class="fa-solid fa-briefcase"></i>
+
+                      <select id="employmentType" name="employmentType">
+                        <option value="">Select Employment Type</option>
+                        <option value="Salaried">Salaried</option>
+                        <option value="Self Employed">Self Employed</option>
+                        <option value="Business Owner">Business Owner</option>
+                        <option value="Professional">Professional</option>
+                      </select>
+
+                      <i class="fa-solid fa-chevron-down select-arrow"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="apply-form-group">
+                  <label for="message"> Additional Message </label>
+
+                  <div class="input-box textarea-box">
+                    <i class="fa-regular fa-message"></i>
+
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="3"
+                      placeholder="Tell us anything you'd like us to know..."
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="apply-consent">
+                  <label>
+                    <input type="checkbox" id="consent" />
+                    <span>
+                      I agree to be contacted by Loan Suvida regarding my loan
+                      application.
+                    </span>
+                  </label>
+
+                  <small class="form-error" id="consentError"></small>
+                </div>
+
+                <button type="submit" class="apply-submit-btn">
+                  <span>Submit Application</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="form-success" id="formSuccess">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>
+                    Thank you! Your application has been submitted successfully.
+                  </span>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-        <a href="emi-calculator.html" class="mobile-link">EMI Calculator</a>
-        <a href="about.html" class="mobile-link">About Us</a>
-        <a href="contact.html" class="mobile-link">Contact</a>
-        <a href="apply-now.html" class="mobile-apply-btn"
-          >Apply Now <i class="fa-solid fa-arrow-right"></i
-        ></a>
-      </div>
-    </div>
+      </section>
 
-    <main>
-      <section class="apply-hero">
-        <div class="container apply-hero-container">
-          <div class="apply-hero-content">
-            <span class="apply-badge">
-              <i class="fa-solid fa-shield-halved"></i>
-
-              Secure & Simple Application
+      <!-- ================= WHY APPLY WITH US ================= -->
+      <section class="why-apply-section">
+        <div class="container">
+          <div class="section-heading-center">
+            <span class="section-tag">
+              <i class="fa-solid fa-star"></i>
+              Why Loan Suvida
             </span>
 
-            <h1>
-              Take The First Step Towards Your
-              <span>Financial Goals</span>
-            </h1>
-
-            <p>
-              Tell us what you need and our team will help you explore a
-              suitable loan solution based on your requirements.
-            </p>
-
-            <div class="apply-highlights">
-              <div class="apply-highlight">
-                <div class="highlight-icon">
-                  <i class="fa-solid fa-bolt"></i>
-                </div>
-
-                <div>
-                  <strong> Quick Enquiry </strong>
-
-                  <span> Simple online application </span>
-                </div>
-              </div>
-
-              <div class="apply-highlight">
-                <div class="highlight-icon">
-                  <i class="fa-solid fa-headset"></i>
-                </div>
-
-                <div>
-                  <strong> Expert Assistance </strong>
-
-                  <span> Guidance throughout the process </span>
-                </div>
-              </div>
-
-              <div class="apply-highlight">
-                <div class="highlight-icon">
-                  <i class="fa-solid fa-lock"></i>
-                </div>
-
-                <div>
-                  <strong> Secure Information </strong>
-
-                  <span> Your details remain protected </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- =================================================
-                     APPLICATION CARD
-                ================================================== -->
-
-          <div class="application-card">
-            <div class="application-header">
-              <div>
-                <span> LOAN APPLICATION </span>
-
-                <h2>Get Started</h2>
-              </div>
-
-              <div class="application-step">
-                <strong> 01 </strong>
-
-                <small> / 03 </small>
-              </div>
-            </div>
-
-            <div class="progress-wrapper" aria-label="Application progress">
-              <div class="progress-steps">
-                <div class="progress-step active current" data-step="1">
-                  <span>01</span><small>Loan Type</small>
-                </div>
-                <div class="progress-line"></div>
-                <div class="progress-step" data-step="2">
-                  <span>02</span><small>Your Details</small>
-                </div>
-                <div class="progress-line"></div>
-                <div class="progress-step" data-step="3">
-                  <span>03</span><small>Requirements</small>
-                </div>
-              </div>
-            </div>
-
-            <!-- APPLICATION FORM -->
-
-            <form
-              id="loanApplicationForm"
-              class="loan-application-form"
-              novalidate
-            >
-              <!-- =========================================
-                             LOAN TYPE
-                        ========================================== -->
-
-              <div class="form-section-title">
-                <span> 01 </span>
-
-                <div>
-                  <strong> Select Loan Type </strong>
-
-                  <small> What type of loan are you looking for? </small>
-                </div>
-              </div>
-
-              <div class="loan-type-grid">
-                <label class="loan-type-option">
-                  <input
-                    type="radio"
-                    name="loan_type"
-                    value="Personal Loan"
-                    required
-                  />
-
-                  <span class="loan-type-box">
-                    <i class="fa-solid fa-user"></i>
-
-                    <strong> Personal </strong>
-                  </span>
-                </label>
-
-                <label class="loan-type-option">
-                  <input type="radio" name="loan_type" value="Business Loan" />
-
-                  <span class="loan-type-box">
-                    <i class="fa-solid fa-briefcase"></i>
-
-                    <strong> Business </strong>
-                  </span>
-                </label>
-
-                <label class="loan-type-option">
-                  <input type="radio" name="loan_type" value="Home Loan" />
-
-                  <span class="loan-type-box">
-                    <i class="fa-solid fa-house"></i>
-
-                    <strong> Home </strong>
-                  </span>
-                </label>
-
-                <label class="loan-type-option">
-                  <input type="radio" name="loan_type" value="Car Loan" />
-
-                  <span class="loan-type-box">
-                    <i class="fa-solid fa-car"></i>
-
-                    <strong> Car </strong>
-                  </span>
-                </label>
-
-                <label class="loan-type-option">
-                  <input type="radio" name="loan_type" value="Education Loan" />
-
-                  <span class="loan-type-box">
-                    <i class="fa-solid fa-graduation-cap"></i>
-
-                    <strong> Education </strong>
-                  </span>
-                </label>
-
-                <label class="loan-type-option">
-                  <input
-                    type="radio"
-                    name="loan_type"
-                    value="Loan Against Property"
-                  />
-
-                  <span class="loan-type-box">
-                    <i class="fa-solid fa-building"></i>
-
-                    <strong> Property </strong>
-                  </span>
-                </label>
-              </div>
-              <small
-                class="field-error"
-                data-error-for="loan_type"
-                aria-live="polite"
-              ></small>
-
-              <!-- =========================================
-                             PERSONAL DETAILS
-                        ========================================== -->
-
-              <div class="form-section-title">
-                <span> 02 </span>
-
-                <div>
-                  <strong> Your Details </strong>
-
-                  <small> Enter your basic information </small>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="fullName"> Full Name </label>
-
-                  <div class="input-box">
-                    <i class="fa-regular fa-user"></i>
-
-                    <input
-                      type="text"
-                      id="fullName"
-                      name="full_name"
-                      placeholder="Enter your full name"
-                      autocomplete="name"
-                      required
-                    />
-                  </div>
-
-                  <small class="form-error"></small>
-                </div>
-
-                <div class="form-group">
-                  <label for="mobileNumber"> Mobile Number </label>
-
-                  <div class="input-box">
-                    <i class="fa-solid fa-phone"></i>
-
-                    <input
-                      type="tel"
-                      id="mobileNumber"
-                      name="mobile"
-                      placeholder="10 digit mobile number"
-                      maxlength="10"
-                      inputmode="numeric"
-                      autocomplete="tel"
-                      required
-                    />
-                  </div>
-
-                  <small class="form-error"></small>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="emailAddress"> Email Address </label>
-
-                  <div class="input-box">
-                    <i class="fa-regular fa-envelope"></i>
-
-                    <input
-                      type="email"
-                      id="emailAddress"
-                      name="email"
-                      placeholder="Enter your email"
-                      autocomplete="email"
-                      required
-                    />
-                  </div>
-
-                  <small class="form-error"></small>
-                </div>
-
-                <div class="form-group">
-                  <label for="city"> City </label>
-
-                  <div class="input-box">
-                    <i class="fa-solid fa-location-dot"></i>
-
-                    <input
-                      type="text"
-                      id="city"
-                      name="city"
-                      placeholder="Enter your city"
-                      autocomplete="address-level2"
-                      required
-                    />
-                  </div>
-
-                  <small class="form-error"></small>
-                </div>
-              </div>
-
-              <!-- =========================================
-                             LOAN AMOUNT
-                        ========================================== -->
-
-              <div class="form-section-title">
-                <span> 03 </span>
-
-                <div>
-                  <strong> Loan Requirement </strong>
-
-                  <small> Tell us how much you need </small>
-                </div>
-              </div>
-
-              <div class="loan-amount-group">
-                <label for="loanAmount"> Required Loan Amount </label>
-
-                <div class="amount-input">
-                  <span> ₹ </span>
-
-                  <input
-                    type="number"
-                    id="loanAmount"
-                    name="loan_amount"
-                    placeholder="Enter amount"
-                    min="10000"
-                    required
-                  />
-                </div>
-
-                <div class="amount-suggestions">
-                  <button type="button" data-amount="100000">₹1 Lakh</button>
-
-                  <button type="button" data-amount="300000">₹3 Lakh</button>
-
-                  <button type="button" data-amount="500000">₹5 Lakh</button>
-
-                  <button type="button" data-amount="1000000">₹10 Lakh</button>
-                </div>
-                <small
-                  class="field-error"
-                  data-error-for="loan_amount"
-                  aria-live="polite"
-                ></small>
-              </div>
-
-              <!-- =========================================
-                             EMPLOYMENT
-                        ========================================== -->
-
-              <div class="employment-group">
-                <label> Employment Type </label>
-
-                <div class="employment-options">
-                  <label>
-                    <input
-                      type="radio"
-                      name="employment"
-                      value="Salaried"
-                      required
-                    />
-
-                    <span>
-                      <i class="fa-solid fa-user-tie"></i>
-
-                      Salaried
-                    </span>
-                  </label>
-
-                  <label>
-                    <input
-                      type="radio"
-                      name="employment"
-                      value="Self Employed"
-                    />
-
-                    <span>
-                      <i class="fa-solid fa-business-time"></i>
-
-                      Self Employed
-                    </span>
-                  </label>
-                </div>
-                <small
-                  class="field-error"
-                  data-error-for="employment"
-                  aria-live="polite"
-                ></small>
-              </div>
-
-              <!-- =========================================
-                             CONSENT
-                        ========================================== -->
-
-              <div class="consent-box">
-                <label>
-                  <input type="checkbox" id="consent" name="consent" required />
-
-                  <span class="custom-check"></span>
-
-                  <p>
-                    I agree to be contacted by LoanSuvida regarding my loan
-                    enquiry and understand that submitting this form does not
-                    guarantee loan approval.
-                  </p>
-                </label>
-                <small
-                  class="field-error"
-                  data-error-for="consent"
-                  aria-live="polite"
-                ></small>
-              </div>
-
-              <!-- SUBMIT -->
-
-              <button type="submit" class="application-submit">
-                <span> Submit Application </span>
-
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-
-              <div class="secure-note">
-                <i class="fa-solid fa-shield-halved"></i>
-
-                Your information is submitted securely.
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <!-- =================================================
-             TRUST STRIP
-        ================================================== -->
-
-      <section class="trust-strip">
-        <div class="container">
-          <div class="trust-item">
-            <i class="fa-solid fa-shield-halved"></i>
-
-            <div>
-              <strong> Secure Process </strong>
-
-              <span> Your information is protected </span>
-            </div>
-          </div>
-
-          <div class="trust-divider"></div>
-
-          <div class="trust-item">
-            <i class="fa-solid fa-headset"></i>
-
-            <div>
-              <strong> Dedicated Assistance </strong>
-
-              <span> Support when you need it </span>
-            </div>
-          </div>
-
-          <div class="trust-divider"></div>
-
-          <div class="trust-item">
-            <i class="fa-solid fa-file-circle-check"></i>
-
-            <div>
-              <strong> Easy Documentation </strong>
-
-              <span> Simple and guided process </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- =================================================
-             WHY APPLY
-        ================================================== -->
-
-      <section class="why-apply">
-        <div class="container">
-          <div class="section-heading">
-            <span class="section-label"> WHY APPLY WITH US </span>
-
             <h2>
-              A Simpler Way To
-              <span>Start Your Loan Journey</span>
+              Make Your Loan Journey
+              <span>Simple & Stress-Free</span>
             </h2>
 
             <p>
-              We focus on making your first step easy, transparent and
-              convenient.
+              We help you find suitable loan solutions with transparent guidance
+              and a hassle-free application process.
             </p>
           </div>
 
-          <div class="apply-benefits">
-            <div class="benefit-card">
+          <div class="apply-benefits-grid">
+            <div class="apply-benefit-card">
               <div class="benefit-icon">
-                <i class="fa-solid fa-mobile-screen-button"></i>
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+
+              <h3>Simple Process</h3>
+
+              <p>
+                Apply online with a quick and easy application process without
+                unnecessary paperwork.
+              </p>
+            </div>
+
+            <div class="apply-benefit-card">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+
+              <h3>Expert Assistance</h3>
+
+              <p>
+                Our loan experts guide you throughout the process and help you
+                understand your available options.
+              </p>
+            </div>
+
+            <div class="apply-benefit-card">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+
+              <h3>Quick Processing</h3>
+
+              <p>
+                Get your application reviewed quickly and move closer to your
+                financial goals.
+              </p>
+            </div>
+
+            <div class="apply-benefit-card">
+              <div class="benefit-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+
+              <h3>Secure & Transparent</h3>
+
+              <p>
+                Your information is handled securely with a clear and
+                transparent approach.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= HOW IT WORKS ================= -->
+      <section class="apply-process-section">
+        <div class="container">
+          <div class="section-heading-center">
+            <span class="section-tag">
+              <i class="fa-solid fa-route"></i>
+              How It Works
+            </span>
+
+            <h2>
+              Apply in Just
+              <span>5 Simple Steps</span>
+            </h2>
+
+            <p>
+              Our streamlined process makes applying for a loan simple from
+              start to finish.
+            </p>
+          </div>
+
+          <div class="apply-process">
+            <div class="process-item">
+              <div class="process-number">01</div>
+
+              <div class="process-icon">
+                <i class="fa-solid fa-pen-to-square"></i>
               </div>
 
               <h3>Apply Online</h3>
 
-              <p>
-                Start your enquiry from anywhere using our simple online form.
-              </p>
+              <p>Fill out our simple online application form.</p>
             </div>
 
-            <div class="benefit-card">
-              <div class="benefit-icon">
-                <i class="fa-solid fa-comments"></i>
+            <div class="process-line"></div>
+
+            <div class="process-item">
+              <div class="process-number">02</div>
+
+              <div class="process-icon">
+                <i class="fa-solid fa-file-lines"></i>
               </div>
 
-              <h3>Get Guidance</h3>
+              <h3>Submit Documents</h3>
 
-              <p>Share your requirements and get assistance from our team.</p>
+              <p>Provide the required documents for verification.</p>
             </div>
 
-            <div class="benefit-card">
-              <div class="benefit-icon">
-                <i class="fa-solid fa-scale-balanced"></i>
+            <div class="process-line"></div>
+
+            <div class="process-item">
+              <div class="process-number">03</div>
+
+              <div class="process-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
               </div>
 
-              <h3>Understand Options</h3>
+              <h3>Verification</h3>
 
-              <p>
-                Explore available options according to your financial
-                requirements.
-              </p>
+              <p>Your application details are reviewed.</p>
             </div>
 
-            <div class="benefit-card">
-              <div class="benefit-icon">
-                <i class="fa-solid fa-arrow-trend-up"></i>
+            <div class="process-line"></div>
+
+            <div class="process-item">
+              <div class="process-number">04</div>
+
+              <div class="process-icon">
+                <i class="fa-solid fa-circle-check"></i>
               </div>
 
-              <h3>Move Forward</h3>
+              <h3>Quick Approval</h3>
 
-              <p>
-                Take the next step towards your financial goals with confidence.
-              </p>
+              <p>Get updates on your application status.</p>
+            </div>
+
+            <div class="process-line"></div>
+
+            <div class="process-item">
+              <div class="process-number">05</div>
+
+              <div class="process-icon">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+              </div>
+
+              <h3>Disbursal</h3>
+
+              <p>Once approved, the loan amount is disbursed.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- =================================================
-             FINAL CTA
-        ================================================== -->
+      <!-- ================= DOCUMENTS ================= -->
+      <section class="documents-section">
+        <div class="container">
+          <div class="documents-wrapper">
+            <div class="documents-content">
+              <span class="section-tag">
+                <i class="fa-solid fa-folder-open"></i>
+                Documents
+              </span>
 
+              <h2>
+                Keep Your Documents
+                <span>Ready</span>
+              </h2>
+
+              <p>
+                Having the necessary documents ready can help make your loan
+                application process smoother and faster.
+              </p>
+
+              <div class="documents-list">
+                <div class="document-item">
+                  <i class="fa-solid fa-id-card"></i>
+                  <div>
+                    <strong>Identity Proof</strong>
+                    <span>Valid government-issued ID</span>
+                  </div>
+                </div>
+
+                <div class="document-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div>
+                    <strong>Address Proof</strong>
+                    <span>Valid residential address proof</span>
+                  </div>
+                </div>
+
+                <div class="document-item">
+                  <i class="fa-solid fa-file-invoice-dollar"></i>
+                  <div>
+                    <strong>Income Documents</strong>
+                    <span>Salary slips / income proof</span>
+                  </div>
+                </div>
+
+                <div class="document-item">
+                  <i class="fa-solid fa-building"></i>
+                  <div>
+                    <strong>Bank Statements</strong>
+                    <span>Recent bank account statements</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="documents-highlight">
+              <div class="highlight-circle">
+                <i class="fa-solid fa-file-shield"></i>
+              </div>
+
+              <h3>Need Help?</h3>
+
+              <p>
+                Not sure which documents you need? Our experts can guide you.
+              </p>
+
+              <a href="contact.html" class="document-help-btn">
+                Get Assistance
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FINAL CTA ================= -->
       <section class="apply-final-cta">
         <div class="container">
-          <div class="final-cta-content">
-            <span> HAVE QUESTIONS? </span>
+          <div class="final-cta-wrapper">
+            <div class="final-cta-content">
+              <span class="cta-small-title"> Your Financial Goals Matter </span>
 
-            <h2>Need Help Before Applying?</h2>
+              <h2>
+                Ready to Take the
+                <span>Next Step?</span>
+              </h2>
 
-            <p>
-              Our team is here to understand your requirement and guide you
-              through the next steps.
-            </p>
+              <p>
+                Start your loan application today and let our experts help you
+                find the right financial solution.
+              </p>
+            </div>
 
-            <a href="contact.html" class="final-cta-btn">
-              Talk To Us
+            <div class="final-cta-actions">
+              <a href="#loanApplyForm" class="cta-primary-btn">
+                Apply Now
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
 
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
+              <a href="tel:+919999052161" class="cta-call-btn">
+                <i class="fa-solid fa-phone"></i>
+                <span>
+                  <small>Talk to an Expert</small>
+                  +91 9999052161
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container footer-main">
-        <!-- Company -->
-        <div class="footer-company">
-          <a href="index.html" class="footer-logo">
-            <img src="images/logo.png" alt="Loan Suvidha" />
-          </a>
-          <p>
-            Your trusted loan assistance partner helping you explore suitable
-            financial solutions with trusted lending partners.
-          </p>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="#" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="#" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="#" aria-label="YouTube">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-          </div>
-        </div>
+    <footer class="main-footer">
+      <div class="footer-main">
+        <div class="container">
+          <div class="row g-5">
+            <!-- ABOUT -->
 
-        <!-- ✅ Loans (Updated with dropdown links) -->
-        <div class="footer-column">
-          <h3>Loan Solutions</h3>
-          <a href="loans.html?type=personal">Personal Loan</a>
-          <a href="loans.html?type=business">Business Loan</a>
-          <a href="loans.html?type=home">Home Loan</a>
-          <a href="loans.html?type=car">Car Loan</a>
-          <a href="loans.html?type=property">Loan Against Property</a>
-          <a href="loans.html?type=machinery">Machinery Loan</a>
-        </div>
+            <div class="col-lg-4">
+              <div class="footer-about">
+                <a href="index.html" class="footer-logo">
+                  <img src="image/logo.png" alt="Loan Suvida" />
+                </a>
 
-        <!-- Resources (Same) -->
-        <div class="footer-column">
-          <h3>Resources</h3>
-          <a href="emi-calculator.html">EMI Calculator</a>
-          <a href="loan-eligibility.html">Loan Eligibility</a>
-          <a href="loan-interest-rate.html">Interest Rates</a>
-          <a href="documents.html">Documents Required</a>
-          <a href="faq.html">FAQs</a>
-          <a href="blog.html">Loan Knowledge Center</a>
-        </div>
+                <p>
+                  Loan Suvida helps customers explore suitable loan solutions
+                  for personal, professional and business requirements with
+                  simple and transparent guidance.
+                </p>
 
-        <!-- Company (Same) -->
-        <div class="footer-column">
-          <h3>Company</h3>
-          <a href="about.html">About Us</a>
-          <a href="contact.html">Contact Us</a>
-          <a href="partners.html">Lending Partners</a>
-          <a href="careers.html">Careers</a>
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="terms.html">Terms &amp; Conditions</a>
-        </div>
+                <div class="footer-social">
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
 
-        <!-- Contact (Same) -->
-        <div class="footer-column footer-contact">
-          <h3>Get In Touch</h3>
-          <a href="tel:+919999052161">
-            <i class="fa-solid fa-phone"></i> +91 99990 52161
-          </a>
-          <a href="mailto:info@loansuvida.com">
-            <i class="fa-solid fa-envelope"></i> info@loansuvida.com
-          </a>
-          <div class="footer-address">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>
-              FLAT NO-106, 9/2, Block 9, East Patel Nagar,<br />
-              Patel Nagar, New Delhi, Delhi 110008
-            </span>
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+
+                  <a href="#">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+
+                  <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- LOAN PRODUCTS -->
+
+            <div class="col-lg-2 col-md-4">
+              <div class="footer-col">
+                <h3>Loan Products</h3>
+
+                <ul class="footer-links">
+                  <li>
+                    <a href="personal-loan.html"> Personal Loan </a>
+                  </li>
+
+                  <li>
+                    <a href="business-loan.html"> Business Loan </a>
+                  </li>
+
+                  <li>
+                    <a href="professional-loan.html"> Professional Loan </a>
+                  </li>
+
+                  <li>
+                    <a href="car-loan.html"> Car Loan </a>
+                  </li>
+
+                  <li>
+                    <a href="machinery-loan.html"> Machinery Loan </a>
+                  </li>
+
+                  <li>
+                    <a href="home-loan.html"> Home Loan </a>
+                  </li>
+
+                  <li>
+                    <a href="loan-against-property.html">
+                      Loan Against Property
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- QUICK LINKS -->
+
+            <div class="col-lg-2 col-md-4">
+              <div class="footer-col">
+                <h3>Quick Links</h3>
+
+                <ul class="footer-links">
+                  <li>
+                    <a href="index.html"> Home </a>
+                  </li>
+
+                  <li>
+                    <a href="about.html"> About Us </a>
+                  </li>
+
+                  <li>
+                    <a href="apply-now.html"> Apply Now </a>
+                  </li>
+
+                  <li>
+                    <a href="emi-calculator.html"> EMI Calculator </a>
+                  </li>
+
+                  <li>
+                    <a href="faq.html"> FAQs </a>
+                  </li>
+
+                  <li>
+                    <a href="contact.html"> Contact Us </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CONTACT -->
+
+            <div class="col-lg-4 col-md-4">
+              <div class="footer-col">
+                <h3>Contact Us</h3>
+
+                <div class="footer-contact-item">
+                  <i class="fa-solid fa-phone"></i>
+
+                  <a href="tel:+919999052161"> +91 9999052161 </a>
+                </div>
+
+                <div class="footer-contact-item">
+                  <i class="fa-solid fa-envelope"></i>
+
+                  <a href="mailto:info@loansuvida.com"> info@loansuvida.com </a>
+                </div>
+
+                <div class="footer-contact-item">
+                  <i class="fa-solid fa-location-dot"></i>
+
+                  <span> Delhi, India </span>
+                </div>
+
+                <div class="footer-contact-item">
+                  <i class="fa-solid fa-clock"></i>
+
+                  <span>
+                    Monday - Saturday
+                    <br />
+                    9:00 AM - 7:00 PM
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Footer Bottom (Same) -->
+      <!-- FOOTER BOTTOM -->
+
       <div class="footer-bottom">
-        <div class="container footer-bottom-inner">
-          <p>© 2026 Loan Suvidha. All Rights Reserved.</p>
-          <p>Follow your dream.</p>
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p>© 2026 Loan Suvida. All Rights Reserved.</p>
+            </div>
+
+            <div class="col-md-6">
+              <div class="footer-bottom-links">
+                <a href="privacy-policy.html"> Privacy Policy </a>
+
+                <a href="terms-conditions.html"> Terms & Conditions </a>
+
+                <a href="disclaimer.html"> Disclaimer </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP -->
-    <a
-      href="https://wa.me/919999999999"
-      class="whatsapp-btn"
-      target="_blank"
-      aria-label="Chat on WhatsApp"
-    >
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <!-- FLOATING BUTTONS-->
 
-    <!-- BACK TO TOP -->
+    <div class="floating-buttons">
+      <a
+        href="tel:+919999052161"
+        class="float-call"
+        aria-label="Call Loan Suvida"
+      >
+        <i class="fa-solid fa-phone"></i>
+      </a>
 
-    <button class="back-to-top" id="backToTop">
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
+      <a
+        href="https://wa.me/919999052161"
+        class="float-whatsapp"
+        target="_blank"
+        aria-label="WhatsApp Loan Suvida"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
 
-    <!-- Main JS -->
+    <!-- BOOTSTRAP JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--  JAVASCRIPT -->
     <script src="js/script.js"></script>
 
     <!-- Apply Page JS -->
     <script src="js/apply-now.js"></script>
-    
   </body>
 </html>
