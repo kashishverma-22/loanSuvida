@@ -205,6 +205,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  color: #fff;
 }
 
 .trust-item {
@@ -228,7 +229,9 @@
   color: #f7941d;
   font-size: 14px;
 }
-
+.trust-item span {
+  color: #fff;
+}
 /* =========================================================
    FORM CARD
 ========================================================= */

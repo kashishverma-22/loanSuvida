@@ -25,6 +25,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -32,6 +34,7 @@ body {
   color: var(--text);
   background: #fff;
   overflow-x: hidden;
+  width: 100%;
 }
 
 a {
@@ -474,13 +477,17 @@ img {
 
   padding: 90px 0 70px;
 
-  background-image: url("../image/hero-banner.jfif");
+  background-image: url("../image/hero-banner.jpeg");
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: scroll;
 
   overflow: hidden;
+
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Dark Overlay */
@@ -679,6 +686,7 @@ img {
 
   transform: translateY(-3px);
 }
+
 
 /* =====================================================
    TRUST ITEMS
@@ -4405,9 +4413,11 @@ img {
 
   .hero-section {
 
-    padding: 55px 0 70px;
+    padding: 45px 0 60px;
 
-    background-position: center;
+    background-position: center top;
+
+    min-height: 520px;
   }
 
   .hero-content {
@@ -4727,9 +4737,11 @@ img {
 
   .hero-section {
 
-    padding: 48px 0 60px;
+    padding: 40px 0 50px;
 
-    background-position: center;
+    background-position: 62% top;
+
+    min-height: 480px;
   }
 
   .hero-content h1 {
@@ -4957,6 +4969,11 @@ img {
   /* -----------------------------------------
        HERO
        ----------------------------------------- */
+
+  .hero-section {
+    background-position: 65% top;
+    min-height: 450px;
+  }
 
   .hero-content h1 {
     font-size: 27px;
