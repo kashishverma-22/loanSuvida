@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Machinery Loan |Loan Suvida</title>
+    <title>Home Loan |Loan Suvida</title>
 
     <meta
       name="description"
-      content="Explore flexible machinery loan solutions with Loan Suvida. Get assistance for new and used machinery loans with simple documentation and expert guidance."
+      content="Explore flexible home loan solutions with Loan Suvida. Get assistance for new and used home loans with simple documentation and expert guidance."
     />
 
     <!-- Google Font -->
@@ -35,8 +35,8 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Car Loan CSS -->
-    <link rel="stylesheet" href="css/machinery-loan.css" />
+    <!-- Home Loan CSS -->
+    <link rel="stylesheet" href="css/home-loan.css" />
   </head>
 
   <body>
@@ -290,15 +290,15 @@
 
               <ul class="dropdown-menu">
                 <li>
-                  <a href="car-loan.html" > Car Loan </a>
+                  <a href="car-loan.html"> Car Loan </a>
                 </li>
 
                 <li>
-                  <a href="machinery-loan.html" class="active"> Machinery Loan </a>
+                  <a href="machinery-loan.html"> Machinery Loan </a>
                 </li>
 
                 <li>
-                  <a href="home-loan.html"> Home Loan </a>
+                  <a href="home-loan.html" class="active"> Home Loan </a>
                 </li>
 
                 <li>
@@ -332,43 +332,45 @@
       </div>
     </header>
 
-    <main class="machinery-loan-page">
-      <!-- ================= HERO ================= -->
-      <section class="machinery-hero">
-        <div class="machinery-hero-overlay"></div>
+    <main class="home-loan-page">
+      <!-- =====================================================
+       HOME LOAN HERO
+       ===================================================== -->
+      <section class="home-hero">
+        <div class="home-hero-overlay"></div>
 
         <div class="container">
-          <div class="machinery-hero-grid">
-            <div class="machinery-hero-content">
-              <span class="machinery-badge">
-                <i class="fa-solid fa-gears"></i>
-                Machinery Loan
+          <div class="home-hero-grid">
+            <!-- LEFT CONTENT -->
+            <div class="home-hero-content">
+              <span class="home-badge">
+                <i class="fa-solid fa-house"></i>
+                Home Loan
               </span>
 
               <h1>
-                Power Your Business With
-                <span>Better Machinery</span>
+                Make Your Dream
+                <span>Home A Reality</span>
               </h1>
 
               <p>
-                Get the financial support you need to purchase, upgrade or
-                expand your business machinery and equipment with suitable loan
-                options.
+                Get the financial support you need to purchase, construct or
+                renovate your dream home with suitable home loan options.
               </p>
 
-              <div class="machinery-hero-buttons">
-                <a href="apply-now.html" class="machinery-btn-primary">
+              <div class="home-hero-buttons">
+                <a href="apply-now.html" class="home-btn-primary">
                   Apply Now
                   <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
-                <a href="contact.html" class="machinery-btn-outline">
+                <a href="contact.html" class="home-btn-outline">
                   Talk To An Expert
                   <i class="fa-solid fa-headset"></i>
                 </a>
               </div>
 
-              <div class="machinery-hero-points">
+              <div class="home-hero-points">
                 <div>
                   <i class="fa-solid fa-circle-check"></i>
                   Flexible Loan Options
@@ -376,202 +378,228 @@
 
                 <div>
                   <i class="fa-solid fa-circle-check"></i>
-                  Quick Assistance
+                  Simple Documentation
                 </div>
 
                 <div>
                   <i class="fa-solid fa-circle-check"></i>
-                  Simple Documentation
+                  Expert Assistance
                 </div>
               </div>
             </div>
 
-            <!-- Hero Form -->
-            <div class="machinery-form-card">
-              <div class="machinery-form-icon">
-                <i class="fa-solid fa-screwdriver-wrench"></i>
+            <!-- RIGHT FORM -->
+            <div class="home-form-card">
+              <div class="home-form-icon">
+                <i class="fa-solid fa-house"></i>
               </div>
 
-              <h2>Check Machinery Loan Options</h2>
+              <h2>Check Home Loan Options</h2>
+
               <p>
                 Share your details and our team will help you explore suitable
                 financing options.
               </p>
 
-              <form id="machineryLoanForm">
-                <div class="machinery-input-group">
-                  <label for="machineryName">Full Name</label>
-                  <div class="machinery-input">
+              <form id="homeLoanForm" novalidate>
+                <!-- NAME -->
+                <div class="home-input-group">
+                  <label for="homeName"> Full Name </label>
+
+                  <div class="home-input">
                     <i class="fa-regular fa-user"></i>
+
                     <input
                       type="text"
-                      id="machineryName"
+                      id="homeName"
                       name="name"
                       placeholder="Enter your name"
+                      autocomplete="name"
                     />
                   </div>
-                  <small
-                    class="machinery-error"
-                    id="machineryNameError"
-                  ></small>
+
+                  <span class="home-error" id="homeNameError"></span>
                 </div>
 
-                <div class="machinery-input-group">
-                  <label for="machineryMobile">Mobile Number</label>
-                  <div class="machinery-input">
+                <!-- MOBILE -->
+                <div class="home-input-group">
+                  <label for="homeMobile"> Mobile Number </label>
+
+                  <div class="home-input">
                     <i class="fa-solid fa-phone"></i>
+
                     <input
                       type="tel"
-                      id="machineryMobile"
+                      id="homeMobile"
                       name="mobile"
                       placeholder="Enter 10 digit mobile number"
                       maxlength="10"
+                      inputmode="numeric"
+                      autocomplete="tel"
                     />
                   </div>
-                  <small
-                    class="machinery-error"
-                    id="machineryMobileError"
-                  ></small>
+
+                  <span class="home-error" id="homeMobileError"></span>
                 </div>
 
-                <div class="machinery-form-row">
-                  <div class="machinery-input-group">
-                    <label for="machineryType">Machinery Type</label>
-                    <div class="machinery-input">
-                      <i class="fa-solid fa-gears"></i>
-                      <select id="machineryType" name="machineryType">
-                        <option value="">Select Machinery</option>
-                        <option value="Manufacturing Machinery">
-                          Manufacturing Machinery
+                <!-- LOAN TYPE + AMOUNT -->
+                <div class="home-form-row">
+                  <div class="home-input-group">
+                    <label for="homeLoanType"> Home Loan Type </label>
+
+                    <div class="home-input">
+                      <i class="fa-solid fa-house-chimney"></i>
+
+                      <select id="homeLoanType" name="loanType">
+                        <option value="">Select Loan Type</option>
+
+                        <option value="Home Purchase">Home Purchase</option>
+
+                        <option value="Home Construction">
+                          Home Construction
                         </option>
-                        <option value="Construction Machinery">
-                          Construction Machinery
+
+                        <option value="Home Renovation">Home Renovation</option>
+
+                        <option value="Home Extension">Home Extension</option>
+
+                        <option value="Balance Transfer">
+                          Home Loan Balance Transfer
                         </option>
-                        <option value="Industrial Machinery">
-                          Industrial Machinery
-                        </option>
-                        <option value="Printing Machinery">
-                          Printing Machinery
-                        </option>
-                        <option value="Medical Equipment">
-                          Medical Equipment
-                        </option>
-                        <option value="Other Machinery">Other Machinery</option>
                       </select>
                     </div>
+
+                    <span class="home-error" id="homeLoanTypeError"></span>
                   </div>
 
-                  <div class="machinery-input-group">
-                    <label for="machineryAmount">Required Amount</label>
-                    <div class="machinery-input">
+                  <div class="home-input-group">
+                    <label for="homeAmount"> Required Amount </label>
+
+                    <div class="home-input">
                       <i class="fa-solid fa-indian-rupee-sign"></i>
+
                       <input
                         type="text"
-                        id="machineryAmount"
+                        id="homeAmount"
                         name="amount"
                         placeholder="Loan amount"
+                        inputmode="numeric"
                       />
                     </div>
+
+                    <span class="home-error" id="homeAmountError"></span>
                   </div>
                 </div>
 
-                <button type="submit" class="machinery-form-btn">
+                <!-- SUBMIT -->
+                <button type="submit" class="home-form-btn">
                   Check Eligibility
                   <i class="fa-solid fa-arrow-right"></i>
                 </button>
 
-                <div class="machinery-form-success" id="machineryFormSuccess">
+                <!-- SUCCESS -->
+                <div class="home-form-success" id="homeFormSuccess">
                   <i class="fa-solid fa-circle-check"></i>
                   Thank you! Our team will contact you shortly.
                 </div>
-              </form>
 
-              <div class="machinery-form-note">
-                <i class="fa-solid fa-shield-halved"></i>
-                Your information is kept secure and confidential.
-              </div>
+                <!-- NOTE -->
+                <div class="home-form-note">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  Your information is kept secure and confidential.
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ================= OVERVIEW ================= -->
-      <section class="machinery-overview section-space">
+      <!-- =====================================================
+       HOME LOAN OVERVIEW
+       ===================================================== -->
+      <section class="home-overview home-section-space">
         <div class="container">
-          <div class="machinery-section-heading">
-            <span>Machinery Financing</span>
-            <h2>Grow Your Business With The Right Equipment</h2>
-            <p>
-              Modern machinery can improve productivity, increase production
-              capacity and help your business stay competitive. A machinery loan
-              can help you finance the purchase of equipment without putting
-              excessive pressure on your working capital.
-            </p>
-          </div>
+          <div class="home-overview-grid">
+            <!-- CONTENT -->
+            <div class="home-overview-content">
+              <div class="home-section-heading">
+                <span>HOME LOAN OVERVIEW</span>
 
-          <div class="machinery-overview-grid">
-            <div class="machinery-overview-content">
-              <h3>Finance Machinery For Your Business Needs</h3>
+                <h2>Finance Your Dream Home With Confidence</h2>
 
-              <p>
-                Whether you are starting a new unit, expanding your existing
-                business or replacing old equipment, suitable machinery
-                financing can provide the funds required for your business
-                needs.
-              </p>
+                <p>
+                  Buying a home is one of the biggest financial decisions you
+                  make. A suitable home loan can help you manage the cost of
+                  your dream property through structured repayment options.
+                </p>
+              </div>
 
               <p>
-                Loan Suvida helps you connect with suitable lending partners and
-                understand the available financing options based on your
-                requirements and eligibility.
+                Whether you are planning to purchase a ready-to-move property,
+                construct a house, renovate your existing home or transfer an
+                existing home loan, Loan Suvida can help you explore suitable
+                financing options.
               </p>
 
-              <div class="machinery-check-list">
+              <div class="home-check-list">
                 <div>
                   <i class="fa-solid fa-check"></i>
-                  Purchase new machinery
+                  Home Purchase
                 </div>
 
                 <div>
                   <i class="fa-solid fa-check"></i>
-                  Upgrade existing equipment
+                  Home Construction
                 </div>
 
                 <div>
                   <i class="fa-solid fa-check"></i>
-                  Expand production capacity
+                  Home Renovation
                 </div>
 
                 <div>
                   <i class="fa-solid fa-check"></i>
-                  Support business expansion
+                  Loan Balance Transfer
+                </div>
+
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  Property Extension
+                </div>
+
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  Expert Loan Assistance
                 </div>
               </div>
 
-              <a href="apply-now.html" class="machinery-text-btn">
-                Explore Loan Options
+              <a href="apply-now.html" class="home-text-btn">
+                Explore Home Loan Options
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
 
-            <div class="machinery-overview-visual">
-              <div class="machinery-visual-circle">
-                <i class="fa-solid fa-industry"></i>
+            <!-- VISUAL -->
+            <div class="home-overview-visual">
+              <div class="home-visual-circle">
+                <i class="fa-solid fa-house-chimney"></i>
               </div>
 
-              <div class="machinery-floating-card card-one">
-                <i class="fa-solid fa-gears"></i>
+              <div class="home-floating-card home-card-one">
+                <i class="fa-solid fa-key"></i>
+
                 <div>
-                  <strong>Business Equipment</strong>
-                  <span>Financing Support</span>
+                  <strong>Dream Home</strong>
+                  <span>Within Your Reach</span>
                 </div>
               </div>
 
-              <div class="machinery-floating-card card-two">
-                <i class="fa-solid fa-chart-line"></i>
+              <div class="home-floating-card home-card-two">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+
                 <div>
-                  <strong>Business Growth</strong>
-                  <span>Upgrade & Expand</span>
+                  <strong>Financial Support</strong>
+                  <span>Suitable Loan Options</span>
                 </div>
               </div>
             </div>
@@ -579,598 +607,390 @@
         </div>
       </section>
 
-      <!-- ================= BENEFITS ================= -->
-      <section class="machinery-benefits section-space">
+      <!-- =====================================================
+       HOME LOAN BENEFITS
+       ===================================================== -->
+      <section class="home-benefits home-section-space">
         <div class="container">
-          <div class="machinery-section-heading center">
-            <span>Why Consider Machinery Financing?</span>
-            <h2>Benefits That Support Your Business</h2>
+          <div class="home-section-heading center">
+            <span>WHY CONSIDER A HOME LOAN</span>
+
+            <h2>Benefits That Make Home Financing Easier</h2>
+
             <p>
-              Choose financing that helps you acquire the equipment your
-              business needs while managing your available funds.
+              Explore financing solutions designed to support different home
+              ownership requirements.
             </p>
           </div>
 
-          <div class="machinery-benefits-grid">
-            <div class="machinery-benefit-card">
-              <div class="machinery-benefit-icon">
-                <i class="fa-solid fa-gears"></i>
+          <div class="home-benefits-grid">
+            <div class="home-benefit-card">
+              <div class="home-benefit-icon">
+                <i class="fa-solid fa-house"></i>
               </div>
-              <h3>Purchase Equipment</h3>
+
+              <h3>Home Purchase</h3>
+
               <p>
-                Finance machinery required for manufacturing, construction,
-                industrial and other business activities.
+                Explore suitable financing options for purchasing your new home
+                or residential property.
               </p>
             </div>
 
-            <div class="machinery-benefit-card">
-              <div class="machinery-benefit-icon">
-                <i class="fa-solid fa-arrow-up-right-dots"></i>
+            <div class="home-benefit-card">
+              <div class="home-benefit-icon">
+                <i class="fa-solid fa-building"></i>
               </div>
-              <h3>Expand Capacity</h3>
+
+              <h3>Home Construction</h3>
+
               <p>
-                Add new equipment to increase production capacity and support
-                growing business requirements.
+                Financial support for eligible home construction requirements
+                based on lender terms.
               </p>
             </div>
 
-            <div class="machinery-benefit-card">
-              <div class="machinery-benefit-icon">
-                <i class="fa-solid fa-money-bill-transfer"></i>
-              </div>
-              <h3>Manage Cash Flow</h3>
-              <p>
-                Financing can help you manage equipment purchases while keeping
-                funds available for day-to-day business needs.
-              </p>
-            </div>
-
-            <div class="machinery-benefit-card">
-              <div class="machinery-benefit-icon">
-                <i class="fa-solid fa-bolt"></i>
-              </div>
-              <h3>Quick Assistance</h3>
-              <p>
-                Get assistance throughout the application and documentation
-                process from the Loan Suvida team.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= MACHINERY TYPES ================= -->
-      <section class="machinery-types section-space">
-        <div class="container">
-          <div class="machinery-section-heading center">
-            <span>Equipment Categories</span>
-            <h2>Machinery You Can Finance</h2>
-            <p>
-              Financing requirements can vary depending on the type and purpose
-              of the machinery.
-            </p>
-          </div>
-
-          <div class="machinery-types-grid">
-            <div class="machinery-type-card">
-              <div class="machinery-type-icon">
-                <i class="fa-solid fa-industry"></i>
-              </div>
-              <h3>Manufacturing Machinery</h3>
-              <p>Equipment used for manufacturing and production activities.</p>
-              <a href="apply-now.html">
-                Know More <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-
-            <div class="machinery-type-card">
-              <div class="machinery-type-icon">
-                <i class="fa-solid fa-helmet-safety"></i>
-              </div>
-              <h3>Construction Machinery</h3>
-              <p>Machinery and equipment used across construction projects.</p>
-              <a href="apply-now.html">
-                Know More <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-
-            <div class="machinery-type-card">
-              <div class="machinery-type-icon">
-                <i class="fa-solid fa-print"></i>
-              </div>
-              <h3>Printing Machinery</h3>
-              <p>Equipment required for printing and publishing businesses.</p>
-              <a href="apply-now.html">
-                Know More <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-
-            <div class="machinery-type-card">
-              <div class="machinery-type-icon">
-                <i class="fa-solid fa-flask"></i>
-              </div>
-              <h3>Industrial Equipment</h3>
-              <p>
-                Equipment used for various industrial and commercial
-                applications.
-              </p>
-              <a href="apply-now.html">
-                Know More <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-
-            <div class="machinery-type-card">
-              <div class="machinery-type-icon">
-                <i class="fa-solid fa-kit-medical"></i>
-              </div>
-              <h3>Medical Equipment</h3>
-              <p>
-                Financing support for eligible medical and healthcare equipment.
-              </p>
-              <a href="apply-now.html">
-                Know More <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-
-            <div class="machinery-type-card">
-              <div class="machinery-type-icon">
+            <div class="home-benefit-card">
+              <div class="home-benefit-icon">
                 <i class="fa-solid fa-screwdriver-wrench"></i>
               </div>
-              <h3>Other Machinery</h3>
+
+              <h3>Home Renovation</h3>
+
               <p>
-                Explore financing options for other eligible business equipment.
+                Upgrade or improve your existing home with suitable financing
+                solutions.
               </p>
+            </div>
+
+            <div class="home-benefit-card">
+              <div class="home-benefit-icon">
+                <i class="fa-solid fa-right-left"></i>
+              </div>
+
+              <h3>Balance Transfer</h3>
+
+              <p>
+                Explore options to transfer an existing home loan subject to
+                lender eligibility.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+       HOME LOAN TYPES
+       ===================================================== -->
+      <section class="home-types home-section-space">
+        <div class="container">
+          <div class="home-section-heading center">
+            <span>HOME FINANCING OPTIONS</span>
+
+            <h2>Choose The Right Home Loan Option</h2>
+
+            <p>
+              Different home financing requirements may need different loan
+              solutions.
+            </p>
+          </div>
+
+          <div class="home-types-grid">
+            <!-- CARD 1 -->
+            <div class="home-type-card">
+              <div class="home-type-icon">
+                <i class="fa-solid fa-house"></i>
+              </div>
+
+              <h3>Home Purchase Loan</h3>
+
+              <p>
+                Financing support for purchasing a new or existing residential
+                property.
+              </p>
+
               <a href="apply-now.html">
-                Know More <i class="fa-solid fa-arrow-right"></i>
+                Know More
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="home-type-card">
+              <div class="home-type-icon">
+                <i class="fa-solid fa-building-circle-check"></i>
+              </div>
+
+              <h3>Home Construction Loan</h3>
+
+              <p>
+                Suitable financing options for eligible customers planning to
+                construct their own home.
+              </p>
+
+              <a href="apply-now.html">
+                Know More
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="home-type-card">
+              <div class="home-type-icon">
+                <i class="fa-solid fa-paint-roller"></i>
+              </div>
+
+              <h3>Home Improvement Loan</h3>
+
+              <p>
+                Explore financing support for eligible renovation and
+                improvement requirements.
+              </p>
+
+              <a href="apply-now.html">
+                Know More
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="home-type-card">
+              <div class="home-type-icon">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+              </div>
+
+              <h3>Home Loan Transfer</h3>
+
+              <p>
+                Explore balance transfer options for an existing home loan based
+                on lender criteria.
+              </p>
+
+              <a href="apply-now.html">
+                Know More
+                <i class="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ================= ELIGIBILITY ================= -->
-      <section class="machinery-eligibility section-space">
+      <!-- =====================================================
+       ELIGIBILITY
+       ===================================================== -->
+      <section class="home-eligibility home-section-space">
         <div class="container">
-          <div class="machinery-eligibility-grid">
-            <div class="machinery-eligibility-content">
-              <div class="machinery-section-heading">
-                <span>Eligibility</span>
-                <h2>Who Can Apply For A Machinery Loan?</h2>
+          <div class="home-eligibility-grid">
+            <div>
+              <div class="home-section-heading">
+                <span>ELIGIBILITY</span>
+
+                <h2>Who Can Explore Home Loan Options?</h2>
+
                 <p>
-                  Eligibility criteria may vary between lending partners. Your
-                  business profile, financial information and machinery
-                  requirement may be considered during evaluation.
+                  Home loan eligibility is generally evaluated based on income,
+                  repayment capacity, credit profile, property details and
+                  lender policies.
                 </p>
               </div>
 
-              <div class="machinery-eligibility-list">
+              <div class="home-eligibility-list">
                 <div>
                   <i class="fa-solid fa-circle-check"></i>
-                  <span>Business owners and eligible enterprises</span>
+                  Salaried individuals
                 </div>
 
                 <div>
                   <i class="fa-solid fa-circle-check"></i>
-                  <span>Established business operations</span>
+                  Self-employed individuals
                 </div>
 
                 <div>
                   <i class="fa-solid fa-circle-check"></i>
-                  <span>Suitable business and financial profile</span>
+                  Professionals and business owners
                 </div>
 
                 <div>
                   <i class="fa-solid fa-circle-check"></i>
-                  <span>Eligible machinery or equipment requirement</span>
+                  Applicants with eligible property
                 </div>
 
                 <div>
                   <i class="fa-solid fa-circle-check"></i>
-                  <span>Required financial and business documents</span>
+                  Applicants meeting lender criteria
                 </div>
               </div>
             </div>
 
-            <div class="machinery-eligibility-card">
-              <div class="machinery-eligibility-card-icon">
+            <div class="home-eligibility-card">
+              <div class="home-eligibility-card-icon">
                 <i class="fa-solid fa-clipboard-check"></i>
               </div>
 
-              <h3>Want To Check Your Eligibility?</h3>
+              <h3>Check Your Eligibility</h3>
 
               <p>
-                Share your basic details and let our team help you understand
-                suitable machinery loan options.
+                Share your basic details and our team can help you understand
+                the available loan options.
               </p>
 
-              <a href="apply-now.html" class="machinery-btn-primary">
-                Check Eligibility
+              <a href="apply-now.html" class="home-btn-primary">
+                Check Now
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
 
               <small>
-                Final eligibility, approval, interest rate and loan terms are
-                decided by the respective lending partner.
+                Final eligibility, approval and loan terms are subject to the
+                lending partner's policies.
               </small>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ================= DOCUMENTS ================= -->
-      <section class="machinery-documents section-space">
+      <!-- =====================================================
+       DOCUMENTS
+       ===================================================== -->
+      <section class="home-documents home-section-space">
         <div class="container">
-          <div class="machinery-section-heading center">
-            <span>Documentation</span>
-            <h2>Documents Generally Required</h2>
+          <div class="home-section-heading center">
+            <span>DOCUMENTATION</span>
+
+            <h2>Documents You May Need</h2>
+
             <p>
-              The exact documents may differ depending on the applicant profile
+              Documentation requirements can vary depending on applicant profile
               and lending partner.
             </p>
           </div>
 
-          <div class="machinery-documents-grid">
-            <div class="machinery-document-card">
-              <div class="machinery-document-icon">
+          <div class="home-documents-grid">
+            <div class="home-document-card">
+              <div class="home-document-icon">
                 <i class="fa-solid fa-id-card"></i>
               </div>
+
               <h3>Identity Proof</h3>
-              <p>Valid identity and address proof as applicable.</p>
-            </div>
 
-            <div class="machinery-document-card">
-              <div class="machinery-document-icon">
-                <i class="fa-solid fa-building"></i>
-              </div>
-              <h3>Business Proof</h3>
-              <p>Relevant business registration or ownership documents.</p>
-            </div>
-
-            <div class="machinery-document-card">
-              <div class="machinery-document-icon">
-                <i class="fa-solid fa-file-invoice-dollar"></i>
-              </div>
-              <h3>Financial Documents</h3>
               <p>
-                Financial statements, bank statements or other applicable
-                records.
+                Valid identity and address proof as required by the lending
+                partner.
               </p>
             </div>
 
-            <div class="machinery-document-card">
-              <div class="machinery-document-icon">
-                <i class="fa-solid fa-file-invoice"></i>
+            <div class="home-document-card">
+              <div class="home-document-icon">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
               </div>
-              <h3>Machinery Details</h3>
+
+              <h3>Income Proof</h3>
+
               <p>
-                Quotation, invoice or details of the machinery being financed.
+                Salary or income-related documents may be required for
+                eligibility assessment.
+              </p>
+            </div>
+
+            <div class="home-document-card">
+              <div class="home-document-icon">
+                <i class="fa-solid fa-building"></i>
+              </div>
+
+              <h3>Property Documents</h3>
+
+              <p>
+                Relevant property documents may be required as part of the loan
+                process.
+              </p>
+            </div>
+
+            <div class="home-document-card">
+              <div class="home-document-icon">
+                <i class="fa-solid fa-file-lines"></i>
+              </div>
+
+              <h3>Bank Statements</h3>
+
+              <p>
+                Recent bank statements or other financial documents may be
+                requested.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ================= PROCESS ================= -->
-      <section class="machinery-process section-space">
+      <!-- =====================================================
+       HOME LOAN PROCESS
+       ===================================================== -->
+      <section class="home-process home-section-space">
         <div class="container">
-          <div class="machinery-section-heading center">
-            <span>Simple Process</span>
-            <h2>How To Apply For A Machinery Loan?</h2>
+          <div class="home-section-heading center">
+            <span>HOW IT WORKS</span>
+
+            <h2>Simple Home Loan Process</h2>
+
             <p>
-              Get assistance through the application journey with a simple,
-              step-by-step process.
+              Our team helps you navigate the loan journey from enquiry to final
+              lender decision.
             </p>
           </div>
 
-          <div class="machinery-process-grid">
-            <div class="machinery-process-item">
-              <div class="machinery-process-number">01</div>
+          <div class="home-process-grid">
+            <div class="home-process-item">
+              <div class="home-process-number">01</div>
+
               <div>
-                <h3>Submit Your Details</h3>
-                <p>Share your basic personal and business information.</p>
+                <h3>Apply Online</h3>
+
+                <p>Submit your basic loan requirement and contact details.</p>
               </div>
             </div>
 
-            <div class="machinery-process-item">
-              <div class="machinery-process-number">02</div>
+            <div class="home-process-item">
+              <div class="home-process-number">02</div>
+
               <div>
-                <h3>Discuss Requirement</h3>
-                <p>Tell us about the machinery and financing requirement.</p>
+                <h3>Share Documents</h3>
+
+                <p>Provide the documents required for initial assessment.</p>
               </div>
             </div>
 
-            <div class="machinery-process-item">
-              <div class="machinery-process-number">03</div>
-              <div>
-                <h3>Document Verification</h3>
-                <p>Submit the applicable documents for assessment.</p>
-              </div>
-            </div>
+            <div class="home-process-item">
+              <div class="home-process-number">03</div>
 
-            <div class="machinery-process-item">
-              <div class="machinery-process-number">04</div>
               <div>
-                <h3>Lender Evaluation</h3>
-                <p>The lending partner evaluates the application.</p>
-              </div>
-            </div>
+                <h3>Verification</h3>
 
-            <div class="machinery-process-item">
-              <div class="machinery-process-number">05</div>
-              <div>
-                <h3>Loan Disbursal</h3>
                 <p>
-                  Upon approval and completion of formalities, the loan is
-                  disbursed as per lender terms.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= EMI CALCULATOR ================= -->
-      <section class="machinery-emi-section section-space">
-        <div class="container">
-          <div class="machinery-emi-grid">
-            <div class="machinery-emi-content">
-              <span>Plan Your Repayment</span>
-              <h2>Machinery Loan EMI Calculator</h2>
-
-              <p>
-                Use this calculator to get an indicative estimate of your
-                monthly EMI based on the loan amount, interest rate and tenure.
-              </p>
-
-              <div class="machinery-emi-points">
-                <div>
-                  <i class="fa-solid fa-check"></i>
-                  Estimate your monthly repayment
-                </div>
-
-                <div>
-                  <i class="fa-solid fa-check"></i>
-                  Compare different loan amounts
-                </div>
-
-                <div>
-                  <i class="fa-solid fa-check"></i>
-                  Plan your business cash flow
-                </div>
-              </div>
-            </div>
-
-            <div class="machinery-emi-calculator">
-              <h3>Calculate Your EMI</h3>
-
-              <div class="machinery-range-group">
-                <div class="machinery-range-label">
-                  <label for="machineryLoanAmount">Loan Amount</label>
-                  <strong>
-                    ₹<span id="machineryLoanAmountValue">1000000</span>
-                  </strong>
-                </div>
-
-                <input
-                  type="range"
-                  id="machineryLoanAmount"
-                  min="100000"
-                  max="5000000"
-                  step="50000"
-                  value="1000000"
-                />
-              </div>
-
-              <div class="machinery-range-group">
-                <div class="machinery-range-label">
-                  <label for="machineryInterestRate">Interest Rate</label>
-                  <strong>
-                    <span id="machineryInterestValue">12</span>%
-                  </strong>
-                </div>
-
-                <input
-                  type="range"
-                  id="machineryInterestRate"
-                  min="6"
-                  max="24"
-                  step="0.5"
-                  value="12"
-                />
-              </div>
-
-              <div class="machinery-range-group">
-                <div class="machinery-range-label">
-                  <label for="machineryTenure">Tenure</label>
-                  <strong>
-                    <span id="machineryTenureValue">5</span> Years
-                  </strong>
-                </div>
-
-                <input
-                  type="range"
-                  id="machineryTenure"
-                  min="1"
-                  max="10"
-                  step="1"
-                  value="5"
-                />
-              </div>
-
-              <div class="machinery-emi-result">
-                <div>
-                  <span>Monthly EMI</span>
-                  <strong id="machineryMonthlyEmi">₹22,244</strong>
-                </div>
-
-                <div>
-                  <span>Total Interest</span>
-                  <strong id="machineryTotalInterest">₹3,34,640</strong>
-                </div>
-
-                <div>
-                  <span>Total Amount</span>
-                  <strong id="machineryTotalAmount">₹13,34,640</strong>
-                </div>
-              </div>
-
-              <a href="apply-now.html" class="machinery-btn-primary">
-                Apply For Loan
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= WHY LOAN SUVIDA ================= -->
-      <section class="machinery-why section-space">
-        <div class="container">
-          <div class="machinery-section-heading center">
-            <span>Why Loan Suvida?</span>
-            <h2>Support At Every Step Of Your Loan Journey</h2>
-          </div>
-
-          <div class="machinery-why-grid">
-            <div class="machinery-why-card">
-              <div class="machinery-why-icon">
-                <i class="fa-solid fa-handshake"></i>
-              </div>
-              <h3>Expert Assistance</h3>
-              <p>
-                Get assistance in understanding loan options and application
-                requirements.
-              </p>
-            </div>
-
-            <div class="machinery-why-card">
-              <div class="machinery-why-icon">
-                <i class="fa-solid fa-list-check"></i>
-              </div>
-              <h3>Simple Process</h3>
-              <p>
-                A straightforward process designed to make your loan journey
-                easier.
-              </p>
-            </div>
-
-            <div class="machinery-why-card">
-              <div class="machinery-why-icon">
-                <i class="fa-solid fa-file-circle-check"></i>
-              </div>
-              <h3>Documentation Support</h3>
-              <p>
-                Understand the documents and information required for your
-                application.
-              </p>
-            </div>
-
-            <div class="machinery-why-card">
-              <div class="machinery-why-icon">
-                <i class="fa-solid fa-headset"></i>
-              </div>
-              <h3>End-to-End Support</h3>
-              <p>
-                Our team can assist you throughout the loan application journey.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= FAQ ================= -->
-      <section class="machinery-faq section-space">
-        <div class="container">
-          <div class="machinery-section-heading center">
-            <span>FAQs</span>
-            <h2>Machinery Loan Frequently Asked Questions</h2>
-          </div>
-
-          <div class="machinery-faq-list">
-            <div class="machinery-faq-item">
-              <button type="button" class="machinery-faq-question">
-                What is a machinery loan?
-                <i class="fa-solid fa-plus"></i>
-              </button>
-
-              <div class="machinery-faq-answer">
-                <p>
-                  A machinery loan is a financing option that may help eligible
-                  businesses purchase, upgrade or acquire machinery and
-                  equipment. Terms and eligibility depend on the lending
+                  Your application and documents may be reviewed by the lending
                   partner.
                 </p>
               </div>
             </div>
 
-            <div class="machinery-faq-item">
-              <button type="button" class="machinery-faq-question">
-                Who can apply for a machinery loan?
-                <i class="fa-solid fa-plus"></i>
-              </button>
+            <div class="home-process-item">
+              <div class="home-process-number">04</div>
 
-              <div class="machinery-faq-answer">
+              <div>
+                <h3>Loan Decision</h3>
+
                 <p>
-                  Eligible business owners and enterprises may apply, subject to
-                  the eligibility criteria of the respective lending partner.
+                  The lender evaluates eligibility and applicable loan terms.
                 </p>
               </div>
             </div>
 
-            <div class="machinery-faq-item">
-              <button type="button" class="machinery-faq-question">
-                What documents are required?
-                <i class="fa-solid fa-plus"></i>
-              </button>
+            <div class="home-process-item">
+              <div class="home-process-number">05</div>
 
-              <div class="machinery-faq-answer">
+              <div>
+                <h3>Disbursal</h3>
+
                 <p>
-                  Depending on the applicant and lender, documents may include
-                  identity proof, business proof, financial records, bank
-                  statements and machinery quotations.
-                </p>
-              </div>
-            </div>
-
-            <div class="machinery-faq-item">
-              <button type="button" class="machinery-faq-question">
-                Can I finance new machinery?
-                <i class="fa-solid fa-plus"></i>
-              </button>
-
-              <div class="machinery-faq-answer">
-                <p>
-                  Eligible new machinery may be financed depending on the
-                  lending partner's policies and the applicant's profile.
-                </p>
-              </div>
-            </div>
-
-            <div class="machinery-faq-item">
-              <button type="button" class="machinery-faq-question">
-                Can machinery financing be used for business expansion?
-                <i class="fa-solid fa-plus"></i>
-              </button>
-
-              <div class="machinery-faq-answer">
-                <p>
-                  Yes, eligible financing options may be used for equipment
-                  required for business expansion, subject to lender terms.
-                </p>
-              </div>
-            </div>
-
-            <div class="machinery-faq-item">
-              <button type="button" class="machinery-faq-question">
-                How can I apply?
-                <i class="fa-solid fa-plus"></i>
-              </button>
-
-              <div class="machinery-faq-answer">
-                <p>
-                  You can submit your details through the Loan Suvida
-                  application form. Our team can then assist you with the next
-                  steps.
+                  Loan disbursal is completed according to the lender's approved
+                  terms.
                 </p>
               </div>
             </div>
@@ -1178,52 +998,371 @@
         </div>
       </section>
 
-      <!-- ================= FINAL CTA ================= -->
-      <section class="machinery-final-cta">
-        <div class="machinery-final-overlay"></div>
+      <!-- =====================================================
+       EMI CALCULATOR
+       ===================================================== -->
+      <section class="home-emi home-section-space">
+        <div class="container">
+          <div class="home-emi-grid">
+            <!-- LEFT -->
+            <div class="home-emi-content">
+              <span>HOME LOAN EMI CALCULATOR</span>
+
+              <h2>Plan Your Monthly Home Loan EMI</h2>
+
+              <p>
+                Use the calculator to get an indicative estimate of your monthly
+                EMI based on loan amount, interest rate and tenure.
+              </p>
+
+              <div class="home-emi-points">
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  Easy monthly EMI estimate
+                </div>
+
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  Adjust loan amount
+                </div>
+
+                <div>
+                  <i class="fa-solid fa-check"></i>
+                  Adjust interest rate and tenure
+                </div>
+              </div>
+            </div>
+
+            <!-- CALCULATOR -->
+            <div class="home-emi-calculator">
+              <h3>Home Loan EMI Calculator</h3>
+
+              <!-- LOAN AMOUNT -->
+              <div class="home-range-group">
+                <div class="home-range-label">
+                  <label for="homeLoanAmount"> Loan Amount </label>
+
+                  <strong>
+                    ₹<span id="homeLoanAmountValue"> 2500000 </span>
+                  </strong>
+                </div>
+
+                <input
+                  type="range"
+                  id="homeLoanAmount"
+                  min="100000"
+                  max="10000000"
+                  step="50000"
+                  value="2500000"
+                />
+              </div>
+
+              <!-- INTEREST -->
+              <div class="home-range-group">
+                <div class="home-range-label">
+                  <label for="homeInterestRate"> Interest Rate </label>
+
+                  <strong> <span id="homeInterestValue">8.5</span>% </strong>
+                </div>
+
+                <input
+                  type="range"
+                  id="homeInterestRate"
+                  min="5"
+                  max="20"
+                  step="0.1"
+                  value="8.5"
+                />
+              </div>
+
+              <!-- TENURE -->
+              <div class="home-range-group">
+                <div class="home-range-label">
+                  <label for="homeTenure"> Tenure </label>
+
+                  <strong> <span id="homeTenureValue">20</span> Years </strong>
+                </div>
+
+                <input
+                  type="range"
+                  id="homeTenure"
+                  min="1"
+                  max="30"
+                  step="1"
+                  value="20"
+                />
+              </div>
+
+              <!-- RESULT -->
+              <div class="home-emi-result">
+                <div>
+                  <span>Monthly EMI</span>
+
+                  <strong id="homeMonthlyEmi"> ₹21,696 </strong>
+                </div>
+
+                <div>
+                  <span>Total Interest</span>
+
+                  <strong id="homeTotalInterest"> ₹27,27,000 </strong>
+                </div>
+
+                <div>
+                  <span>Total Amount</span>
+
+                  <strong id="homeTotalAmount"> ₹52,27,000 </strong>
+                </div>
+              </div>
+
+              <a href="apply-now.html" class="home-btn-primary">
+                Apply For Home Loan
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+       WHY LOAN SUVIDA
+       ===================================================== -->
+      <section class="home-why home-section-space">
+        <div class="container">
+          <div class="home-section-heading center">
+            <span>WHY LOAN SUVIDA</span>
+
+            <h2>Why Choose Us For Your Home Loan Journey?</h2>
+
+            <p>
+              We help simplify the process of exploring suitable home loan
+              options.
+            </p>
+          </div>
+
+          <div class="home-why-grid">
+            <div class="home-why-card">
+              <div class="home-why-icon">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+
+              <h3>Expert Assistance</h3>
+
+              <p>
+                Get assistance throughout your loan enquiry and application
+                journey.
+              </p>
+            </div>
+
+            <div class="home-why-card">
+              <div class="home-why-icon">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+
+              <h3>Multiple Options</h3>
+
+              <p>
+                Explore suitable loan options based on your requirement and
+                profile.
+              </p>
+            </div>
+
+            <div class="home-why-card">
+              <div class="home-why-icon">
+                <i class="fa-solid fa-file-circle-check"></i>
+              </div>
+
+              <h3>Documentation Guidance</h3>
+
+              <p>
+                Understand the documentation required during the loan
+                application process.
+              </p>
+            </div>
+
+            <div class="home-why-card">
+              <div class="home-why-icon">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+
+              <h3>Quick Assistance</h3>
+
+              <p>
+                Our team can help you with your queries and loan requirement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+       FAQ
+       ===================================================== -->
+      <section class="home-faq home-section-space">
+        <div class="container">
+          <div class="home-section-heading center">
+            <span>FAQ</span>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p>Find answers to some common questions about home loans.</p>
+          </div>
+
+          <div class="home-faq-list">
+            <!-- FAQ 1 -->
+            <div class="home-faq-item">
+              <button type="button" class="home-faq-question">
+                <span> What is a home loan? </span>
+
+                <i class="fa-solid fa-plus"></i>
+              </button>
+
+              <div class="home-faq-answer">
+                <p>
+                  A home loan is financing provided by a lending institution for
+                  eligible purposes such as purchasing, constructing or
+                  improving a residential property.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="home-faq-item">
+              <button type="button" class="home-faq-question">
+                <span> Who can apply for a home loan? </span>
+
+                <i class="fa-solid fa-plus"></i>
+              </button>
+
+              <div class="home-faq-answer">
+                <p>
+                  Salaried individuals, self-employed individuals and
+                  professionals may be eligible depending on the lending
+                  partner's eligibility criteria.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="home-faq-item">
+              <button type="button" class="home-faq-question">
+                <span> What documents are generally required? </span>
+
+                <i class="fa-solid fa-plus"></i>
+              </button>
+
+              <div class="home-faq-answer">
+                <p>
+                  Depending on your profile, documents such as identity proof,
+                  address proof, income documents, bank statements and
+                  property-related documents may be required.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="home-faq-item">
+              <button type="button" class="home-faq-question">
+                <span> Can I use a home loan for renovation? </span>
+
+                <i class="fa-solid fa-plus"></i>
+              </button>
+
+              <div class="home-faq-answer">
+                <p>
+                  Suitable home improvement or renovation financing options may
+                  be available depending on the lending partner and your
+                  eligibility.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="home-faq-item">
+              <button type="button" class="home-faq-question">
+                <span> How is home loan EMI calculated? </span>
+
+                <i class="fa-solid fa-plus"></i>
+              </button>
+
+              <div class="home-faq-answer">
+                <p>
+                  EMI generally depends on the loan amount, applicable interest
+                  rate and repayment tenure. You can use the calculator above
+                  for an indicative estimate.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="home-faq-item">
+              <button type="button" class="home-faq-question">
+                <span> Is loan approval guaranteed after applying? </span>
+
+                <i class="fa-solid fa-plus"></i>
+              </button>
+
+              <div class="home-faq-answer">
+                <p>
+                  No. Loan approval is subject to the lending partner's
+                  eligibility criteria, verification, credit assessment and
+                  other applicable terms.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+       FINAL CTA
+       ===================================================== -->
+      <section class="home-final-cta">
+        <div class="home-final-overlay"></div>
 
         <div class="container">
-          <div class="machinery-final-content">
-            <span class="machinery-badge">
-              <i class="fa-solid fa-gears"></i>
-              Upgrade Your Business
+          <div class="home-final-content">
+            <span class="home-badge">
+              <i class="fa-solid fa-house"></i>
+              Your Dream Home Starts Here
             </span>
 
             <h2>
-              Ready To Finance Your
-              <span>Business Machinery?</span>
+              Ready To Explore Your
+              <span>Home Loan Options?</span>
             </h2>
 
             <p>
-              Take the next step towards upgrading your equipment and supporting
-              your business growth.
+              Share your requirement with Loan Suvida and get assistance in
+              exploring suitable financing options.
             </p>
 
-            <div class="machinery-final-buttons">
-              <a href="apply-now.html" class="machinery-btn-primary">
+            <div class="home-final-buttons">
+              <a href="apply-now.html" class="home-btn-primary">
                 Apply Now
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
 
-              <a href="contact.html" class="machinery-btn-outline">
-                Contact Us
+              <a href="tel:+919999052161" class="home-btn-outline">
                 <i class="fa-solid fa-phone"></i>
+                Talk To Us
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ================= DISCLAIMER ================= -->
-      <section class="machinery-disclaimer">
+      <!-- =====================================================
+       DISCLAIMER
+       ===================================================== -->
+      <section class="home-disclaimer">
         <div class="container">
           <p>
             <strong>Disclaimer:</strong>
-            Loan Suvida acts as a financial service facilitator/DSA and may
-            assist customers in connecting with lending partners. Loan approval,
-            loan amount, interest rate, tenure, processing fees and other terms
-            are subject to the respective lender's policies, eligibility
-            criteria and approval.
+            Loan Suvida is a financial services facilitator/DSA and does not
+            directly sanction loans. Final loan approval, interest rate, tenure,
+            amount, processing fees and other terms are determined by the
+            respective lending partner based on its policies and applicant
+            eligibility.
           </p>
         </div>
       </section>
@@ -1430,7 +1569,7 @@
     <!-- Main JS -->
     <script src="js/script.js"></script>
 
-    <!-- Machinery Loan JS -->
-    <script src="js/machinery-loan.js"></script>
+    <!-- Home Loan JS -->
+    <script src="js/home-loan.js"></script>
   </body>
 </html>

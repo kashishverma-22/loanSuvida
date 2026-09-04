@@ -1,0 +1,1984 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+.professional-loan-page {
+  --pro-blue: #005baa;
+  --pro-blue-dark: #003f78;
+  --pro-blue-light: #eaf5ff;
+  --pro-orange: #f7941d;
+  --pro-orange-dark: #e87800;
+
+  --pro-white: #ffffff;
+  --pro-black: #172033;
+  --pro-text: #5d6878;
+  --pro-light: #f7faff;
+  --pro-border: #e5ebf2;
+
+  --pro-shadow-sm: 0 8px 25px rgba(0, 64, 120, 0.08);
+  --pro-shadow-md: 0 15px 40px rgba(0, 64, 120, 0.12);
+
+  font-family: "Poppins", sans-serif;
+  color: var(--pro-black);
+  overflow: hidden;
+}
+
+.professional-loan-page *,
+.professional-loan-page *::before,
+.professional-loan-page *::after {
+  box-sizing: border-box;
+}
+
+.professional-loan-page img {
+  max-width: 100%;
+  height: auto;
+}
+
+.professional-loan-page a {
+  text-decoration: none;
+}
+
+.professional-loan-page button,
+.professional-loan-page input,
+.professional-loan-page select {
+  font-family: inherit;
+}
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.professional-loan-page .container {
+  width: 100%;
+}
+
+.professional-loan-page .professional-section-heading {
+  max-width: 720px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.professional-loan-page .professional-section-heading > span,
+.professional-loan-page .professional-section-tag {
+  display: inline-block;
+  color: var(--pro-orange);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin-bottom: 8px;
+}
+
+.professional-loan-page .professional-section-heading h2,
+.professional-loan-page .professional-overview-content h2,
+.professional-loan-page .professional-why-content h2 {
+  margin: 0 0 12px;
+  color: var(--pro-black);
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.professional-loan-page .professional-section-heading h2 strong,
+.professional-loan-page .professional-overview-content h2 span,
+.professional-loan-page .professional-why-content h2 span {
+  color: var(--pro-blue);
+}
+
+.professional-loan-page .professional-section-heading p {
+  margin: 0;
+  color: var(--pro-text);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.professional-loan-page .btn-primary-loan,
+.professional-loan-page .btn-outline-loan {
+  min-height: 46px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.professional-loan-page .btn-primary-loan {
+  background: var(--pro-orange);
+  color: var(--pro-white);
+  border: 1px solid var(--pro-orange);
+}
+
+.professional-loan-page .btn-primary-loan:hover {
+  background: var(--pro-orange-dark);
+  border-color: var(--pro-orange-dark);
+  color: var(--pro-white);
+  transform: translateY(-2px);
+}
+
+.professional-loan-page .btn-outline-loan {
+  color: var(--pro-blue);
+  background: var(--pro-white);
+  border: 1px solid rgba(0, 91, 170, 0.25);
+}
+
+.professional-loan-page .btn-outline-loan:hover {
+  background: var(--pro-blue);
+  border-color: var(--pro-blue);
+  color: var(--pro-white);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.professional-loan-page .professional-hero {
+  position: relative;
+  min-height: 590px;
+  padding: 65px 0;
+  display: flex;
+  align-items: center;
+
+  background-image: url("../image/professional-banner.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.professional-loan-page .professional-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 35, 70, 0.43) 0%,
+    rgba(0, 55, 105, 0.20) 45%,
+    rgba(0, 70, 120, 0.35) 100%
+  );
+}
+
+.professional-loan-page .professional-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.professional-loan-page .professional-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 430px);
+  gap: 55px;
+  align-items: center;
+}
+
+.professional-loan-page .professional-hero-content {
+  max-width: 650px;
+}
+
+.professional-loan-page .professional-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 7px 12px;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.professional-loan-page .professional-badge i {
+  color: var(--pro-orange);
+}
+
+.professional-loan-page .professional-hero-content h1 {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: 48px;
+  line-height: 1.13;
+  font-weight: 700;
+}
+
+.professional-loan-page .professional-hero-content h1 span {
+  display: block;
+  color: var(--pro-orange);
+}
+
+.professional-loan-page .professional-hero-content > p {
+  max-width: 590px;
+  margin: 0 0 24px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.professional-loan-page .professional-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 27px;
+}
+
+.professional-loan-page .professional-hero-buttons .btn-outline-loan {
+  color: #fff;
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.professional-loan-page .professional-hero-buttons .btn-outline-loan:hover {
+  color: var(--pro-blue);
+  background: #fff;
+  border-color: #fff;
+}
+
+.professional-loan-page .professional-hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.professional-loan-page .hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11px;
+}
+
+.professional-loan-page .hero-trust-item i {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--pro-orange);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.professional-loan-page .hero-trust-item strong {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* =========================================================
+   HERO FORM
+========================================================= */
+
+.professional-loan-page .professional-form-card {
+  padding: 27px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+.professional-loan-page .professional-form-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 13px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+
+  color: var(--pro-blue);
+  background: var(--pro-blue-light);
+  font-size: 20px;
+}
+
+.professional-loan-page .professional-form-card h2 {
+  margin: 0 0 5px;
+  color: var(--pro-black);
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.professional-loan-page .professional-form-card > p {
+  margin: 0 0 19px;
+  color: var(--pro-text);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.professional-loan-page .professional-form-group {
+  margin-bottom: 13px;
+}
+
+.professional-loan-page .professional-form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--pro-black);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.professional-loan-page .professional-input-wrap {
+  position: relative;
+}
+
+.professional-loan-page .professional-input-wrap > i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  z-index: 1;
+  transform: translateY(-50%);
+  color: #8b97a7;
+  font-size: 12px;
+}
+
+.professional-loan-page .professional-input-wrap input,
+.professional-loan-page .professional-input-wrap select {
+  width: 100%;
+  height: 43px;
+  padding: 0 12px 0 34px;
+
+  border: 1px solid var(--pro-border);
+  border-radius: 6px;
+  outline: none;
+
+  background: #fff;
+  color: var(--pro-black);
+  font-size: 11px;
+
+  transition: 0.25s ease;
+}
+
+.professional-loan-page .professional-input-wrap select {
+  cursor: pointer;
+}
+
+.professional-loan-page .professional-input-wrap input:focus,
+.professional-loan-page .professional-input-wrap select:focus {
+  border-color: var(--pro-blue);
+  box-shadow: 0 0 0 3px rgba(0, 91, 170, 0.08);
+}
+
+.professional-loan-page .professional-input-wrap input::placeholder {
+  color: #a2acb9;
+}
+
+.professional-loan-page .professional-form-error {
+  display: none;
+  margin-top: 4px;
+  color: #dc3545;
+  font-size: 10px;
+}
+
+.professional-loan-page .professional-form-error.show {
+  display: block;
+}
+
+.professional-loan-page .professional-input-wrap input.input-error,
+.professional-loan-page .professional-input-wrap select.input-error {
+  border-color: #dc3545;
+}
+
+.professional-loan-page .professional-submit-btn {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: var(--pro-blue);
+  color: #fff;
+
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.professional-loan-page .professional-submit-btn:hover {
+  background: var(--pro-blue-dark);
+  transform: translateY(-1px);
+}
+
+.professional-loan-page .professional-form-success {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 6px;
+
+  background: #edf9f1;
+  color: #198754;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.professional-loan-page .professional-form-success.show {
+  display: flex;
+}
+
+.professional-loan-page .professional-form-note {
+  margin-top: 13px;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+
+  color: #8a94a3;
+  font-size: 9px;
+}
+
+.professional-loan-page .professional-form-note i {
+  color: #198754;
+}
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.professional-loan-page .professional-overview {
+  padding: 70px 0;
+  background: #fff;
+}
+
+.professional-loan-page .professional-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.professional-loan-page .professional-overview-content h2 {
+  max-width: 560px;
+}
+
+.professional-loan-page .professional-overview-content > p {
+  max-width: 610px;
+  margin: 0 0 13px;
+
+  color: var(--pro-text);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.professional-loan-page .professional-check-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 11px 18px;
+  margin-top: 22px;
+}
+
+.professional-loan-page .professional-check-list div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--pro-black);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.professional-loan-page .professional-check-list i {
+  color: var(--pro-orange);
+  font-size: 13px;
+}
+
+.professional-loan-page .professional-overview-visual {
+  min-height: 350px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.9) 0,
+    rgba(234, 245, 255, 0.8) 55%,
+    rgba(234, 245, 255, 0.3) 100%
+  );
+}
+
+.professional-loan-page .professional-visual-card {
+  width: min(310px, 90%);
+  padding: 30px 25px;
+  text-align: center;
+
+  background: #fff;
+  border: 1px solid var(--pro-border);
+  border-radius: 15px;
+  box-shadow: var(--pro-shadow-md);
+}
+
+.professional-loan-page .professional-visual-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 16px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: var(--pro-blue-light);
+  color: var(--pro-blue);
+
+  font-size: 27px;
+}
+
+.professional-loan-page .professional-visual-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.professional-loan-page .professional-visual-card p {
+  margin: 0;
+  color: var(--pro-text);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.professional-loan-page .professional-visual-line {
+  width: 45px;
+  height: 3px;
+  margin: 17px auto 9px;
+  border-radius: 5px;
+  background: var(--pro-orange);
+}
+
+.professional-loan-page .professional-visual-card > span {
+  color: var(--pro-blue);
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.professional-loan-page .professional-benefits {
+  padding: 70px 0;
+  background: var(--pro-light);
+}
+
+.professional-loan-page .professional-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+
+.professional-loan-page .professional-benefit-card {
+  padding: 23px 20px;
+  background: #fff;
+  border: 1px solid var(--pro-border);
+  border-radius: 11px;
+
+  box-shadow: var(--pro-shadow-sm);
+  transition: 0.3s ease;
+}
+
+.professional-loan-page .professional-benefit-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 91, 170, 0.18);
+  box-shadow: var(--pro-shadow-md);
+}
+
+.professional-loan-page .professional-benefit-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 14px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+  background: var(--pro-blue-light);
+  color: var(--pro-blue);
+
+  font-size: 20px;
+}
+
+.professional-loan-page
+  .professional-benefit-card:nth-child(even)
+  .professional-benefit-icon {
+  background: #fff4e7;
+  color: var(--pro-orange);
+}
+
+.professional-loan-page .professional-benefit-card h3 {
+  margin: 0 0 7px;
+  color: var(--pro-black);
+  font-size: 16px;
+}
+
+.professional-loan-page .professional-benefit-card p {
+  margin: 0;
+  color: var(--pro-text);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   PROFESSIONAL TYPES
+========================================================= */
+
+.professional-loan-page .professional-types {
+  padding: 70px 0;
+  background: #fff;
+}
+
+.professional-loan-page .professional-types-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.professional-loan-page .professional-type-card {
+  padding: 27px 21px;
+  border: 1px solid var(--pro-border);
+  border-radius: 12px;
+  background: #fff;
+
+  box-shadow: var(--pro-shadow-sm);
+  transition: 0.3s ease;
+}
+
+.professional-loan-page .professional-type-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 91, 170, 0.25);
+  box-shadow: var(--pro-shadow-md);
+}
+
+.professional-loan-page .professional-type-icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 15px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+  background: var(--pro-blue-light);
+  color: var(--pro-blue);
+
+  font-size: 21px;
+}
+
+.professional-loan-page .professional-type-card h3 {
+  min-height: 44px;
+  margin: 0 0 8px;
+  color: var(--pro-black);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.professional-loan-page .professional-type-card p {
+  min-height: 60px;
+  margin: 0 0 15px;
+  color: var(--pro-text);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.professional-loan-page .professional-type-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--pro-blue);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.professional-loan-page .professional-type-card a i {
+  font-size: 9px;
+  transition: 0.25s ease;
+}
+
+.professional-loan-page .professional-type-card a:hover {
+  color: var(--pro-orange);
+}
+
+.professional-loan-page .professional-type-card a:hover i {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   ELIGIBILITY
+========================================================= */
+
+.professional-loan-page .professional-eligibility {
+  padding: 70px 0;
+  background: var(--pro-light);
+}
+
+.professional-loan-page .professional-eligibility-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.professional-loan-page .professional-eligibility-card {
+  padding: 27px;
+  background: #fff;
+  border: 1px solid var(--pro-border);
+  border-radius: 12px;
+  box-shadow: var(--pro-shadow-sm);
+}
+
+.professional-loan-page .professional-card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 19px;
+}
+
+.professional-loan-page .professional-small-icon {
+  width: 45px;
+  height: 45px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 9px;
+  background: var(--pro-blue-light);
+  color: var(--pro-blue);
+
+  font-size: 18px;
+}
+
+.professional-loan-page .professional-card-title h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.professional-loan-page .professional-eligibility-card ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.professional-loan-page .professional-eligibility-card li {
+  position: relative;
+  display: flex;
+  gap: 9px;
+  margin-bottom: 12px;
+
+  color: var(--pro-text);
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.professional-loan-page .professional-eligibility-card li:last-child {
+  margin-bottom: 0;
+}
+
+.professional-loan-page .professional-eligibility-card li i {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  color: var(--pro-orange);
+  font-size: 10px;
+}
+
+/* =========================================================
+   INTEREST RATES
+========================================================= */
+
+.professional-loan-page .professional-interest {
+  padding: 70px 0;
+  background: #fff;
+}
+
+.professional-loan-page .professional-interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.professional-loan-page .professional-interest-card {
+  padding: 25px 21px;
+  text-align: center;
+
+  background: #fff;
+  border: 1px solid var(--pro-border);
+  border-radius: 12px;
+
+  box-shadow: var(--pro-shadow-sm);
+}
+
+.professional-loan-page .professional-interest-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 14px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: var(--pro-blue-light);
+  color: var(--pro-blue);
+
+  font-size: 20px;
+}
+
+.professional-loan-page
+  .professional-interest-card:nth-child(2)
+  .professional-interest-icon {
+  background: #fff4e7;
+  color: var(--pro-orange);
+}
+
+.professional-loan-page .professional-interest-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.professional-loan-page .professional-interest-card p {
+  margin: 0;
+  color: var(--pro-text);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.professional-loan-page .professional-interest-note {
+  max-width: 900px;
+  margin: 22px auto 0;
+  padding: 13px 17px;
+
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+
+  border-radius: 8px;
+  background: #fff8ee;
+  border: 1px solid #ffe1bb;
+}
+
+.professional-loan-page .professional-interest-note > i {
+  margin-top: 3px;
+  color: var(--pro-orange);
+}
+
+.professional-loan-page .professional-interest-note p {
+  margin: 0;
+  color: #795a36;
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   EMI CALCULATOR
+========================================================= */
+
+.professional-loan-page .professional-emi {
+  padding: 70px 0;
+  background: var(--pro-light);
+}
+
+.professional-loan-page .professional-emi-wrapper {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.professional-loan-page .professional-emi-calculator,
+.professional-loan-page .professional-emi-result {
+  padding: 27px;
+  border-radius: 13px;
+  background: #fff;
+  border: 1px solid var(--pro-border);
+  box-shadow: var(--pro-shadow-sm);
+}
+
+.professional-loan-page .professional-emi-field {
+  margin-bottom: 24px;
+}
+
+.professional-loan-page .professional-emi-field:last-child {
+  margin-bottom: 0;
+}
+
+.professional-loan-page .emi-field-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.professional-loan-page .emi-field-top label {
+  color: var(--pro-black);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.professional-loan-page .emi-field-top strong {
+  color: var(--pro-blue);
+  font-size: 13px;
+}
+
+.professional-loan-page .professional-emi-field input[type="range"] {
+  width: 100%;
+  height: 5px;
+  margin: 0;
+  accent-color: var(--pro-blue);
+  cursor: pointer;
+}
+
+.professional-loan-page .emi-range-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+
+  color: #8b96a5;
+  font-size: 9px;
+}
+
+.professional-loan-page .professional-emi-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: linear-gradient(145deg, var(--pro-blue-dark), var(--pro-blue));
+  border: 0;
+  color: #fff;
+}
+
+.professional-loan-page .emi-result-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11px;
+}
+
+.professional-loan-page .emi-result-heading i {
+  color: var(--pro-orange);
+}
+
+.professional-loan-page .professional-emi-result h3 {
+  margin: 8px 0 20px;
+  color: #fff;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.professional-loan-page .emi-result-list {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.professional-loan-page .emi-result-list > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px 0;
+}
+
+.professional-loan-page .emi-result-list > div + div {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.professional-loan-page .emi-result-list span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 10px;
+}
+
+.professional-loan-page .emi-result-list strong {
+  color: #fff;
+  font-size: 11px;
+}
+
+.professional-loan-page .professional-emi-btn {
+  min-height: 43px;
+  margin-top: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border-radius: 6px;
+  background: var(--pro-orange);
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.professional-loan-page .professional-emi-btn:hover {
+  background: var(--pro-orange-dark);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.professional-loan-page .professional-emi-result small {
+  margin-top: 11px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 8px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.professional-loan-page .professional-process {
+  padding: 70px 0;
+  background: #fff;
+}
+
+.professional-loan-page .professional-process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 13px;
+}
+
+.professional-loan-page .professional-process-item {
+  position: relative;
+  padding: 21px 15px;
+  text-align: center;
+
+  border: 1px solid var(--pro-border);
+  border-radius: 10px;
+  background: #fff;
+
+  box-shadow: var(--pro-shadow-sm);
+}
+
+.professional-loan-page .process-number {
+  position: absolute;
+  top: 9px;
+  right: 11px;
+
+  color: rgba(0, 91, 170, 0.1);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.professional-loan-page .process-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 13px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: var(--pro-blue-light);
+  color: var(--pro-blue);
+
+  font-size: 19px;
+}
+
+.professional-loan-page .professional-process-item h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.professional-loan-page .professional-process-item p {
+  margin: 0;
+  color: var(--pro-text);
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   WHY LOAN SUVIDA
+========================================================= */
+
+.professional-loan-page .professional-why {
+  padding: 70px 0;
+  background: var(--pro-light);
+}
+
+.professional-loan-page .professional-why-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.professional-loan-page .professional-why-visual {
+  position: relative;
+  min-height: 350px;
+  display: grid;
+  place-items: center;
+}
+
+.professional-loan-page .why-circle-main {
+  width: 255px;
+  height: 255px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  background: linear-gradient(145deg, var(--pro-blue-dark), var(--pro-blue));
+
+  color: #fff;
+  box-shadow: 0 20px 45px rgba(0, 91, 170, 0.2);
+}
+
+.professional-loan-page .why-circle-main i {
+  margin-bottom: 8px;
+  color: var(--pro-orange);
+  font-size: 50px;
+}
+
+.professional-loan-page .why-circle-main strong {
+  font-size: 24px;
+}
+
+.professional-loan-page .why-circle-main span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+}
+
+.professional-loan-page .why-floating-card {
+  position: absolute;
+  min-width: 145px;
+  padding: 10px 13px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--pro-shadow-md);
+
+  color: var(--pro-black);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.professional-loan-page .why-floating-card i {
+  color: var(--pro-orange);
+}
+
+.professional-loan-page .why-card-one {
+  top: 22px;
+  left: 4%;
+}
+
+.professional-loan-page .why-card-two {
+  right: 0;
+  bottom: 28px;
+}
+
+.professional-loan-page .professional-why-content > p {
+  max-width: 590px;
+  margin: 0 0 22px;
+  color: var(--pro-text);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.professional-loan-page .professional-why-list {
+  display: grid;
+  gap: 15px;
+}
+
+.professional-loan-page .professional-why-list > div {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.professional-loan-page .why-list-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 9px;
+  background: #fff;
+  color: var(--pro-blue);
+
+  box-shadow: var(--pro-shadow-sm);
+}
+
+.professional-loan-page .professional-why-list h3 {
+  margin: 0 0 3px;
+  font-size: 14px;
+}
+
+.professional-loan-page .professional-why-list p {
+  margin: 0;
+  color: var(--pro-text);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.professional-loan-page .professional-faq {
+  padding: 70px 0;
+  background: #fff;
+}
+
+.professional-loan-page .professional-faq-wrapper {
+  max-width: 850px;
+  margin: auto;
+}
+
+.professional-loan-page .professional-faq-item {
+  margin-bottom: 9px;
+  border: 1px solid var(--pro-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.professional-loan-page .professional-faq-question {
+  width: 100%;
+  min-height: 54px;
+  padding: 14px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  border: 0;
+  outline: 0;
+  background: #fff;
+
+  color: var(--pro-black);
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.professional-loan-page .professional-faq-question i {
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: var(--pro-blue-light);
+  color: var(--pro-blue);
+
+  font-size: 10px;
+}
+
+.professional-loan-page
+  .professional-faq-item.active
+  .professional-faq-question {
+  color: var(--pro-blue);
+}
+
+.professional-loan-page .professional-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.professional-loan-page .professional-faq-answer p {
+  margin: 0;
+  padding: 0 18px 17px;
+
+  color: var(--pro-text);
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   APPLY CTA
+========================================================= */
+
+.professional-loan-page .professional-apply {
+  position: relative;
+  padding: 68px 0;
+  background: linear-gradient(100deg, var(--pro-blue-dark), var(--pro-blue));
+  overflow: hidden;
+}
+
+.professional-loan-page .professional-apply::before,
+.professional-loan-page .professional-apply::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.professional-loan-page .professional-apply::before {
+  width: 280px;
+  height: 280px;
+  top: -170px;
+  right: -70px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.professional-loan-page .professional-apply::after {
+  width: 220px;
+  height: 220px;
+  bottom: -150px;
+  left: -70px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.professional-loan-page .professional-apply-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 63, 120, 0.1),
+    rgba(0, 91, 170, 0.15)
+  );
+}
+
+.professional-loan-page .professional-apply .container {
+  position: relative;
+  z-index: 2;
+}
+
+.professional-loan-page .professional-apply-content {
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+}
+
+.professional-loan-page .professional-apply-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 11px;
+
+  color: var(--pro-orange);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.professional-loan-page .professional-apply-content h2 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.professional-loan-page .professional-apply-content h2 span {
+  color: var(--pro-orange);
+}
+
+.professional-loan-page .professional-apply-content > p {
+  max-width: 610px;
+  margin: 0 auto 22px;
+
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.professional-loan-page .professional-apply-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.professional-loan-page .professional-apply-buttons .btn-outline-loan {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+  background: transparent;
+}
+
+.professional-loan-page .professional-apply-buttons .btn-outline-loan:hover {
+  color: var(--pro-blue);
+  background: #fff;
+  border-color: #fff;
+}
+
+/* =========================================================
+   DISCLAIMER
+========================================================= */
+
+.professional-loan-page .professional-disclaimer {
+  padding: 24px 0;
+  background: #f2f5f8;
+}
+
+.professional-loan-page .professional-disclaimer-box {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+
+  max-width: 1050px;
+  margin: auto;
+  padding: 17px 20px;
+
+  border: 1px solid #e0e6ec;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.professional-loan-page .professional-disclaimer-box > i {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  color: var(--pro-orange);
+  font-size: 15px;
+}
+
+.professional-loan-page .professional-disclaimer-box h3 {
+  margin: 0 0 5px;
+  font-size: 12px;
+}
+
+.professional-loan-page .professional-disclaimer-box p {
+  margin: 0;
+  color: #718096;
+  font-size: 9px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   1199px
+========================================================= */
+
+@media (max-width: 1199px) {
+  .professional-loan-page .professional-hero {
+    min-height: 570px;
+  }
+
+  .professional-loan-page .professional-hero-grid {
+    gap: 35px;
+  }
+
+  .professional-loan-page .professional-hero-content h1 {
+    font-size: 43px;
+  }
+
+  .professional-loan-page .professional-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .professional-loan-page .professional-process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .professional-loan-page .professional-why-grid {
+    gap: 40px;
+  }
+}
+
+/* =========================================================
+   991px
+========================================================= */
+
+@media (max-width: 991px) {
+  .professional-loan-page .professional-hero {
+    min-height: auto;
+    padding: 55px 0;
+    background-position: 68% center;
+  }
+
+  .professional-loan-page .professional-hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 35, 70, 0.95),
+      rgba(0, 55, 105, 0.82)
+    );
+  }
+
+  .professional-loan-page .professional-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .professional-loan-page .professional-hero-content {
+    max-width: 700px;
+  }
+
+  .professional-loan-page .professional-form-card {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .professional-loan-page .professional-overview-grid,
+  .professional-loan-page .professional-why-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .professional-loan-page .professional-overview-content {
+    max-width: 750px;
+    margin: auto;
+  }
+
+  .professional-loan-page .professional-overview-visual {
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .professional-loan-page .professional-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .professional-loan-page .professional-interest-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .professional-loan-page .professional-emi-wrapper {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+  }
+
+  .professional-loan-page .professional-why-content {
+    max-width: 700px;
+    margin: auto;
+  }
+
+  .professional-loan-page .professional-why-visual {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+/* =========================================================
+   767px
+========================================================= */
+
+@media (max-width: 767px) {
+  .professional-loan-page .professional-section-heading {
+    margin-bottom: 30px;
+  }
+
+  .professional-loan-page .professional-section-heading h2,
+  .professional-loan-page .professional-overview-content h2,
+  .professional-loan-page .professional-why-content h2 {
+    font-size: 28px;
+  }
+
+  .professional-loan-page .professional-section-heading p {
+    font-size: 12px;
+  }
+
+  .professional-loan-page .professional-hero {
+    padding: 45px 0;
+    background-position: 76% center;
+  }
+
+  .professional-loan-page .professional-hero-content {
+    text-align: center;
+  }
+
+  .professional-loan-page .professional-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .professional-loan-page .professional-hero-content > p {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+  }
+
+  .professional-loan-page .professional-hero-buttons {
+    justify-content: center;
+  }
+
+  .professional-loan-page .professional-hero-trust {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .professional-loan-page .hero-trust-item {
+    font-size: 9px;
+  }
+
+  .professional-loan-page .professional-overview,
+  .professional-loan-page .professional-benefits,
+  .professional-loan-page .professional-types,
+  .professional-loan-page .professional-eligibility,
+  .professional-loan-page .professional-interest,
+  .professional-loan-page .professional-emi,
+  .professional-loan-page .professional-process,
+  .professional-loan-page .professional-why,
+  .professional-loan-page .professional-faq {
+    padding: 52px 0;
+  }
+
+  .professional-loan-page .professional-benefits-grid,
+  .professional-loan-page .professional-interest-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .professional-loan-page .professional-types-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .professional-loan-page .professional-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .professional-loan-page .professional-check-list {
+    gap: 10px;
+  }
+
+  .professional-loan-page .professional-apply {
+    padding: 55px 0;
+  }
+
+  .professional-loan-page .professional-apply-content h2 {
+    font-size: 30px;
+  }
+}
+
+/* =========================================================
+   576px
+========================================================= */
+
+@media (max-width: 576px) {
+  .professional-loan-page .professional-hero {
+    padding: 40px 0;
+    background-position: 80% center;
+  }
+
+  .professional-loan-page .professional-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 40, 78, 0.9),
+      rgba(0, 50, 95, 0.94)
+    );
+  }
+
+  .professional-loan-page .professional-hero-content h1 {
+    font-size: 30px;
+  }
+
+  .professional-loan-page .professional-hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .professional-loan-page .professional-hero-buttons a {
+    width: 100%;
+  }
+
+  .professional-loan-page .professional-hero-trust {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .professional-loan-page .hero-trust-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+
+  .professional-loan-page .hero-trust-item i {
+    width: 30px;
+    height: 30px;
+  }
+
+  .professional-loan-page .professional-form-card {
+    padding: 21px;
+  }
+
+  .professional-loan-page .professional-benefits-grid,
+  .professional-loan-page .professional-interest-grid,
+  .professional-loan-page .professional-types-grid,
+  .professional-loan-page .professional-eligibility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .professional-loan-page .professional-check-list {
+    grid-template-columns: 1fr;
+  }
+
+  .professional-loan-page .professional-type-card h3,
+  .professional-loan-page .professional-type-card p {
+    min-height: auto;
+  }
+
+  .professional-loan-page .professional-process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .professional-loan-page .professional-why-visual {
+    min-height: 300px;
+  }
+
+  .professional-loan-page .why-circle-main {
+    width: 210px;
+    height: 210px;
+  }
+
+  .professional-loan-page .why-circle-main i {
+    font-size: 40px;
+  }
+
+  .professional-loan-page .why-circle-main strong {
+    font-size: 20px;
+  }
+
+  .professional-loan-page .why-card-one {
+    left: 0;
+    top: 15px;
+  }
+
+  .professional-loan-page .why-card-two {
+    right: 0;
+    bottom: 15px;
+  }
+
+  .professional-loan-page .professional-emi-calculator,
+  .professional-loan-page .professional-emi-result {
+    padding: 22px;
+  }
+
+  .professional-loan-page .professional-emi-result h3 {
+    font-size: 28px;
+  }
+
+  .professional-loan-page .professional-apply-content h2 {
+    font-size: 27px;
+  }
+
+  .professional-loan-page .professional-apply-buttons {
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .professional-loan-page .professional-apply-buttons a {
+    width: 100%;
+  }
+
+  .professional-loan-page .professional-disclaimer-box {
+    padding: 14px;
+  }
+}
+
+/* =========================================================
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .professional-loan-page .professional-section-heading h2,
+  .professional-loan-page .professional-overview-content h2,
+  .professional-loan-page .professional-why-content h2 {
+    font-size: 25px;
+  }
+
+  .professional-loan-page .professional-hero {
+    padding: 35px 0;
+    background-position: 83% center;
+  }
+
+  .professional-loan-page .professional-hero-content h1 {
+    font-size: 27px;
+  }
+
+  .professional-loan-page .professional-hero-content > p {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .professional-loan-page .professional-hero-trust {
+    gap: 5px;
+  }
+
+  .professional-loan-page .hero-trust-item {
+    font-size: 8px;
+  }
+
+  .professional-loan-page .hero-trust-item i {
+    width: 27px;
+    height: 27px;
+    font-size: 10px;
+  }
+
+  .professional-loan-page .professional-form-card {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .professional-loan-page .professional-form-card h2 {
+    font-size: 19px;
+  }
+
+  .professional-loan-page .professional-overview,
+  .professional-loan-page .professional-benefits,
+  .professional-loan-page .professional-types,
+  .professional-loan-page .professional-eligibility,
+  .professional-loan-page .professional-interest,
+  .professional-loan-page .professional-emi,
+  .professional-loan-page .professional-process,
+  .professional-loan-page .professional-why,
+  .professional-loan-page .professional-faq {
+    padding: 45px 0;
+  }
+
+  .professional-loan-page .professional-visual-card {
+    padding: 23px 18px;
+  }
+
+  .professional-loan-page .professional-benefit-card,
+  .professional-loan-page .professional-type-card,
+  .professional-loan-page .professional-eligibility-card,
+  .professional-loan-page .professional-interest-card {
+    padding: 20px 17px;
+  }
+
+  .professional-loan-page .professional-faq-question {
+    min-height: 50px;
+    padding: 12px 14px;
+    font-size: 11px;
+  }
+
+  .professional-loan-page .professional-faq-answer p {
+    padding: 0 14px 14px;
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+  .professional-loan-page .professional-hero {
+    padding: 30px 0;
+    background-position: 86% center;
+  }
+
+  .professional-loan-page .professional-hero-content h1 {
+    font-size: 24px;
+  }
+
+  .professional-loan-page .professional-badge {
+    font-size: 9px;
+  }
+
+  .professional-loan-page .professional-hero-trust {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .professional-loan-page .hero-trust-item {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .professional-loan-page .professional-form-card {
+    padding: 15px;
+  }
+
+  .professional-loan-page .professional-section-heading h2,
+  .professional-loan-page .professional-overview-content h2,
+  .professional-loan-page .professional-why-content h2 {
+    font-size: 22px;
+  }
+
+  .professional-loan-page .professional-apply-content h2 {
+    font-size: 23px;
+  }
+
+  .professional-loan-page .why-circle-main {
+    width: 175px;
+    height: 175px;
+  }
+
+  .professional-loan-page .why-circle-main i {
+    font-size: 32px;
+  }
+
+  .professional-loan-page .why-circle-main strong {
+    font-size: 17px;
+  }
+
+  .professional-loan-page .why-floating-card {
+    min-width: 115px;
+    padding: 8px 9px;
+    font-size: 8px;
+  }
+
+  .professional-loan-page .professional-emi-result h3 {
+    font-size: 24px;
+  }
+}
+
+/* =========================================================
+   320px
+========================================================= */
+
+@media (max-width: 320px) {
+  .professional-loan-page .professional-hero {
+    background-position: 88% center;
+  }
+
+  .professional-loan-page .professional-hero-content h1 {
+    font-size: 22px;
+  }
+
+  .professional-loan-page .professional-section-heading h2,
+  .professional-loan-page .professional-overview-content h2,
+  .professional-loan-page .professional-why-content h2 {
+    font-size: 20px;
+  }
+
+  .professional-loan-page .professional-section-heading p,
+  .professional-loan-page .professional-overview-content > p {
+    font-size: 10px;
+  }
+
+  .professional-loan-page .professional-form-card {
+    padding: 13px;
+  }
+
+  .professional-loan-page .professional-input-wrap input,
+  .professional-loan-page .professional-input-wrap select {
+    height: 40px;
+    font-size: 10px;
+  }
+
+  .professional-loan-page .professional-benefit-card,
+  .professional-loan-page .professional-type-card,
+  .professional-loan-page .professional-eligibility-card,
+  .professional-loan-page .professional-interest-card {
+    padding: 17px 14px;
+  }
+
+  .professional-loan-page .professional-apply-content h2 {
+    font-size: 21px;
+  }
+
+  .professional-loan-page .professional-disclaimer-box p {
+    font-size: 8px;
+  }
+}
