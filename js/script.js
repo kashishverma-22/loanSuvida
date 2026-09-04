@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener("click", function (e) {
       e.stopPropagation();
+      e.stopImmediatePropagation();
 
       navMenu.classList.toggle("show");
 
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
           icon.classList.add("fa-bars");
         }
       }
-    });
+    }, true);
   }
 
   /* =========================================
@@ -42,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (window.innerWidth <= 991) {
         e.preventDefault();
         e.stopPropagation();
+        e.stopImmediatePropagation();
 
         /* Close other dropdowns */
         dropdowns.forEach(function (otherDropdown) {
@@ -68,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
             : "rotate(0deg)";
         }
       }
-    });
+    }, true);
   });
 
   /* =========================================
@@ -87,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (window.innerWidth <= 991) {
         e.preventDefault();
         e.stopPropagation();
+        e.stopImmediatePropagation();
 
         const parentDropdown = subDropdown.closest(".dropdown");
 
@@ -112,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
             : "rotate(0deg)";
         }
       }
-    });
+    }, true);
   });
 
   /* =========================================
@@ -216,6 +219,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const loanTenureValue = document.getElementById("loanTenureValue");
 
   const emiResult = document.getElementById("emiResult");
+
+  if (
+    !loanAmount ||
+    !interestRate ||
+    !loanTenure ||
+    !loanAmountValue ||
+    !interestRateValue ||
+    !loanTenureValue ||
+    !emiResult
+  ) {
+    return;
+  }
 
   // ================================
   // FORMAT INDIAN CURRENCY
