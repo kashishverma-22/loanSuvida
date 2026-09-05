@@ -80,7 +80,7 @@
      NAVBAR
 ========================================================== -->
 
-     <header class="main-navbar">
+    <header class="main-navbar">
       <div class="container">
         <div class="navbar-wrapper">
           <!-- Logo -->
@@ -352,62 +352,116 @@
       <section class="apply-hero">
         <div class="apply-hero-overlay"></div>
 
-        <div class="container">
+        <div class="apply-container">
           <div class="apply-hero-content">
-            <div class="apply-hero-text">
-              <span class="apply-badge">
-                <i class="fa-solid fa-bolt"></i>
-                Quick & Easy Application
-              </span>
+            <span class="apply-badge">
+              <i class="fa-solid fa-shield-halved"></i>
+              Secure & Easy Application
+            </span>
 
-              <h1>
-                Apply for Your
-                <span>Loan Today</span>
-              </h1>
+            <h1>
+              Apply For Your Loan
+              <span>Quickly & Easily</span>
+            </h1>
 
-              <p>
-                Get the financial support you need with a simple, transparent
-                and hassle-free loan application process.
-              </p>
+            <p>
+              Fill out the simple application form and our loan experts will
+              help you find the right loan option for your needs.
+            </p>
 
-              <div class="apply-trust">
-                <div class="trust-item">
-                  <i class="fa-solid fa-shield-halved"></i>
-                  <span>Secure Application</span>
-                </div>
+            <div class="apply-trust-items">
+              <div class="apply-trust-item">
+                <i class="fa-solid fa-check"></i>
+                <span>Simple Application</span>
+              </div>
 
-                <div class="trust-item">
-                  <i class="fa-solid fa-clock"></i>
-                  <span>Quick Processing</span>
-                </div>
+              <div class="apply-trust-item">
+                <i class="fa-solid fa-check"></i>
+                <span>Quick Response</span>
+              </div>
 
-                <div class="trust-item">
-                  <i class="fa-solid fa-headset"></i>
-                  <span>Expert Assistance</span>
-                </div>
+              <div class="apply-trust-item">
+                <i class="fa-solid fa-check"></i>
+                <span>Secure Process</span>
               </div>
             </div>
+          </div>
 
-            <!-- ================= APPLY FORM ================= -->
+          <!-- ================= APPLICATION FORM ================= -->
+          <div class="apply-form-wrapper">
             <div class="apply-form-card">
               <div class="form-card-header">
                 <span class="form-icon">
-                  <i class="fa-solid fa-file-signature"></i>
+                  <i class="fa-solid fa-file-pen"></i>
                 </span>
 
                 <div>
-                  <h2>Apply Now</h2>
-                  <p>Fill in your details and our expert will contact you.</p>
+                  <h2>Loan Application</h2>
+                  <p>Complete the form in 3 simple steps</p>
                 </div>
               </div>
 
-              <form id="loanApplyForm">
-                <div class="apply-form-row">
-                  <div class="apply-form-group">
+              <!-- ================= 3 STEP PROGRESS ================= -->
+              <div class="form-steps">
+                <!-- STEP 1 -->
+                <div class="step-item active">
+                  <span class="step-number">1</span>
+
+                  <div class="step-content">
+                    <strong>Personal</strong>
+                    <small>Details</small>
+                  </div>
+                </div>
+
+                <div class="step-line"></div>
+
+                <!-- STEP 2 -->
+                <div class="step-item">
+                  <span class="step-number">2</span>
+
+                  <div class="step-content">
+                    <strong>Loan</strong>
+                    <small>Details</small>
+                  </div>
+                </div>
+
+                <div class="step-line"></div>
+
+                <!-- STEP 3 -->
+                <div class="step-item">
+                  <span class="step-number">3</span>
+
+                  <div class="step-content">
+                    <strong>Confirm</strong>
+                    <small>Application</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ================= FORM ================= -->
+              <form id="loanApplyForm" novalidate>
+                <!-- ================================================= -->
+                <!-- STEP 1 : PERSONAL DETAILS -->
+                <!-- ================================================= -->
+                <div class="form-step active" data-step="1">
+                  <div class="step-heading">
+                    <span class="step-heading-icon">
+                      <i class="fa-solid fa-user"></i>
+                    </span>
+
+                    <div>
+                      <h3>Personal Details</h3>
+                      <p>Tell us a little about yourself</p>
+                    </div>
+                  </div>
+
+                  <!-- NAME -->
+                  <div class="form-group">
                     <label for="fullName"> Full Name <span>*</span> </label>
 
                     <div class="input-box">
                       <i class="fa-regular fa-user"></i>
+
                       <input
                         type="text"
                         id="fullName"
@@ -420,13 +474,15 @@
                     <small class="form-error" id="fullNameError"></small>
                   </div>
 
-                  <div class="apply-form-group">
+                  <!-- MOBILE -->
+                  <div class="form-group">
                     <label for="mobileNumber">
                       Mobile Number <span>*</span>
                     </label>
 
                     <div class="input-box">
-                      <i class="fa-solid fa-phone"></i>
+                      <i class="fa-solid fa-mobile-screen-button"></i>
+
                       <input
                         type="tel"
                         id="mobileNumber"
@@ -434,61 +490,96 @@
                         placeholder="Enter 10 digit mobile number"
                         maxlength="10"
                         inputmode="numeric"
+                        autocomplete="tel"
                       />
                     </div>
 
                     <small class="form-error" id="mobileError"></small>
                   </div>
-                </div>
 
-                <div class="apply-form-row">
-                  <div class="apply-form-group">
-                    <label for="email"> Email Address </label>
+                  <!-- EMAIL -->
+                  <div class="form-group">
+                    <label for="email">
+                      Email Address
+                      <small>(Optional)</small>
+                    </label>
 
                     <div class="input-box">
                       <i class="fa-regular fa-envelope"></i>
+
                       <input
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="Enter your email"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
                       />
                     </div>
 
                     <small class="form-error" id="emailError"></small>
                   </div>
 
-                  <div class="apply-form-group">
+                  <!-- NEXT -->
+                  <div class="form-navigation next-only">
+                    <button type="button" class="next-step">
+                      Continue
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- ================================================= -->
+                <!-- STEP 2 : LOAN DETAILS -->
+                <!-- ================================================= -->
+                <div class="form-step" data-step="2">
+                  <div class="step-heading">
+                    <span class="step-heading-icon">
+                      <i class="fa-solid fa-indian-rupee-sign"></i>
+                    </span>
+
+                    <div>
+                      <h3>Loan Details</h3>
+                      <p>Select the loan you are looking for</p>
+                    </div>
+                  </div>
+
+                  <!-- LOAN TYPE -->
+                  <div class="form-group">
                     <label for="loanType"> Loan Type <span>*</span> </label>
 
                     <div class="input-box select-box">
-                      <i class="fa-solid fa-wallet"></i>
+                      <i class="fa-solid fa-money-check-dollar"></i>
 
                       <select id="loanType" name="loanType">
                         <option value="">Select Loan Type</option>
+
                         <option value="Personal Loan">Personal Loan</option>
+
                         <option value="Business Loan">Business Loan</option>
+
                         <option value="Professional Loan">
                           Professional Loan
                         </option>
+
                         <option value="Car Loan">Car Loan</option>
+
                         <option value="Machinery Loan">Machinery Loan</option>
+
                         <option value="Home Loan">Home Loan</option>
+
                         <option value="Loan Against Property">
                           Loan Against Property
                         </option>
+
                         <option value="Education Loan">Education Loan</option>
                       </select>
-
-                      <i class="fa-solid fa-chevron-down select-arrow"></i>
                     </div>
 
                     <small class="form-error" id="loanTypeError"></small>
                   </div>
-                </div>
 
-                <div class="apply-form-row">
-                  <div class="apply-form-group">
+                  <!-- LOAN AMOUNT -->
+                  <div class="form-group">
                     <label for="loanAmount">
                       Required Loan Amount <span>*</span>
                     </label>
@@ -500,15 +591,17 @@
                         type="number"
                         id="loanAmount"
                         name="loanAmount"
-                        placeholder="Enter loan amount"
+                        placeholder="Enter required amount"
                         min="10000"
+                        inputmode="numeric"
                       />
                     </div>
 
                     <small class="form-error" id="loanAmountError"></small>
                   </div>
 
-                  <div class="apply-form-group">
+                  <!-- EMPLOYMENT TYPE -->
+                  <div class="form-group">
                     <label for="employmentType"> Employment Type </label>
 
                     <div class="input-box select-box">
@@ -516,224 +609,287 @@
 
                       <select id="employmentType" name="employmentType">
                         <option value="">Select Employment Type</option>
-                        <option value="Salaried">Salaried</option>
-                        <option value="Self Employed">Self Employed</option>
-                        <option value="Business Owner">Business Owner</option>
-                        <option value="Professional">Professional</option>
-                      </select>
 
-                      <i class="fa-solid fa-chevron-down select-arrow"></i>
+                        <option value="Salaried">Salaried</option>
+
+                        <option value="Self Employed">Self Employed</option>
+
+                        <option value="Business Owner">Business Owner</option>
+
+                        <option value="Professional">Professional</option>
+
+                        <option value="Student">Student</option>
+
+                        <option value="Other">Other</option>
+                      </select>
                     </div>
                   </div>
-                </div>
 
-                <div class="apply-form-group">
-                  <label for="message"> Additional Message </label>
+                  <!-- NAVIGATION -->
+                  <div class="form-navigation">
+                    <button type="button" class="prev-step">
+                      <i class="fa-solid fa-arrow-left"></i>
+                      Back
+                    </button>
 
-                  <div class="input-box textarea-box">
-                    <i class="fa-regular fa-message"></i>
-
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows="3"
-                      placeholder="Tell us anything you'd like us to know..."
-                    ></textarea>
+                    <button type="button" class="next-step">
+                      Continue
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
                   </div>
                 </div>
 
-                <div class="apply-consent">
-                  <label>
-                    <input type="checkbox" id="consent" />
-                    <span>
-                      I agree to be contacted by Loan Suvida regarding my loan
-                      application.
+                <!-- ================================================= -->
+                <!-- STEP 3 : CONFIRMATION -->
+                <!-- ================================================= -->
+                <div class="form-step" data-step="3">
+                  <div class="step-heading">
+                    <span class="step-heading-icon">
+                      <i class="fa-solid fa-clipboard-check"></i>
                     </span>
-                  </label>
 
-                  <small class="form-error" id="consentError"></small>
-                </div>
+                    <div>
+                      <h3>Confirm Application</h3>
+                      <p>Review your request and submit</p>
+                    </div>
+                  </div>
 
-                <button type="submit" class="apply-submit-btn">
-                  <span>Submit Application</span>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
+                  <!-- MESSAGE -->
+                  <div class="form-group">
+                    <label for="message">
+                      Additional Information
+                      <small>(Optional)</small>
+                    </label>
 
-                <div class="form-success" id="formSuccess">
-                  <i class="fa-solid fa-circle-check"></i>
-                  <span>
-                    Thank you! Your application has been submitted successfully.
-                  </span>
+                    <div class="input-box textarea-box">
+                      <i class="fa-regular fa-message"></i>
+
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        placeholder="Tell us anything else about your loan requirement..."
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <!-- APPLICATION SUMMARY -->
+                  <div class="application-summary">
+                    <div class="summary-title">
+                      <i class="fa-solid fa-circle-info"></i>
+
+                      <span> Application Summary </span>
+                    </div>
+
+                    <div class="summary-note">
+                      <i class="fa-solid fa-shield-halved"></i>
+
+                      <p>
+                        Your information is kept secure and will only be used to
+                        process your loan enquiry.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- CONSENT -->
+                  <div class="consent-box">
+                    <label class="consent-label">
+                      <input type="checkbox" id="consent" name="consent" />
+
+                      <span class="custom-checkbox"></span>
+
+                      <span class="consent-text">
+                        I agree to be contacted by Loan Suvida and its lending
+                        partners regarding my loan enquiry.
+                      </span>
+                    </label>
+
+                    <small class="form-error" id="consentError"></small>
+                  </div>
+
+                  <!-- NAVIGATION -->
+                  <div class="form-navigation">
+                    <button type="button" class="prev-step">
+                      <i class="fa-solid fa-arrow-left"></i>
+                      Back
+                    </button>
+
+                    <button type="submit" class="submit-application">
+                      Submit Application
+                      <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                  </div>
+
+                  <!-- SUCCESS MESSAGE -->
+                  <div
+                    class="form-success"
+                    id="formSuccess"
+                    style="display: none"
+                  >
+                    <div class="success-icon">
+                      <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <h3>Application Submitted!</h3>
+
+                    <p>
+                      Thank you for your enquiry. Our loan expert will contact
+                      you shortly.
+                    </p>
+                  </div>
                 </div>
               </form>
+
+              <!-- FORM FOOTER -->
+              <div class="form-security">
+                <i class="fa-solid fa-lock"></i>
+
+                <span> Your information is secure & confidential </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ================= WHY APPLY WITH US ================= -->
+      <!-- ================= WHY APPLY ================= -->
       <section class="why-apply-section">
-        <div class="container">
-          <div class="section-heading-center">
-            <span class="section-tag">
-              <i class="fa-solid fa-star"></i>
-              Why Loan Suvida
-            </span>
+        <div class="apply-container">
+          <div class="section-heading">
+            <span>WHY APPLY WITH US</span>
 
             <h2>
-              Make Your Loan Journey
-              <span>Simple & Stress-Free</span>
+              A Simple & Transparent
+              <strong>Loan Journey</strong>
             </h2>
 
             <p>
-              We help you find suitable loan solutions with transparent guidance
-              and a hassle-free application process.
+              We make the loan enquiry process simple so you can focus on
+              choosing the right financial solution.
             </p>
           </div>
 
-          <div class="apply-benefits-grid">
-            <div class="apply-benefit-card">
-              <div class="benefit-icon">
-                <i class="fa-solid fa-list-check"></i>
+          <div class="why-apply-grid">
+            <div class="why-apply-card">
+              <div class="why-icon">
+                <i class="fa-solid fa-file-circle-check"></i>
               </div>
 
-              <h3>Simple Process</h3>
+              <h3>Easy Application</h3>
+
+              <p>Complete our simple application form in just a few steps.</p>
+            </div>
+
+            <div class="why-apply-card">
+              <div class="why-icon">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+
+              <h3>Quick Response</h3>
 
               <p>
-                Apply online with a quick and easy application process without
-                unnecessary paperwork.
+                Get assistance from our loan experts after submitting your
+                enquiry.
               </p>
             </div>
 
-            <div class="apply-benefit-card">
-              <div class="benefit-icon">
-                <i class="fa-solid fa-user-tie"></i>
+            <div class="why-apply-card">
+              <div class="why-icon">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+              </div>
+
+              <h3>Multiple Loan Options</h3>
+
+              <p>Explore different loan solutions based on your requirement.</p>
+            </div>
+
+            <div class="why-apply-card">
+              <div class="why-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+
+              <h3>Secure Process</h3>
+
+              <p>
+                Your enquiry details are handled with care and confidentiality.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= APPLICATION PROCESS ================= -->
+      <section class="apply-process-section">
+        <div class="apply-container">
+          <div class="section-heading">
+            <span>HOW IT WORKS</span>
+
+            <h2>
+              Apply In
+              <strong>Simple Steps</strong>
+            </h2>
+          </div>
+
+          <div class="process-grid">
+            <div class="process-card">
+              <span class="process-number">01</span>
+
+              <div class="process-icon">
+                <i class="fa-solid fa-file-pen"></i>
+              </div>
+
+              <h3>Submit Enquiry</h3>
+
+              <p>Fill in your basic details and loan requirement.</p>
+            </div>
+
+            <div class="process-card">
+              <span class="process-number">02</span>
+
+              <div class="process-icon">
+                <i class="fa-solid fa-phone-volume"></i>
               </div>
 
               <h3>Expert Assistance</h3>
 
+              <p>Our team reviews your enquiry and contacts you.</p>
+            </div>
+
+            <div class="process-card">
+              <span class="process-number">03</span>
+
+              <div class="process-icon">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+
+              <h3>Check Options</h3>
+
               <p>
-                Our loan experts guide you throughout the process and help you
-                understand your available options.
+                Suitable loan options can be discussed based on eligibility.
               </p>
             </div>
 
-            <div class="apply-benefit-card">
-              <div class="benefit-icon">
-                <i class="fa-solid fa-bolt"></i>
-              </div>
-
-              <h3>Quick Processing</h3>
-
-              <p>
-                Get your application reviewed quickly and move closer to your
-                financial goals.
-              </p>
-            </div>
-
-            <div class="apply-benefit-card">
-              <div class="benefit-icon">
-                <i class="fa-solid fa-shield-halved"></i>
-              </div>
-
-              <h3>Secure & Transparent</h3>
-
-              <p>
-                Your information is handled securely with a clear and
-                transparent approach.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= HOW IT WORKS ================= -->
-      <section class="apply-process-section">
-        <div class="container">
-          <div class="section-heading-center">
-            <span class="section-tag">
-              <i class="fa-solid fa-route"></i>
-              How It Works
-            </span>
-
-            <h2>
-              Apply in Just
-              <span>5 Simple Steps</span>
-            </h2>
-
-            <p>
-              Our streamlined process makes applying for a loan simple from
-              start to finish.
-            </p>
-          </div>
-
-          <div class="apply-process">
-            <div class="process-item">
-              <div class="process-number">01</div>
+            <div class="process-card">
+              <span class="process-number">04</span>
 
               <div class="process-icon">
-                <i class="fa-solid fa-pen-to-square"></i>
+                <i class="fa-solid fa-building-columns"></i>
               </div>
 
-              <h3>Apply Online</h3>
+              <h3>Lender Processing</h3>
 
-              <p>Fill out our simple online application form.</p>
+              <p>The selected lending partner processes the application.</p>
             </div>
 
-            <div class="process-line"></div>
-
-            <div class="process-item">
-              <div class="process-number">02</div>
-
-              <div class="process-icon">
-                <i class="fa-solid fa-file-lines"></i>
-              </div>
-
-              <h3>Submit Documents</h3>
-
-              <p>Provide the required documents for verification.</p>
-            </div>
-
-            <div class="process-line"></div>
-
-            <div class="process-item">
-              <div class="process-number">03</div>
-
-              <div class="process-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
-
-              <h3>Verification</h3>
-
-              <p>Your application details are reviewed.</p>
-            </div>
-
-            <div class="process-line"></div>
-
-            <div class="process-item">
-              <div class="process-number">04</div>
+            <div class="process-card">
+              <span class="process-number">05</span>
 
               <div class="process-icon">
                 <i class="fa-solid fa-circle-check"></i>
               </div>
 
-              <h3>Quick Approval</h3>
+              <h3>Loan Decision</h3>
 
-              <p>Get updates on your application status.</p>
-            </div>
-
-            <div class="process-line"></div>
-
-            <div class="process-item">
-              <div class="process-number">05</div>
-
-              <div class="process-icon">
-                <i class="fa-solid fa-indian-rupee-sign"></i>
-              </div>
-
-              <h3>Disbursal</h3>
-
-              <p>Once approved, the loan amount is disbursed.</p>
+              <p>Final approval and disbursal are subject to lender terms.</p>
             </div>
           </div>
         </div>
@@ -741,73 +897,64 @@
 
       <!-- ================= DOCUMENTS ================= -->
       <section class="documents-section">
-        <div class="container">
-          <div class="documents-wrapper">
+        <div class="apply-container">
+          <div class="documents-grid">
             <div class="documents-content">
-              <span class="section-tag">
-                <i class="fa-solid fa-folder-open"></i>
-                Documents
-              </span>
+              <span class="section-label"> DOCUMENTATION </span>
 
               <h2>
-                Keep Your Documents
-                <span>Ready</span>
+                Keep Your
+                <strong>Documents Ready</strong>
               </h2>
 
               <p>
-                Having the necessary documents ready can help make your loan
-                application process smoother and faster.
+                Depending on the loan type and lending partner, you may be asked
+                to provide documents such as:
               </p>
 
               <div class="documents-list">
                 <div class="document-item">
                   <i class="fa-solid fa-id-card"></i>
-                  <div>
-                    <strong>Identity Proof</strong>
-                    <span>Valid government-issued ID</span>
-                  </div>
+                  <span>Identity & Address Proof</span>
                 </div>
 
                 <div class="document-item">
-                  <i class="fa-solid fa-location-dot"></i>
-                  <div>
-                    <strong>Address Proof</strong>
-                    <span>Valid residential address proof</span>
-                  </div>
-                </div>
-
-                <div class="document-item">
-                  <i class="fa-solid fa-file-invoice-dollar"></i>
-                  <div>
-                    <strong>Income Documents</strong>
-                    <span>Salary slips / income proof</span>
-                  </div>
+                  <i class="fa-solid fa-money-check-dollar"></i>
+                  <span>Income / Salary Proof</span>
                 </div>
 
                 <div class="document-item">
                   <i class="fa-solid fa-building"></i>
-                  <div>
-                    <strong>Bank Statements</strong>
-                    <span>Recent bank account statements</span>
-                  </div>
+                  <span>Business / Professional Documents</span>
+                </div>
+
+                <div class="document-item">
+                  <i class="fa-solid fa-file-invoice"></i>
+                  <span>Bank Statements</span>
+                </div>
+
+                <div class="document-item">
+                  <i class="fa-solid fa-file-lines"></i>
+                  <span>Additional Documents as Required</span>
                 </div>
               </div>
             </div>
 
-            <div class="documents-highlight">
-              <div class="highlight-circle">
-                <i class="fa-solid fa-file-shield"></i>
+            <div class="documents-help-card">
+              <div class="help-icon">
+                <i class="fa-solid fa-headset"></i>
               </div>
 
               <h3>Need Help?</h3>
 
               <p>
-                Not sure which documents you need? Our experts can guide you.
+                Not sure which loan is suitable for you? Our team can help you
+                understand available options.
               </p>
 
-              <a href="contact.html" class="document-help-btn">
-                Get Assistance
-                <i class="fa-solid fa-arrow-right"></i>
+              <a href="tel:+919999052161" class="help-phone">
+                <i class="fa-solid fa-phone"></i>
+                +91 9999052161
               </a>
             </div>
           </div>
@@ -816,41 +963,40 @@
 
       <!-- ================= FINAL CTA ================= -->
       <section class="apply-final-cta">
-        <div class="container">
-          <div class="final-cta-wrapper">
-            <div class="final-cta-content">
-              <span class="cta-small-title"> Your Financial Goals Matter </span>
+        <div class="apply-container">
+          <div class="final-cta-content">
+            <div>
+              <span> READY TO GET STARTED? </span>
 
-              <h2>
-                Ready to Take the
-                <span>Next Step?</span>
-              </h2>
+              <h2>Take the First Step Towards Your Financial Goal</h2>
 
               <p>
-                Start your loan application today and let our experts help you
-                find the right financial solution.
+                Submit your loan enquiry today and explore your available loan
+                options.
               </p>
             </div>
 
-            <div class="final-cta-actions">
-              <a href="#loanApplyForm" class="cta-primary-btn">
-                Apply Now
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
-
-              <a href="tel:+919999052161" class="cta-call-btn">
-                <i class="fa-solid fa-phone"></i>
-                <span>
-                  <small>Talk to an Expert</small>
-                  +91 9999052161
-                </span>
-              </a>
-            </div>
+            <a href="#loanApplyForm" class="final-cta-btn">
+              Apply Now
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
         </div>
       </section>
-    </main>
 
+      <!-- ================= DISCLAIMER ================= -->
+      <section class="apply-disclaimer">
+        <div class="apply-container">
+          <p>
+            <strong>Disclaimer:</strong>
+            Loan Suvida is a financial service facilitator / DSA. Loan approval,
+            interest rate, tenure, loan amount and other terms are subject to
+            the respective lending partner's eligibility criteria, policies and
+            approval.
+          </p>
+        </div>
+      </section>
+    </main>
     <footer class="main-footer">
       <div class="footer-main">
         <div class="container">
