@@ -1,21 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* =========================================================
+   EMI CALCULATOR - ROOT VARIABLES
+========================================================= */
+
 :root {
   --emi-blue: #0754a5;
+  --emi-blue-dark: #003f7d;
+  --emi-blue-deep: #002b55;
+  --emi-blue-light: #eaf4ff;
+  --emi-blue-soft: #f5faff;
+
   --emi-dark: #14213d;
   --emi-muted: #68778d;
   --emi-border: #e2eaf3;
-  --emi-soft: #f5faff;
-  --emi-orange: #f7941d;
+  --emi-white: #ffffff;
+
+  --emi-shadow: 0 25px 65px rgba(7, 84, 165, 0.1);
+  --emi-shadow-soft: 0 18px 35px rgba(7, 84, 165, 0.09);
 }
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
 
 .emi-hero {
   position: relative;
   overflow: hidden;
   padding: 90px 0 118px;
+
   background:
     radial-gradient(
       circle at 88% 18%,
-      rgba(247, 148, 29, 0.17),
-      transparent 20%
+      rgba(7, 84, 165, 0.12),
+      transparent 22%
     ),
     linear-gradient(135deg, #f8fcff, #e9f5ff);
 }
@@ -23,34 +42,60 @@
 .emi-hero-inner {
   position: relative;
   z-index: 1;
+
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
+
   gap: 70px;
   align-items: center;
 }
 
+
+/* =========================================================
+   HERO BADGE
+========================================================= */
+
 .emi-badge {
   display: inline-flex;
-  gap: 9px;
   align-items: center;
-  padding: 9px 14px;
+  gap: 9px;
+
+  padding: 9px 15px;
+
   border: 1px solid rgba(7, 84, 165, 0.14);
   border-radius: 30px;
-  background: #fff;
+
+  background: var(--emi-white);
   color: var(--emi-blue);
-  font:
-    700 10px Poppins,
-    sans-serif;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+
   letter-spacing: 1px;
 }
 
+.emi-badge i {
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
 .emi-hero h1 {
   max-width: 650px;
+
   margin: 20px 0 16px;
+
   color: var(--emi-dark);
-  font:
-    800 clamp(40px, 5vw, 64px)/1.12 Poppins,
-    sans-serif;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(42px, 5vw, 62px);
+  font-weight: 800;
+  line-height: 1.12;
+
   letter-spacing: -1.8px;
 }
 
@@ -60,109 +105,171 @@
 
 .emi-hero p {
   max-width: 580px;
+
   margin: 0;
+
   color: var(--emi-muted);
+
+  font-family: "Inter", sans-serif;
   font-size: 15px;
   line-height: 1.85;
 }
+
+
+/* =========================================================
+   HERO TRUST
+========================================================= */
 
 .hero-trust {
   display: flex;
   flex-wrap: wrap;
   gap: 19px;
+
   margin-top: 27px;
+
   color: #52647c;
-  font-size: 11px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .hero-trust i {
   margin-right: 5px;
-  color: var(--emi-orange);
+  color: var(--emi-blue);
 }
+
+
+/* =========================================================
+   HERO ORBS
+========================================================= */
 
 .hero-orb {
   position: absolute;
-  border-radius: 50%;
+
   border: 1px solid rgba(7, 84, 165, 0.1);
+  border-radius: 50%;
+
+  pointer-events: none;
 }
 
 .orb-one {
   width: 400px;
   height: 400px;
-  right: -210px;
+
   top: -225px;
+  right: -210px;
 }
 
 .orb-two {
   width: 280px;
   height: 280px;
+
   left: -160px;
   bottom: -190px;
+
   background: rgba(7, 84, 165, 0.035);
 }
+
+
+/* =========================================================
+   HERO MINI CARD
+========================================================= */
 
 .hero-mini-card {
   position: relative;
   justify-self: end;
+
   width: 280px;
+
   padding: 32px;
+
   border: 1px solid rgba(7, 84, 165, 0.1);
   border-radius: 22px;
-  background: #fff;
+
+  background: var(--emi-white);
+
   box-shadow: 0 25px 55px rgba(7, 84, 165, 0.14);
 }
 
 .mini-icon {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
+
   display: grid;
   place-items: center;
+
   margin-bottom: 20px;
+
   border-radius: 13px;
-  background: #eaf4ff;
+
+  background: var(--emi-blue-light);
   color: var(--emi-blue);
+
+  font-size: 18px;
 }
 
 .hero-mini-card > span,
-.results-head span,
+.results-head > span,
 .panel-heading > span,
 .schedule-card > div > span,
 .section-intro > span {
   display: block;
+
   color: var(--emi-blue);
-  font:
-    700 9px Poppins,
-    sans-serif;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+
   letter-spacing: 1.25px;
 }
 
 .hero-mini-card strong {
   display: block;
+
   margin: 5px 0;
+
   color: var(--emi-dark);
-  font:
-    700 28px Poppins,
-    sans-serif;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .hero-mini-card small {
   color: var(--emi-muted);
-  font-size: 10px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
 }
+
+
+/* =========================================================
+   MINI BAR CHART
+========================================================= */
 
 .mini-bars {
   display: flex;
   align-items: flex-end;
+
   gap: 6px;
+
   height: 43px;
+
   margin-top: 20px;
 }
 
 .mini-bars i {
   width: 100%;
+
   border-radius: 4px 4px 0 0;
-  background: linear-gradient(#75b4ec, var(--emi-blue));
+
+  background: linear-gradient(
+    to bottom,
+    #7db9ec,
+    var(--emi-blue)
+  );
 }
 
 .mini-bars i:nth-child(1) {
@@ -187,28 +294,42 @@
 
 .mini-bars i:nth-child(6) {
   height: 100%;
-  background: linear-gradient(#ffbd62, var(--emi-orange));
+
+  background: linear-gradient(
+    to bottom,
+    #4d98d8,
+    var(--emi-blue-dark)
+  );
 }
+
+
+/* =========================================================
+   CALCULATOR SECTION
+========================================================= */
 
 .calculator-section {
   position: relative;
+
   margin-top: -58px;
+
   padding-bottom: 100px;
 }
 
 .calculator-shell {
   position: relative;
   z-index: 2;
-}
 
-.calculator-shell {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   overflow: hidden;
+
   border: 1px solid var(--emi-border);
   border-radius: 25px;
-  background: #fff;
-  box-shadow: 0 25px 65px rgba(7, 84, 165, 0.1);
+
+  background: var(--emi-white);
+
+  box-shadow: var(--emi-shadow);
 }
 
 .calculator-panel,
@@ -220,50 +341,90 @@
   border-right: 1px solid var(--emi-border);
 }
 
+
+/* =========================================================
+   PANEL HEADINGS
+========================================================= */
+
 .panel-heading h2,
 .results-head h2,
 .schedule-card h2 {
   margin: 6px 0 8px;
+
   color: var(--emi-dark);
-  font:
-    700 26px Poppins,
-    sans-serif;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+
+  line-height: 1.3;
 }
 
 .panel-heading p {
   margin: 0 0 25px;
+
   color: var(--emi-muted);
-  font-size: 11px;
-  line-height: 1.7;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 1.75;
 }
+
+
+/* =========================================================
+   LOAN TABS
+========================================================= */
 
 .loan-tabs {
   display: flex;
+
   gap: 7px;
+
   margin-bottom: 31px;
   padding: 5px;
+
   border-radius: 11px;
+
   background: #f2f7fb;
 }
 
 .loan-tab {
   flex: 1;
-  padding: 9px 6px;
+
+  padding: 10px 7px;
+
   border: 0;
   border-radius: 7px;
+
   background: transparent;
+
   color: var(--emi-muted);
+
   cursor: pointer;
-  font:
-    600 9px Inter,
-    sans-serif;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+
+  transition: 0.25s ease;
+}
+
+.loan-tab:hover {
+  color: var(--emi-blue);
 }
 
 .loan-tab.active {
-  background: #fff;
+  background: var(--emi-white);
+
   color: var(--emi-blue);
+
   box-shadow: 0 3px 9px rgba(7, 84, 165, 0.1);
 }
+
+
+/* =========================================================
+   CONTROL GROUP
+========================================================= */
 
 .control-group {
   margin-top: 27px;
@@ -271,212 +432,364 @@
 
 .control-label {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+
   margin-bottom: 12px;
 }
 
 .control-label label {
   color: var(--emi-dark);
-  font:
-    600 11px Poppins,
-    sans-serif;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .control-label label small {
   color: var(--emi-muted);
-  font:
-    400 9px Inter,
-    sans-serif;
+
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
 }
 
 .control-label output {
   color: var(--emi-blue);
-  font:
-    700 13px Poppins,
-    sans-serif;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
 }
+
+
+/* =========================================================
+   RANGE SLIDER
+========================================================= */
 
 input[type="range"] {
   width: 100%;
-  height: 5px;
+  height: 6px;
+
   appearance: none;
+
   border-radius: 10px;
-  outline: 0;
-  background: linear-gradient(90deg, var(--emi-blue), #68a8e4);
+
+  outline: none;
+
+  background: linear-gradient(
+    90deg,
+    var(--emi-blue),
+    #68a8e4
+  );
+
   accent-color: var(--emi-blue);
+
+  cursor: pointer;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
+
   appearance: none;
-  border: 3px solid #fff;
+
+  border: 3px solid var(--emi-white);
   border-radius: 50%;
-  background: var(--emi-orange);
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25);
+
+  background: var(--emi-blue);
+
+  box-shadow: 0 2px 7px rgba(7, 84, 165, 0.3);
+
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+
+  border: 3px solid var(--emi-white);
+  border-radius: 50%;
+
+  background: var(--emi-blue);
+
+  box-shadow: 0 2px 7px rgba(7, 84, 165, 0.3);
+
   cursor: pointer;
 }
 
 .range-scale {
   display: flex;
+
   justify-content: space-between;
+
   margin-top: 7px;
+
   color: #94a4b6;
-  font-size: 9px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
 }
+
+
+/* =========================================================
+   QUICK AMOUNTS
+========================================================= */
 
 .quick-amounts {
   display: flex;
+  flex-wrap: wrap;
+
   gap: 7px;
+
   margin-top: 13px;
 }
 
 .quick-amounts button,
 .tenure-switch button {
-  padding: 6px 9px;
+  padding: 7px 10px;
+
   border: 1px solid var(--emi-border);
   border-radius: 20px;
-  background: #fff;
+
+  background: var(--emi-white);
+
   color: var(--emi-muted);
+
   cursor: pointer;
-  font:
-    600 9px Inter,
-    sans-serif;
+
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+
+  transition: 0.25s ease;
 }
 
-.quick-amounts button.selected,
 .quick-amounts button:hover,
+.quick-amounts button.selected,
 .tenure-switch button.active {
   border-color: var(--emi-blue);
-  background: #eaf4ff;
+
+  background: var(--emi-blue-light);
+
   color: var(--emi-blue);
 }
+
+
+/* =========================================================
+   TENURE SWITCH
+========================================================= */
 
 .tenure-group {
   position: relative;
 }
 
 .tenure-switch {
-  display: flex;
-  gap: 4px;
   position: absolute;
+
   right: 0;
   bottom: -31px;
+
+  display: flex;
+
+  gap: 4px;
+
   padding: 3px;
+
   border-radius: 20px;
+
   background: #f1f6fa;
 }
 
 .tenure-switch button {
   border: 0;
-  padding: 5px 9px;
+
+  padding: 6px 10px;
 }
 
+
+/* =========================================================
+   RESULTS PANEL
+========================================================= */
+
 .results-panel {
-  background: linear-gradient(140deg, #f9fcff, #edf7ff);
+  background: linear-gradient(
+    140deg,
+    #f9fcff,
+    #edf7ff
+  );
 }
 
 .results-head {
   display: flex;
+
   justify-content: space-between;
   align-items: flex-start;
+
+  gap: 15px;
 }
 
 .reset-btn {
   border: 0;
+
   background: transparent;
+
   color: var(--emi-blue);
+
   cursor: pointer;
-  font:
-    600 10px Inter,
-    sans-serif;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.reset-btn:hover {
+  color: var(--emi-blue-dark);
 }
 
 .reset-btn i {
   margin-right: 5px;
 }
 
+
+/* =========================================================
+   EMI HIGHLIGHT
+========================================================= */
+
 .emi-highlight {
   margin: 26px 0 25px;
-  padding: 22px;
+
+  padding: 23px;
+
   border-radius: 16px;
-  background: linear-gradient(120deg, #043d7a, #0a6dc5);
-  color: #fff;
+
+  background: linear-gradient(
+    120deg,
+    var(--emi-blue-deep),
+    var(--emi-blue)
+  );
+
+  color: var(--emi-white);
+
   box-shadow: 0 15px 26px rgba(7, 84, 165, 0.2);
 }
 
 .emi-highlight span,
 .emi-highlight small {
   display: block;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
 }
 
 .emi-highlight strong {
   display: block;
-  margin: 4px 0;
-  color: #fff;
-  font:
-    700 30px Poppins,
-    sans-serif;
+
+  margin: 5px 0;
+
+  color: var(--emi-white);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 31px;
+  font-weight: 700;
 }
+
+
+/* =========================================================
+   CHART SUMMARY
+========================================================= */
 
 .chart-summary {
   display: flex;
+
   align-items: center;
+
   gap: 26px;
 }
+
+
+/* =========================================================
+   DONUT CHART
+========================================================= */
 
 .donut-chart {
   width: 138px;
   height: 138px;
+
   display: grid;
-  flex-shrink: 0;
   place-items: center;
+
+  flex-shrink: 0;
+
   border-radius: 50%;
-  background: conic-gradient(#0754a5 0 77%, #f7941d 77% 100%);
+
+  background: conic-gradient(
+    var(--emi-blue) 0 77%,
+    #7eb7e7 77% 100%
+  );
 }
 
 .donut-chart > div {
   width: 105px;
   height: 105px;
+
   display: grid;
   place-content: center;
+
   border-radius: 50%;
+
   background: #f7fbff;
+
   text-align: center;
 }
 
 .donut-chart strong {
   color: var(--emi-dark);
-  font:
-    700 18px Poppins,
-    sans-serif;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .donut-chart span {
   color: var(--emi-muted);
-  font-size: 9px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
 }
+
+
+/* =========================================================
+   CHART LEGEND
+========================================================= */
 
 .chart-legend {
   display: flex;
+
   flex-direction: column;
+
   gap: 17px;
+
   width: 100%;
 }
 
 .chart-legend > div {
   display: flex;
+
   gap: 8px;
 }
 
 .legend-dot {
   width: 9px;
   height: 9px;
+
   flex-shrink: 0;
-  margin-top: 3px;
+
+  margin-top: 4px;
+
   border-radius: 50%;
 }
 
@@ -485,101 +798,172 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .interest-dot {
-  background: var(--emi-orange);
+  background: #7eb7e7;
 }
 
 .chart-legend p {
   display: flex;
+
   flex: 1;
+
   justify-content: space-between;
-  gap: 6px;
+
+  gap: 8px;
+
   margin: 0;
+
   color: var(--emi-muted);
-  font-size: 9px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
 }
 
 .chart-legend strong {
   color: var(--emi-dark);
-  font-size: 10px;
+
+  font-size: 11px;
 }
+
+
+/* =========================================================
+   SUMMARY TOTAL
+========================================================= */
 
 .summary-total {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+
   margin-top: 26px;
   padding-top: 19px;
+
   border-top: 1px solid #dce8f2;
+
   color: var(--emi-muted);
-  font-size: 11px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
 }
 
 .summary-total strong {
   color: var(--emi-dark);
-  font:
-    700 17px Poppins,
-    sans-serif;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
 }
+
+
+/* =========================================================
+   APPLY BUTTON
+========================================================= */
 
 .calculator-apply {
   display: flex;
+
   justify-content: center;
+  align-items: center;
+
   gap: 9px;
+
   margin-top: 19px;
-  padding: 13px;
+  padding: 14px;
+
   border-radius: 9px;
-  background: var(--emi-orange);
-  color: #fff;
+
+  background: var(--emi-blue);
+
+  color: var(--emi-white);
+
   text-decoration: none;
-  font:
-    600 11px Poppins,
-    sans-serif;
-  transition: 0.25s;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: 0.25s ease;
 }
 
 .calculator-apply:hover {
   transform: translateY(-2px);
-  box-shadow: 0 9px 18px rgba(247, 148, 29, 0.27);
+
+  background: var(--emi-blue-dark);
+
+  box-shadow: 0 9px 18px rgba(7, 84, 165, 0.25);
 }
 
+
+/* =========================================================
+   SCHEDULE CARD
+========================================================= */
+
 .schedule-card {
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
+
   display: flex;
+
   flex-wrap: wrap;
+
   justify-content: space-between;
+  align-items: center;
+
   gap: 20px;
+
   padding: 30px 42px;
+
   border-top: 1px solid var(--emi-border);
-  background: #fff;
+
+  background: var(--emi-white);
 }
 
 .schedule-card h2 {
-  font-size: 20px;
+  margin: 6px 0 0;
+
+  font-size: 21px;
 }
 
 .schedule-card button {
   align-self: center;
+
   border: 0;
+
   background: transparent;
+
   color: var(--emi-blue);
+
   cursor: pointer;
-  font:
-    600 10px Inter,
-    sans-serif;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.schedule-card button:hover {
+  color: var(--emi-blue-dark);
 }
 
 .schedule-card button i {
-  transition: 0.2s;
+  margin-left: 5px;
+
+  transition: 0.2s ease;
 }
 
 .schedule-card button.open i {
   transform: rotate(180deg);
 }
 
+
+/* =========================================================
+   SCHEDULE TABLE
+========================================================= */
+
 .schedule-table-wrap {
   display: none;
+
   flex-basis: 100%;
-  overflow: auto;
+
+  overflow-x: auto;
 }
 
 .schedule-table-wrap.open {
@@ -588,16 +972,24 @@ input[type="range"]::-webkit-slider-thumb {
 
 table {
   width: 100%;
+
   border-collapse: collapse;
+
   color: var(--emi-muted);
-  font-size: 10px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
 }
 
 th,
 td {
   padding: 13px 10px;
+
   border-bottom: 1px solid #edf2f6;
+
   text-align: right;
+
+  white-space: nowrap;
 }
 
 th:first-child,
@@ -607,10 +999,16 @@ td:first-child {
 
 th {
   color: var(--emi-dark);
-  font:
-    600 10px Poppins,
-    sans-serif;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
 }
+
+
+/* =========================================================
+   HELP SECTION
+========================================================= */
 
 .emi-help {
   padding: 0 0 105px;
@@ -618,116 +1016,261 @@ th {
 
 .section-intro {
   max-width: 660px;
+
   margin: 0 auto 42px;
+
   text-align: center;
 }
 
 .section-intro h2 {
   margin: 11px 0;
+
   color: var(--emi-dark);
-  font:
-    700 clamp(30px, 4vw, 43px) Poppins,
-    sans-serif;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 700;
+
+  line-height: 1.2;
 }
 
 .section-intro em {
   color: var(--emi-blue);
+
   font-style: normal;
 }
 
 .section-intro p {
   margin: 0;
+
   color: var(--emi-muted);
-  font-size: 13px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
   line-height: 1.8;
 }
 
+
+/* =========================================================
+   HELP GRID
+========================================================= */
+
 .help-grid {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 19px;
 }
 
 .help-grid article {
-  padding: 29px;
+  padding: 30px;
+
   border: 1px solid var(--emi-border);
   border-radius: 17px;
-  background: #fff;
-  transition: 0.25s;
+
+  background: var(--emi-white);
+
+  transition: 0.25s ease;
 }
 
 .help-grid article:hover {
   transform: translateY(-5px);
-  box-shadow: 0 18px 35px rgba(7, 84, 165, 0.09);
+
+  border-color: rgba(7, 84, 165, 0.2);
+
+  box-shadow: var(--emi-shadow-soft);
 }
 
 .help-grid i {
-  width: 47px;
-  height: 47px;
+  width: 48px;
+  height: 48px;
+
   display: grid;
   place-items: center;
+
   border-radius: 13px;
-  background: #eaf4ff;
+
+  background: var(--emi-blue-light);
+
   color: var(--emi-blue);
-  font-size: 17px;
+
+  font-size: 18px;
 }
 
 .help-grid h3 {
-  margin: 18px 0 7px;
+  margin: 18px 0 8px;
+
   color: var(--emi-dark);
-  font:
-    600 15px Poppins,
-    sans-serif;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 .help-grid p {
   margin: 0;
+
   color: var(--emi-muted);
-  font-size: 11px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
   line-height: 1.75;
 }
 
+
+/* =========================================================
+   RESPONSIVE - 850px
+========================================================= */
+
 @media (max-width: 850px) {
+
   .emi-hero-inner,
   .calculator-shell {
     grid-template-columns: 1fr;
   }
 
   .emi-hero {
-    padding: 65px 0 105px;
+    padding: 70px 0 105px;
+  }
+
+  .emi-hero h1 {
+    font-size: 46px;
   }
 
   .hero-mini-card {
     justify-self: start;
+
     width: min(100%, 380px);
   }
 
   .calculator-panel {
     border-right: 0;
+
     border-bottom: 1px solid var(--emi-border);
   }
 
+  .calculator-panel,
+  .results-panel {
+    padding: 34px;
+  }
+
   .schedule-card {
-    padding: 27px;
+    padding: 28px 34px;
   }
 
   .help-grid {
     grid-template-columns: 1fr;
   }
-
-  .calculator-panel,
-  .results-panel {
-    padding: 30px;
-  }
 }
 
-@media (max-width: 520px) {
+
+/* =========================================================
+   RESPONSIVE - 650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .emi-hero {
+    padding: 60px 0 95px;
+  }
+
   .emi-hero h1 {
-    font-size: 36px;
+    font-size: 40px;
+
+    letter-spacing: -1px;
+  }
+
+  .emi-hero p {
+    font-size: 14px;
   }
 
   .hero-trust {
-    gap: 11px;
+    gap: 12px;
+
+    font-size: 11px;
+  }
+
+  .calculator-section {
+    margin-top: -45px;
+
+    padding-bottom: 75px;
+  }
+
+  .calculator-panel,
+  .results-panel {
+    padding: 27px;
+  }
+
+  .panel-heading h2,
+  .results-head h2 {
+    font-size: 24px;
+  }
+
+  .chart-summary {
+    gap: 20px;
+  }
+
+  .donut-chart {
+    width: 125px;
+    height: 125px;
+  }
+
+  .donut-chart > div {
+    width: 95px;
+    height: 95px;
+  }
+
+  .schedule-card {
+    padding: 25px 27px;
+  }
+
+  .help-grid article {
+    padding: 26px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 520px
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .emi-hero {
+    padding: 55px 0 85px;
+  }
+
+  .emi-hero h1 {
+    font-size: 35px;
+
+    line-height: 1.16;
+  }
+
+  .emi-hero p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .emi-badge {
+    font-size: 10px;
+  }
+
+  .hero-mini-card {
+    width: 100%;
+
+    padding: 27px;
+  }
+
+  .hero-trust {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    font-size: 10px;
   }
 
   .calculator-panel,
@@ -740,11 +1283,243 @@ th {
   }
 
   .loan-tab {
-    font-size: 8px;
+    padding: 9px 4px;
+
+    font-size: 9px;
+  }
+
+  .control-label label {
+    font-size: 12px;
+  }
+
+  .control-label output {
+    font-size: 13px;
+  }
+
+  .quick-amounts {
+    flex-wrap: wrap;
   }
 
   .chart-summary {
-    gap: 15px;
+    gap: 14px;
+  }
+
+  .donut-chart {
+    width: 115px;
+    height: 115px;
+  }
+
+  .donut-chart > div {
+    width: 87px;
+    height: 87px;
+  }
+
+  .donut-chart strong {
+    font-size: 16px;
+  }
+
+  .chart-legend {
+    gap: 13px;
+  }
+
+  .chart-legend p {
+    flex-direction: column;
+
+    gap: 3px;
+
+    font-size: 10px;
+  }
+
+  .chart-legend strong {
+    font-size: 10px;
+  }
+
+  .emi-highlight {
+    padding: 20px;
+  }
+
+  .emi-highlight strong {
+    font-size: 27px;
+  }
+
+  .summary-total {
+    font-size: 11px;
+  }
+
+  .summary-total strong {
+    font-size: 16px;
+  }
+
+  .schedule-card {
+    padding: 22px;
+  }
+
+  .schedule-card h2 {
+    font-size: 19px;
+  }
+
+  .schedule-card button {
+    align-self: flex-start;
+
+    font-size: 10px;
+  }
+
+  table {
+    font-size: 10px;
+  }
+
+  th {
+    font-size: 10px;
+  }
+
+  .section-intro {
+    margin-bottom: 32px;
+  }
+
+  .section-intro h2 {
+    font-size: 29px;
+  }
+
+  .section-intro p {
+    font-size: 13px;
+  }
+
+  .help-grid h3 {
+    font-size: 16px;
+  }
+
+  .help-grid p {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .emi-hero h1 {
+    font-size: 32px;
+  }
+
+  .emi-hero p {
+    font-size: 13px;
+  }
+
+  .hero-trust {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .calculator-panel,
+  .results-panel {
+    padding: 19px;
+  }
+
+  .panel-heading h2,
+  .results-head h2 {
+    font-size: 22px;
+  }
+
+  .loan-tab {
+    font-size: 8.5px;
+  }
+
+  .control-label label {
+    font-size: 11px;
+  }
+
+  .control-label output {
+    font-size: 12px;
+  }
+
+  .chart-summary {
+    align-items: flex-start;
+  }
+
+  .donut-chart {
+    width: 105px;
+    height: 105px;
+  }
+
+  .donut-chart > div {
+    width: 79px;
+    height: 79px;
+  }
+
+  .donut-chart strong {
+    font-size: 14px;
+  }
+
+  .donut-chart span {
+    font-size: 8px;
+  }
+
+  .emi-highlight strong {
+    font-size: 25px;
+  }
+
+  .schedule-card {
+    padding: 20px;
+  }
+
+  .section-intro h2 {
+    font-size: 26px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 350px
+========================================================= */
+
+@media (max-width: 350px) {
+
+  .emi-hero h1 {
+    font-size: 29px;
+  }
+
+  .emi-badge {
+    padding: 8px 11px;
+
+    font-size: 9px;
+  }
+
+  .hero-mini-card {
+    padding: 22px;
+  }
+
+  .hero-mini-card strong {
+    font-size: 25px;
+  }
+
+  .calculator-panel,
+  .results-panel {
+    padding: 17px;
+  }
+
+  .loan-tabs {
+    padding: 4px;
+  }
+
+  .loan-tab {
+    padding: 8px 3px;
+
+    font-size: 8px;
+  }
+
+  .quick-amounts button,
+  .tenure-switch button {
+    padding: 6px 8px;
+
+    font-size: 9px;
+  }
+
+  .chart-summary {
+    flex-direction: column;
   }
 
   .donut-chart {
@@ -757,28 +1532,15 @@ th {
     height: 90px;
   }
 
-  .chart-legend p {
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .quick-amounts {
-    flex-wrap: wrap;
+  .chart-legend {
+    margin-top: 5px;
   }
 
   .schedule-card {
-    padding: 22px;
+    padding: 18px;
   }
 
-  .schedule-card h2 {
-    font-size: 18px;
-  }
-
-  .schedule-card button {
-    align-self: flex-start;
-  }
-
-  .footer-main {
-    grid-template-columns: 1fr 1fr;
+  .section-intro h2 {
+    font-size: 24px;
   }
 }

@@ -9,8 +9,8 @@
     --blue-dark: #003f78;
     --blue-light: #eaf5ff;
     --blue-soft: #f5faff;
-    --orange: #f7941d;
-    --orange-dark: #e87800;
+    --orange: #005baa;
+    --orange-dark: #003f78;
     --white: #ffffff;
     --dark: #172033;
     --text: #596579;
@@ -80,7 +80,7 @@
 
 .about-page .section-heading-center {
     max-width: 720px;
-    margin: 0 auto 55px;
+    margin: 0 auto 30px;
     text-align: center;
 }
 
@@ -89,7 +89,7 @@
 
     color: var(--dark);
 
-    font-size: clamp(30px, 3.2vw, 45px);
+    font-size: clamp(27px, 3vw, 40px);
     line-height: 1.2;
     font-weight: 700;
     letter-spacing: -0.8px;
@@ -119,12 +119,12 @@
     display: flex;
     align-items: center;
 
-    padding: 100px 0 75px;
+    padding: 65px 0 50px;
 
     background:
         radial-gradient(
             circle at 88% 18%,
-            rgba(247, 148, 29, 0.18),
+            rgba(0, 91, 170, 0.18),
             transparent 27%
         ),
         radial-gradient(
@@ -235,7 +235,7 @@
 }
 
 .about-page .about-badge i {
-    color: #ffb24d;
+    color: #9cd5ff;
 }
 
 
@@ -246,7 +246,7 @@
 
     color: #ffffff;
 
-    font-size: clamp(38px, 5vw, 63px);
+    font-size: clamp(34px, 4.5vw, 56px);
     line-height: 1.08;
 
     font-weight: 700;
@@ -256,7 +256,7 @@
 
 .about-page .about-hero h1 span {
     display: inline-block;
-    color: #ffb34e;
+    color: #9cd5ff;
 }
 
 
@@ -296,11 +296,11 @@
 }
 
 .about-page .about-breadcrumb a:hover {
-    color: #ffb34e;
+    color: #9cd5ff;
 }
 
 .about-page .about-breadcrumb i {
-    color: #ffb34e;
+    color: #9cd5ff;
     font-size: 9px;
 }
 
@@ -312,7 +312,7 @@
 .about-page .about-intro-section {
     position: relative;
 
-    padding: 105px 0;
+    padding: 60px 0;
 
     background: #ffffff;
 }
@@ -322,7 +322,7 @@
 
     grid-template-columns: 1.15fr 0.85fr;
 
-    gap: 75px;
+    gap: 35px;
 
     align-items: center;
 }
@@ -339,7 +339,7 @@
 
     color: var(--dark);
 
-    font-size: clamp(31px, 3.3vw, 46px);
+    font-size: clamp(26px, 2.8vw, 34px);
     line-height: 1.2;
 
     font-weight: 700;
@@ -417,7 +417,7 @@
     background:
         radial-gradient(
             circle at 100% 0%,
-            rgba(247, 148, 29, 0.10),
+            rgba(0, 91, 170, 0.10),
             transparent 32%
         ),
         linear-gradient(
@@ -493,7 +493,7 @@
 
     border-radius: 18px;
 
-    font-size: 25px;
+    font-size: 22px;
 
     box-shadow: 0 12px 28px rgba(0, 91, 170, 0.22);
 }
@@ -521,7 +521,7 @@
 
     color: var(--dark);
 
-    font-size: 25px;
+    font-size: 22px;
     line-height: 1.3;
 
     font-weight: 700;
@@ -596,7 +596,7 @@
 ========================================================= */
 
 .about-page .about-stats-section {
-    padding: 65px 0;
+    padding: 45px 0;
 
     background: #f7faff;
 
@@ -690,7 +690,7 @@
 
     color: var(--blue);
 
-    font-size: 26px;
+    font-size: 23px;
     line-height: 1.1;
 
     font-weight: 700;
@@ -711,7 +711,7 @@
 ========================================================= */
 
 .about-page .about-services-section {
-    padding: 105px 0;
+    padding: 60px 0;
 
     background: #ffffff;
 }
@@ -793,7 +793,7 @@
     width: 210px;
     height: 210px;
 
-    background: rgba(247, 148, 29, 0.07);
+    background: rgba(0, 91, 170, 0.07);
 }
 
 .about-page .about-service-card:hover::after {
@@ -921,7 +921,7 @@
 ========================================================= */
 
 .about-page .about-why-section {
-    padding: 105px 0;
+    padding: 60px 0;
 
     background:
         linear-gradient(
@@ -936,7 +936,7 @@
 
     grid-template-columns: 0.95fr 1.05fr;
 
-    gap: 75px;
+    gap: 35px;
 
     align-items: center;
 }
@@ -946,7 +946,7 @@
 
     color: var(--dark);
 
-    font-size: clamp(31px, 3.3vw, 46px);
+    font-size: clamp(26px, 2.8vw, 34px);
 
     line-height: 1.2;
 
@@ -1083,7 +1083,7 @@
     background:
         radial-gradient(
             circle at 85% 15%,
-            rgba(247, 148, 29, 0.16),
+            rgba(0, 91, 170, 0.16),
             transparent 25%
         ),
         linear-gradient(
@@ -1128,7 +1128,7 @@
 
     border-radius: 50%;
 
-    background: rgba(247, 148, 29, 0.08);
+    background: rgba(0, 91, 170, 0.08);
 }
 
 
@@ -1155,7 +1155,7 @@
 
     color: #ffffff;
 
-    font-size: 38px;
+    font-size: 34px;
 
     backdrop-filter: blur(10px);
 }
@@ -1164,7 +1164,7 @@
     position: relative;
     z-index: 1;
 
-    color: #ffb34e;
+    color: #9cd5ff;
 
     font-size: 11px;
 
@@ -1183,7 +1183,7 @@
 
     color: #ffffff;
 
-    font-size: 29px;
+    font-size: 25px;
 
     line-height: 1.25;
 
@@ -1263,7 +1263,7 @@
 }
 
 .about-page .floating-card-two i {
-    background: rgba(247, 148, 29, 0.10);
+    background: rgba(0, 91, 170, 0.10);
     color: var(--orange);
 }
 
@@ -1273,7 +1273,7 @@
 ========================================================= */
 
 .about-page .about-process-section {
-    padding: 105px 0;
+    padding: 60px 0;
 
     background: #ffffff;
 }
@@ -1354,7 +1354,7 @@
 .process-step-number {
     color: var(--orange);
 
-    border-color: rgba(247, 148, 29, 0.13);
+    border-color: rgba(0, 91, 170, 0.13);
 }
 
 .about-page .about-process-item:hover .process-step-number {
@@ -1385,7 +1385,7 @@
 
 .about-page .about-process-item:nth-child(even)
 .process-step-icon {
-    background: rgba(247, 148, 29, 0.09);
+    background: rgba(0, 91, 170, 0.09);
     color: var(--orange);
 }
 
@@ -1417,7 +1417,7 @@
 ========================================================= */
 
 .about-page .about-mission-section {
-    padding: 90px 0;
+    padding: 60px 0;
 
     background: #f7faff;
 }
@@ -1479,7 +1479,7 @@
 }
 
 .about-page .mission-card-blue > div:last-child span {
-    color: #ffb34e;
+    color: #9cd5ff;
 }
 
 .about-page .mission-card-blue h3 {
@@ -1535,7 +1535,7 @@
 }
 
 .about-page .mission-card-light .mission-icon {
-    background: rgba(247,148,29,0.10);
+    background: rgba(0,91,170,0.10);
     color: var(--orange);
 }
 
@@ -1556,7 +1556,7 @@
 .about-page .mission-card h3 {
     margin: 0 0 12px;
 
-    font-size: 21px;
+    font-size: 19px;
 
     line-height: 1.35;
 
@@ -1579,12 +1579,12 @@
 .about-page .about-final-cta {
     position: relative;
 
-    padding: 75px 0;
+    padding: 45px 0;
 
     background:
         radial-gradient(
             circle at 90% 50%,
-            rgba(247, 148, 29, 0.17),
+            rgba(0, 91, 170, 0.17),
             transparent 26%
         ),
         linear-gradient(
@@ -1641,7 +1641,7 @@
 
     justify-content: space-between;
 
-    gap: 45px;
+    gap: 35px;
 }
 
 .about-page .about-cta-content {
@@ -1655,7 +1655,7 @@
 
     gap: 8px;
 
-    color: #ffb34e;
+    color: #9cd5ff;
 
     font-size: 11px;
 
@@ -1671,7 +1671,7 @@
 
     color: #ffffff;
 
-    font-size: clamp(28px, 3vw, 40px);
+    font-size: clamp(26px, 2.8vw, 34px);
 
     line-height: 1.2;
 
@@ -1681,7 +1681,7 @@
 .about-page .about-cta-content h2 strong {
     display: block;
 
-    color: #ffb34e;
+    color: #9cd5ff;
 
     font-weight: 700;
 }
@@ -1822,7 +1822,7 @@
     .about-page .about-intro-grid {
         grid-template-columns: 1fr;
 
-        gap: 45px;
+        gap: 35px;
     }
 
     .about-page .about-intro-content {
@@ -1874,7 +1874,7 @@
     .about-page .about-process-grid {
         grid-template-columns: repeat(3, 1fr);
 
-        row-gap: 45px;
+        row-gap: 35px;
     }
 
     .about-page .about-process-grid::before {
@@ -1957,7 +1957,7 @@
     /* STATS */
 
     .about-page .about-stats-section {
-        padding: 55px 0;
+        padding: 45px 0;
     }
 
 
@@ -1997,14 +1997,14 @@
     /* MISSION */
 
     .about-page .about-mission-section {
-        padding: 65px 0;
+        padding: 45px 0;
     }
 
 
     /* CTA */
 
     .about-page .about-final-cta {
-        padding: 65px 0;
+        padding: 45px 0;
     }
 
     .about-page .about-cta-actions {
@@ -2059,7 +2059,7 @@
     }
 
     .about-page .section-heading-center h2 {
-        font-size: 29px;
+        font-size: 25px;
     }
 
     .about-page .section-heading-center > p {
@@ -2075,7 +2075,7 @@
 
     .about-page .about-intro-content h2,
     .about-page .about-why-content h2 {
-        font-size: 29px;
+        font-size: 25px;
     }
 
     .about-page .about-intro-content > p,
@@ -2106,7 +2106,7 @@
         width: 57px;
         height: 57px;
 
-        font-size: 21px;
+        font-size: 19px;
     }
 
     .about-page .about-intro-card h3 {
@@ -2154,7 +2154,7 @@
     }
 
     .about-page .about-stat-card h3 {
-        font-size: 21px;
+        font-size: 19px;
     }
 
     .about-page .about-stat-card p {
@@ -2422,7 +2422,7 @@
 
     .about-page .about-intro-content h2,
     .about-page .about-why-content h2 {
-        font-size: 26px;
+        font-size: 23px;
     }
 
     .about-page .about-intro-content > p,
@@ -2499,7 +2499,7 @@
         width: 60px;
         height: 60px;
 
-        font-size: 25px;
+        font-size: 22px;
     }
 
     .about-page .why-main-card h3 {
@@ -2756,7 +2756,7 @@
 
         margin-bottom: 13px;
 
-        font-size: 21px;
+        font-size: 19px;
 
         border-radius: 16px;
     }
@@ -2871,7 +2871,7 @@
 @media (max-width: 250px) {
 
     .about-page .about-hero h1 {
-        font-size: 21px;
+        font-size: 19px;
     }
 
     .about-page .about-hero p {
@@ -3060,4 +3060,252 @@
 
         font-size: 7px;
     }
+}
+
+/* =========================================================
+   FINAL VISUAL TUNING - PROCESS + MISSION / VISION
+   Only spacing, sizing and color visibility adjustments
+========================================================= */
+
+/* Process section */
+.about-page .about-process-grid {
+    gap: 16px;
+}
+
+.about-page .about-process-grid::before {
+    background: #b9d8ef;
+    opacity: 1;
+}
+
+.about-page .process-step-number,
+.about-page .about-process-item:nth-child(even) .process-step-number {
+    width: 62px;
+    height: 62px;
+    background: #005baa;
+    border: 5px solid #eaf5ff;
+    color: #ffffff !important;
+    font-size: 14px;
+    box-shadow: 0 7px 18px rgba(0, 91, 170, 0.16);
+}
+
+.about-page .process-step-icon,
+.about-page .about-process-item:nth-child(even) .process-step-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 11px;
+    background: #eaf5ff !important;
+    color: #005baa !important;
+    font-size: 16px;
+}
+
+.about-page .process-step-icon i {
+    color: #005baa !important;
+}
+
+.about-page .about-process-item h3 {
+    margin-bottom: 5px;
+    color: #003f78;
+    font-size: 14px;
+}
+
+.about-page .about-process-item p {
+    max-width: 180px;
+    font-size: 10.5px;
+    line-height: 1.55;
+}
+
+/* Mission / Vision */
+.about-page .about-mission-section {
+    padding: 44px 0;
+}
+
+.about-page .mission-grid {
+    gap: 20px;
+}
+
+.about-page .mission-card {
+    gap: 18px;
+    padding: 28px;
+    border-radius: 18px;
+}
+
+.about-page .mission-card-blue {
+    background: #005baa !important;
+    border-color: transparent;
+}
+
+.about-page .mission-card-blue > div:last-child span {
+    color: #9cd5ff !important;
+}
+
+.about-page .mission-card-blue h3 {
+    color: #ffffff !important;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.about-page .mission-card-blue p {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-size: 11.5px;
+    line-height: 1.65;
+}
+
+.about-page .mission-card-light > div:last-child span {
+    color: #005baa !important;
+}
+
+.about-page .mission-card-light h3 {
+    color: #003f78 !important;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.about-page .mission-card-light p {
+    font-size: 11.5px;
+    line-height: 1.65;
+}
+
+.about-page .mission-icon {
+    flex: 0 0 54px;
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    font-size: 20px;
+}
+
+.about-page .mission-card-blue .mission-icon {
+    background: rgba(255, 255, 255, 0.14) !important;
+    color: #ffffff !important;
+}
+
+.about-page .mission-card-blue .mission-icon i {
+    color: #ffffff !important;
+}
+
+.about-page .mission-card-light .mission-icon {
+    background: #eaf5ff !important;
+    color: #005baa !important;
+}
+
+.about-page .mission-card-light .mission-icon i {
+    color: #005baa !important;
+}
+
+@media (max-width: 767px) {
+    .about-page .about-mission-section {
+        padding: 38px 0;
+    }
+
+    .about-page .mission-card {
+        padding: 22px;
+    }
+
+    .about-page .mission-card h3 {
+        font-size: 16px;
+    }
+
+    .about-page .mission-card p {
+        font-size: 11px;
+    }
+}
+/* =========================================================
+   ABOUT PAGE - ALL ICON COLORS FIX
+========================================================= */
+
+/* Section Tag Icon */
+.about-page .section-tag i {
+    color: #005baa !important;
+}
+
+/* Intro Icon */
+.about-page .intro-card-icon {
+    background: #005baa !important;
+    color: #ffffff !important;
+}
+
+/* Intro Card Small Icon/Text */
+.about-page .about-intro-card > span {
+    color: #005baa !important;
+}
+
+/* Stat Icons */
+.about-page .stat-icon {
+    background: #eaf5ff !important;
+    color: #005baa !important;
+}
+
+/* Stat Card Icons/Text */
+.about-page .about-stat-card i {
+    color: #005baa !important;
+}
+
+/* Service Icons */
+.about-page .about-service-icon {
+    background: #eaf5ff !important;
+    color: #005baa !important;
+}
+
+.about-page .about-service-card:hover .about-service-icon {
+    background: #005baa !important;
+    color: #ffffff !important;
+}
+
+/* Why Feature Icons */
+.about-page .why-feature-icon {
+    background: #eaf5ff !important;
+    color: #005baa !important;
+}
+
+.about-page .why-feature-icon i {
+    color: #005baa !important;
+}
+
+/* Why Main Icon */
+.about-page .why-main-icon {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+}
+
+.about-page .why-main-icon i {
+    color: #ffffff !important;
+}
+
+/* Process Icons */
+.about-page .process-step-icon {
+    background: #eaf5ff !important;
+    color: #005baa !important;
+}
+
+.about-page .process-step-icon i {
+    color: #005baa !important;
+}
+
+/* Even Process Icons */
+.about-page .about-process-item:nth-child(even) .process-step-icon {
+    background: #eaf5ff !important;
+    color: #005baa !important;
+}
+
+.about-page .about-process-item:nth-child(even) .process-step-icon i {
+    color: #005baa !important;
+}
+
+/* Mission Icons - Light Card */
+.about-page .mission-card-light .mission-icon {
+    background: #eaf5ff !important;
+    color: #005baa !important;
+}
+
+.about-page .mission-card-light .mission-icon i {
+    color: #005baa !important;
+}
+
+/* Mission Icons - Blue Card */
+.about-page .mission-card-blue .mission-icon {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+}
+
+.about-page .mission-card-blue .mission-icon i {
+    color: #ffffff !important;
 }

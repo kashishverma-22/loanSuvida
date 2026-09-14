@@ -1,16 +1,26 @@
-
+/* =========================================================
+   PERSONAL LOAN PAGE
+========================================================= */
 
 .personal-loan-page {
   --pl-blue: #005baa;
   --pl-blue-dark: #003f78;
+  --pl-blue-deep: #002b55;
   --pl-blue-light: #eaf5ff;
-  --pl-orange: #f7941d;
-  --pl-orange-dark: #e87800;
+  --pl-blue-soft: #f3f8fd;
+
   --pl-white: #ffffff;
-  --pl-black: #14213d;
-  --pl-text: #5c6878;
+  --pl-black: #172033;
+  --pl-text: #586579;
+  --pl-muted: #7b8798;
+
   --pl-bg: #f7faff;
   --pl-border: #e5ebf2;
+
+  --pl-success: #218838;
+  --pl-success-bg: #eaf8ef;
+  --pl-danger: #dc3545;
+
   --pl-shadow-sm: 0 8px 25px rgba(0, 64, 120, 0.08);
   --pl-shadow-md: 0 15px 40px rgba(0, 64, 120, 0.12);
 
@@ -21,7 +31,7 @@
 
 /* =========================================================
    COMMON
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page *,
 .personal-loan-page *::before,
@@ -38,6 +48,12 @@
   text-decoration: none;
 }
 
+.personal-loan-page button,
+.personal-loan-page input,
+.personal-loan-page select {
+  font-family: inherit;
+}
+
 .personal-loan-page section {
   position: relative;
 }
@@ -49,33 +65,38 @@
 
 /* =========================================================
    BUTTONS
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .btn-primary-loan,
 .personal-loan-page .btn-outline-loan {
   min-height: 48px;
-  padding: 0 21px;
-  border-radius: 7px;
+  padding: 0 22px;
+  border-radius: 8px;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 9px;
+
   font-size: 14px;
   font-weight: 600;
+
+  cursor: pointer;
   transition: 0.3s ease;
 }
 
 .personal-loan-page .btn-primary-loan {
-  background: var(--pl-orange);
+  background: var(--pl-blue);
   color: var(--pl-white);
-  border: 1px solid var(--pl-orange);
+  border: 1px solid var(--pl-blue);
 }
 
 .personal-loan-page .btn-primary-loan:hover {
-  background: var(--pl-orange-dark);
-  border-color: var(--pl-orange-dark);
+  background: var(--pl-blue-dark);
+  border-color: var(--pl-blue-dark);
   color: var(--pl-white);
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 91, 170, 0.22);
 }
 
 .personal-loan-page .btn-outline-loan {
@@ -92,29 +113,33 @@
 
 /* =========================================================
    SECTION HEADING
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-section-heading {
-  max-width: 700px;
-  margin: 0 auto 42px;
+  max-width: 720px;
+  margin: 0 auto 45px;
   text-align: center;
 }
 
 .personal-loan-page .personal-section-heading > span {
   display: inline-block;
-  margin-bottom: 8px;
-  color: var(--pl-orange);
+  margin-bottom: 9px;
+
+  color: var(--pl-blue);
   font-size: 12px;
   font-weight: 700;
+
   text-transform: uppercase;
   letter-spacing: 1.1px;
 }
 
 .personal-loan-page .personal-section-heading h2 {
-  margin: 0 0 12px;
+  margin: 0 0 13px;
+
   font-size: 36px;
   line-height: 1.2;
   font-weight: 700;
+
   color: var(--pl-black);
 }
 
@@ -124,26 +149,29 @@
 
 .personal-loan-page .personal-section-heading p {
   margin: 0;
+
   color: var(--pl-text);
   font-size: 14px;
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
 /* =========================================================
    HERO
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-hero {
   min-height: 590px;
-  padding: 65px 0;
+  padding: 70px 0;
+
   display: flex;
   align-items: center;
+
   background:
     linear-gradient(
       90deg,
-      rgba(0, 45, 90, 0.43) 0%,
-      rgba(0, 75, 125, 0.58) 43%,
-      rgba(0, 75, 125, 0.4) 100%
+      rgba(0, 35, 75, 0.72) 0%,
+      rgba(0, 70, 120, 0.62) 45%,
+      rgba(0, 91, 170, 0.42) 100%
     ),
     url("../image/personal-banner.jpeg") center center / cover no-repeat;
 }
@@ -151,20 +179,28 @@
 .personal-loan-page .personal-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0, 45, 90, 0.3), transparent);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 43, 85, 0.25),
+      transparent
+    );
+
   pointer-events: none;
 }
 
 .personal-loan-page .personal-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(350px, 0.75fr);
+
   align-items: center;
   gap: 55px;
 }
 
 /* =========================================================
    HERO CONTENT
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-hero-content {
   max-width: 680px;
@@ -175,114 +211,138 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 15px;
-  padding: 7px 12px;
+
+  margin-bottom: 17px;
+  padding: 8px 13px;
+
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 30px;
-  background: rgba(255, 255, 255, 0.08);
-  font-size: 10px;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.8px;
 }
 
 .personal-loan-page .personal-badge i {
-  color: var(--pl-orange);
+  color: #ffffff;
 }
 
 .personal-loan-page .personal-hero-content h1 {
-  margin: 0 0 16px;
-  font-size: clamp(38px, 4.5vw, 58px);
+  margin: 0 0 17px;
+
+  font-size: clamp(40px, 4.5vw, 58px);
   line-height: 1.1;
   font-weight: 700;
+
   letter-spacing: -1px;
 }
 
 .personal-loan-page .personal-hero-content h1 span {
   display: block;
-  color: var(--pl-orange);
+  color: #ffffff;
 }
 
 .personal-loan-page .personal-hero-content > p {
-  max-width: 610px;
-  margin: 0 0 25px;
-  color: rgba(255, 255, 255, 0.88);
+  max-width: 620px;
+  margin: 0 0 27px;
+
+  color: rgba(255, 255, 255, 0.9);
+
   font-size: 15px;
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
 .personal-loan-page .personal-hero-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 11px;
-  margin-bottom: 28px;
+  gap: 12px;
+
+  margin-bottom: 30px;
 }
 
 /* =========================================================
    HERO TRUST
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-hero-trust {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 22px;
 }
 
 .personal-loan-page .personal-trust-item {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 10px;
 }
 
 .personal-loan-page .personal-trust-item > i {
-  width: 35px;
-  height: 35px;
-  border-radius: 8px;
+  width: 38px;
+  height: 38px;
+
+  border-radius: 9px;
+
   display: grid;
   place-items: center;
+
   background: rgba(255, 255, 255, 0.13);
-  color: var(--pl-orange);
-  font-size: 14px;
+  color: var(--pl-white);
+
+  font-size: 15px;
 }
 
 .personal-loan-page .personal-trust-item strong {
   display: block;
+
   color: var(--pl-white);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .personal-loan-page .personal-trust-item span {
   display: block;
   margin-top: 2px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 9px;
+
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 10px;
 }
 
 /* =========================================================
    HERO FORM
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-form-card {
-  padding: 27px;
+  padding: 28px;
+
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.97);
+
+  background: rgba(255, 255, 255, 0.98);
+
   box-shadow: 0 20px 55px rgba(0, 0, 0, 0.18);
 }
 
 .personal-loan-page .personal-form-icon {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 13px;
+  width: 52px;
+  height: 52px;
+
+  margin-bottom: 14px;
+
   display: grid;
   place-items: center;
+
   border-radius: 12px;
+
   background: var(--pl-blue-light);
   color: var(--pl-blue);
-  font-size: 21px;
+
+  font-size: 22px;
 }
 
 .personal-loan-page .personal-form-card h2 {
-  margin: 0 0 7px;
+  margin: 0 0 8px;
+
   color: var(--pl-black);
   font-size: 23px;
   line-height: 1.3;
@@ -290,25 +350,27 @@
 }
 
 .personal-loan-page .personal-form-card > p {
-  margin: 0 0 20px;
+  margin: 0 0 21px;
+
   color: var(--pl-text);
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.65;
 }
 
 /* =========================================================
    FORM
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-form-group {
-  margin-bottom: 13px;
+  margin-bottom: 14px;
 }
 
 .personal-loan-page .personal-form-group label {
   display: block;
   margin-bottom: 6px;
+
   color: var(--pl-black);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -318,26 +380,35 @@
 
 .personal-loan-page .personal-input-wrap > i {
   position: absolute;
-  left: 13px;
+  left: 14px;
   top: 50%;
+
   transform: translateY(-50%);
+
   color: var(--pl-blue);
-  font-size: 13px;
+  font-size: 14px;
+
   pointer-events: none;
 }
 
 .personal-loan-page .personal-input-wrap input,
 .personal-loan-page .personal-input-wrap select {
   width: 100%;
-  height: 43px;
-  padding: 0 12px 0 38px;
+  height: 45px;
+
+  padding: 0 13px 0 40px;
+
   border: 1px solid var(--pl-border);
-  border-radius: 7px;
+  border-radius: 8px;
+
   outline: none;
+
   background: var(--pl-white);
   color: var(--pl-black);
+
   font-family: inherit;
-  font-size: 11px;
+  font-size: 12px;
+
   transition: 0.25s ease;
 }
 
@@ -346,45 +417,56 @@
 }
 
 .personal-loan-page .personal-input-wrap input::placeholder {
-  color: #a1aab5;
+  color: #9aa5b3;
 }
 
 .personal-loan-page .personal-input-wrap input:focus,
 .personal-loan-page .personal-input-wrap select:focus {
   border-color: var(--pl-blue);
-  box-shadow: 0 0 0 3px rgba(0, 91, 170, 0.08);
+
+  box-shadow:
+    0 0 0 3px rgba(0, 91, 170, 0.09);
 }
 
 .personal-loan-page .personal-input-wrap input.input-error,
 .personal-loan-page .personal-input-wrap select.input-error {
-  border-color: #dc3545;
+  border-color: var(--pl-danger);
 }
 
 .personal-loan-page .personal-form-error {
-  min-height: 15px;
-  padding-top: 3px;
-  color: #dc3545;
-  font-size: 9px;
+  min-height: 16px;
+  padding-top: 4px;
+
+  color: var(--pl-danger);
+  font-size: 10px;
 }
 
 .personal-loan-page .personal-submit-btn {
   width: 100%;
-  min-height: 45px;
+  min-height: 47px;
+
   margin-top: 3px;
+
   border: 0;
-  border-radius: 7px;
-  background: var(--pl-orange);
+  border-radius: 8px;
+
+  background: var(--pl-blue);
   color: var(--pl-white);
+
   font-family: inherit;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
+
   cursor: pointer;
   transition: 0.3s ease;
 }
 
 .personal-loan-page .personal-submit-btn:hover {
-  background: var(--pl-orange-dark);
+  background: var(--pl-blue-dark);
   transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(0, 91, 170, 0.2);
 }
 
 .personal-loan-page .personal-submit-btn:disabled {
@@ -395,11 +477,14 @@
 
 .personal-loan-page .personal-form-note {
   display: flex;
-  gap: 7px;
-  margin-top: 12px;
-  color: #7a8592;
-  font-size: 9px;
-  line-height: 1.5;
+  gap: 8px;
+
+  margin-top: 13px;
+
+  color: var(--pl-muted);
+
+  font-size: 10px;
+  line-height: 1.55;
 }
 
 .personal-loan-page .personal-form-note i {
@@ -411,13 +496,17 @@
   display: none;
   align-items: center;
   gap: 8px;
+
   margin-top: 12px;
-  padding: 9px 10px;
-  border-radius: 7px;
-  background: #eaf8ef;
-  color: #218838;
-  font-size: 10px;
-  line-height: 1.4;
+  padding: 10px 11px;
+
+  border-radius: 8px;
+
+  background: var(--pl-success-bg);
+  color: var(--pl-success);
+
+  font-size: 11px;
+  line-height: 1.45;
 }
 
 .personal-loan-page .personal-form-success.show {
@@ -426,32 +515,37 @@
 
 /* =========================================================
    OVERVIEW
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-overview {
-  padding: 70px 0;
+  padding: 75px 0;
   background: var(--pl-white);
 }
 
 .personal-loan-page .personal-overview-grid {
   display: grid;
   grid-template-columns: 1fr 0.85fr;
+
   align-items: center;
   gap: 60px;
 }
 
 .personal-loan-page .personal-section-tag {
   display: inline-block;
-  margin-bottom: 9px;
-  color: var(--pl-orange);
-  font-size: 11px;
+  margin-bottom: 10px;
+
+  color: var(--pl-blue);
+
+  font-size: 12px;
   font-weight: 700;
+
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .personal-loan-page .personal-overview-content h2 {
-  margin: 0 0 15px;
+  margin: 0 0 16px;
+
   font-size: 36px;
   line-height: 1.2;
   font-weight: 700;
@@ -462,67 +556,90 @@
 }
 
 .personal-loan-page .personal-overview-content > p {
-  margin: 0 0 13px;
+  margin: 0 0 14px;
+
   color: var(--pl-text);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8;
 }
 
 .personal-loan-page .personal-check-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px 18px;
-  margin-top: 22px;
+
+  gap: 12px 20px;
+
+  margin-top: 23px;
 }
 
 .personal-loan-page .personal-check-list div {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
+
   color: var(--pl-black);
-  font-size: 11px;
+
+  font-size: 12px;
   font-weight: 500;
 }
 
 .personal-loan-page .personal-check-list i {
-  color: var(--pl-orange);
-  font-size: 12px;
+  color: var(--pl-blue);
+  font-size: 13px;
 }
 
 /* =========================================================
    OVERVIEW VISUAL
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-overview-visual {
+  min-height: 340px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 330px;
 }
 
 .personal-loan-page .personal-visual-card {
   position: relative;
-  width: min(100%, 330px);
-  padding: 35px 30px;
+
+  width: min(100%, 340px);
+
+  padding: 38px 30px;
+
   border-radius: 20px;
-  background: linear-gradient(145deg, var(--pl-blue), var(--pl-blue-dark));
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--pl-blue),
+      var(--pl-blue-dark)
+    );
+
   text-align: center;
+
   color: var(--pl-white);
+
   box-shadow: var(--pl-shadow-md);
+
   overflow: hidden;
 }
 
 .personal-loan-page .personal-visual-card::before,
 .personal-loan-page .personal-visual-card::after {
   content: "";
+
   position: absolute;
+
   border-radius: 50%;
+
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .personal-loan-page .personal-visual-card::before {
   width: 190px;
   height: 190px;
+
   top: -95px;
   right: -75px;
 }
@@ -530,6 +647,7 @@
 .personal-loan-page .personal-visual-card::after {
   width: 150px;
   height: 150px;
+
   bottom: -80px;
   left: -65px;
 }
@@ -537,21 +655,29 @@
 .personal-loan-page .personal-visual-icon {
   position: relative;
   z-index: 1;
-  width: 68px;
-  height: 68px;
-  margin: 0 auto 18px;
+
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 19px;
+
   display: grid;
   place-items: center;
+
   border-radius: 16px;
+
   background: rgba(255, 255, 255, 0.13);
-  color: var(--pl-orange);
+  color: var(--pl-white);
+
   font-size: 30px;
 }
 
 .personal-loan-page .personal-visual-card h3 {
   position: relative;
   z-index: 1;
+
   margin: 0 0 10px;
+
   font-size: 20px;
   line-height: 1.3;
 }
@@ -559,138 +685,175 @@
 .personal-loan-page .personal-visual-card p {
   position: relative;
   z-index: 1;
+
   margin: 0;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 11px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 12px;
   line-height: 1.7;
 }
 
 .personal-loan-page .personal-visual-line {
-  width: 45px;
+  width: 48px;
   height: 3px;
-  margin: 20px auto 10px;
+
+  margin: 21px auto 11px;
+
   border-radius: 10px;
-  background: var(--pl-orange);
+
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .personal-loan-page .personal-visual-card > span {
   position: relative;
   z-index: 1;
-  font-size: 9px;
+
+  font-size: 10px;
   letter-spacing: 1.5px;
-  opacity: 0.75;
+
+  opacity: 0.78;
 }
 
 /* =========================================================
    FEATURES
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-features {
-  padding: 70px 0;
+  padding: 75px 0;
   background: var(--pl-bg);
 }
 
 .personal-loan-page .personal-benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+
+  gap: 20px;
 }
 
 .personal-loan-page .personal-benefit-card {
-  padding: 24px 21px;
+  padding: 27px 23px;
+
   border: 1px solid var(--pl-border);
-  border-radius: 13px;
+  border-radius: 14px;
+
   background: var(--pl-white);
+
   box-shadow: var(--pl-shadow-sm);
+
   transition: 0.3s ease;
 }
 
 .personal-loan-page .personal-benefit-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(0, 91, 170, 0.22);
+  transform: translateY(-5px);
+
+  border-color: rgba(0, 91, 170, 0.25);
+
   box-shadow: var(--pl-shadow-md);
 }
 
 .personal-loan-page .personal-benefit-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 16px;
+  width: 50px;
+  height: 50px;
+
+  margin-bottom: 17px;
+
   display: grid;
   place-items: center;
-  border-radius: 11px;
+
+  border-radius: 12px;
+
   background: var(--pl-blue-light);
   color: var(--pl-blue);
-  font-size: 19px;
+
+  font-size: 20px;
 }
 
 .personal-loan-page
   .personal-benefit-card:nth-child(even)
   .personal-benefit-icon {
-  background: #fff3e4;
-  color: var(--pl-orange);
+  background: var(--pl-blue-soft);
+  color: var(--pl-blue-dark);
 }
 
 .personal-loan-page .personal-benefit-card h3 {
-  margin: 0 0 7px;
-  font-size: 16px;
+  margin: 0 0 8px;
+
+  font-size: 17px;
   line-height: 1.4;
 }
 
 .personal-loan-page .personal-benefit-card p {
   margin: 0;
+
   color: var(--pl-text);
-  font-size: 11px;
-  line-height: 1.7;
+
+  font-size: 13px;
+  line-height: 1.75;
 }
 
 /* =========================================================
    ELIGIBILITY
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-eligibility {
-  padding: 70px 0;
+  padding: 75px 0;
   background: var(--pl-white);
 }
 
 .personal-loan-page .personal-eligibility-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+
+  gap: 22px;
 }
 
 .personal-loan-page .personal-info-card {
-  padding: 27px;
+  padding: 29px;
+
   border: 1px solid var(--pl-border);
   border-radius: 15px;
+
   background: var(--pl-white);
+
   box-shadow: var(--pl-shadow-sm);
 }
 
 .personal-loan-page .personal-card-title {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 13px;
+
+  margin-bottom: 21px;
 }
 
 .personal-loan-page .personal-small-icon {
-  width: 48px;
-  height: 48px;
-  flex: 0 0 48px;
+  width: 49px;
+  height: 49px;
+
+  flex: 0 0 49px;
+
   display: grid;
   place-items: center;
+
   border-radius: 11px;
+
   background: var(--pl-blue-light);
   color: var(--pl-blue);
+
+  font-size: 18px;
 }
 
 .personal-loan-page .personal-card-title h3 {
   margin: 0;
-  font-size: 19px;
+
+  font-size: 20px;
+  line-height: 1.35;
 }
 
 .personal-loan-page .personal-info-card ul {
   list-style: none;
+
   margin: 0;
   padding: 0;
 }
@@ -698,11 +861,15 @@
 .personal-loan-page .personal-info-card li {
   display: flex;
   gap: 10px;
-  padding: 9px 0;
+
+  padding: 10px 0;
+
   border-bottom: 1px solid #f0f2f5;
+
   color: var(--pl-text);
-  font-size: 11px;
-  line-height: 1.6;
+
+  font-size: 13px;
+  line-height: 1.65;
 }
 
 .personal-loan-page .personal-info-card li:last-child {
@@ -711,73 +878,95 @@
 
 .personal-loan-page .personal-info-card li i {
   flex: 0 0 auto;
-  margin-top: 4px;
-  color: var(--pl-orange);
-  font-size: 10px;
+
+  margin-top: 5px;
+
+  color: var(--pl-blue);
+  font-size: 11px;
 }
 
 /* =========================================================
    INTEREST
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-interest {
-  padding: 70px 0;
+  padding: 75px 0;
   background: var(--pl-bg);
 }
 
 .personal-loan-page .personal-interest-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+
+  gap: 20px;
 }
 
 .personal-loan-page .personal-interest-card {
-  padding: 25px 22px;
+  padding: 27px 23px;
+
   border-radius: 14px;
+
   background: var(--pl-white);
+
   border: 1px solid var(--pl-border);
+
   box-shadow: var(--pl-shadow-sm);
+
   text-align: center;
 }
 
 .personal-loan-page .personal-interest-icon {
-  width: 50px;
-  height: 50px;
-  margin: 0 auto 14px;
+  width: 52px;
+  height: 52px;
+
+  margin: 0 auto 15px;
+
   display: grid;
   place-items: center;
+
   border-radius: 50%;
+
   background: var(--pl-blue-light);
   color: var(--pl-blue);
+
+  font-size: 19px;
 }
 
 .personal-loan-page
   .personal-interest-card:nth-child(2)
   .personal-interest-icon {
-  background: #fff3e4;
-  color: var(--pl-orange);
+  background: var(--pl-blue-soft);
+  color: var(--pl-blue-dark);
 }
 
 .personal-loan-page .personal-interest-card h3 {
-  margin: 0 0 7px;
-  font-size: 16px;
+  margin: 0 0 8px;
+
+  font-size: 17px;
 }
 
 .personal-loan-page .personal-interest-card p {
   margin: 0;
+
   color: var(--pl-text);
-  font-size: 11px;
-  line-height: 1.7;
+
+  font-size: 13px;
+  line-height: 1.75;
 }
 
 .personal-loan-page .personal-interest-note {
   display: flex;
   align-items: flex-start;
   gap: 10px;
+
   max-width: 850px;
-  margin: 25px auto 0;
-  padding: 13px 16px;
+
+  margin: 26px auto 0;
+
+  padding: 14px 17px;
+
   border-radius: 9px;
+
   background: var(--pl-blue-light);
   color: var(--pl-blue-dark);
 }
@@ -788,79 +977,102 @@
 
 .personal-loan-page .personal-interest-note p {
   margin: 0;
-  font-size: 10px;
-  line-height: 1.6;
+
+  font-size: 12px;
+  line-height: 1.65;
 }
 
 /* =========================================================
    TYPES
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-types {
-  padding: 70px 0;
+  padding: 75px 0;
   background: var(--pl-white);
 }
 
 .personal-loan-page .personal-types-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+
+  gap: 18px;
 }
 
 .personal-loan-page .personal-type-card {
   position: relative;
-  padding: 24px 20px;
+
+  padding: 26px 21px;
+
   border: 1px solid var(--pl-border);
-  border-radius: 13px;
+  border-radius: 14px;
+
   background: var(--pl-white);
+
   box-shadow: var(--pl-shadow-sm);
+
   scroll-margin-top: 100px;
+
   transition: 0.3s ease;
 }
 
 .personal-loan-page .personal-type-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
+
   border-color: rgba(0, 91, 170, 0.25);
+
   box-shadow: var(--pl-shadow-md);
 }
 
 .personal-loan-page .personal-type-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 15px;
+  width: 50px;
+  height: 50px;
+
+  margin-bottom: 16px;
+
   display: grid;
   place-items: center;
-  border-radius: 11px;
+
+  border-radius: 12px;
+
   background: var(--pl-blue-light);
   color: var(--pl-blue);
-  font-size: 19px;
+
+  font-size: 20px;
 }
 
-.personal-loan-page .personal-type-card:nth-child(even) .personal-type-icon {
-  background: #fff3e4;
-  color: var(--pl-orange);
+.personal-loan-page
+  .personal-type-card:nth-child(even)
+  .personal-type-icon {
+  background: var(--pl-blue-soft);
+  color: var(--pl-blue-dark);
 }
 
 .personal-loan-page .personal-type-card h3 {
-  margin: 0 0 8px;
-  font-size: 16px;
+  margin: 0 0 9px;
+
+  font-size: 17px;
   line-height: 1.4;
 }
 
 .personal-loan-page .personal-type-card p {
-  min-height: 92px;
-  margin: 0 0 15px;
+  min-height: 96px;
+
+  margin: 0 0 16px;
+
   color: var(--pl-text);
-  font-size: 10.5px;
-  line-height: 1.7;
+
+  font-size: 12px;
+  line-height: 1.75;
 }
 
 .personal-loan-page .personal-type-card a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+
   color: var(--pl-blue);
-  font-size: 10px;
+
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -874,95 +1086,123 @@
 
 /* =========================================================
    PROCESS
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-process {
-  padding: 70px 0;
+  padding: 75px 0;
   background: var(--pl-bg);
 }
 
 .personal-loan-page .personal-process-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
+
+  gap: 16px;
 }
 
 .personal-loan-page .personal-process-item {
   position: relative;
-  padding: 23px 17px;
+
+  padding: 25px 18px;
+
   border: 1px solid var(--pl-border);
-  border-radius: 13px;
+  border-radius: 14px;
+
   background: var(--pl-white);
+
   text-align: center;
+
   box-shadow: var(--pl-shadow-sm);
 }
 
 .personal-loan-page .process-number {
   position: absolute;
+
   top: 10px;
   right: 11px;
-  color: #dce8f2;
-  font-size: 18px;
+
+  color: #cdddec;
+
+  font-size: 20px;
   font-weight: 800;
 }
 
 .personal-loan-page .process-icon {
-  width: 52px;
-  height: 52px;
-  margin: 0 auto 13px;
+  width: 54px;
+  height: 54px;
+
+  margin: 0 auto 14px;
+
   display: grid;
   place-items: center;
+
   border-radius: 50%;
+
   background: var(--pl-blue-light);
   color: var(--pl-blue);
-  font-size: 19px;
+
+  font-size: 20px;
 }
 
-.personal-loan-page .personal-process-item:nth-child(even) .process-icon {
-  background: #fff3e4;
-  color: var(--pl-orange);
+.personal-loan-page
+  .personal-process-item:nth-child(even)
+  .process-icon {
+  background: var(--pl-blue-soft);
+  color: var(--pl-blue-dark);
 }
 
 .personal-loan-page .personal-process-item h3 {
-  margin: 0 0 6px;
-  font-size: 14px;
+  margin: 0 0 7px;
+
+  font-size: 15px;
+  line-height: 1.4;
 }
 
 .personal-loan-page .personal-process-item p {
   margin: 0;
+
   color: var(--pl-text);
-  font-size: 10px;
-  line-height: 1.65;
+
+  font-size: 12px;
+  line-height: 1.7;
 }
 
 /* =========================================================
    EMI CALCULATOR
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-emi {
-  padding: 70px 0;
+  padding: 75px 0;
   background: var(--pl-white);
 }
 
 .personal-loan-page .personal-emi-wrapper {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 22px;
-  padding: 24px;
+
+  gap: 24px;
+
+  padding: 26px;
+
   border-radius: 18px;
+
   background: var(--pl-bg);
+
   border: 1px solid var(--pl-border);
 }
 
 .personal-loan-page .personal-emi-calculator {
-  padding: 20px;
-  border-radius: 13px;
+  padding: 22px;
+
+  border-radius: 14px;
+
   background: var(--pl-white);
+
   border: 1px solid var(--pl-border);
 }
 
 .personal-loan-page .personal-emi-field {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .personal-loan-page .personal-emi-field:last-child {
@@ -973,41 +1213,59 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   gap: 10px;
+
   margin-bottom: 11px;
 }
 
 .personal-loan-page .emi-field-top label {
   color: var(--pl-black);
-  font-size: 12px;
+
+  font-size: 13px;
   font-weight: 600;
 }
 
 .personal-loan-page .emi-field-top strong {
   color: var(--pl-blue);
-  font-size: 14px;
+
+  font-size: 15px;
 }
 
 .personal-loan-page .personal-emi-field input[type="range"] {
   width: 100%;
   height: 5px;
+
   margin: 0;
+
   accent-color: var(--pl-blue);
+
   cursor: pointer;
 }
 
 .personal-loan-page .emi-range-labels {
   display: flex;
   justify-content: space-between;
-  margin-top: 6px;
+
+  margin-top: 7px;
+
   color: #87919d;
-  font-size: 9px;
+
+  font-size: 10px;
 }
 
 .personal-loan-page .personal-emi-result {
-  padding: 25px;
-  border-radius: 13px;
-  background: linear-gradient(145deg, var(--pl-blue), var(--pl-blue-dark));
+  padding: 27px;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--pl-blue),
+      var(--pl-blue-dark)
+    );
+
   color: var(--pl-white);
 }
 
@@ -1015,140 +1273,186 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 11px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 12px;
 }
 
 .personal-loan-page .emi-result-heading i {
-  color: var(--pl-orange);
-  font-size: 18px;
+  color: var(--pl-white);
+  font-size: 19px;
 }
 
 .personal-loan-page .personal-emi-result h3 {
-  margin: 9px 0 22px;
-  color: var(--pl-orange);
-  font-size: 34px;
+  margin: 10px 0 23px;
+
+  color: var(--pl-white);
+
+  font-size: 35px;
   line-height: 1;
 }
 
 .personal-loan-page .emi-result-list {
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 .personal-loan-page .emi-result-list > div {
   display: flex;
   justify-content: space-between;
+
   gap: 10px;
-  padding: 11px 0;
+
+  padding: 12px 0;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.13);
 }
 
 .personal-loan-page .emi-result-list span {
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 10px;
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 11px;
 }
 
 .personal-loan-page .emi-result-list strong {
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .personal-loan-page .personal-emi-btn {
-  min-height: 43px;
+  min-height: 45px;
   width: 100%;
+
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
   gap: 8px;
-  border-radius: 7px;
-  background: var(--pl-orange);
-  color: var(--pl-white);
-  font-size: 11px;
+
+  border-radius: 8px;
+
+  background: var(--pl-white);
+  color: var(--pl-blue);
+
+  font-size: 12px;
   font-weight: 600;
+
   transition: 0.3s ease;
 }
 
 .personal-loan-page .personal-emi-btn:hover {
-  background: var(--pl-orange-dark);
-  color: var(--pl-white);
+  background: var(--pl-blue-light);
+  color: var(--pl-blue-dark);
+  transform: translateY(-1px);
 }
 
 .personal-loan-page .personal-emi-result small {
   display: block;
-  margin-top: 12px;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 8px;
+
+  margin-top: 13px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 10px;
   line-height: 1.6;
 }
 
 /* =========================================================
    WHY US
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-why {
-  padding: 70px 0;
+  padding: 75px 0;
   background: var(--pl-bg);
 }
 
 .personal-loan-page .personal-why-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
+
   align-items: center;
+
   gap: 65px;
 }
 
 .personal-loan-page .personal-why-visual {
   position: relative;
-  min-height: 330px;
+
+  min-height: 340px;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .personal-loan-page .why-circle-main {
-  width: 255px;
-  height: 255px;
+  width: 260px;
+  height: 260px;
+
   border-radius: 50%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   text-align: center;
-  background: linear-gradient(145deg, var(--pl-blue), var(--pl-blue-dark));
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--pl-blue),
+      var(--pl-blue-dark)
+    );
+
   color: var(--pl-white);
-  box-shadow: 0 20px 45px rgba(0, 64, 120, 0.18);
+
+  box-shadow:
+    0 20px 45px rgba(0, 64, 120, 0.18);
 }
 
 .personal-loan-page .why-circle-main i {
-  margin-bottom: 10px;
-  color: var(--pl-orange);
-  font-size: 38px;
+  margin-bottom: 11px;
+
+  color: var(--pl-white);
+
+  font-size: 39px;
 }
 
 .personal-loan-page .why-circle-main strong {
-  font-size: 20px;
+  font-size: 21px;
 }
 
 .personal-loan-page .why-circle-main span {
-  max-width: 150px;
-  margin-top: 4px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 9px;
+  max-width: 165px;
+
+  margin-top: 5px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 10px;
+  line-height: 1.5;
 }
 
 .personal-loan-page .why-floating-card {
   position: absolute;
-  padding: 10px 13px;
-  border-radius: 8px;
+
+  padding: 11px 14px;
+
+  border-radius: 9px;
+
   background: var(--pl-white);
   color: var(--pl-black);
+
   box-shadow: var(--pl-shadow-md);
-  font-size: 10px;
+
+  font-size: 11px;
   font-weight: 600;
 }
 
 .personal-loan-page .why-floating-card i {
   margin-right: 5px;
-  color: var(--pl-orange);
+
+  color: var(--pl-blue);
 }
 
 .personal-loan-page .why-card-one {
@@ -1162,7 +1466,8 @@
 }
 
 .personal-loan-page .personal-why-content h2 {
-  margin: 0 0 14px;
+  margin: 0 0 15px;
+
   font-size: 36px;
   line-height: 1.2;
 }
@@ -1173,53 +1478,64 @@
 }
 
 .personal-loan-page .personal-why-content > p {
-  margin: 0 0 22px;
+  margin: 0 0 23px;
+
   color: var(--pl-text);
-  font-size: 13px;
+
+  font-size: 14px;
   line-height: 1.8;
 }
 
 .personal-loan-page .personal-why-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+
+  gap: 20px;
 }
 
 .personal-loan-page .personal-why-list > div {
   display: flex;
-  gap: 10px;
+  gap: 11px;
 }
 
 .personal-loan-page .why-list-icon {
-  width: 38px;
-  height: 38px;
-  flex: 0 0 38px;
+  width: 40px;
+  height: 40px;
+
+  flex: 0 0 40px;
+
   display: grid;
   place-items: center;
+
   border-radius: 9px;
+
   background: var(--pl-blue-light);
   color: var(--pl-blue);
-  font-size: 13px;
+
+  font-size: 14px;
 }
 
 .personal-loan-page .personal-why-list h3 {
-  margin: 0 0 3px;
-  font-size: 12px;
+  margin: 0 0 4px;
+
+  font-size: 13px;
 }
 
 .personal-loan-page .personal-why-list p {
   margin: 0;
+
   color: var(--pl-text);
-  font-size: 9.5px;
-  line-height: 1.55;
+
+  font-size: 11px;
+  line-height: 1.6;
 }
 
 /* =========================================================
    FAQ
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-faq {
-  padding: 70px 0;
+  padding: 75px 0;
   background: var(--pl-white);
 }
 
@@ -1229,80 +1545,113 @@
 }
 
 .personal-loan-page .personal-faq-item {
-  margin-bottom: 10px;
+  margin-bottom: 11px;
+
   border: 1px solid var(--pl-border);
-  border-radius: 9px;
+  border-radius: 10px;
+
   background: var(--pl-white);
+
   overflow: hidden;
 }
 
 .personal-loan-page .personal-faq-question {
   width: 100%;
-  min-height: 54px;
-  padding: 14px 17px;
+  min-height: 57px;
+
+  padding: 15px 18px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 15px;
+
   border: 0;
+
   background: transparent;
   color: var(--pl-black);
+
   font-family: inherit;
-  font-size: 12px;
+
+  font-size: 13px;
   font-weight: 600;
+
   text-align: left;
+
   cursor: pointer;
 }
 
 .personal-loan-page .personal-faq-question i {
-  width: 25px;
-  height: 25px;
-  flex: 0 0 25px;
+  width: 27px;
+  height: 27px;
+
+  flex: 0 0 27px;
+
   display: grid;
   place-items: center;
+
   border-radius: 50%;
+
   background: var(--pl-blue-light);
   color: var(--pl-blue);
-  font-size: 9px;
+
+  font-size: 10px;
+
   transition: 0.3s ease;
 }
 
 .personal-loan-page .personal-faq-item.active .personal-faq-question i {
-  background: var(--pl-orange);
+  background: var(--pl-blue);
   color: var(--pl-white);
+
+  transform: rotate(180deg);
 }
 
 .personal-loan-page .personal-faq-answer {
   max-height: 0;
+
   overflow: hidden;
+
   transition: max-height 0.35s ease;
 }
 
 .personal-loan-page .personal-faq-answer p {
   margin: 0;
-  padding: 0 17px 17px;
+
+  padding: 0 18px 18px;
+
   color: var(--pl-text);
-  font-size: 10.5px;
-  line-height: 1.7;
+
+  font-size: 12px;
+  line-height: 1.75;
 }
 
 /* =========================================================
    APPLY CTA
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-apply {
-  padding: 70px 0;
+  padding: 75px 0;
+
   background:
-    linear-gradient(90deg, rgba(0, 55, 105, 0.94), rgba(0, 91, 170, 0.82)),
+    linear-gradient(
+      90deg,
+      rgba(0, 43, 85, 0.96),
+      rgba(0, 91, 170, 0.86)
+    ),
     url("../image/personal-banner.jpg") center / cover no-repeat;
+
   color: var(--pl-white);
+
   text-align: center;
 }
 
 .personal-loan-page .personal-apply-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 50, 95, 0.12);
+
+  background: rgba(0, 50, 95, 0.1);
 }
 
 .personal-loan-page .personal-apply-content {
@@ -1314,82 +1663,101 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  margin-bottom: 10px;
-  color: var(--pl-orange);
-  font-size: 10px;
+
+  margin-bottom: 11px;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 11px;
   font-weight: 700;
+
   letter-spacing: 1px;
 }
 
 .personal-loan-page .personal-apply-content h2 {
-  margin: 0 0 12px;
+  margin: 0 0 13px;
+
   font-size: 40px;
   line-height: 1.2;
 }
 
 .personal-loan-page .personal-apply-content h2 span {
-  color: var(--pl-orange);
+  color: var(--pl-white);
 }
 
 .personal-loan-page .personal-apply-content > p {
-  margin: 0 auto 23px;
   max-width: 600px;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 13px;
-  line-height: 1.7;
+
+  margin: 0 auto 24px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 14px;
+  line-height: 1.75;
 }
 
 .personal-loan-page .personal-apply-buttons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+
+  gap: 11px;
 }
 
 /* =========================================================
    DISCLAIMER
-   ========================================================= */
+========================================================= */
 
 .personal-loan-page .personal-disclaimer {
-  padding: 25px 0;
+  padding: 27px 0;
+
   background: #f1f5f9;
 }
 
 .personal-loan-page .personal-disclaimer-box {
   display: flex;
   align-items: flex-start;
-  gap: 13px;
-  padding: 18px 20px;
+
+  gap: 14px;
+
+  padding: 19px 21px;
+
   border: 1px solid #dde5ed;
   border-radius: 10px;
+
   background: var(--pl-white);
 }
 
 .personal-loan-page .personal-disclaimer-box > i {
   margin-top: 3px;
-  color: var(--pl-orange);
-  font-size: 17px;
+
+  color: var(--pl-blue);
+
+  font-size: 18px;
 }
 
 .personal-loan-page .personal-disclaimer-box h3 {
-  margin: 0 0 5px;
-  font-size: 13px;
+  margin: 0 0 6px;
+
+  font-size: 14px;
 }
 
 .personal-loan-page .personal-disclaimer-box p {
   margin: 0;
+
   color: var(--pl-text);
-  font-size: 9.5px;
+
+  font-size: 11px;
   line-height: 1.7;
 }
 
 /* =========================================================
    1199px
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 1199px) {
   .personal-loan-page .personal-hero-grid {
-    gap: 35px;
+    gap: 38px;
   }
 
   .personal-loan-page .personal-types-grid {
@@ -1407,18 +1775,19 @@
 
 /* =========================================================
    991px
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 991px) {
   .personal-loan-page .personal-hero {
     min-height: auto;
-    padding: 60px 0;
+    padding: 65px 0;
+
     background-position: 72% center;
   }
 
   .personal-loan-page .personal-hero-grid {
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 38px;
   }
 
   .personal-loan-page .personal-hero-content {
@@ -1426,15 +1795,16 @@
   }
 
   .personal-loan-page .personal-form-card {
-    max-width: 550px;
+    max-width: 560px;
     width: 100%;
+
     margin: auto;
   }
 
   .personal-loan-page .personal-overview-grid,
   .personal-loan-page .personal-why-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 45px;
   }
 
   .personal-loan-page .personal-overview-content {
@@ -1443,7 +1813,7 @@
   }
 
   .personal-loan-page .personal-overview-visual {
-    min-height: 290px;
+    min-height: 300px;
   }
 
   .personal-loan-page .personal-benefits-grid,
@@ -1462,6 +1832,7 @@
   .personal-loan-page .personal-why-visual {
     max-width: 450px;
     width: 100%;
+
     margin: auto;
   }
 
@@ -1473,11 +1844,12 @@
 
 /* =========================================================
    767px
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 767px) {
   .personal-loan-page .personal-hero {
-    padding: 50px 0;
+    padding: 55px 0;
+
     background-position: 78% center;
   }
 
@@ -1486,16 +1858,16 @@
   }
 
   .personal-loan-page .personal-badge {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .personal-loan-page .personal-hero-content h1 {
-    font-size: 34px;
+    font-size: 36px;
     letter-spacing: -0.5px;
   }
 
   .personal-loan-page .personal-hero-content > p {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .personal-loan-page .personal-hero-buttons {
@@ -1504,27 +1876,27 @@
 
   .personal-loan-page .personal-hero-trust {
     justify-content: center;
-    gap: 12px;
+    gap: 13px;
   }
 
   .personal-loan-page .personal-trust-item {
-    min-width: 145px;
+    min-width: 150px;
     text-align: left;
   }
 
   .personal-loan-page .personal-section-heading {
-    margin-bottom: 30px;
+    margin-bottom: 33px;
   }
 
   .personal-loan-page .personal-section-heading h2,
   .personal-loan-page .personal-overview-content h2,
   .personal-loan-page .personal-why-content h2 {
-    font-size: 29px;
+    font-size: 30px;
   }
 
   .personal-loan-page .personal-section-heading p,
   .personal-loan-page .personal-overview-content > p {
-    font-size: 11px;
+    font-size: 13px;
   }
 
   .personal-loan-page .personal-overview,
@@ -1537,7 +1909,7 @@
   .personal-loan-page .personal-why,
   .personal-loan-page .personal-faq,
   .personal-loan-page .personal-apply {
-    padding: 52px 0;
+    padding: 58px 0;
   }
 
   .personal-loan-page .personal-benefits-grid,
@@ -1547,15 +1919,15 @@
   }
 
   .personal-loan-page .personal-types-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .personal-loan-page .personal-process-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .personal-loan-page .personal-check-list {
-    gap: 9px;
+    gap: 10px;
   }
 
   .personal-loan-page .personal-why-list {
@@ -1563,33 +1935,36 @@
   }
 
   .personal-loan-page .personal-apply-content h2 {
-    font-size: 32px;
+    font-size: 33px;
   }
 }
 
 /* =========================================================
    576px
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 576px) {
   .personal-loan-page .personal-hero {
-    padding: 45px 0;
+    padding: 48px 0;
+
     background-position: 82% center;
   }
 
   .personal-loan-page .personal-hero-content h1 {
-    font-size: 31px;
+    font-size: 33px;
   }
 
   .personal-loan-page .personal-hero-content > p {
-    font-size: 11px;
-    line-height: 1.65;
+    font-size: 12px;
+    line-height: 1.7;
   }
 
   .personal-loan-page .personal-hero-buttons {
     flex-direction: column;
     align-items: stretch;
-    max-width: 290px;
+
+    max-width: 300px;
+
     margin-left: auto;
     margin-right: auto;
   }
@@ -1601,17 +1976,19 @@
   .personal-loan-page .personal-hero-trust {
     display: grid;
     grid-template-columns: 1fr;
-    max-width: 290px;
+
+    max-width: 300px;
+
     margin: auto;
   }
 
   .personal-loan-page .personal-form-card {
-    padding: 21px;
-    border-radius: 14px;
+    padding: 23px;
+    border-radius: 15px;
   }
 
   .personal-loan-page .personal-form-card h2 {
-    font-size: 20px;
+    font-size: 21px;
   }
 
   .personal-loan-page .personal-types-grid,
@@ -1624,25 +2001,25 @@
   }
 
   .personal-loan-page .personal-emi-wrapper {
-    padding: 12px;
+    padding: 13px;
   }
 
   .personal-loan-page .personal-emi-calculator,
   .personal-loan-page .personal-emi-result {
-    padding: 18px;
+    padding: 20px;
   }
 
   .personal-loan-page .personal-emi-result h3 {
-    font-size: 29px;
+    font-size: 30px;
   }
 
   .personal-loan-page .personal-why-visual {
-    min-height: 280px;
+    min-height: 290px;
   }
 
   .personal-loan-page .why-circle-main {
-    width: 215px;
-    height: 215px;
+    width: 220px;
+    height: 220px;
   }
 
   .personal-loan-page .why-card-one {
@@ -1656,13 +2033,13 @@
   }
 
   .personal-loan-page .personal-apply-content h2 {
-    font-size: 28px;
+    font-size: 29px;
   }
 }
 
 /* =========================================================
    480px
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 480px) {
   .personal-loan-page .personal-hero {
@@ -1670,13 +2047,13 @@
   }
 
   .personal-loan-page .personal-hero-content h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .personal-loan-page .personal-section-heading h2,
   .personal-loan-page .personal-overview-content h2,
   .personal-loan-page .personal-why-content h2 {
-    font-size: 25px;
+    font-size: 27px;
   }
 
   .personal-loan-page .personal-check-list {
@@ -1684,98 +2061,99 @@
   }
 
   .personal-loan-page .personal-visual-card {
-    width: 280px;
-    padding: 28px 22px;
+    width: 285px;
+    padding: 30px 23px;
   }
 
   .personal-loan-page .personal-info-card {
-    padding: 20px 17px;
+    padding: 22px 18px;
   }
 
   .personal-loan-page .personal-benefit-card {
-    padding: 20px 17px;
+    padding: 22px 18px;
   }
 
   .personal-loan-page .personal-type-card {
-    padding: 20px 17px;
+    padding: 22px 18px;
   }
 
   .personal-loan-page .personal-process-item {
-    padding: 20px 15px;
+    padding: 22px 16px;
   }
 
   .personal-loan-page .personal-faq-question {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .personal-loan-page .personal-faq-answer p {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .personal-loan-page .personal-disclaimer-box {
-    padding: 14px;
+    padding: 15px;
   }
 }
 
 /* =========================================================
    400px
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 400px) {
   .personal-loan-page .personal-hero {
-    padding: 40px 0;
+    padding: 43px 0;
+
     background-position: 88% center;
   }
 
   .personal-loan-page .personal-hero-content h1 {
-    font-size: 25px;
+    font-size: 28px;
   }
 
   .personal-loan-page .personal-badge {
-    font-size: 7px;
-    padding: 6px 9px;
+    font-size: 9px;
+    padding: 7px 10px;
   }
 
   .personal-loan-page .personal-form-card {
-    padding: 17px;
+    padding: 19px;
   }
 
   .personal-loan-page .personal-form-card h2 {
-    font-size: 18px;
+    font-size: 19px;
   }
 
   .personal-loan-page .personal-section-heading h2,
   .personal-loan-page .personal-overview-content h2,
   .personal-loan-page .personal-why-content h2 {
-    font-size: 23px;
-  }
-
-  .personal-loan-page .personal-apply-content h2 {
     font-size: 25px;
   }
 
+  .personal-loan-page .personal-apply-content h2 {
+    font-size: 27px;
+  }
+
   .personal-loan-page .why-circle-main {
-    width: 190px;
-    height: 190px;
+    width: 195px;
+    height: 195px;
   }
 
   .personal-loan-page .why-circle-main i {
-    font-size: 30px;
+    font-size: 31px;
   }
 
   .personal-loan-page .why-circle-main strong {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .personal-loan-page .why-floating-card {
-    font-size: 8px;
-    padding: 8px 9px;
+    font-size: 9px;
+    padding: 8px 10px;
   }
 }
 
 /* =========================================================
    360px
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 360px) {
   .personal-loan-page .personal-hero {
@@ -1783,42 +2161,43 @@
   }
 
   .personal-loan-page .personal-hero-content h1 {
-    font-size: 23px;
+    font-size: 26px;
   }
 
   .personal-loan-page .personal-hero-content > p {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .personal-loan-page .btn-primary-loan,
   .personal-loan-page .btn-outline-loan {
-    min-height: 43px;
-    padding: 0 14px;
-    font-size: 11px;
+    min-height: 44px;
+    padding: 0 15px;
+
+    font-size: 12px;
   }
 
   .personal-loan-page .personal-section-heading h2,
   .personal-loan-page .personal-overview-content h2,
   .personal-loan-page .personal-why-content h2 {
-    font-size: 21px;
+    font-size: 23px;
   }
 
   .personal-loan-page .personal-section-heading p {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .personal-loan-page .personal-visual-card {
-    width: 250px;
+    width: 255px;
   }
 
   .personal-loan-page .personal-emi-result h3 {
-    font-size: 25px;
+    font-size: 27px;
   }
 }
 
 /* =========================================================
    320px
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 320px) {
   .personal-loan-page .personal-hero {
@@ -1826,30 +2205,30 @@
   }
 
   .personal-loan-page .personal-hero-content h1 {
-    font-size: 21px;
+    font-size: 24px;
   }
 
   .personal-loan-page .personal-form-card {
-    padding: 14px;
+    padding: 16px;
   }
 
   .personal-loan-page .personal-form-card h2 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .personal-loan-page .personal-input-wrap input,
   .personal-loan-page .personal-input-wrap select {
-    height: 40px;
-    font-size: 10px;
+    height: 42px;
+    font-size: 11px;
   }
 
   .personal-loan-page .personal-benefit-card,
   .personal-loan-page .personal-type-card,
   .personal-loan-page .personal-info-card {
-    padding: 17px 14px;
+    padding: 18px 15px;
   }
 
   .personal-loan-page .personal-apply-content h2 {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
