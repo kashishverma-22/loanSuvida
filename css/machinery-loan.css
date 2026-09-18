@@ -87,7 +87,7 @@
 .machinery-section-heading p {
   margin: 0;
   color: var(--mach-text);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.75;
 }
 
@@ -409,7 +409,7 @@
   border: 0;
   border-radius: 7px;
 
-  background: var(--mach-blue);
+  background: orange;
   color: #fff;
 
   font-size: 13px;
@@ -420,7 +420,7 @@
 }
 
 .machinery-form-btn:hover {
-  background: var(--mach-blue-dark);
+  background: orange;
 }
 
 .machinery-form-btn i {
@@ -1482,73 +1482,67 @@
   color: #526071;
 }
 
+
 /* =========================================================
-   1200px
+   NEW RESPONSIVE SYSTEM
+   Old responsive rules removed and replaced
 ========================================================= */
 
-@media (max-width: 1200px) {
-
-  .machinery-loan-page .section-space {
-    padding: 60px 0;
+@media (max-width: 1199px) {
+  .machinery-loan-page .container {
+    width: min(1080px, calc(100% - 40px));
+    max-width: 1080px;
   }
 
-  .machinery-hero {
-    min-height: 570px;
-    padding: 60px 0;
-
-    background-position: 65% center;
-  }
-
-  .machinery-hero-grid {
-    gap: 42px;
+  .machinery-hero-grid,
+  .machinery-overview-grid,
+  .machinery-eligibility-grid,
+  .machinery-emi-grid {
+    gap: 38px;
   }
 
   .machinery-hero-content h1 {
-    font-size: 44px;
+    font-size: 43px;
+  }
+
+  .machinery-benefits-grid,
+  .machinery-documents-grid,
+  .machinery-why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .machinery-types-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .machinery-process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .machinery-loan-page {
+    overflow-x: hidden;
+  }
+
+  .machinery-loan-page .container {
+    width: min(760px, calc(100% - 36px));
+    max-width: 760px;
+  }
+
+  .machinery-loan-page .section-space {
+    padding: 58px 0;
   }
 
   .machinery-section-heading h2,
   .machinery-emi-content h2 {
-    font-size: 33px;
-  }
-
-  .machinery-benefits-grid,
-  .machinery-why-grid {
-    gap: 14px;
-  }
-
-  .machinery-eligibility-grid,
-  .machinery-emi-grid,
-  .machinery-overview-grid {
-    gap: 42px;
-  }
-}
-
-/* =========================================================
-   991px
-========================================================= */
-
-@media (max-width: 991px) {
-
-  .machinery-loan-page .section-space {
-    padding: 55px 0;
+    font-size: 31px;
   }
 
   .machinery-hero {
     min-height: auto;
-
-    padding: 60px 0;
-
-    background-position: 72% center;
-
-    background-image:
-      linear-gradient(
-        90deg,
-        rgba(0, 39, 76, 0.97) 0%,
-        rgba(0, 52, 98, 0.91) 58%,
-        rgba(0, 52, 98, 0.63) 100%
-      ),
-      url("../image/machinery-banner.jpg");
+    padding: 58px 0;
   }
 
   .machinery-hero-grid {
@@ -1557,132 +1551,14 @@
   }
 
   .machinery-hero-content {
-    max-width: 720px;
-  }
-
-  .machinery-hero-content h1 {
-    font-size: 42px;
-  }
-
-  .machinery-form-card {
-    margin: 0;
-
-    max-width: 480px;
-  }
-
-  .machinery-overview-grid,
-  .machinery-eligibility-grid,
-  .machinery-emi-grid {
-    grid-template-columns: 1fr;
-
-    gap: 38px;
-  }
-
-  .machinery-overview-visual {
-    min-height: 300px;
-
-    max-width: 520px;
-
-    margin: auto;
-  }
-
-  .machinery-benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .machinery-types-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .machinery-documents-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .machinery-process-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .machinery-process-item:last-child {
-    grid-column: span 2;
-  }
-
-  .machinery-why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .machinery-eligibility-card {
-    max-width: 520px;
-  }
-
-  .machinery-emi-content {
-    max-width: 680px;
-  }
-}
-
-/* =========================================================
-   767px
-========================================================= */
-
-@media (max-width: 767px) {
-
-  .machinery-loan-page .section-space {
-    padding: 48px 0;
-  }
-
-  /* -------------------------
-     MOBILE HERO
-  ------------------------- */
-
-  .machinery-hero {
-    min-height: auto;
-
-    padding: 48px 0;
-
-    background-position: 82% center;
-
-    background-image:
-      linear-gradient(
-        90deg,
-        rgba(0, 39, 76, 0.98) 0%,
-        rgba(0, 52, 98, 0.94) 62%,
-        rgba(0, 52, 98, 0.77) 100%
-      ),
-      url("../image/machinery-banner.jpg");
-  }
-
-  .machinery-hero-grid {
-    gap: 30px;
-  }
-
-  .machinery-hero-content {
-    max-width: 100%;
-
+    max-width: 700px;
+    margin: 0 auto;
     text-align: center;
   }
 
-  .machinery-badge {
-    font-size: 11px;
-    padding: 7px 12px;
-  }
-
-  .machinery-hero-content h1 {
-    margin: 14px auto 15px;
-
-    max-width: 620px;
-
-    font-size: 36px;
-    line-height: 1.18;
-
-    letter-spacing: -0.3px;
-  }
-
   .machinery-hero-content > p {
-    max-width: 600px;
-
-    margin: 0 auto 21px;
-
-    font-size: 13px;
-    line-height: 1.7;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .machinery-hero-buttons {
@@ -1691,31 +1567,64 @@
 
   .machinery-hero-points {
     justify-content: center;
-
-    gap: 11px 16px;
-
-    margin-top: 21px;
-  }
-
-  .machinery-hero-points div {
-    font-size: 11px;
   }
 
   .machinery-form-card {
-    width: 100%;
-
-    max-width: 480px;
-
+    max-width: 620px;
     margin: 0 auto;
-
-    padding: 23px;
-
-    border-radius: 12px;
   }
 
-  /* -------------------------
-     SECTIONS
-  ------------------------- */
+  .machinery-overview-grid,
+  .machinery-eligibility-grid,
+  .machinery-emi-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .machinery-overview-content {
+    max-width: 760px;
+  }
+
+  .machinery-overview-visual {
+    width: 100%;
+    max-width: 620px;
+    min-height: 330px;
+    margin: 0 auto;
+  }
+
+  .machinery-eligibility-card {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .machinery-emi-calculator {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .machinery-benefits-grid,
+  .machinery-types-grid,
+  .machinery-documents-grid,
+  .machinery-why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .machinery-process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .machinery-loan-page .container {
+    width: calc(100% - 28px);
+    max-width: none;
+  }
+
+  .machinery-loan-page .section-space {
+    padding: 50px 0;
+  }
 
   .machinery-section-heading {
     margin-bottom: 30px;
@@ -1723,128 +1632,170 @@
 
   .machinery-section-heading h2,
   .machinery-emi-content h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .machinery-section-heading p,
   .machinery-emi-content > p {
     font-size: 14px;
+    line-height: 1.7;
   }
 
-  .machinery-overview-content h3 {
-    font-size: 24px;
+  .machinery-hero {
+    padding: 50px 0;
   }
 
-  .machinery-check-list {
-    grid-template-columns: 1fr;
+  .machinery-hero-content {
+    text-align: center;
+  }
 
+  .machinery-hero-content h1 {
+    font-size: 36px;
+    line-height: 1.15;
+    letter-spacing: -0.3px;
+  }
+
+  .machinery-hero-content > p {
+    font-size: 14px;
+  }
+
+  .machinery-hero-buttons {
+    justify-content: center;
     gap: 10px;
+  }
+
+  .machinery-hero-points {
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  .machinery-form-card {
+    max-width: 560px;
+    padding: 24px;
+  }
+
+  .machinery-overview-visual {
+    min-height: 300px;
+  }
+
+  .machinery-visual-circle {
+    width: 245px;
+    height: 245px;
+  }
+
+  .machinery-visual-circle i {
+    width: 90px;
+    height: 90px;
+    font-size: 38px;
+  }
+
+  .machinery-floating-card.card-one {
+    left: 0;
+    top: 15px;
+  }
+
+  .machinery-floating-card.card-two {
+    right: 0;
+    bottom: 15px;
   }
 
   .machinery-benefits-grid,
   .machinery-types-grid,
   .machinery-documents-grid,
   .machinery-why-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .machinery-benefit-card,
-  .machinery-document-card,
-  .machinery-why-card {
-    padding: 20px 17px;
-  }
-
-  .machinery-type-card {
-    padding: 22px;
-  }
-
-  .machinery-type-card h3 {
-    font-size: 18px;
-  }
-
-  .machinery-type-card p {
-    min-height: auto;
-  }
-
-  .machinery-eligibility-card {
-    padding: 25px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .machinery-process-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .machinery-process-item:last-child {
-    grid-column: span 2;
-  }
-
-  .machinery-emi-calculator {
-    padding: 23px;
+  .machinery-emi-result {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .machinery-final-cta {
-    padding: 52px 0;
+    padding: 55px 0;
   }
 
   .machinery-final-content h2 {
-    font-size: 32px;
+    font-size: 31px;
   }
 }
 
-/* =========================================================
-   576px
-========================================================= */
-
 @media (max-width: 576px) {
+  .machinery-loan-page .container {
+    width: calc(100% - 24px);
+  }
 
   .machinery-loan-page .section-space {
     padding: 42px 0;
   }
 
+  .machinery-section-heading {
+    margin-bottom: 26px;
+  }
+
+  .machinery-section-heading > span,
+  .machinery-emi-content > span {
+    font-size: 11px;
+  }
+
+  .machinery-section-heading h2,
+  .machinery-emi-content h2 {
+    font-size: 25px;
+  }
+
+  .machinery-section-heading p,
+  .machinery-emi-content > p {
+    font-size: 13px;
+  }
+
   .machinery-hero {
-    padding: 43px 0;
-
-    background-position: 88% center;
-
-    background-image:
-      linear-gradient(
-        90deg,
-        rgba(0, 39, 76, 0.985) 0%,
-        rgba(0, 52, 98, 0.95) 65%,
-        rgba(0, 52, 98, 0.79) 100%
-      ),
-      url("../image/machinery-banner.jpg");
+    padding: 43px 0 46px;
   }
 
   .machinery-hero-content h1 {
-    font-size: 32px;
+    font-size: 31px;
+    line-height: 1.16;
   }
 
   .machinery-hero-content > p {
     font-size: 13px;
   }
 
-  .machinery-hero-buttons {
-    justify-content: center;
+  .machinery-hero-buttons,
+  .machinery-final-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  .machinery-btn-primary,
-  .machinery-btn-outline {
-    min-height: 44px;
+  .machinery-hero-buttons a,
+  .machinery-hero-buttons button,
+  .machinery-final-buttons a,
+  .machinery-final-buttons button {
+    width: 100%;
+  }
 
-    padding: 0 17px;
-
-    font-size: 12px;
+  .machinery-hero-points {
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
   }
 
   .machinery-form-card {
-    padding: 21px;
-
-    border-radius: 11px;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 12px;
   }
 
   .machinery-form-card h2 {
     font-size: 21px;
+  }
+
+  .machinery-form-card > p {
+    font-size: 12px;
   }
 
   .machinery-form-row {
@@ -1852,49 +1803,67 @@
     gap: 0;
   }
 
-  .machinery-section-heading h2,
-  .machinery-emi-content h2 {
-    font-size: 28px;
+  .machinery-input {
+    min-height: 44px;
   }
 
-  .machinery-section-heading > span,
-  .machinery-emi-content > span {
-    font-size: 12px;
+  .machinery-input input,
+  .machinery-input select {
+    height: 42px;
+    font-size: 16px;
+  }
+
+  .machinery-input > i {
+    width: 38px;
+  }
+
+  .machinery-check-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .machinery-benefits-grid,
+  .machinery-types-grid,
+  .machinery-documents-grid,
+  .machinery-process-grid,
+  .machinery-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .machinery-benefit-card,
+  .machinery-type-card,
+  .machinery-document-card,
+  .machinery-process-item,
+  .machinery-why-card {
+    padding: 21px 18px;
   }
 
   .machinery-overview-visual {
-    min-height: 250px;
+    min-height: 330px;
   }
 
   .machinery-visual-circle {
-    width: 225px;
-    height: 225px;
+    width: 210px;
+    height: 210px;
   }
 
   .machinery-visual-circle i {
-    width: 78px;
-    height: 78px;
-
-    font-size: 33px;
+    width: 76px;
+    height: 76px;
+    border-radius: 18px;
+    font-size: 32px;
   }
 
   .machinery-floating-card {
-    padding: 9px 11px;
+    position: absolute;
+    max-width: 170px;
+    padding: 10px 11px;
+    gap: 8px;
   }
 
   .machinery-floating-card i {
-    width: 30px;
-    height: 30px;
-
-    font-size: 11px;
-  }
-
-  .machinery-floating-card strong {
-    font-size: 10px;
-  }
-
-  .machinery-floating-card span {
-    font-size: 9px;
+    width: 32px;
+    height: 32px;
   }
 
   .machinery-floating-card.card-one {
@@ -1907,225 +1876,142 @@
     bottom: 5px;
   }
 
-  .machinery-benefits-grid,
-  .machinery-types-grid,
-  .machinery-documents-grid,
-  .machinery-why-grid {
-    grid-template-columns: 1fr;
+  .machinery-eligibility-card,
+  .machinery-emi-calculator {
+    padding: 22px;
   }
 
-  .machinery-benefit-card,
-  .machinery-type-card,
-  .machinery-document-card,
-  .machinery-why-card {
-    padding: 20px;
+  .machinery-emi-calculator h3 {
+    font-size: 19px;
   }
 
-  .machinery-process-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .machinery-process-item:last-child {
-    grid-column: auto;
-  }
-
-  .machinery-process-item {
-    display: flex;
-
-    gap: 14px;
-
+  .machinery-range-label {
     align-items: flex-start;
-  }
-
-  .machinery-process-number {
-    flex-shrink: 0;
-
-    margin: 0;
-
-    font-size: 20px;
+    flex-direction: column;
+    gap: 4px;
   }
 
   .machinery-emi-result {
     grid-template-columns: 1fr;
-
-    gap: 12px;
+    gap: 14px;
   }
 
-  .machinery-emi-result div {
-    padding-bottom: 10px;
-
-    border-bottom: 1px solid var(--mach-border);
+  .machinery-faq-question {
+    padding: 15px;
+    font-size: 13px;
   }
 
-  .machinery-emi-result div:last-child {
-    padding-bottom: 0;
-    border-bottom: 0;
+  .machinery-faq-answer {
+    padding: 0 15px 15px;
+  }
+
+  .machinery-final-cta {
+    padding: 45px 0;
   }
 
   .machinery-final-content h2 {
-    font-size: 29px;
+    font-size: 27px;
   }
 
   .machinery-final-content > p {
     font-size: 13px;
   }
-
-  .machinery-disclaimer p {
-    padding: 0 12px;
-
-    font-size: 10px;
-  }
 }
 
-/* =========================================================
-   400px
-========================================================= */
-
 @media (max-width: 400px) {
+  .machinery-loan-page .container {
+    width: calc(100% - 20px);
+  }
 
   .machinery-loan-page .section-space {
-    padding: 37px 0;
-  }
-
-  .machinery-hero {
     padding: 38px 0;
-
-    background-position: 94% center;
-
-    background-image:
-      linear-gradient(
-        90deg,
-        rgba(0, 39, 76, 0.99) 0%,
-        rgba(0, 52, 98, 0.96) 68%,
-        rgba(0, 52, 98, 0.82) 100%
-      ),
-      url("../image/machinery-banner.jpg");
-  }
-
-  .machinery-hero-content h1 {
-    font-size: 29px;
-  }
-
-  .machinery-hero-content > p {
-    font-size: 12px;
-  }
-
-  .machinery-hero-buttons {
-    flex-direction: column;
-
-    width: 100%;
-  }
-
-  .machinery-hero-buttons a {
-    width: 100%;
-  }
-
-  .machinery-form-card {
-    padding: 18px;
-  }
-
-  .machinery-form-card h2 {
-    font-size: 20px;
   }
 
   .machinery-section-heading h2,
   .machinery-emi-content h2 {
-    font-size: 26px;
+    font-size: 23px;
   }
 
-  .machinery-overview-content h3 {
-    font-size: 21px;
+  .machinery-hero {
+    padding: 38px 0 40px;
+  }
+
+  .machinery-hero-content h1 {
+    font-size: 28px;
+  }
+
+  .machinery-badge {
+    padding: 7px 11px;
+    font-size: 10px;
+  }
+
+  .machinery-form-card {
+    padding: 17px;
+  }
+
+  .machinery-form-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
+  }
+
+  .machinery-form-card h2 {
+    font-size: 19px;
+  }
+
+  .machinery-form-card > p {
+    font-size: 11px;
+  }
+
+  .machinery-benefit-card h3,
+  .machinery-type-card h3 {
+    font-size: 16px;
+  }
+
+  .machinery-type-card p,
+  .machinery-benefit-card p,
+  .machinery-document-card p,
+  .machinery-why-card p {
+    font-size: 12px;
+  }
+
+  .machinery-overview-visual {
+    min-height: 290px;
   }
 
   .machinery-visual-circle {
-    width: 195px;
-    height: 195px;
+    width: 190px;
+    height: 190px;
   }
 
   .machinery-visual-circle i {
-    width: 67px;
-    height: 67px;
-
+    width: 68px;
+    height: 68px;
     font-size: 28px;
   }
 
   .machinery-floating-card {
-    transform: scale(0.9);
+    max-width: 145px;
+    padding: 8px 9px;
   }
 
-  .machinery-floating-card.card-one {
-    left: -8px;
+  .machinery-floating-card strong {
+    font-size: 10px;
   }
 
-  .machinery-floating-card.card-two {
-    right: -8px;
+  .machinery-floating-card span {
+    font-size: 8px;
   }
 
-  .machinery-eligibility-card {
-    padding: 20px;
-  }
-
-  .machinery-final-buttons {
-    flex-direction: column;
-  }
-
-  .machinery-final-buttons a {
-    width: 100%;
-  }
-}
-
-/* =========================================================
-   320px
-========================================================= */
-
-@media (max-width: 320px) {
-
-  .machinery-hero {
-    padding: 32px 0;
-
-    background-position: 97% center;
-  }
-
-  .machinery-hero-content h1 {
-    font-size: 26px;
-  }
-
-  .machinery-hero-content > p {
+  .machinery-floating-card i {
+    width: 28px;
+    height: 28px;
     font-size: 11px;
   }
 
-  .machinery-hero-points {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    justify-items: center;
-  }
-
-  .machinery-section-heading h2,
-  .machinery-emi-content h2 {
-    font-size: 24px;
-  }
-
-  .machinery-section-heading p {
-    font-size: 12px;
-  }
-
-  .machinery-form-card {
-    padding: 16px;
-  }
-
-  .machinery-input input,
-  .machinery-input select {
-    font-size: 11px;
-  }
-
-  .machinery-input-group label {
-    font-size: 11px;
-  }
-
-  .machinery-type-card h3 {
-    font-size: 16px;
+  .machinery-eligibility-card,
+  .machinery-emi-calculator {
+    padding: 18px;
   }
 
   .machinery-final-content h2 {
@@ -2133,24 +2019,60 @@
   }
 }
 
-/* =========================================================
-   240px
-========================================================= */
-
-@media (max-width: 240px) {
-
-  .machinery-loan-page .section-space {
-    padding: 30px 0;
+@media (max-width: 360px) {
+  .machinery-loan-page .container {
+    width: calc(100% - 18px);
   }
 
-  .machinery-hero {
-    padding: 27px 0;
+  .machinery-loan-page .section-space {
+    padding: 34px 0;
+  }
 
-    background-position: 100% center;
+  .machinery-section-heading h2,
+  .machinery-emi-content h2 {
+    font-size: 22px;
   }
 
   .machinery-hero-content h1 {
+    font-size: 26px;
+  }
+
+  .machinery-form-card {
+    padding: 15px;
+  }
+
+  .machinery-form-btn,
+  .machinery-btn-primary,
+  .machinery-btn-outline {
+    min-height: 44px;
+    padding: 0 15px;
+  }
+
+  .machinery-overview-visual {
+    min-height: 270px;
+  }
+
+  .machinery-visual-circle {
+    width: 175px;
+    height: 175px;
+  }
+
+  .machinery-floating-card {
+    max-width: 130px;
+  }
+
+  .machinery-final-content h2 {
     font-size: 23px;
+  }
+}
+
+@media (max-width: 320px) {
+  .machinery-loan-page .container {
+    width: calc(100% - 16px);
+  }
+
+  .machinery-loan-page .section-space {
+    padding: 30px 0;
   }
 
   .machinery-section-heading h2,
@@ -2158,53 +2080,86 @@
     font-size: 21px;
   }
 
+  .machinery-hero {
+    padding: 34px 0 36px;
+  }
+
+  .machinery-hero-content h1 {
+    font-size: 24px;
+  }
+
   .machinery-form-card {
     padding: 13px;
   }
 
-  .machinery-form-icon {
-    width: 41px;
-    height: 41px;
-
+  .machinery-form-card h2 {
     font-size: 17px;
   }
 
-  .machinery-form-card h2 {
-    font-size: 18px;
-  }
-
-  .machinery-hero-points div {
+  .machinery-form-card > p {
     font-size: 10px;
   }
 
+  .machinery-input-group label {
+    font-size: 11px;
+  }
+
+  .machinery-input > i {
+    width: 35px;
+  }
+
+  .machinery-input input,
+  .machinery-input select {
+    font-size: 16px;
+  }
+
+  .machinery-benefit-card,
+  .machinery-type-card,
+  .machinery-document-card,
+  .machinery-process-item,
+  .machinery-why-card {
+    padding: 17px 14px;
+  }
+
+  .machinery-overview-visual {
+    min-height: 245px;
+  }
+
   .machinery-visual-circle {
-    width: 155px;
-    height: 155px;
+    width: 160px;
+    height: 160px;
   }
 
   .machinery-visual-circle i {
-    width: 52px;
-    height: 52px;
-
-    font-size: 21px;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
   }
 
   .machinery-floating-card {
-    display: none;
+    max-width: 115px;
+    padding: 7px;
   }
 
-  .machinery-process-item {
-    padding: 16px 12px;
+  .machinery-floating-card strong {
+    font-size: 9px;
   }
 
-  .machinery-process-number {
-    width: 40px;
-    height: 40px;
-
-    font-size: 20px;
+  .machinery-floating-card span {
+    font-size: 7px;
   }
 
   .machinery-final-content h2 {
-    font-size: 21px;
+    font-size: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .machinery-loan-page *,
+  .machinery-loan-page *::before,
+  .machinery-loan-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }

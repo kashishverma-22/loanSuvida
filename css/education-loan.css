@@ -1,8 +1,3 @@
-/* =========================================================
-   EDUCATION LOAN PAGE
-   Loan Suvida - Blue Professional Theme
-========================================================= */
-
 .education-loan-page {
   --edu-blue: #005baa;
   --edu-blue-dark: #003f78;
@@ -205,8 +200,8 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
 
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
   letter-spacing: 0.8px;
 }
 
@@ -225,8 +220,8 @@
 
   margin: 0 0 16px;
 
-  font-size: 46px;
-  line-height: 1.15;
+  font-size: 60px;
+  line-height: 1.10;
   font-weight: 700;
   letter-spacing: -0.7px;
 }
@@ -285,7 +280,7 @@
   color: #9bd4ff;
   background: rgba(255, 255, 255, 0.1);
 
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .education-loan-page .education-trust-item strong {
@@ -293,7 +288,7 @@
 
   color: var(--edu-white);
 
-  font-size: 11px;
+  font-size: 13px;
 }
 
 
@@ -306,7 +301,7 @@
   max-width: 390px;
 
   margin-left: auto;
-  padding: 27px;
+  padding: 25px;
 
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 13px;
@@ -442,10 +437,15 @@
 .education-loan-page .education-submit-btn {
   width: 100%;
   min-height: 45px;
+  background: orange;
+  outline: none;
+  border: none;
 
   margin-top: 3px;
 }
-
+.education-loan-page .education-submit-btn:hover{
+  background: orange;
+}
 .education-loan-page .education-form-success {
   display: none;
 
@@ -551,7 +551,7 @@
 
   color: var(--edu-black);
 
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -767,7 +767,7 @@
 
   color: var(--edu-text);
 
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.75;
 }
 
@@ -866,7 +866,7 @@
 
   color: var(--edu-text);
 
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.75;
 }
 
@@ -886,7 +886,7 @@
 
   color: var(--edu-black);
 
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
@@ -928,7 +928,7 @@
 
   color: var(--edu-text);
 
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.75;
 }
 
@@ -962,7 +962,7 @@
 .education-loan-page .education-eligibility-item h4 {
   margin: 0 0 4px;
 
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.35;
   font-weight: 600;
 }
@@ -972,7 +972,7 @@
 
   color: var(--edu-text);
 
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.65;
 }
 
@@ -1020,7 +1020,7 @@
 .education-loan-page .education-eligibility-top > span {
   color: rgba(255, 255, 255, 0.68);
 
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 1.2px;
 }
 
@@ -1049,7 +1049,7 @@
 
   color: rgba(255, 255, 255, 0.88);
 
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .education-loan-page .education-profile-points i {
@@ -1139,7 +1139,7 @@
 
   color: var(--edu-text);
 
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.7;
 }
 
@@ -1149,7 +1149,7 @@
   gap: 10px;
 
   max-width: 900px;
-
+  font-size: 14px;
   margin: 25px auto 0;
 
   padding: 14px 16px;
@@ -1172,7 +1172,7 @@
 
   color: var(--edu-text);
 
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.65;
 }
 
@@ -1250,7 +1250,7 @@
 .education-loan-page .education-process-item h3 {
   margin: 0 0 7px;
 
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.4;
   font-weight: 600;
 }
@@ -1260,7 +1260,7 @@
 
   color: var(--edu-text);
 
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.65;
 }
 
@@ -1306,7 +1306,7 @@
 
   color: var(--edu-text);
 
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -1327,14 +1327,14 @@
 .education-loan-page .education-range-top label {
   color: var(--edu-black);
 
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
 }
 
 .education-loan-page .education-range-top strong {
   color: var(--edu-blue);
 
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .education-loan-page .education-range-group input[type="range"] {
@@ -1386,7 +1386,7 @@
 .education-loan-page .education-emi-result > span {
   color: rgba(255, 255, 255, 0.68);
 
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 1.1px;
 }
 
@@ -1419,13 +1419,13 @@
 
   color: rgba(255, 255, 255, 0.78);
 
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .education-loan-page .education-result-row strong {
   color: var(--edu-white);
 
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .education-loan-page .education-emi-result small {
@@ -1435,7 +1435,7 @@
 
   color: rgba(255, 255, 255, 0.58);
 
-  font-size: 9px;
+  font-size: 13px;
   line-height: 1.55;
 }
 
@@ -1546,7 +1546,7 @@
 .education-loan-page .education-floating-card span {
   color: var(--edu-text);
 
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .education-loan-page .education-floating-card strong {
@@ -1581,7 +1581,7 @@
 
   color: var(--edu-text);
 
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.75;
 }
 
@@ -1616,7 +1616,7 @@
 .education-loan-page .education-why-item h4 {
   margin: 0 0 4px;
 
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.35;
   font-weight: 600;
 }
@@ -1626,7 +1626,7 @@
 
   color: var(--edu-text);
 
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.65;
 }
 
@@ -1682,7 +1682,7 @@
 
   font-family: inherit;
 
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
 
   text-align: left;
@@ -1695,7 +1695,7 @@
 
   color: var(--edu-blue);
 
-  font-size: 13px;
+  font-size: 14px;
 
   transition: transform 0.25s ease;
 }
@@ -1806,7 +1806,7 @@
 
   color: rgba(255, 255, 255, 0.78);
 
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.75;
 }
 
@@ -1847,7 +1847,7 @@
 
   color: var(--edu-blue);
 
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .education-loan-page .education-disclaimer-box p {
@@ -1855,7 +1855,7 @@
 
   color: #748092;
 
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -1865,642 +1865,214 @@
 
 
 /* =========================================================
-   1199px
+   RESPONSIVE — 1199px (large tablets / small laptops)
 ========================================================= */
 
 @media (max-width: 1199px) {
-
-  .education-loan-page .education-hero-grid {
-    gap: 35px;
+  .education-loan-page .container {
+    width: min(1080px, calc(100% - 36px));
   }
 
-  .education-loan-page .education-hero-content h1 {
-    font-size: 43px;
-  }
+  .education-loan-page .education-hero-content h1 { font-size: 50px; }
+
+  .education-loan-page .education-hero-grid { gap: 36px; }
+
+  .education-loan-page .education-form-card { max-width: 100%; }
 
   .education-loan-page .education-overview-grid,
   .education-loan-page .education-eligibility-grid,
-  .education-loan-page .education-why-grid {
-    gap: 40px;
-  }
+  .education-loan-page .education-why-grid { gap: 38px; }
 
-  .education-loan-page .education-process-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  .education-loan-page .education-emi-wrapper { gap: 30px; }
 
+  .education-loan-page .education-benefits-grid,
+  .education-loan-page .education-types-grid { gap: 16px; }
+
+  .education-loan-page .education-documents-grid { gap: 14px; }
 }
 
 
 /* =========================================================
-   991px
+   RESPONSIVE — 991px (tablets)
 ========================================================= */
 
 @media (max-width: 991px) {
-
-  .education-loan-page .section-padding {
-    padding: 58px 0;
+  .education-loan-page .container {
+    width: min(760px, calc(100% - 34px));
   }
 
-  .education-loan-page .education-hero {
-    min-height: auto;
+  .education-loan-page .section-padding { padding: 54px 0; }
 
-    padding: 62px 0;
+  /* Hero */
+  .education-loan-page .education-hero { min-height: auto; padding: 54px 0; }
+  .education-loan-page .education-hero-grid { grid-template-columns: 1fr; gap: 34px; }
+  .education-loan-page .education-hero-content { max-width: 100%; }
+  .education-loan-page .education-form-card { max-width: 460px; margin: 0 auto; }
 
-    background-position: 65% center;
-  }
+  /* Overview */
+  .education-loan-page .education-overview-grid { grid-template-columns: 1fr; gap: 34px; }
+  .education-loan-page .education-overview-content h2 { max-width: 100%; }
+  .education-loan-page .education-overview-visual { order: -1; }
 
-  .education-loan-page .education-hero-overlay {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(0, 42, 82, 0.95),
-        rgba(0, 63, 120, 0.84)
-      );
-  }
+  /* Benefits / Types */
+  .education-loan-page .education-benefits-grid,
+  .education-loan-page .education-types-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-  .education-loan-page .education-hero-grid {
-    grid-template-columns: 1fr;
+  /* Eligibility */
+  .education-loan-page .education-eligibility-grid { grid-template-columns: 1fr; gap: 34px; }
+  .education-loan-page .education-eligibility-card { max-width: 500px; margin: 0 auto; }
 
-    gap: 38px;
-  }
+  /* Documents */
+  .education-loan-page .education-documents-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-  .education-loan-page .education-hero-content {
-    max-width: 720px;
-  }
+  /* Process */
+  .education-loan-page .education-process-wrapper { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 24px; }
 
-  .education-loan-page .education-form-card {
-    max-width: 500px;
+  /* EMI */
+  .education-loan-page .education-emi-wrapper { grid-template-columns: 1fr; gap: 28px; }
 
-    margin: 0 auto;
-  }
-
-  .education-loan-page .education-overview-grid,
-  .education-loan-page .education-eligibility-grid,
-  .education-loan-page .education-why-grid,
-  .education-loan-page .education-emi-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .education-loan-page .education-overview-content,
-  .education-loan-page .education-eligibility-content,
-  .education-loan-page .education-why-content {
-    max-width: 720px;
-
-    margin: 0 auto;
-  }
-
-  .education-loan-page .education-overview-visual {
-    order: -1;
-  }
-
-  .education-loan-page .education-documents-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .education-loan-page .education-emi-calculator,
-  .education-loan-page .education-emi-result {
-    max-width: 750px;
-
-    margin: 0 auto;
-  }
-
+  /* Why */
+  .education-loan-page .education-why-grid { grid-template-columns: 1fr; gap: 34px; }
+  .education-loan-page .education-why-visual { min-height: 260px; max-width: 460px; margin: 0 auto; }
 }
 
 
 /* =========================================================
-   767px
+   RESPONSIVE — 767px (large phones / small tablets)
 ========================================================= */
 
 @media (max-width: 767px) {
+  .education-loan-page .container { width: calc(100% - 28px); }
 
-  .education-loan-page .section-padding {
-    padding: 50px 0;
-  }
+  .education-loan-page .section-padding { padding: 44px 0; }
 
-  .education-loan-page .education-section-heading {
-    margin-bottom: 30px;
-  }
-
+  .education-loan-page .education-section-heading { margin-bottom: 30px; }
   .education-loan-page .education-section-heading h2,
   .education-loan-page .education-overview-content h2,
   .education-loan-page .education-eligibility-content h2,
+  .education-loan-page .education-emi-heading h2,
   .education-loan-page .education-why-content h2,
-  .education-loan-page .education-emi-heading h2 {
-    font-size: 28px;
-  }
+  .education-loan-page .education-final-content h2 { font-size: 27px; }
 
-  .education-loan-page .education-section-heading p {
-    font-size: 13px;
-  }
+  /* Hero */
+  .education-loan-page .education-hero-content { text-align: center; margin: 0 auto; }
+  .education-loan-page .education-hero-line { margin-left: auto; margin-right: auto; }
+  .education-loan-page .education-hero-content h1 { font-size: 38px; }
+  .education-loan-page .education-hero-content > p { margin-left: auto; margin-right: auto; }
+  .education-loan-page .education-hero-buttons { justify-content: center; }
+  .education-loan-page .education-hero-trust { justify-content: center; }
 
-  .education-loan-page .education-hero {
-    padding: 52px 0;
-
-    background-position: 75% center;
-  }
-
-  .education-loan-page .education-hero-overlay {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(0, 42, 82, 0.97),
-        rgba(0, 63, 120, 0.88)
-      );
-  }
-
-  .education-loan-page .education-hero-content {
-    text-align: center;
-  }
-
-  .education-loan-page .education-badge {
-    font-size: 10px;
-  }
-
-  .education-loan-page .education-hero-line {
-    margin: 0 auto 13px;
-  }
-
-  .education-loan-page .education-hero-content h1 {
-    font-size: 35px;
-
-    letter-spacing: -0.4px;
-  }
-
-  .education-loan-page .education-hero-content > p {
-    font-size: 13px;
-  }
-
-  .education-loan-page .education-hero-buttons {
-    justify-content: center;
-  }
-
-  .education-loan-page .education-hero-trust {
-    justify-content: center;
-
-    gap: 12px;
-  }
-
-  .education-loan-page .education-trust-item {
-    min-width: 135px;
-
-    justify-content: flex-start;
-
-    text-align: left;
-  }
-
-  .education-loan-page .education-form-card {
-    padding: 23px;
-
-    border-radius: 11px;
-  }
-
+  /* Benefits / Types / Process / Documents collapse to 1 column on small screens */
   .education-loan-page .education-benefits-grid,
-  .education-loan-page .education-types-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .education-loan-page .education-types-grid,
+  .education-loan-page .education-process-wrapper,
+  .education-loan-page .education-documents-grid { grid-template-columns: 1fr; }
 
-  .education-loan-page .education-process-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  /* EMI */
+  .education-loan-page .education-emi-calculator { padding: 22px; }
+  .education-loan-page .education-emi-result { padding: 22px; }
 
-  .education-loan-page .education-why-visual {
-    min-height: 285px;
-  }
+  /* Final CTA */
+  .education-loan-page .education-final-buttons { flex-direction: column; align-items: stretch; }
+  .education-loan-page .education-final-buttons a,
+  .education-loan-page .education-final-buttons button { width: 100%; }
 
-  .education-loan-page .education-why-circle {
-    width: 220px;
-    height: 220px;
-  }
-
-  .education-loan-page .education-floating-one {
-    left: 0;
-  }
-
-  .education-loan-page .education-floating-two {
-    right: 0;
-  }
-
-  .education-loan-page .education-final-content h2 {
-    font-size: 30px;
-  }
-
+  /* Disclaimer */
+  .education-loan-page .education-disclaimer-box { flex-direction: column; text-align: center; }
 }
 
 
 /* =========================================================
-   576px
+   RESPONSIVE — 576px (phones)
 ========================================================= */
 
 @media (max-width: 576px) {
+  .education-loan-page .education-hero { padding: 40px 0 44px; }
+  .education-loan-page .education-hero-content h1 { font-size: 32px; }
 
-  .education-loan-page .section-padding {
-    padding: 44px 0;
-  }
-
-  .education-loan-page .education-hero {
-    padding: 45px 0;
-
-    background-position: 80% center;
-  }
-
-  .education-loan-page .education-hero-content h1 {
-    font-size: 31px;
-  }
-
-  .education-loan-page .education-hero-content > p {
-    font-size: 12px;
-
-    line-height: 1.7;
-  }
-
-  .education-loan-page .education-btn-primary,
-  .education-loan-page .education-btn-outline {
-    width: 100%;
-
-    min-height: 44px;
-
-    font-size: 12px;
-  }
-
-  .education-loan-page .education-hero-buttons {
-    width: 100%;
-
-    max-width: 340px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    flex-direction: column;
-  }
-
-  .education-loan-page .education-hero-trust {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    max-width: 370px;
-
-    margin: 0 auto;
-  }
-
-  .education-loan-page .education-trust-item {
-    min-width: 0;
-
-    font-size: 10px;
-  }
-
-  .education-loan-page .education-trust-item strong {
-    font-size: 10px;
-  }
-
-  .education-loan-page .education-form-card {
-    padding: 21px 17px;
-  }
-
-  .education-loan-page .education-form-card h2 {
-    font-size: 21px;
-  }
-
-  .education-loan-page .education-benefits-grid,
-  .education-loan-page .education-types-grid,
-  .education-loan-page .education-documents-grid,
-  .education-loan-page .education-process-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .education-loan-page .education-benefit-card,
-  .education-loan-page .education-type-card {
-    padding: 21px 18px;
-  }
-
-  .education-loan-page .education-benefit-card p,
-  .education-loan-page .education-type-content > p {
-    font-size: 12px;
-  }
-
-  .education-loan-page .education-visual-card {
-    width: 270px;
-    height: 270px;
-  }
-
-  .education-loan-page .education-eligibility-card {
-    padding: 24px 21px;
-  }
-
-  .education-loan-page .education-emi-calculator,
-  .education-loan-page .education-emi-result {
-    padding: 23px 19px;
-  }
-
-  .education-loan-page .education-emi-result h3 {
-    font-size: 30px;
-  }
-
-  .education-loan-page .education-why-circle {
-    width: 200px;
-    height: 200px;
-  }
-
-  .education-loan-page .education-why-circle i {
-    font-size: 38px;
-  }
-
-  .education-loan-page .education-why-circle strong {
-    font-size: 18px;
-  }
-
-  .education-loan-page .education-floating-card {
-    padding: 8px 10px;
-  }
-
-  .education-loan-page .education-floating-one {
-    top: 8px;
-  }
-
-  .education-loan-page .education-floating-two {
-    bottom: 8px;
-  }
-
-  .education-loan-page .education-final-cta {
-    padding: 50px 0;
-  }
-
-  .education-loan-page .education-final-content h2 {
-    font-size: 27px;
-  }
-
-  .education-loan-page .education-final-content p {
-    font-size: 12px;
-  }
-
+  .education-loan-page .education-hero-buttons,
   .education-loan-page .education-final-buttons {
-    width: 100%;
-
-    max-width: 340px;
-
-    margin: auto;
-
     flex-direction: column;
+    align-items: stretch;
   }
+  .education-loan-page .education-hero-buttons a,
+  .education-loan-page .education-hero-buttons button { width: 100%; }
 
-  .education-loan-page .education-final-buttons a {
-    width: 100%;
-  }
+  .education-loan-page .education-form-card { padding: 20px; }
 
+  .education-loan-page .education-visual-card { width: 100%; max-width: 280px; height: 280px; }
+
+  .education-loan-page .education-why-circle { width: 210px; height: 210px; }
+  .education-loan-page .education-floating-card { display: none; }
+
+  .education-loan-page .education-faq-question { font-size: 14px; padding: 13px 15px; }
 }
 
 
 /* =========================================================
-   480px
+   RESPONSIVE — 480px (small phones)
 ========================================================= */
 
 @media (max-width: 480px) {
+  .education-loan-page .education-hero-content h1 { font-size: 28px; }
 
-  .education-loan-page .education-hero {
-    background-position: 84% center;
-  }
+  .education-loan-page .education-badge { font-size: 11px; }
 
-  .education-loan-page .education-hero-content h1 {
-    font-size: 29px;
-  }
+  .education-loan-page .education-trust-item { font-size: 10px; }
 
-  .education-loan-page .education-section-heading h2,
-  .education-loan-page .education-overview-content h2,
-  .education-loan-page .education-eligibility-content h2,
-  .education-loan-page .education-why-content h2,
-  .education-loan-page .education-emi-heading h2 {
-    font-size: 25px;
-  }
+  .education-loan-page .education-eligibility-top h3,
+  .education-loan-page .education-emi-result h3 { font-size: 24px; }
 
-  .education-loan-page .education-section-heading p {
-    font-size: 12px;
-  }
+  .education-loan-page .education-final-content h2 { font-size: 22px; }
 
-  .education-loan-page .education-hero-trust {
-    gap: 8px;
-  }
-
-  .education-loan-page .education-trust-item {
-    gap: 7px;
-
-    font-size: 9px;
-  }
-
-  .education-loan-page .education-trust-item strong {
-    font-size: 10px;
-  }
-
-  .education-loan-page .education-trust-item i {
-    width: 28px;
-    height: 28px;
-
-    font-size: 11px;
-  }
-
-  .education-loan-page .education-visual-card {
-    width: 245px;
-    height: 245px;
-
-    padding: 28px 20px;
-  }
-
-  .education-loan-page .education-visual-icon {
-    width: 52px;
-    height: 52px;
-
-    font-size: 22px;
-  }
-
-  .education-loan-page .education-visual-card h3 {
-    font-size: 23px;
-  }
-
-  .education-loan-page .education-floating-card {
-    max-width: 118px;
-  }
-
-  .education-loan-page .education-floating-card span {
-    font-size: 9px;
-  }
-
-  .education-loan-page .education-floating-card strong {
-    font-size: 10px;
-  }
-
-  .education-loan-page .education-disclaimer-box {
-    gap: 8px;
-  }
-
-  .education-loan-page .education-disclaimer-box p {
-    font-size: 9px;
-  }
-
+  .education-loan-page .education-document-card,
+  .education-loan-page .education-benefit-card,
+  .education-loan-page .education-type-card { padding: 18px 16px; }
 }
 
 
 /* =========================================================
-   360px
+   RESPONSIVE — 360px (very small phones)
 ========================================================= */
 
 @media (max-width: 360px) {
+  .education-loan-page .education-hero-content h1 { font-size: 25px; }
 
-  .education-loan-page .education-hero {
-    padding: 40px 0;
+  .education-loan-page .education-btn-primary,
+  .education-loan-page .education-btn-outline,
+  .education-loan-page .education-submit-btn,
+  .education-loan-page .education-card-btn { font-size: 12px; padding: 0 16px; }
 
-    background-position: 87% center;
-  }
-
-  .education-loan-page .education-hero-content h1 {
-    font-size: 26px;
-  }
-
-  .education-loan-page .education-hero-content > p {
-    font-size: 11px;
-  }
-
-  .education-loan-page .education-badge {
-    padding: 6px 9px;
-
-    font-size: 9px;
-  }
-
-  .education-loan-page .education-form-card {
-    padding: 18px 14px;
-  }
-
-  .education-loan-page .education-form-card h2 {
-    font-size: 19px;
-  }
-
-  .education-loan-page .education-input-wrap input,
-  .education-loan-page .education-input-wrap select {
-    height: 41px;
-
-    font-size: 11px;
-  }
-
-  .education-loan-page .education-section-heading h2,
-  .education-loan-page .education-overview-content h2,
-  .education-loan-page .education-eligibility-content h2,
-  .education-loan-page .education-why-content h2,
-  .education-loan-page .education-emi-heading h2 {
-    font-size: 23px;
-  }
-
-  .education-loan-page .education-visual-card {
-    width: 220px;
-    height: 220px;
-  }
-
-  .education-loan-page .education-why-circle {
-    width: 175px;
-    height: 175px;
-  }
-
-  .education-loan-page .education-why-circle i {
-    font-size: 30px;
-  }
-
-  .education-loan-page .education-why-circle strong {
-    font-size: 15px;
-  }
-
-  .education-loan-page .education-floating-card {
-    padding: 6px 8px;
-  }
-
-  .education-loan-page .education-floating-one {
-    left: -5px;
-  }
-
-  .education-loan-page .education-floating-two {
-    right: -5px;
-  }
-
+  .education-loan-page .education-emi-calculator,
+  .education-loan-page .education-emi-result { padding: 16px; }
 }
 
 
 /* =========================================================
-   320px
+   RESPONSIVE — 320px (smallest supported phones)
 ========================================================= */
 
 @media (max-width: 320px) {
+  .education-loan-page .education-hero-content h1 { font-size: 22px; }
 
-  .education-loan-page .section-padding {
-    padding: 37px 0;
+  .education-loan-page .education-section-heading h2,
+  .education-loan-page .education-overview-content h2,
+  .education-loan-page .education-eligibility-content h2,
+  .education-loan-page .education-emi-heading h2,
+  .education-loan-page .education-why-content h2,
+  .education-loan-page .education-final-content h2 { font-size: 22px; }
+
+  .education-loan-page .education-visual-card { max-width: 240px; height: 240px; }
+  .education-loan-page .education-why-circle { width: 180px; height: 180px; }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .education-loan-page *,
+  .education-loan-page *::before,
+  .education-loan-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
-
-  .education-loan-page .education-hero {
-    padding: 35px 0;
-
-    background-position: 90% center;
-  }
-
-  .education-loan-page .education-hero-content h1 {
-    font-size: 24px;
-  }
-
-  .education-loan-page .education-hero-buttons {
-    max-width: 100%;
-  }
-
-  .education-loan-page .education-hero-trust {
-    grid-template-columns: 1fr;
-
-    max-width: 190px;
-  }
-
-  .education-loan-page .education-trust-item {
-    width: 100%;
-  }
-
-  .education-loan-page .education-form-card {
-    padding: 16px 12px;
-  }
-
-  .education-loan-page .education-form-card h2 {
-    font-size: 18px;
-  }
-
-  .education-loan-page .education-visual-card {
-    width: 200px;
-    height: 200px;
-
-    padding: 22px 15px;
-  }
-
-  .education-loan-page .education-visual-icon {
-    width: 45px;
-    height: 45px;
-
-    font-size: 19px;
-
-    margin-bottom: 10px;
-  }
-
-  .education-loan-page .education-visual-card h3 {
-    font-size: 19px;
-  }
-
-  .education-loan-page .education-floating-card {
-    transform: scale(0.85);
-  }
-
-  .education-loan-page .education-why-circle {
-    width: 155px;
-    height: 155px;
-  }
-
-  .education-loan-page .education-why-circle i {
-    font-size: 26px;
-  }
-
-  .education-loan-page .education-why-circle strong {
-    font-size: 13px;
-  }
-
-  .education-loan-page .education-final-content h2 {
-    font-size: 23px;
-  }
-
 }

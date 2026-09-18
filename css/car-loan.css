@@ -1,22 +1,20 @@
-/* =========================================================
-   CAR LOAN PAGE
-   Loan Suvida Premium Blue Theme
-========================================================= */
-
 .car-loan-page {
   --car-blue: #005baa;
   --car-blue-dark: #003f78;
   --car-blue-deep: #002b55;
-  --car-blue-light: #eef7ff;
-
+  --car-blue-light: #eaf5ff;
+  --car-orange: #f7941d;
+  --car-orange-dark: #e87800;
   --car-white: #ffffff;
-  --car-text: #172b4d;
-  --car-muted: #65748b;
-  --car-border: #e3ebf4;
-  --car-bg: #f7faff;
+  --car-text: #172033;
+  --car-muted: #7c8797;
+  --car-border: #e5ebf2;
+  --car-bg: #f8fafc;
+  --car-light-bg: #f5f9fd;
 
-  --car-shadow: 0 12px 35px rgba(0, 64, 120, 0.09);
-  --car-shadow-lg: 0 22px 60px rgba(0, 43, 85, 0.14);
+  --car-shadow: 0 10px 30px rgba(0, 43, 85, 0.09);
+  --car-shadow-lg: 0 18px 45px rgba(0, 43, 85, 0.14);
+  --car-transition: all 0.3s ease;
 
   font-family: "Poppins", sans-serif;
   color: var(--car-text);
@@ -58,14 +56,10 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   padding: 7px 14px;
-
   border-radius: 50px;
-
   background: var(--car-blue-light);
   color: var(--car-blue);
-
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -73,17 +67,15 @@
 
 .car-section-heading {
   max-width: 700px;
-  margin: 0 auto 40px;
+  margin: 0 auto 42px;
   text-align: center;
 }
 
 .car-section-heading h2 {
   margin: 14px 0 12px;
-
-  font-size: clamp(30px, 3.5vw, 42px);
+  font-size: 35px;
   line-height: 1.2;
   font-weight: 700;
-
   color: var(--car-text);
 }
 
@@ -93,10 +85,8 @@
 
 .car-section-heading p {
   margin: 0;
-
   color: var(--car-muted);
-
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.75;
 }
 
@@ -106,72 +96,54 @@
 
 .car-hero {
   position: relative;
-
-  min-height: 590px;
-
+  min-height: 610px;
   display: flex;
   align-items: center;
-
-  padding: 70px 0;
+  padding: 55px 0 70px;
 
   background:
-    radial-gradient(
-      circle at 85% 20%,
-      rgba(255, 255, 255, 0.10),
-      transparent 28%
-    ),
     linear-gradient(
-      120deg,
-      #002b55 0%,
-      #005baa 58%,
-      #0872c9 100%
-    );
-
+      90deg,
+      rgba(0, 43, 85, 0.48) 0%,
+      rgba(0, 63, 120, 0.54) 45%,
+      rgba(0, 63, 120, 0.62) 72%,
+      rgba(0, 63, 120, 0.48) 100%
+    ),
+    url("../image/car-loan.png") center / cover no-repeat;
   isolation: isolate;
 }
 
-.car-hero::before {
+.car-hero::before,
+.car-hero::after {
   content: "";
-
   position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 50%;
+  pointer-events: none;
+}
 
+.car-hero::before {
   width: 430px;
   height: 430px;
-
-  right: -160px;
+  right: -170px;
   bottom: -230px;
-
-  border: 1px solid rgba(255, 255, 255, 0.13);
-
-  border-radius: 50%;
 }
 
 .car-hero::after {
-  content: "";
-
-  position: absolute;
-
   width: 290px;
   height: 290px;
-
   right: 50px;
   bottom: -155px;
-
-  border: 1px solid rgba(255, 255, 255, 0.09);
-
-  border-radius: 50%;
 }
 
 .car-hero-overlay {
   position: absolute;
   inset: 0;
-
   background: linear-gradient(
     90deg,
-    rgba(0, 35, 70, 0.25),
+    rgba(0, 43, 85, 0.30),
     transparent
   );
-
   z-index: -1;
 }
 
@@ -180,150 +152,151 @@
   z-index: 2;
 
   display: grid;
-
-  grid-template-columns: 1.12fr 0.88fr;
-
-  gap: 50px;
-
+  grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
+  gap: 42px;
   align-items: center;
 }
 
 .car-hero-content {
+  max-width: 720px;
   color: var(--car-white);
 }
 
 .car-hero-badge {
+  position: relative;
+
   display: inline-flex;
   align-items: center;
-  gap: 8px;
 
-  padding: 7px 14px;
+  padding-left: 70px;
 
-  border-radius: 50px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
 
-  background: rgba(255, 255, 255, 0.10);
+  color: var(--car-white);
 
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+}
 
-  font-size: 10px;
-  font-weight: 700;
+.car-hero-badge::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 55px;
+  height: 4px;
+  border-radius: 10px;
+  background: var(--car-white);
+  transform: translateY(-50%);
+}
 
-  letter-spacing: 1px;
+.car-hero-badge i {
+  display: none;
 }
 
 .car-hero-content h1 {
-  margin: 18px 0 15px;
+  margin: 16px 0;
 
-  max-width: 650px;
+  max-width: 720px;
 
-  font-size: clamp(38px, 4.5vw, 56px);
-
-  line-height: 1.1;
-
+  font-size: clamp(40px, 4.5vw, 58px);
+  line-height: 1.08;
   font-weight: 700;
-
-  letter-spacing: -0.7px;
+  letter-spacing: -1.2px;
 }
 
 .car-hero-content h1 span {
-  color: #9ed5ff;
+  display: block;
+  color: var(--car-white);
 }
 
 .car-hero-content > p {
-  max-width: 620px;
+  max-width: 690px;
+  margin: 0 0 27px;
 
-  margin: 0 0 24px;
-
-  color: rgba(255, 255, 255, 0.82);
-
-  font-size: 14px;
-
-  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 15px;
+  line-height: 1.8;
 }
 
 .car-hero-buttons {
   display: flex;
+  align-items: center;
+  gap: 14px;
   flex-wrap: wrap;
-
-  gap: 12px;
 }
 
 .car-primary-btn,
 .car-outline-btn,
 .car-call-btn {
-  min-height: 46px;
+  min-height: 52px;
 
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
-  gap: 9px;
+  gap: 10px;
+  padding: 13px 23px;
 
-  padding: 0 20px;
+  border-radius: 8px;
 
-  border-radius: 9px;
-
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
 
-  transition: 0.3s ease;
+  transition: var(--car-transition);
 }
 
 .car-primary-btn {
-  background: var(--car-white);
-
-  color: var(--car-blue);
-
-  box-shadow: 0 8px 22px rgba(0, 30, 70, 0.15);
+  background: var(--car-blue);
+  color: var(--car-white);
+  border: 1px solid var(--car-blue);
 }
 
 .car-primary-btn:hover {
-  background: #eaf5ff;
-
-  color: var(--car-blue-dark);
-
-  transform: translateY(-2px);
+  background: var(--car-blue-dark);
+  color: var(--car-white);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 91, 170, 0.30);
 }
 
 .car-outline-btn {
-  border: 1px solid rgba(255, 255, 255, 0.40);
-
   color: var(--car-white);
-
+  border: 1px solid rgba(255, 255, 255, 0.70);
   background: rgba(255, 255, 255, 0.06);
 }
 
 .car-outline-btn:hover {
   background: var(--car-white);
-
   color: var(--car-blue);
-
-  transform: translateY(-2px);
+  border-color: var(--car-white);
+  transform: translateY(-3px);
 }
 
 .car-hero-trust {
+  margin-top: 32px;
+
   display: flex;
+  align-items: center;
+  gap: 25px;
   flex-wrap: wrap;
-
-  gap: 18px;
-
-  margin-top: 25px;
 }
 
 .car-trust-item {
   display: flex;
   align-items: center;
+  gap: 9px;
 
-  gap: 7px;
-
-  color: rgba(255, 255, 255, 0.84);
-
-  font-size: 11px;
+  color: var(--car-white);
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .car-trust-item i {
-  color: #ffffff;
+  font-size: 17px;
+  color: var(--car-white);
 }
 
 /* =========================================================
@@ -333,20 +306,23 @@
 .car-hero-card {
   position: relative;
 
-  padding: 28px;
+  width: 100%;
+  max-width: 440px;
+  margin-left:2.8rem;
+
+  padding: 30px;
 
   background: rgba(255, 255, 255, 0.98);
 
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 0;
+  border-radius: 18px;
 
-  border-radius: 20px;
-
-  box-shadow: 0 25px 65px rgba(0, 25, 60, 0.22);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.22);
 }
 
 .car-card-icon {
-  width: 54px;
-  height: 54px;
+  width: 52px;
+  height: 52px;
 
   display: flex;
   align-items: center;
@@ -354,37 +330,32 @@
 
   margin-bottom: 17px;
 
-  border-radius: 13px;
+  border-radius: 12px;
 
   background: linear-gradient(
     135deg,
     var(--car-blue),
-    #1686dc
+    var(--car-blue-dark)
   );
 
   color: var(--car-white);
-
-  font-size: 22px;
+  font-size: 21px;
 }
 
 .car-card-small {
   color: var(--car-blue);
-
-  font-size: 10px;
-
+  font-size: 11px;
   font-weight: 700;
-
   letter-spacing: 1px;
 }
 
 .car-hero-card h2 {
-  margin: 9px 0;
+  margin: 9px 0 7px;
 
   color: var(--car-text);
-
-  font-size: 25px;
-
+  font-size: 22px;
   line-height: 1.25;
+  font-weight: 700;
 }
 
 .car-hero-card h2 span {
@@ -392,38 +363,35 @@
 }
 
 .car-hero-card > p {
+  margin-bottom: 20px;
+
   color: var(--car-muted);
-
-  font-size: 12px;
-
+  font-size: 14px;
   line-height: 1.7;
 }
 
 .car-card-points {
   display: grid;
-
-  gap: 9px;
-
+  gap: 10px;
   margin: 19px 0;
 }
 
 .car-card-points div {
   display: flex;
   align-items: center;
-
   gap: 9px;
 
   color: #40526b;
-
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .car-card-points i {
   color: var(--car-blue);
+  font-size: 14px;
 }
 
 .car-card-btn {
-  min-height: 46px;
+  min-height: 50px;
 
   display: flex;
   align-items: center;
@@ -431,24 +399,23 @@
 
   gap: 9px;
 
-  border-radius: 9px;
+  border: 0;
+  border-radius: 8px;
 
-  background: var(--car-blue);
-
+  background: var(--car-orange);
   color: var(--car-white);
 
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
 
-  transition: 0.3s;
+  transition: var(--car-transition);
 }
 
 .car-card-btn:hover {
-  background: var(--car-blue-dark);
-
+  background: var(--car-orange-dark);
   color: var(--car-white);
-
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(247, 148, 29, 0.25);
 }
 
 /* =========================================================
@@ -456,28 +423,22 @@
 ========================================================= */
 
 .car-intro-section {
-  padding: 70px 0;
-
+  padding: 75px 0;
   background: var(--car-white);
 }
 
 .car-intro-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
-  gap: 55px;
-
+  gap: 60px;
   align-items: center;
 }
 
 .car-intro-content h2 {
   margin: 15px 0;
 
-  font-size: 36px;
-
+  font-size: 35px;
   line-height: 1.2;
-
   font-weight: 700;
 }
 
@@ -489,29 +450,23 @@
   margin-bottom: 13px;
 
   color: var(--car-muted);
-
-  font-size: 13px;
-
+  font-size: 14px;
   line-height: 1.75;
 }
 
 .car-check-list {
   display: grid;
-
   gap: 9px;
-
   margin: 22px 0;
 }
 
 .car-check-list div {
   display: flex;
   align-items: center;
-
   gap: 9px;
 
   color: #42536a;
-
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .car-check-list i {
@@ -520,18 +475,14 @@
 
 .car-text-btn {
   display: inline-flex;
-
   align-items: center;
-
   gap: 8px;
 
   color: var(--car-blue);
-
   font-size: 13px;
-
   font-weight: 700;
 
-  transition: 0.3s;
+  transition: var(--car-transition);
 }
 
 .car-text-btn:hover {
@@ -548,16 +499,14 @@
   min-height: 390px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  background:
-    radial-gradient(
-      circle at center,
-      #eaf5ff,
-      transparent 65%
-    );
+  background: radial-gradient(
+    circle at center,
+    var(--car-blue-light),
+    transparent 65%
+  );
 }
 
 .car-visual-main {
@@ -566,18 +515,16 @@
 
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
 
-  background:
-    linear-gradient(
-      145deg,
-      var(--car-blue),
-      var(--car-blue-dark)
-    );
+  background: linear-gradient(
+    145deg,
+    var(--car-blue),
+    var(--car-blue-dark)
+  );
 
   color: var(--car-white);
 
@@ -597,7 +544,6 @@
   margin-bottom: 12px;
 
   border-radius: 50%;
-
   background: rgba(255, 255, 255, 0.12);
 
   font-size: 28px;
@@ -605,31 +551,24 @@
 
 .car-visual-main > span {
   font-size: 9px;
-
   letter-spacing: 1.5px;
-
   font-weight: 600;
-
   color: rgba(255, 255, 255, 0.65);
 }
 
 .car-visual-main h3 {
   margin: 7px 0 14px;
-
   font-size: 23px;
 }
 
 .car-visual-main strong {
   display: block;
-
   color: #a9dcff;
 }
 
 .car-road-line {
   display: flex;
-
   align-items: center;
-
   gap: 7px;
 }
 
@@ -638,7 +577,6 @@
   height: 3px;
 
   border-radius: 10px;
-
   background: rgba(255, 255, 255, 0.35);
 }
 
@@ -646,15 +584,12 @@
   position: absolute;
 
   display: flex;
-
   align-items: center;
 
   gap: 10px;
-
   padding: 13px 16px;
 
   background: var(--car-white);
-
   border-radius: 12px;
 
   box-shadow: var(--car-shadow);
@@ -673,7 +608,6 @@
   border-radius: 9px;
 
   background: var(--car-blue-light);
-
   color: var(--car-blue);
 }
 
@@ -684,13 +618,11 @@
 
 .car-floating-card strong {
   color: var(--car-text);
-
   font-size: 12px;
 }
 
 .car-floating-card small {
   color: var(--car-muted);
-
   font-size: 9px;
 }
 
@@ -709,40 +641,33 @@
 ========================================================= */
 
 .car-benefits-section {
-  padding: 70px 0;
-
+  padding: 75px 0;
   background: var(--car-bg);
 }
 
 .car-benefits-grid {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 16px;
 }
 
 .car-benefit-card {
   position: relative;
 
-  padding: 23px 20px;
+  padding: 25px 21px;
 
   background: var(--car-white);
-
   border: 1px solid var(--car-border);
-
   border-radius: 15px;
 
   overflow: hidden;
 
-  transition: 0.3s;
+  transition: var(--car-transition);
 }
 
 .car-benefit-card:hover {
   transform: translateY(-5px);
-
   border-color: rgba(0, 91, 170, 0.25);
-
   box-shadow: var(--car-shadow);
 }
 
@@ -759,7 +684,6 @@
   border-radius: 11px;
 
   background: var(--car-blue-light);
-
   color: var(--car-blue);
 
   font-size: 19px;
@@ -768,8 +692,7 @@
 .car-benefit-card h3 {
   margin-bottom: 8px;
 
-  font-size: 16px;
-
+  font-size: 17px;
   font-weight: 600;
 }
 
@@ -777,22 +700,17 @@
   margin: 0;
 
   color: var(--car-muted);
-
-  font-size: 11px;
-
+  font-size: 13px;
   line-height: 1.7;
 }
 
 .car-benefit-card > span {
   position: absolute;
-
   right: 15px;
   bottom: 8px;
 
   color: #edf2f7;
-
   font-size: 30px;
-
   font-weight: 800;
 }
 
@@ -801,51 +719,44 @@
 ========================================================= */
 
 .car-types-section {
-  padding: 70px 0;
-
+  padding: 75px 0;
   background: var(--car-white);
 }
 
 .car-types-grid {
   display: grid;
-
   grid-template-columns: repeat(2, 1fr);
-
   gap: 18px;
 }
 
 .car-type-card {
   position: relative;
 
-  padding: 28px;
+  padding: 27px 21px;
 
   border-radius: 18px;
 
   background: #f2f8ff;
-
   border: 1px solid #dcebf8;
 
   overflow: hidden;
 
-  transition: 0.3s;
+  transition: var(--car-transition);
 }
 
 .car-type-card:hover {
   transform: translateY(-5px);
-
   box-shadow: var(--car-shadow);
 }
 
 .car-type-number {
   position: absolute;
-
   top: 15px;
   right: 20px;
 
   color: rgba(0, 91, 170, 0.08);
 
   font-size: 55px;
-
   font-weight: 800;
 }
 
@@ -862,7 +773,6 @@
   border-radius: 13px;
 
   background: var(--car-blue);
-
   color: var(--car-white);
 
   font-size: 21px;
@@ -871,8 +781,7 @@
 .car-type-card h3 {
   margin-bottom: 9px;
 
-  font-size: 21px;
-
+  font-size: 17px;
   font-weight: 600;
 }
 
@@ -880,9 +789,7 @@
   max-width: 500px;
 
   color: var(--car-muted);
-
-  font-size: 12px;
-
+  font-size: 13px;
   line-height: 1.7;
 }
 
@@ -893,7 +800,6 @@
   margin: 18px 0;
 
   display: grid;
-
   gap: 8px;
 }
 
@@ -904,8 +810,7 @@
   gap: 9px;
 
   color: #40536b;
-
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .car-type-card li i {
@@ -914,15 +819,11 @@
 
 .car-type-card > a {
   display: inline-flex;
-
   align-items: center;
-
   gap: 8px;
 
   color: var(--car-blue);
-
   font-size: 12px;
-
   font-weight: 700;
 }
 
@@ -935,26 +836,21 @@
 ========================================================= */
 
 .car-eligibility-section {
-  padding: 70px 0;
-
+  padding: 75px 0;
   background: var(--car-bg);
 }
 
 .car-eligibility-grid {
   display: grid;
-
   grid-template-columns: 1.25fr 0.75fr;
-
   gap: 45px;
-
   align-items: center;
 }
 
 .car-eligibility-content h2 {
   margin: 15px 0 12px;
 
-  font-size: 36px;
-
+  font-size: 35px;
   line-height: 1.2;
 }
 
@@ -966,17 +862,13 @@
   max-width: 700px;
 
   color: var(--car-muted);
-
-  font-size: 13px;
-
+  font-size: 14px;
   line-height: 1.7;
 }
 
 .eligibility-list {
   display: grid;
-
   grid-template-columns: repeat(2, 1fr);
-
   gap: 14px;
 
   margin-top: 25px;
@@ -984,7 +876,6 @@
 
 .eligibility-item {
   display: flex;
-
   gap: 10px;
 }
 
@@ -1001,7 +892,6 @@
   border-radius: 9px;
 
   background: var(--car-white);
-
   color: var(--car-blue);
 
   box-shadow: 0 7px 20px rgba(0, 64, 120, 0.06);
@@ -1010,8 +900,7 @@
 .eligibility-item h3 {
   margin: 0 0 4px;
 
-  font-size: 13px;
-
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -1019,9 +908,7 @@
   margin: 0;
 
   color: var(--car-muted);
-
-  font-size: 10px;
-
+  font-size: 12px;
   line-height: 1.6;
 }
 
@@ -1030,12 +917,11 @@
 
   border-radius: 18px;
 
-  background:
-    linear-gradient(
-      145deg,
-      var(--car-blue),
-      var(--car-blue-dark)
-    );
+  background: linear-gradient(
+    145deg,
+    var(--car-blue),
+    var(--car-blue-dark)
+  );
 
   color: var(--car-white);
 
@@ -1063,9 +949,7 @@
   color: #b9e0ff;
 
   font-size: 9px;
-
   font-weight: 700;
-
   letter-spacing: 1.2px;
 }
 
@@ -1073,37 +957,31 @@
   margin: 9px 0;
 
   font-size: 23px;
-
   line-height: 1.25;
 }
 
 .eligibility-side-card h3 strong {
   display: block;
-
   color: #b9e0ff;
 }
 
 .eligibility-side-card p {
   color: rgba(255, 255, 255, 0.76);
 
-  font-size: 11px;
-
+  font-size: 12px;
   line-height: 1.7;
 }
 
 .eligibility-side-card a {
   display: inline-flex;
-
   align-items: center;
 
   gap: 8px;
-
   margin-top: 13px;
 
   color: var(--car-white);
 
   font-size: 12px;
-
   font-weight: 700;
 }
 
@@ -1112,16 +990,13 @@
 ========================================================= */
 
 .car-documents-section {
-  padding: 70px 0;
-
+  padding: 75px 0;
   background: var(--car-white);
 }
 
 .car-documents-grid {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
-
   gap: 16px;
 }
 
@@ -1129,17 +1004,14 @@
   padding: 22px 20px;
 
   border: 1px solid var(--car-border);
-
   border-radius: 15px;
 
-  transition: 0.3s;
+  transition: var(--car-transition);
 }
 
 .document-card:hover {
   border-color: #c7ddf1;
-
   transform: translateY(-4px);
-
   box-shadow: var(--car-shadow);
 }
 
@@ -1156,7 +1028,6 @@
   border-radius: 11px;
 
   background: var(--car-blue-light);
-
   color: var(--car-blue);
 
   font-size: 19px;
@@ -1166,7 +1037,6 @@
   margin-bottom: 7px;
 
   font-size: 15px;
-
   font-weight: 600;
 }
 
@@ -1174,9 +1044,7 @@
   margin: 0;
 
   color: var(--car-muted);
-
-  font-size: 10px;
-
+  font-size: 12px;
   line-height: 1.65;
 }
 
@@ -1185,38 +1053,32 @@
 ========================================================= */
 
 .car-process-section {
-  padding: 70px 0;
-
+  padding: 75px 0;
   background: var(--car-bg);
 }
 
 .car-process-grid {
   display: grid;
-
   grid-template-columns: repeat(5, 1fr);
-
-  gap: 14px;
+  gap: 13px;
 }
 
 .car-process-item {
   position: relative;
 
-  padding: 22px 15px;
+  padding: 23px 15px;
 
   text-align: center;
 
   background: var(--car-white);
-
   border-radius: 15px;
-
   border: 1px solid var(--car-border);
 
-  transition: 0.3s;
+  transition: var(--car-transition);
 }
 
 .car-process-item:hover {
   transform: translateY(-4px);
-
   box-shadow: var(--car-shadow);
 }
 
@@ -1228,8 +1090,7 @@
 
   color: #e8eff7;
 
-  font-size:20px !important;
-
+  font-size: 20px !important;
   font-weight: 800;
 }
 
@@ -1246,7 +1107,6 @@
   border-radius: 50%;
 
   background: var(--car-blue-light);
-
   color: var(--car-blue);
 
   font-size: 19px;
@@ -1255,8 +1115,7 @@
 .car-process-item h3 {
   margin-bottom: 7px;
 
-  font-size: 14px;
-
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -1264,9 +1123,7 @@
   margin: 0;
 
   color: var(--car-muted);
-
-  font-size: 10px;
-
+  font-size: 12px;
   line-height: 1.6;
 }
 
@@ -1275,31 +1132,25 @@
 ========================================================= */
 
 .car-emi-section {
-  padding: 70px 0;
+  padding: 75px 0;
 
-  background:
-    linear-gradient(
-      120deg,
-      var(--car-blue-dark),
-      var(--car-blue)
-    );
+  background: linear-gradient(
+    120deg,
+    var(--car-blue-dark),
+    var(--car-blue)
+  );
 }
 
 .car-emi-wrapper {
   display: grid;
-
   grid-template-columns: 0.9fr 1.1fr;
-
   gap: 45px;
-
   align-items: center;
 }
 
 .light-tag {
   background: rgba(255, 255, 255, 0.10);
-
   color: #d7edff;
-
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -1310,8 +1161,7 @@
 .car-emi-content h2 {
   margin: 15px 0;
 
-  font-size: 36px;
-
+  font-size: 35px;
   line-height: 1.2;
 }
 
@@ -1324,14 +1174,12 @@
 
   color: rgba(255, 255, 255, 0.76);
 
-  font-size: 13px;
-
+  font-size: 14px;
   line-height: 1.75;
 }
 
 .emi-info-list {
   display: grid;
-
   gap: 8px;
 
   margin-top: 20px;
@@ -1339,18 +1187,16 @@
 
 .emi-info-list div {
   display: flex;
-
   align-items: center;
 
   gap: 9px;
 
-  font-size: 11px;
-
+  font-size: 13px;
   color: rgba(255, 255, 255, 0.85);
 }
 
 .emi-info-list i {
-  color: #ffffff;
+  color: var(--car-white);
 }
 
 /* =========================================================
@@ -1371,7 +1217,6 @@
   margin-bottom: 18px;
 
   font-size: 19px;
-
   font-weight: 600;
 }
 
@@ -1386,20 +1231,17 @@
 
   color: #475971;
 
-  font-size: 11px;
-
+  font-size: 12px;
   font-weight: 600;
 }
 
 .emi-input-wrap {
   display: flex;
-
   align-items: center;
 
-  height: 44px;
+  height: 46px;
 
   border: 1px solid var(--car-border);
-
   border-radius: 8px;
 
   overflow: hidden;
@@ -1409,7 +1251,6 @@
 
 .emi-input-wrap:focus-within {
   border-color: var(--car-blue);
-
   box-shadow: 0 0 0 3px rgba(0, 91, 170, 0.08);
 }
 
@@ -1418,13 +1259,12 @@
   width: 43px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   color: var(--car-blue);
 
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .emi-input-wrap input {
@@ -1437,39 +1277,33 @@
   padding: 0 10px;
 
   color: var(--car-text);
-
   background: transparent;
 
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .emi-calculate-btn {
   width: 100%;
-
-  min-height: 45px;
+  min-height: 50px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   gap: 8px;
 
   border: 0;
-
   border-radius: 8px;
 
   background: var(--car-blue);
-
   color: var(--car-white);
 
-  font-size: 12px;
-
+  font-size: 15px;
   font-weight: 600;
 
   cursor: pointer;
 
-  transition: 0.3s;
+  transition: var(--car-transition);
 }
 
 .emi-calculate-btn:hover {
@@ -1492,7 +1326,6 @@
   display: block;
 
   color: var(--car-muted);
-
   font-size: 10px;
 }
 
@@ -1503,14 +1336,12 @@
 
   color: var(--car-blue);
 
-  font-size: 27px;
+  font-size: 32px;
 }
 
 .emi-result-details {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 9px;
 }
 
@@ -1518,7 +1349,6 @@
   padding: 9px;
 
   background: var(--car-white);
-
   border-radius: 7px;
 }
 
@@ -1529,16 +1359,14 @@
 
 .emi-result-details small {
   color: var(--car-muted);
-
-  font-size: 8px;
+  font-size: 9px;
 }
 
 .emi-result-details b {
   margin-top: 3px;
 
   color: var(--car-text);
-
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .emi-note {
@@ -1548,8 +1376,7 @@
 
   color: #8290a2;
 
-  font-size: 8px;
-
+  font-size: 9px;
   line-height: 1.5;
 }
 
@@ -1558,17 +1385,15 @@
 ========================================================= */
 
 .car-why-section {
-  padding: 70px 0;
-
+  padding: 75px 0;
   background: var(--car-white);
 }
 
 .car-why-grid {
   display: grid;
-
   grid-template-columns: 0.9fr 1.1fr;
 
-  gap: 55px;
+  gap: 65px;
 
   align-items: center;
 }
@@ -1579,16 +1404,14 @@
   min-height: 350px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  background:
-    radial-gradient(
-      circle,
-      #eaf5ff,
-      transparent 65%
-    );
+  background: radial-gradient(
+    circle,
+    var(--car-blue-light),
+    transparent 65%
+  );
 }
 
 .why-circle {
@@ -1596,12 +1419,10 @@
   height: 260px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
-
   border: 2px dashed #c5ddf2;
 }
 
@@ -1610,18 +1431,16 @@
   height: 180px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
 
-  background:
-    linear-gradient(
-      145deg,
-      var(--car-blue),
-      var(--car-blue-dark)
-    );
+  background: linear-gradient(
+    145deg,
+    var(--car-blue),
+    var(--car-blue-dark)
+  );
 
   color: var(--car-white);
 
@@ -1637,11 +1456,9 @@
   bottom: 25px;
 
   display: flex;
-
   align-items: center;
 
   gap: 10px;
-
   padding: 13px 16px;
 
   background: var(--car-white);
@@ -1656,14 +1473,12 @@
   height: 40px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 9px;
 
   background: var(--car-blue-light);
-
   color: var(--car-blue);
 }
 
@@ -1673,20 +1488,18 @@
 }
 
 .why-small-card strong {
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .why-small-card span {
   color: var(--car-muted);
-
   font-size: 9px;
 }
 
 .car-why-content h2 {
   margin: 15px 0;
 
-  font-size: 36px;
-
+  font-size: 35px;
   line-height: 1.2;
 }
 
@@ -1697,14 +1510,12 @@
 .car-why-content > p {
   color: var(--car-muted);
 
-  font-size: 13px;
-
+  font-size: 14px;
   line-height: 1.75;
 }
 
 .why-feature-list {
   display: grid;
-
   gap: 14px;
 
   margin-top: 22px;
@@ -1712,7 +1523,6 @@
 
 .why-feature {
   display: flex;
-
   gap: 11px;
 }
 
@@ -1723,22 +1533,19 @@
   height: 42px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   border-radius: 10px;
 
   background: var(--car-blue-light);
-
   color: var(--car-blue);
 }
 
 .why-feature h3 {
   margin: 0 0 4px;
 
-  font-size: 13px;
-
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -1747,8 +1554,7 @@
 
   color: var(--car-muted);
 
-  font-size: 10px;
-
+  font-size: 12px;
   line-height: 1.6;
 }
 
@@ -1757,14 +1563,12 @@
 ========================================================= */
 
 .car-faq-section {
-  padding: 70px 0;
-
+  padding: 75px 0;
   background: var(--car-bg);
 }
 
 .car-faq-wrapper {
   max-width: 900px;
-
   margin: auto;
 }
 
@@ -1774,7 +1578,6 @@
   background: var(--car-white);
 
   border: 1px solid var(--car-border);
-
   border-radius: 11px;
 
   overflow: hidden;
@@ -1784,7 +1587,6 @@
   width: 100%;
 
   display: flex;
-
   align-items: center;
   justify-content: space-between;
 
@@ -1793,7 +1595,6 @@
   padding: 16px 19px;
 
   border: 0;
-
   background: transparent;
 
   color: var(--car-text);
@@ -1801,9 +1602,7 @@
   text-align: left;
 
   font-family: inherit;
-
   font-size: 13px;
-
   font-weight: 600;
 
   cursor: pointer;
@@ -1811,19 +1610,16 @@
 
 .car-faq-question i {
   color: var(--car-blue);
-
   transition: 0.3s;
 }
 
 .car-faq-item.active .car-faq-question i {
   transform: rotate(45deg);
-
   color: var(--car-blue-dark);
 }
 
 .car-faq-answer {
   display: none;
-
   padding: 0 19px 17px;
 }
 
@@ -1836,8 +1632,7 @@
 
   color: var(--car-muted);
 
-  font-size: 11px;
-
+  font-size: 12px;
   line-height: 1.7;
 }
 
@@ -1901,7 +1696,6 @@
   color: #c8e7ff;
 
   font-size: 10px;
-
   font-weight: 700;
 
   letter-spacing: 1.3px;
@@ -1910,14 +1704,12 @@
 .car-cta-content h2 {
   margin: 0 0 12px;
 
-  font-size: clamp(30px, 4vw, 44px);
-
+  font-size: 38px;
   line-height: 1.15;
 }
 
 .car-cta-content h2 strong {
   display: inline;
-
   color: #b9e0ff;
 }
 
@@ -1928,16 +1720,13 @@
 
   color: rgba(255, 255, 255, 0.76);
 
-  font-size: 13px;
-
+  font-size: 14px;
   line-height: 1.75;
 }
 
 .car-cta-buttons {
   display: flex;
-
   flex-wrap: wrap;
-
   justify-content: center;
 
   gap: 10px;
@@ -1947,212 +1736,193 @@
   border: 1px solid rgba(255, 255, 255, 0.35);
 
   color: var(--car-white);
-
   background: rgba(255, 255, 255, 0.06);
 }
 
 .car-call-btn:hover {
   background: var(--car-white);
-
   color: var(--car-blue);
 }
 
+
 /* =========================================================
-   RESPONSIVE - 1199px
+   =========================================================
+   RESPONSIVE SYSTEM  (NEW)
+   Desktop → Laptop → Tablet → Mobile → Small Mobile
+   Breakpoints: 1399 / 1199 / 991 / 767 / 575 / 480 / 400 / 360 / 320 / 240
+   =========================================================
+========================================================= */
+
+
+/* =========================================================
+   RESPONSIVE - 1399px  (SMALL DESKTOP / LARGE LAPTOP)
+========================================================= */
+
+@media (max-width: 1399px) {
+  .car-loan-page .container { width: min(1120px, calc(100% - 40px)); }
+
+  .car-hero-grid { gap: 36px; }
+  .car-hero-card { margin-left: 2rem; }
+
+  .car-intro-grid { gap: 48px; }
+  .car-why-grid { gap: 52px; }
+  .car-emi-wrapper { gap: 38px; }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1199px  (LAPTOP / TABLET LANDSCAPE)
 ========================================================= */
 
 @media (max-width: 1199px) {
+  .car-loan-page .container { width: min(960px, calc(100% - 36px)); }
 
+  /* HERO */
+  .car-hero { min-height: 560px; padding: 50px 0 60px; }
   .car-hero-grid {
-    gap: 35px;
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.9fr);
+    gap: 30px;
   }
+  .car-hero-content h1 { font-size: clamp(36px, 4.4vw, 46px); }
+  .car-hero-content > p { font-size: 14.5px; }
+  .car-hero-trust { gap: 18px; }
+  .car-hero-card { max-width: 400px; margin-left: auto; padding: 26px 22px; }
 
-  .car-hero-content h1 {
-    font-size: 48px;
-  }
+  /* SECTION SPACING */
+  .car-intro-section,
+  .car-benefits-section,
+  .car-types-section,
+  .car-eligibility-section,
+  .car-documents-section,
+  .car-process-section,
+  .car-emi-section,
+  .car-why-section,
+  .car-faq-section { padding: 65px 0; }
 
-  .car-benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .car-final-cta { padding: 62px 0; }
+  .car-section-heading { margin-bottom: 36px; }
+  .car-section-heading h2,
+  .car-intro-content h2,
+  .car-eligibility-content h2,
+  .car-emi-content h2,
+  .car-why-content h2 { font-size: 31px; }
+  .car-cta-content h2 { font-size: 33px; }
 
-  .car-documents-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  /* INTRO */
+  .car-intro-grid { gap: 40px; }
+  .car-intro-visual { min-height: 350px; }
+  .car-visual-main { width: 270px; height: 270px; }
+  .card-one { top: 35px; }
+  .card-two { bottom: 35px; }
 
-  .car-process-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  /* CARD GRIDS */
+  .car-benefits-grid,
+  .car-documents-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .car-types-grid { gap: 16px; }
+  .car-type-card { padding: 24px 18px; }
+
+  /* ELIGIBILITY */
+  .car-eligibility-grid { grid-template-columns: 1.15fr 0.85fr; gap: 32px; }
+  .eligibility-side-card { padding: 24px; }
+
+  /* PROCESS */
+  .car-process-grid { gap: 11px; }
+  .car-process-item { padding: 20px 12px; }
+  .car-process-item h3 { font-size: 14px; }
+  .car-process-item p { font-size: 11.5px; }
+
+  /* EMI */
+  .car-emi-wrapper { gap: 32px; }
+  .car-emi-calculator { padding: 24px 22px; }
+  .emi-result > strong { font-size: 28px; }
+
+  /* WHY */
+  .car-why-grid { gap: 45px; }
+  .car-why-visual { min-height: 330px; }
+  .why-circle { width: 235px; height: 235px; }
+  .why-circle-inner { width: 165px; height: 165px; font-size: 48px; }
 }
 
+
 /* =========================================================
-   RESPONSIVE - 991px
+   RESPONSIVE - 991px  (TABLET PORTRAIT)
+   All 2-column layouts stack here
 ========================================================= */
 
 @media (max-width: 991px) {
+  .car-loan-page .container { width: min(720px, calc(100% - 32px)); }
 
-  .car-hero {
-    padding: 65px 0;
-  }
-
-  .car-hero-grid {
-    grid-template-columns: 1fr;
-
-    max-width: 750px;
-
-    margin: auto;
-  }
-
-  .car-hero-content {
-    text-align: center;
-  }
-
-  .car-hero-content h1 {
-    margin-left: auto;
-    margin-right: auto;
-
-    font-size: 45px;
-  }
-
-  .car-hero-content > p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .car-hero-buttons,
-  .car-hero-trust {
-    justify-content: center;
-  }
-
+  /* HERO */
+  .car-hero { min-height: auto; padding: 55px 0 60px; }
+  .car-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .car-hero-content { max-width: 100%; }
+  .car-hero-content h1 { max-width: 100%; font-size: clamp(34px, 5.4vw, 44px); }
+  .car-hero-content > p { max-width: 100%; }
   .car-hero-card {
-    max-width: 600px;
-
-    width: 100%;
-
-    margin: auto;
-  }
-
-  .car-intro-grid,
-  .car-eligibility-grid,
-  .car-emi-wrapper,
-  .car-why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .car-intro-content,
-  .car-why-content {
-    text-align: center;
-  }
-
-  .car-check-list {
-    max-width: 500px;
-
+    max-width: 520px;
     margin-left: auto;
     margin-right: auto;
-
-    text-align: left;
   }
+  .car-hero::before { width: 330px; height: 330px; right: -150px; }
+  .car-hero::after { width: 220px; height: 220px; right: 20px; }
 
+  /* INTRO */
+  .car-intro-grid { grid-template-columns: minmax(0, 1fr); gap: 38px; }
+  .car-intro-content { max-width: 100%; }
   .car-intro-visual {
-    min-height: 400px;
-  }
-
-  .car-eligibility-content {
-    text-align: center;
-  }
-
-  .eligibility-list {
-    text-align: left;
-  }
-
-  .eligibility-side-card {
-    max-width: 600px;
-
-    margin: auto;
-
-    text-align: center;
-  }
-
-  .eligibility-card-top {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .car-emi-content {
-    text-align: center;
-  }
-
-  .car-emi-content > p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .emi-info-list {
-    justify-content: center;
-  }
-
-  .car-emi-calculator {
-    max-width: 650px;
-
+    order: 2;
     width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    min-height: 340px;
+  }
+  .car-intro-content { order: 1; }
 
-    margin: auto;
+  /* CARD GRIDS */
+  .car-benefits-grid,
+  .car-documents-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .car-types-grid { grid-template-columns: minmax(0, 1fr); }
+  .car-type-card p { max-width: 100%; }
+
+  /* ELIGIBILITY */
+  .car-eligibility-grid { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .car-eligibility-content > p { max-width: 100%; }
+  .eligibility-side-card { max-width: 560px; margin: 0 auto; }
+
+  /* PROCESS */
+  .car-process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    row-gap: 18px;
   }
 
+  /* EMI — content first, calculator after */
+  .car-emi-wrapper { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .car-emi-content { order: 1; }
+  .car-emi-content > p { max-width: 100%; }
+  .car-emi-calculator { order: 2; max-width: 560px; margin: 0 auto; width: 100%; }
+
+  /* WHY — content first, visual after */
+  .car-why-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .car-why-content { order: 1; }
   .car-why-visual {
     order: 2;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    min-height: 330px;
   }
 
-  .car-why-content {
-    order: 1;
-  }
+  .car-final-cta::before { width: 300px; height: 300px; left: -160px; }
 }
 
+
 /* =========================================================
-   RESPONSIVE - 767px
+   RESPONSIVE - 767px  (LARGE MOBILE / SMALL TABLET)
 ========================================================= */
 
 @media (max-width: 767px) {
-
-  .car-loan-page .container {
-    width: min(100% - 30px, 600px);
-  }
-
-  .car-hero {
-    min-height: auto;
-
-    padding: 60px 0;
-  }
-
-  .car-hero-content h1 {
-    font-size: 38px;
-  }
-
-  .car-hero-content > p {
-    font-size: 13px;
-  }
-
-  .car-hero-card {
-    padding: 25px;
-
-    border-radius: 17px;
-  }
-
-  .car-hero-trust {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 10px;
-
-    max-width: 500px;
-
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .car-trust-item {
-    justify-content: center;
-  }
+  .car-loan-page .container { width: calc(100% - 28px); }
 
   .car-intro-section,
   .car-benefits-section,
@@ -2162,122 +1932,66 @@
   .car-process-section,
   .car-emi-section,
   .car-why-section,
-  .car-faq-section,
-  .car-final-cta {
-    padding: 60px 0;
-  }
+  .car-faq-section { padding: 55px 0; }
 
-  .car-section-heading {
-    margin-bottom: 35px;
-  }
+  .car-final-cta { padding: 55px 0; }
 
-  .car-section-heading h2 {
-    font-size: 30px;
-  }
+  .car-section-heading { margin-bottom: 30px; }
+  .car-section-heading h2,
+  .car-intro-content h2,
+  .car-eligibility-content h2,
+  .car-emi-content h2,
+  .car-why-content h2 { font-size: clamp(26px, 5.6vw, 32px); }
+  .car-cta-content h2 { font-size: clamp(27px, 6vw, 33px); }
+  .car-section-heading p { font-size: 14px; }
 
-  .car-benefits-grid,
-  .car-documents-grid {
-    grid-template-columns: 1fr;
-  }
+  /* HERO — centered */
+  .car-hero { padding: 48px 0 52px; }
+  .car-hero-content { text-align: center; margin: 0 auto; }
+  .car-hero-content > p { margin-left: auto; margin-right: auto; }
+  .car-hero-badge { padding-left: 44px; }
+  .car-hero-badge::before { width: 34px; height: 3px; }
+  .car-hero-buttons { justify-content: center; }
+  .car-hero-trust { justify-content: center; gap: 14px 20px; margin-top: 26px; }
 
-  .car-types-grid {
-    grid-template-columns: 1fr;
-  }
+  /* INTRO VISUAL */
+  .car-intro-visual { min-height: 320px; }
+  .car-visual-main { width: 250px; height: 250px; }
+  .car-visual-icon { width: 58px; height: 58px; font-size: 25px; }
+  .car-floating-card { padding: 10px 12px; gap: 8px; }
+  .car-floating-card i { width: 34px; height: 34px; font-size: 13px; }
+  .card-one { top: 18px; left: 0; }
+  .card-two { bottom: 18px; right: 0; }
 
-  .car-type-card {
-    padding: 25px;
-  }
+  /* PROCESS */
+  .car-process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-  .eligibility-list {
-    grid-template-columns: 1fr;
-  }
+  /* ELIGIBILITY */
+  .eligibility-list { gap: 12px; }
 
-  .car-process-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  /* EMI */
+  .car-emi-calculator { padding: 22px 18px; }
+  .emi-result { padding: 18px 15px; }
 
-  .car-intro-visual {
-    min-height: 360px;
-  }
+  /* WHY */
+  .car-why-visual { min-height: 300px; }
+  .why-circle { width: 215px; height: 215px; }
+  .why-circle-inner { width: 150px; height: 150px; font-size: 44px; }
+  .why-small-card { padding: 10px 13px; bottom: 10px; }
 
-  .car-visual-main {
-    width: 280px;
-    height: 280px;
-  }
-
-  .why-circle {
-    width: 240px;
-    height: 240px;
-  }
-
-  .why-circle-inner {
-    width: 165px;
-    height: 165px;
-
-    font-size: 50px;
-  }
-
-  .why-small-card {
-    right: 5px;
-  }
+  /* FAQ + CTA */
+  .car-faq-question { padding: 14px 16px; gap: 14px; }
+  .car-faq-answer { padding: 0 16px 15px; }
+  .car-cta-content p { font-size: 13.5px; }
 }
 
+
 /* =========================================================
-   RESPONSIVE - 575px
+   RESPONSIVE - 575px  (MOBILE — SINGLE COLUMN)
 ========================================================= */
 
 @media (max-width: 575px) {
-
-  .car-loan-page .container {
-    width: calc(100% - 28px);
-  }
-
-  .car-hero {
-    padding: 55px 0;
-  }
-
-  .car-hero-content h1 {
-    font-size: 33px;
-
-    letter-spacing: -0.4px;
-  }
-
-  .car-hero-content > p {
-    font-size: 12px;
-
-    line-height: 1.7;
-  }
-
-  .car-hero-buttons {
-    flex-direction: column;
-
-    width: 100%;
-  }
-
-  .car-primary-btn,
-  .car-outline-btn {
-    width: 100%;
-  }
-
-  .car-hero-trust {
-    grid-template-columns: 1fr;
-
-    margin-top: 22px;
-  }
-
-  .car-hero-card {
-    padding: 22px 18px;
-
-    border-radius: 16px;
-  }
-
-  .car-hero-card h2 {
-    font-size: 22px;
-  }
-
-  .car-hero-card > p {
-    font-size: 11px;
-  }
+  .car-loan-page .container { width: calc(100% - 24px); }
 
   .car-intro-section,
   .car-benefits-section,
@@ -2287,319 +2001,310 @@
   .car-process-section,
   .car-emi-section,
   .car-why-section,
-  .car-faq-section,
-  .car-final-cta {
-    padding: 55px 0;
+  .car-faq-section { padding: 48px 0; }
+
+  .car-final-cta { padding: 48px 0; }
+
+  /* HERO */
+  .car-hero { padding: 42px 0 46px; }
+  .car-hero-content h1 {
+    font-size: clamp(30px, 8.4vw, 38px);
+    line-height: 1.16;
+    letter-spacing: -0.6px;
+  }
+  .car-hero-content > p { font-size: 13.5px; margin-bottom: 22px; }
+
+  .car-hero-buttons,
+  .car-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+  }
+  .car-hero-buttons .car-primary-btn,
+  .car-hero-buttons .car-outline-btn,
+  .car-cta-buttons .car-primary-btn,
+  .car-cta-buttons .car-outline-btn,
+  .car-cta-buttons .car-call-btn { width: 100%; }
+
+  .car-hero-trust { flex-direction: column; align-items: center; gap: 11px; }
+  .car-hero::before,
+  .car-hero::after { display: none; }
+
+  /* HERO CARD */
+  .car-hero-card { padding: 22px 18px; border-radius: 15px; }
+  .car-hero-card h2 { font-size: 20px; }
+  .car-hero-card > p { font-size: 13px; }
+
+  /* INTRO VISUAL — floating cards stacked under the circle */
+  .car-intro-visual {
+    flex-direction: column;
+    gap: 14px;
+    min-height: auto;
+    padding: 10px 0;
+    background: none;
+  }
+  .car-visual-main { width: 225px; height: 225px; }
+  .car-floating-card {
+    position: static;
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
   }
 
-  .car-section-tag {
-    font-size: 9px;
+  /* CARD GRIDS → 1 COLUMN */
+  .car-benefits-grid,
+  .car-documents-grid,
+  .car-process-grid { grid-template-columns: minmax(0, 1fr); }
 
-    padding: 6px 11px;
+  /* ELIGIBILITY */
+  .eligibility-list { grid-template-columns: minmax(0, 1fr); }
+  .eligibility-side-card { padding: 22px 18px; }
+  .eligibility-side-card h3 { font-size: 20px; }
+
+  /* EMI */
+  .car-emi-calculator h3 { font-size: 17px; }
+  .emi-result > strong { font-size: 26px; }
+
+  /* WHY — small card below the circle */
+  .car-why-visual {
+    flex-direction: column;
+    gap: 14px;
+    min-height: auto;
+    padding: 10px 0;
+    background: none;
   }
+  .why-circle { width: 200px; height: 200px; }
+  .why-circle-inner { width: 140px; height: 140px; font-size: 40px; }
+  .why-small-card {
+    position: static;
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .car-loan-page .container { width: calc(100% - 20px); }
 
   .car-section-heading h2,
   .car-intro-content h2,
   .car-eligibility-content h2,
-  .car-why-content h2 {
-    font-size: 28px;
+  .car-emi-content h2,
+  .car-why-content h2 { font-size: clamp(23px, 7.4vw, 29px); }
+  .car-cta-content h2 { font-size: clamp(24px, 7.6vw, 30px); }
+  .car-section-heading p { font-size: 13px; }
+
+  .car-hero-content h1 { font-size: clamp(27px, 8.6vw, 34px); }
+
+  .car-benefit-card,
+  .car-type-card,
+  .document-card,
+  .car-process-item { padding: 20px 16px; }
+
+  .car-benefit-card h3,
+  .car-type-card h3 { font-size: 16px; }
+  .car-benefit-card > span { font-size: 26px; }
+  .car-type-number { font-size: 45px; top: 12px; right: 15px; }
+
+  .car-emi-calculator { padding: 20px 16px; }
+  .emi-result > strong { font-size: 24px; }
+  .emi-result-details { gap: 7px; }
+
+  .car-primary-btn,
+  .car-outline-btn,
+  .car-call-btn {
+    min-height: 48px;
+    padding: 12px 18px;
+    font-size: 14px;
   }
-
-  .car-section-heading p {
-    font-size: 12px;
-  }
-
-  .car-intro-content p {
-    font-size: 12px;
-  }
-
-  .car-intro-visual {
-    min-height: 330px;
-  }
-
-  .car-visual-main {
-    width: 250px;
-    height: 250px;
-  }
-
-  .car-visual-icon {
-    width: 60px;
-    height: 60px;
-
-    font-size: 25px;
-  }
-
-  .car-visual-main h3 {
-    font-size: 21px;
-  }
-
-  .car-floating-card {
-    padding: 9px 11px;
-  }
-
-  .car-floating-card i {
-    width: 34px;
-    height: 34px;
-  }
-
-  .card-one {
-    top: 20px;
-    left: 0;
-  }
-
-  .card-two {
-    right: 0;
-    bottom: 20px;
-  }
-
-  .car-type-card {
-    padding: 23px 18px;
-  }
-
-  .eligibility-side-card {
-    padding: 25px 20px;
-  }
-
-  .car-process-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .car-emi-calculator {
-    padding: 23px 17px;
-  }
-
-  .car-emi-calculator h3 {
-    font-size: 18px;
-  }
-
-  .emi-result > strong {
-    font-size: 24px;
-  }
-
-  .why-circle {
-    width: 220px;
-    height: 220px;
-  }
-
-  .why-circle-inner {
-    width: 150px;
-    height: 150px;
-
-    font-size: 44px;
-  }
-
-  .why-small-card {
-    right: 0;
-    bottom: 10px;
-  }
-
-  .car-faq-question {
-    padding: 15px;
-
-    font-size: 12px;
-  }
-
-  .car-faq-answer {
-    padding: 0 15px 16px;
-  }
-
-  .car-cta-buttons {
-    flex-direction: column;
-  }
-
-  .car-cta-buttons .car-primary-btn,
-  .car-cta-buttons .car-call-btn {
-    width: 100%;
-  }
+  .car-card-btn { min-height: 48px; font-size: 14px; }
 }
+
 
 /* =========================================================
    RESPONSIVE - 400px
 ========================================================= */
 
 @media (max-width: 400px) {
+  .car-loan-page .container { width: calc(100% - 18px); }
 
-  .car-hero-content h1 {
-    font-size: 30px;
-  }
-
-  .car-hero-card {
-    padding: 20px 15px;
-  }
-
+  .car-hero-content h1 { font-size: 26px; }
   .car-section-heading h2,
   .car-intro-content h2,
   .car-eligibility-content h2,
-  .car-why-content h2 {
-    font-size: 26px;
-  }
+  .car-emi-content h2,
+  .car-why-content h2 { font-size: 22px; }
+  .car-cta-content h2 { font-size: 23px; }
 
-  .car-benefit-card {
-    padding: 22px 17px;
-  }
+  .car-hero-card { padding: 18px 15px; }
+  .car-card-icon { width: 46px; height: 46px; font-size: 19px; }
 
-  .car-type-card {
-    padding: 21px 16px;
-  }
+  .car-visual-main { width: 205px; height: 205px; }
+  .car-visual-main h3 { font-size: 20px; }
 
-  .car-intro-visual {
-    min-height: 290px;
-  }
+  .why-circle { width: 180px; height: 180px; }
+  .why-circle-inner { width: 125px; height: 125px; font-size: 35px; }
 
-  .car-visual-main {
-    width: 215px;
-    height: 215px;
-  }
+  .emi-input-wrap { height: 44px; }
+  .emi-input-wrap > span,
+  .emi-input-wrap > i { width: 38px; }
+  .emi-result > strong { font-size: 22px; }
+  .emi-result-details { grid-template-columns: minmax(0, 1fr); }
 
-  .car-visual-main h3 {
-    font-size: 18px;
-  }
-
-  .car-floating-card {
-    transform: scale(0.82);
-  }
-
-  .why-circle {
-    width: 195px;
-    height: 195px;
-  }
-
-  .why-circle-inner {
-    width: 135px;
-    height: 135px;
-
-    font-size: 40px;
-  }
+  .car-benefit-icon,
+  .document-icon { width: 44px; height: 44px; font-size: 17px; }
+  .car-type-icon { width: 48px; height: 48px; font-size: 19px; }
 }
 
+
 /* =========================================================
-   RESPONSIVE - 320px
+   RESPONSIVE - 360px
+========================================================= */
+
+@media (max-width: 360px) {
+  .car-loan-page .container { width: calc(100% - 16px); }
+
+  .car-hero-content h1 { font-size: 24px; letter-spacing: -0.4px; }
+  .car-hero-content > p,
+  .car-section-heading p { font-size: 12.5px; }
+  .car-section-heading h2,
+  .car-intro-content h2,
+  .car-eligibility-content h2,
+  .car-emi-content h2,
+  .car-why-content h2 { font-size: 20px; }
+  .car-cta-content h2 { font-size: 21px; }
+
+  .car-hero-badge { font-size: 10px; letter-spacing: 1.2px; padding-left: 36px; }
+  .car-hero-badge::before { width: 26px; }
+
+  .car-section-tag { font-size: 10px; padding: 6px 12px; }
+
+  .car-visual-main { width: 185px; height: 185px; }
+  .car-visual-icon { width: 50px; height: 50px; font-size: 21px; }
+
+  .process-icon { width: 46px; height: 46px; font-size: 17px; }
+  .emi-result > strong { font-size: 20px; }
+
+  .car-faq-question { font-size: 12.5px; gap: 10px; padding: 13px 14px; }
+  .car-faq-answer { padding: 0 14px 13px; }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 320px  (SMALLEST PHONES)
 ========================================================= */
 
 @media (max-width: 320px) {
+  .car-loan-page .container { width: calc(100% - 14px); }
 
-  .car-hero-content h1 {
-    font-size: 27px;
-  }
+  .car-hero-content h1 { font-size: 22px; }
+  .car-section-heading h2,
+  .car-intro-content h2,
+  .car-eligibility-content h2,
+  .car-emi-content h2,
+  .car-why-content h2 { font-size: 19px; }
+  .car-cta-content h2 { font-size: 20px; }
 
-  .car-hero-content > p {
-    font-size: 11px;
-  }
+  .car-hero-card { padding: 15px 12px; border-radius: 12px; }
+  .car-hero-card h2 { font-size: 18px; }
+
+  .car-visual-main { width: 165px; height: 165px; }
+  .car-visual-main h3 { font-size: 18px; }
+
+  .why-circle { width: 160px; height: 160px; }
+  .why-circle-inner { width: 112px; height: 112px; font-size: 30px; }
+
+  .car-emi-calculator { padding: 17px 13px; }
+  .emi-result { padding: 15px 12px; }
 
   .car-primary-btn,
   .car-outline-btn,
-  .car-call-btn {
-    min-height: 44px;
-
-    padding: 0 13px;
-
-    font-size: 11px;
-  }
-
-  .car-section-heading h2,
-  .car-intro-content h2,
-  .car-eligibility-content h2,
-  .car-why-content h2 {
-    font-size: 23px;
-  }
-
-  .car-section-heading p,
-  .car-intro-content p {
-    font-size: 11px;
-  }
-
-  .car-hero-card h2 {
-    font-size: 20px;
-  }
-
-  .car-hero-card > p {
-    font-size: 10px;
-  }
-
-  .car-visual-main {
-    width: 185px;
-    height: 185px;
-  }
-
-  .car-visual-icon {
-    width: 50px;
-    height: 50px;
-
-    font-size: 21px;
-  }
-
-  .car-visual-main h3 {
-    font-size: 15px;
-  }
-
-  .car-floating-card {
-    transform: scale(0.68);
-  }
-
-  .car-emi-calculator {
-    padding: 19px 12px;
+  .car-call-btn,
+  .car-card-btn,
+  .emi-calculate-btn {
+    min-height: 46px;
+    padding: 11px 14px;
+    font-size: 13px;
   }
 }
 
+
 /* =========================================================
-   VERY SMALL SCREENS
+   VERY SMALL SCREENS - 240px
 ========================================================= */
 
 @media (max-width: 240px) {
+  .car-loan-page .container { width: calc(100% - 10px); }
 
-  .car-hero {
-    padding: 42px 0;
-  }
-
-  .car-hero-content h1 {
-    font-size: 24px;
-  }
-
+  .car-hero-content h1 { font-size: 19px; }
   .car-section-heading h2,
   .car-intro-content h2,
   .car-eligibility-content h2,
-  .car-why-content h2 {
-    font-size: 21px;
+  .car-emi-content h2,
+  .car-why-content h2,
+  .car-cta-content h2 { font-size: 17px; }
+
+  .car-hero-content > p,
+  .car-section-heading p { font-size: 11.5px; }
+
+  .car-visual-main { width: 140px; height: 140px; }
+  .car-visual-icon { width: 42px; height: 42px; font-size: 18px; }
+  .car-visual-main h3 { font-size: 15px; }
+
+  .why-circle { width: 135px; height: 135px; }
+  .why-circle-inner { width: 95px; height: 95px; font-size: 25px; }
+
+  .car-benefit-card,
+  .car-type-card,
+  .document-card,
+  .car-process-item { padding: 15px 12px; }
+
+  .emi-result > strong { font-size: 18px; }
+
+  .car-primary-btn,
+  .car-outline-btn,
+  .car-call-btn,
+  .car-card-btn { font-size: 12px; padding: 10px 12px; }
+}
+
+
+/* =========================================================
+   MOBILE LANDSCAPE FIX
+========================================================= */
+
+@media (max-width: 991px) and (orientation: landscape) {
+  .car-hero { padding: 40px 0 44px; }
+  .car-final-cta { padding: 45px 0; }
+  .car-intro-visual,
+  .car-why-visual { min-height: auto; }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .car-loan-page *,
+  .car-loan-page *::before,
+  .car-loan-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 
-  .car-hero-card {
-    padding: 17px 11px;
-  }
-
-  .car-hero-card h2 {
-    font-size: 18px;
-  }
-
-  .car-hero-trust {
-    display: block;
-  }
-
-  .car-trust-item {
-    margin-bottom: 7px;
-  }
-
-  .car-intro-visual {
-    min-height: 245px;
-  }
-
-  .car-visual-main {
-    width: 155px;
-    height: 155px;
-  }
-
-  .car-floating-card {
-    display: none;
-  }
-
-  .why-circle {
-    width: 165px;
-    height: 165px;
-  }
-
-  .why-circle-inner {
-    width: 112px;
-    height: 112px;
-
-    font-size: 32px;
-  }
+  .car-primary-btn:hover,
+  .car-outline-btn:hover,
+  .car-card-btn:hover,
+  .car-benefit-card:hover,
+  .car-type-card:hover,
+  .document-card:hover,
+  .car-process-item:hover { transform: none; }
 }

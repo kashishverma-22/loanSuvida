@@ -334,12 +334,13 @@
       </div>
     </header>
 
-    
     <main class="personal-loan-page">
       <!-- =====================================================
          HERO SECTION
     ====================================================== -->
-      <section class="personal-hero" id="overview">
+
+      <section class="personal-hero">
+        <!-- Hero Background -->
         <div class="personal-hero-overlay"></div>
 
         <div class="container">
@@ -376,6 +377,7 @@
               <div class="personal-hero-trust">
                 <div class="personal-trust-item">
                   <i class="fa-solid fa-bolt"></i>
+
                   <div>
                     <strong>Quick Assistance</strong>
                     <span>Simple loan process</span>
@@ -384,6 +386,7 @@
 
                 <div class="personal-trust-item">
                   <i class="fa-solid fa-file-circle-check"></i>
+
                   <div>
                     <strong>Easy Documentation</strong>
                     <span>Guided support</span>
@@ -392,6 +395,7 @@
 
                 <div class="personal-trust-item">
                   <i class="fa-solid fa-headset"></i>
+
                   <div>
                     <strong>Expert Support</strong>
                     <span>Throughout your journey</span>
@@ -400,20 +404,12 @@
               </div>
             </div>
 
-            <!-- HERO FORM -->
             <div class="personal-form-card">
-              <div class="personal-form-icon">
-                <i class="fa-solid fa-hand-holding-dollar"></i>
-              </div>
+              <h2>Check Your Loan Requirement</h2>
 
-              <h2>Check Your Personal Loan Requirement</h2>
-
-              <p>
-                Share your details and our team will help you explore suitable
-                loan options.
-              </p>
-
+              <p>Share your details and get expert loan assistance.</p>
               <form id="personalLoanForm">
+                <!-- Full Name -->
                 <div class="personal-form-group">
                   <label for="personalName"> Full Name </label>
 
@@ -431,6 +427,7 @@
                   <div class="personal-form-error" id="personalNameError"></div>
                 </div>
 
+                <!-- Mobile Number -->
                 <div class="personal-form-group">
                   <label for="personalMobile"> Mobile Number </label>
 
@@ -452,6 +449,7 @@
                   ></div>
                 </div>
 
+                <!-- Loan Requirement -->
                 <div class="personal-form-group">
                   <label for="personalLoanType"> Loan Requirement </label>
 
@@ -505,6 +503,7 @@
                   ></div>
                 </div>
 
+                <!-- Required Loan Amount -->
                 <div class="personal-form-group">
                   <label for="personalAmount"> Required Loan Amount </label>
 
@@ -525,17 +524,21 @@
                   ></div>
                 </div>
 
+                <!-- Submit -->
                 <button type="submit" class="personal-submit-btn">
                   Check Loan Options
+
                   <i class="fa-solid fa-arrow-right"></i>
                 </button>
 
+                <!-- Success Message -->
                 <div class="personal-form-success" id="personalFormSuccess">
                   <i class="fa-solid fa-circle-check"></i>
 
                   <span> Thank you! Our team will contact you shortly. </span>
                 </div>
 
+                <!-- Security Note -->
                 <div class="personal-form-note">
                   <i class="fa-solid fa-lock"></i>
 

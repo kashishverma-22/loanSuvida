@@ -71,7 +71,7 @@
       </div>
     </div>
 
-     <header class="main-navbar">
+    <header class="main-navbar">
       <div class="container">
         <div class="navbar-wrapper">
           <!-- Logo -->
@@ -375,27 +375,24 @@
               </div>
 
               <div class="business-hero-trust">
-                <div class="hero-trust-item">
+                <div class="business-trust-item">
                   <i class="fa-solid fa-bolt"></i>
-
                   <div>
                     <strong>Quick Assistance</strong>
                     <span>Fast support</span>
                   </div>
                 </div>
 
-                <div class="hero-trust-item">
+                <div class="business-trust-item">
                   <i class="fa-solid fa-file-shield"></i>
-
                   <div>
                     <strong>Simple Process</strong>
                     <span>Easy documentation</span>
                   </div>
                 </div>
 
-                <div class="hero-trust-item">
+                <div class="business-trust-item">
                   <i class="fa-solid fa-headset"></i>
-
                   <div>
                     <strong>Expert Support</strong>
                     <span>Loan guidance</span>
@@ -406,21 +403,11 @@
 
             <!-- RIGHT FORM -->
             <div class="business-form-card">
-              <div class="business-form-icon">
-                <i class="fa-solid fa-building"></i>
-              </div>
-
-              <h2>Check Your Business Loan Requirement</h2>
-
-              <p>
-                Share your basic details and our team will help you explore
-                suitable loan options.
-              </p>
-
+             <h2>Check Your Business Loan Requirement</h2>
               <form id="businessLoanForm" novalidate>
-                <!-- NAME -->
+                <!-- Business Name -->
                 <div class="business-form-group">
-                  <label for="businessName"> Full Name </label>
+                  <label for="businessName"> Business / Applicant Name </label>
 
                   <div class="business-input-wrap">
                     <i class="fa-solid fa-user"></i>
@@ -429,15 +416,14 @@
                       type="text"
                       id="businessName"
                       name="businessName"
-                      placeholder="Enter your full name"
-                      autocomplete="name"
+                      placeholder="Enter business / applicant name"
                     />
                   </div>
 
                   <div class="business-form-error" id="businessNameError"></div>
                 </div>
 
-                <!-- MOBILE -->
+                <!-- Mobile -->
                 <div class="business-form-group">
                   <label for="businessMobile"> Mobile Number </label>
 
@@ -450,8 +436,6 @@
                       name="businessMobile"
                       placeholder="Enter 10-digit mobile number"
                       maxlength="10"
-                      inputmode="numeric"
-                      autocomplete="tel"
                     />
                   </div>
 
@@ -461,12 +445,12 @@
                   ></div>
                 </div>
 
-                <!-- BUSINESS TYPE -->
+                <!-- Business Type -->
                 <div class="business-form-group">
                   <label for="businessType"> Business Type </label>
 
                   <div class="business-input-wrap">
-                    <i class="fa-solid fa-shop"></i>
+                    <i class="fa-solid fa-building"></i>
 
                     <select id="businessType" name="businessType">
                       <option value="">Select Business Type</option>
@@ -479,8 +463,6 @@
 
                       <option value="LLP">LLP</option>
 
-                      <option value="Company">Company</option>
-
                       <option value="Other">Other</option>
                     </select>
                   </div>
@@ -488,35 +470,31 @@
                   <div class="business-form-error" id="businessTypeError"></div>
                 </div>
 
-                <!-- LOAN TYPE -->
+                <!-- Loan Requirement -->
                 <div class="business-form-group">
                   <label for="businessLoanType"> Loan Requirement </label>
 
                   <div class="business-input-wrap">
-                    <i class="fa-solid fa-money-bill-wave"></i>
+                    <i class="fa-solid fa-list"></i>
 
                     <select id="businessLoanType" name="businessLoanType">
                       <option value="">Select Loan Requirement</option>
 
-                      <option value="Working Capital">Working Capital</option>
-
-                      <option value="Business Expansion">
-                        Business Expansion
+                      <option value="Working Capital Loan">
+                        Working Capital Loan
                       </option>
 
-                      <option value="Inventory Purchase">
-                        Inventory Purchase
+                      <option value="Business Expansion Loan">
+                        Business Expansion Loan
                       </option>
 
-                      <option value="Equipment Purchase">
-                        Equipment Purchase
-                      </option>
+                      <option value="Business Loan">Business Loan</option>
 
-                      <option value="Business Loan">
-                        General Business Loan
-                      </option>
+                      <option value="Machinery Loan">Machinery Loan</option>
 
-                      <option value="Other">Other Requirement</option>
+                      <option value="Equipment Loan">Equipment Loan</option>
+
+                      <option value="MSME Loan">MSME Loan</option>
                     </select>
                   </div>
 
@@ -526,7 +504,7 @@
                   ></div>
                 </div>
 
-                <!-- AMOUNT -->
+                <!-- Amount -->
                 <div class="business-form-group">
                   <label for="businessAmount"> Required Loan Amount </label>
 
@@ -538,7 +516,6 @@
                       id="businessAmount"
                       name="businessAmount"
                       placeholder="Enter required amount"
-                      inputmode="numeric"
                     />
                   </div>
 
@@ -548,22 +525,20 @@
                   ></div>
                 </div>
 
-                <!-- SUBMIT -->
+                <!-- Submit -->
                 <button type="submit" class="business-submit-btn">
                   Check Loan Options
-
                   <i class="fa-solid fa-arrow-right"></i>
                 </button>
 
-                <!-- SUCCESS -->
+                <!-- Success -->
                 <div class="business-form-success" id="businessFormSuccess">
                   <i class="fa-solid fa-circle-check"></i>
 
-                  <span>
-                    Thank you! Your request has been submitted successfully.
-                  </span>
+                  <span> Thank you! Our team will contact you shortly. </span>
                 </div>
 
+                <!-- Security -->
                 <div class="business-form-note">
                   <i class="fa-solid fa-lock"></i>
 

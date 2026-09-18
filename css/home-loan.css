@@ -100,7 +100,7 @@
 
   color: var(--home-text);
 
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -213,7 +213,7 @@
 .home-hero-content h1 span {
   display: block;
 
-  color: #8fc7f3;
+  color: #fff;
 }
 
 .home-hero-content > p {
@@ -491,7 +491,7 @@
 
   border-radius: 7px;
 
-  background: var(--home-blue);
+  background: orange;
 
   color: #fff;
 
@@ -505,7 +505,7 @@
 }
 
 .home-form-btn:hover {
-  background: var(--home-blue-dark);
+  background: orange;
 
   box-shadow: 0 8px 18px rgba(0, 91, 170, 0.18);
 }
@@ -586,7 +586,7 @@
 
   color: var(--home-text);
 
-  font-size: 14px;
+  font-size: 16px;
 
   line-height: 1.8;
 }
@@ -595,6 +595,7 @@
   margin: 20px 0;
 
   display: grid;
+  font-size: 14px;
 
   grid-template-columns: 1fr 1fr;
 
@@ -610,7 +611,7 @@
 
   color: #344155;
 
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .home-check-list i {
@@ -855,7 +856,7 @@
 
   color: var(--home-text);
 
-  font-size: 12px;
+  font-size: 13px;
 
   line-height: 1.7;
 }
@@ -958,7 +959,7 @@
 
   color: var(--home-text);
 
-  font-size: 12px;
+  font-size: 13px;
 
   line-height: 1.7;
 }
@@ -1017,7 +1018,7 @@
 
   color: #38465a;
 
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .home-eligibility-list i {
@@ -1076,7 +1077,7 @@
 
   color: rgba(255, 255, 255, 0.82);
 
-  font-size: 12px;
+  font-size: 13px;
 
   line-height: 1.75;
 }
@@ -1106,7 +1107,7 @@
 
   color: rgba(255, 255, 255, 0.62);
 
-  font-size: 9px;
+  font-size: 11px;
 
   line-height: 1.6;
 }
@@ -1173,7 +1174,7 @@
 
   color: var(--home-blue-dark);
 
-  font-size: 15px;
+  font-size: 16px;
 
   line-height: 1.4;
 }
@@ -1183,7 +1184,7 @@
 
   color: var(--home-text);
 
-  font-size: 11px;
+  font-size: 13px;
 
   line-height: 1.7;
 }
@@ -1240,7 +1241,7 @@
 
   color: #fff;
 
-  font-size: 20px;
+  font-size: 19px !important;
   font-weight: 700;
 }
 
@@ -1249,7 +1250,7 @@
 
   color: var(--home-blue-dark);
 
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .home-process-item p {
@@ -1257,7 +1258,7 @@
 
   color: var(--home-text);
 
-  font-size: 11px;
+  font-size: 14px;
 
   line-height: 1.65;
 }
@@ -1298,7 +1299,7 @@
 
   color: #3b4758;
 
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .home-emi-points i {
@@ -1341,13 +1342,13 @@
 .home-range-label label {
   color: #475569;
 
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .home-range-label strong {
   color: var(--home-blue);
 
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .home-emi-calculator input[type="range"] {
@@ -1392,13 +1393,13 @@
 
   color: var(--home-muted);
 
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .home-emi-result strong {
   color: var(--home-blue-dark);
 
-  font-size: 14px;
+  font-size: 15px;
 }
 
 
@@ -1461,7 +1462,7 @@
 
   color: var(--home-blue-dark);
 
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .home-why-card p {
@@ -1469,7 +1470,7 @@
 
   color: var(--home-text);
 
-  font-size: 11px;
+  font-size: 14px;
 
   line-height: 1.7;
 }
@@ -1525,7 +1526,7 @@
 
   text-align: left;
 
-  font-size: 13px;
+  font-size: 15px;
 
   font-weight: 600;
 
@@ -1567,7 +1568,7 @@
 
   color: var(--home-text);
 
-  font-size: 12px;
+  font-size: 14px;
 
   line-height: 1.75;
 }
@@ -1587,10 +1588,10 @@
   background-image:
     linear-gradient(
       90deg,
-      rgba(0, 53, 101, 0.97),
+      rgba(0, 53, 101, 0.87),
       rgba(0, 91, 170, 0.88)
     ),
-    url("../image/home-banner.jpg");
+    url("../image/home-banner.png");
 
   background-size: cover;
 
@@ -1679,7 +1680,7 @@
 
   text-align: center;
 
-  font-size: 10px;
+  font-size: 12px;
 
   line-height: 1.7;
 }
@@ -1690,75 +1691,78 @@
 
 
 /* =========================================================
-   1200px
+   RESPONSIVE CSS
 ========================================================= */
 
-@media (max-width: 1200px) {
-
-  .home-section-space {
-    padding: 60px 0;
+/* ========================= 1200px ========================= */
+@media (max-width: 1199px) {
+  .home-loan-page .container {
+    width: calc(100% - 40px);
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .home-hero {
-    min-height: 560px;
-
-    padding: 55px 0;
-
-    background-position: 65% center;
-  }
-
-  .home-hero-grid {
-    gap: 40px;
+  .home-hero-grid,
+  .home-overview-grid,
+  .home-eligibility-grid,
+  .home-emi-grid {
+    gap: 36px;
   }
 
   .home-hero-content h1 {
-    font-size: 44px;
+    font-size: 43px;
+  }
+
+  .home-benefits-grid,
+  .home-types-grid,
+  .home-documents-grid,
+  .home-why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ========================= 991px ========================= */
+@media (max-width: 991px) {
+  .home-loan-page .container {
+    width: calc(100% - 36px);
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-section-space {
+    padding: 58px 0;
+  }
+
+  .home-section-heading {
+    margin-bottom: 30px;
   }
 
   .home-section-heading h2,
   .home-emi-content h2 {
-    font-size: 32px;
-  }
-
-  .home-overview-grid,
-  .home-eligibility-grid,
-  .home-emi-grid {
-    gap: 40px;
-  }
-}
-
-
-/* =========================================================
-   991px
-========================================================= */
-
-@media (max-width: 991px) {
-
-  .home-section-space {
-    padding: 55px 0;
+    font-size: 31px;
   }
 
   .home-hero {
     min-height: auto;
-
     padding: 58px 0;
+    background-position: center;
+  }
 
-    background-position: 72% center;
-
-    background-image:
-      linear-gradient(
-        90deg,
-        rgba(0, 39, 76, 0.97) 0%,
-        rgba(0, 52, 98, 0.92) 58%,
-        rgba(0, 52, 98, 0.65) 100%
-      ),
-      url("../image/home-banner.jpg");
+  .home-hero-grid,
+  .home-overview-grid,
+  .home-eligibility-grid,
+  .home-emi-grid {
+    grid-template-columns: 1fr;
   }
 
   .home-hero-grid {
-    grid-template-columns: 1fr;
-
-    gap: 38px;
+    gap: 36px;
   }
 
   .home-hero-content {
@@ -1766,115 +1770,106 @@
   }
 
   .home-hero-content h1 {
-    font-size: 42px;
+    max-width: 700px;
+    font-size: 40px;
   }
 
   .home-form-card {
-    margin: 0;
-
-    max-width: 470px;
+    max-width: 620px;
+    margin: 0 auto;
   }
 
   .home-overview-grid,
   .home-eligibility-grid,
   .home-emi-grid {
-    grid-template-columns: 1fr;
-
     gap: 38px;
   }
 
   .home-overview-visual {
-    min-height: 290px;
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+  }
 
-    max-width: 500px;
+  .home-eligibility-card,
+  .home-emi-calculator {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+  }
 
-    margin: auto;
+  .home-check-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .home-benefits-grid,
-  .home-why-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .home-types-grid,
-  .home-documents-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .home-documents-grid,
+  .home-why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .home-process-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .home-process-item:last-child {
-    grid-column: span 2;
-  }
-
-  .home-eligibility-card {
-    max-width: 500px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-
-/* =========================================================
-   767px
-========================================================= */
-
+/* ========================= 767px ========================= */
 @media (max-width: 767px) {
+  .home-loan-page {
+    overflow-x: hidden;
+  }
+
+  .home-loan-page .container {
+    width: calc(100% - 28px);
+    max-width: 100%;
+  }
 
   .home-section-space {
-    padding: 47px 0;
+    padding: 50px 0;
   }
 
+  .home-section-heading {
+    margin-bottom: 27px;
+  }
 
-  /* ---------------- HERO ---------------- */
+  .home-section-heading h2,
+  .home-emi-content h2 {
+    font-size: 28px;
+    line-height: 1.28;
+  }
+
+  .home-section-heading p,
+  .home-emi-content > p,
+  .home-overview-content > p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
 
   .home-hero {
-    padding: 48px 0;
-
-    background-position: 82% center;
-
-    background-image:
-      linear-gradient(
-        90deg,
-        rgba(0, 39, 76, 0.98) 0%,
-        rgba(0, 52, 98, 0.94) 62%,
-        rgba(0, 52, 98, 0.76) 100%
-      ),
-      url("../image/home-banner.jpg");
-  }
-
-  .home-hero-grid {
-    gap: 30px;
+    padding: 50px 0;
+    background-position: 58% center;
   }
 
   .home-hero-content {
-    max-width: 100%;
-
     text-align: center;
+    margin: 0 auto;
   }
 
   .home-badge {
-    font-size: 10px;
-
-    padding: 7px 12px;
+    justify-content: center;
   }
 
   .home-hero-content h1 {
-    margin: 14px auto 15px;
-
-    font-size: 35px;
-
-    line-height: 1.18;
+    margin: 15px auto 14px;
+    font-size: 36px;
+    line-height: 1.16;
   }
 
   .home-hero-content > p {
-    max-width: 590px;
-
-    margin: 0 auto 21px;
-
-    font-size: 13px;
-
-    line-height: 1.75;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
   }
 
   .home-hero-buttons {
@@ -1883,41 +1878,118 @@
 
   .home-hero-points {
     justify-content: center;
-
-    gap: 10px 15px;
-
-    margin-top: 21px;
-  }
-
-  .home-hero-points div {
-    font-size: 10px;
+    gap: 12px 18px;
   }
 
   .home-form-card {
-    width: 100%;
-
-    max-width: 470px;
-
-    margin: 0 auto;
-
+    max-width: 560px;
     padding: 24px;
   }
 
+  .home-overview-visual {
+    min-height: 300px;
+  }
 
-  /* ---------------- COMMON ---------------- */
+  .home-visual-circle {
+    width: 245px;
+    height: 245px;
+  }
+
+  .home-visual-circle i {
+    width: 82px;
+    height: 82px;
+    font-size: 34px;
+  }
+
+  .home-floating-card {
+    padding: 10px 12px;
+  }
+
+  .home-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-final-cta {
+    padding: 56px 0;
+  }
+
+  .home-final-content h2 {
+    font-size: 32px;
+  }
+
+  .home-emi-result {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ========================= 576px ========================= */
+@media (max-width: 576px) {
+  .home-loan-page .container {
+    width: calc(100% - 24px);
+  }
+
+  .home-section-space {
+    padding: 42px 0;
+  }
 
   .home-section-heading {
-    margin-bottom: 29px;
+    margin-bottom: 24px;
   }
 
   .home-section-heading h2,
   .home-emi-content h2 {
-    font-size: 29px;
+    font-size: 25px;
   }
 
-  .home-section-heading p,
-  .home-emi-content > p {
+  .home-hero {
+    padding: 43px 0 46px;
+  }
+
+  .home-hero-content h1 {
+    font-size: 31px;
+  }
+
+  .home-hero-content > p {
     font-size: 13px;
+  }
+
+  .home-hero-buttons,
+  .home-final-buttons {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-hero-buttons .home-btn-primary,
+  .home-hero-buttons .home-btn-outline,
+  .home-final-buttons .home-btn-primary,
+  .home-final-buttons .home-btn-outline {
+    width: 100%;
+  }
+
+  .home-hero-points {
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home-form-card {
+    padding: 21px 17px;
+    border-radius: 11px;
+  }
+
+  .home-form-card h2 {
+    font-size: 21px;
+  }
+
+  .home-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .home-input input,
+  .home-input select {
+    font-size: 16px;
   }
 
   .home-check-list {
@@ -1927,177 +1999,7 @@
   .home-benefits-grid,
   .home-types-grid,
   .home-documents-grid,
-  .home-why-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .home-benefit-card,
-  .home-document-card,
-  .home-why-card {
-    padding: 20px 17px;
-  }
-
-  .home-type-card {
-    padding: 22px;
-  }
-
-  .home-type-card h3 {
-    font-size: 17px;
-  }
-
-  .home-type-card p {
-    min-height: auto;
-  }
-
-  .home-eligibility-card {
-    padding: 25px;
-  }
-
-  .home-process-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .home-process-item:last-child {
-    grid-column: span 2;
-  }
-
-  .home-emi-calculator {
-    padding: 24px;
-  }
-
-  .home-final-cta {
-    padding: 52px 0;
-  }
-
-  .home-final-content h2 {
-    font-size: 31px;
-  }
-}
-
-
-/* =========================================================
-   576px
-========================================================= */
-
-@media (max-width: 576px) {
-
-  .home-section-space {
-    padding: 42px 0;
-  }
-
-
-  /* ---------------- HERO ---------------- */
-
-  .home-hero {
-    padding: 42px 0;
-
-    background-position: 88% center;
-
-    background-image:
-      linear-gradient(
-        90deg,
-        rgba(0, 39, 76, 0.985) 0%,
-        rgba(0, 52, 98, 0.95) 65%,
-        rgba(0, 52, 98, 0.78) 100%
-      ),
-      url("../image/home-banner.jpg");
-  }
-
-  .home-hero-content h1 {
-    font-size: 31px;
-  }
-
-  .home-hero-content > p {
-    font-size: 12px;
-  }
-
-  .home-btn-primary,
-  .home-btn-outline {
-    min-height: 44px;
-
-    padding: 0 17px;
-
-    font-size: 11px;
-  }
-
-  .home-form-card {
-    padding: 21px;
-  }
-
-  .home-form-card h2 {
-    font-size: 21px;
-  }
-
-  .home-form-row {
-    grid-template-columns: 1fr;
-
-    gap: 0;
-  }
-
-  .home-section-heading h2,
-  .home-emi-content h2 {
-    font-size: 26px;
-  }
-
-  .home-section-heading > span,
-  .home-emi-content > span {
-    font-size: 10px;
-  }
-
-
-  /* ---------------- VISUAL ---------------- */
-
-  .home-overview-visual {
-    min-height: 250px;
-  }
-
-  .home-visual-circle {
-    width: 220px;
-    height: 220px;
-  }
-
-  .home-visual-circle i {
-    width: 75px;
-    height: 75px;
-
-    font-size: 32px;
-  }
-
-  .home-floating-card {
-    padding: 9px 11px;
-  }
-
-  .home-floating-card i {
-    width: 30px;
-    height: 30px;
-
-    font-size: 11px;
-  }
-
-  .home-floating-card strong {
-    font-size: 9px;
-  }
-
-  .home-floating-card span {
-    font-size: 8px;
-  }
-
-  .home-card-one {
-    left: 0;
-    top: 5px;
-  }
-
-  .home-card-two {
-    right: 0;
-    bottom: 5px;
-  }
-
-
-  /* ---------------- CARDS ---------------- */
-
-  .home-benefits-grid,
-  .home-types-grid,
-  .home-documents-grid,
+  .home-process-grid,
   .home-why-grid {
     grid-template-columns: 1fr;
   }
@@ -2105,142 +2007,130 @@
   .home-benefit-card,
   .home-type-card,
   .home-document-card,
+  .home-process-item,
   .home-why-card {
-    padding: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
-
-  /* ---------------- PROCESS ---------------- */
-
-  .home-process-grid {
-    grid-template-columns: 1fr;
+  .home-type-card p {
+    min-height: auto;
   }
 
-  .home-process-item:last-child {
-    grid-column: auto;
+  .home-overview-visual {
+    min-height: auto;
+    padding: 26px 0 12px;
+    flex-direction: column;
+    gap: 14px;
   }
 
-  .home-process-item {
-    display: flex;
+  .home-visual-circle {
+    width: 210px;
+    height: 210px;
+  }
 
+  .home-visual-circle i {
+    width: 72px;
+    height: 72px;
+    font-size: 30px;
+    border-radius: 18px;
+  }
+
+  .home-floating-card {
+    position: static;
+    width: 100%;
+    max-width: 310px;
+  }
+
+  .home-eligibility-card,
+  .home-emi-calculator {
+    padding: 22px 17px;
+  }
+
+  .home-eligibility-card h3,
+  .home-emi-calculator h3 {
+    font-size: 19px;
+  }
+
+  .home-range-label {
     align-items: flex-start;
-
-    gap: 13px;
+    flex-direction: column;
+    gap: 4px;
   }
-
-  .home-process-number {
-    flex-shrink: 0;
-
-    margin: 0;
-
-    /* Keep process number readable */
-    font-size: 20px;
-  }
-
-
-  /* ---------------- EMI ---------------- */
 
   .home-emi-result {
     grid-template-columns: 1fr;
-
-    gap: 12px;
+    gap: 0;
+    padding: 8px 14px;
   }
 
   .home-emi-result div {
-    padding-bottom: 10px;
-
+    padding: 11px 0;
     border-bottom: 1px solid var(--home-border);
   }
 
   .home-emi-result div:last-child {
-    padding-bottom: 0;
-
     border-bottom: 0;
   }
 
+  .home-faq-question {
+    padding: 14px;
+    font-size: 14px;
+  }
 
-  /* ---------------- CTA ---------------- */
+  .home-faq-answer {
+    padding: 0 14px 14px;
+  }
+
+  .home-final-cta {
+    padding: 48px 0;
+  }
 
   .home-final-content h2 {
     font-size: 28px;
   }
 
   .home-final-content > p {
-    font-size: 12px;
-  }
-
-  .home-final-buttons {
-    flex-direction: column;
-  }
-
-  .home-final-buttons a {
-    width: 100%;
-  }
-
-  .home-disclaimer p {
-    font-size: 9px;
+    font-size: 13px;
   }
 }
 
-
-/* =========================================================
-   400px
-========================================================= */
-
+/* ========================= 400px ========================= */
 @media (max-width: 400px) {
+  .home-loan-page .container {
+    width: calc(100% - 20px);
+  }
 
   .home-section-space {
-    padding: 37px 0;
+    padding: 38px 0;
+  }
+
+  .home-section-heading h2,
+  .home-emi-content h2 {
+    font-size: 23px;
   }
 
   .home-hero {
-    padding: 37px 0;
+    padding: 38px 0 42px;
+  }
 
-    background-position: 94% center;
-
-    background-image:
-      linear-gradient(
-        90deg,
-        rgba(0, 39, 76, 0.99) 0%,
-        rgba(0, 52, 98, 0.96) 68%,
-        rgba(0, 52, 98, 0.82) 100%
-      ),
-      url("../image/home-banner.jpg");
+  .home-badge {
+    padding: 7px 11px;
+    font-size: 10px;
   }
 
   .home-hero-content h1 {
     font-size: 28px;
   }
 
-  .home-hero-content > p {
-    font-size: 11px;
-  }
-
-  .home-hero-buttons {
-    flex-direction: column;
-
-    width: 100%;
-  }
-
-  .home-hero-buttons a {
-    width: 100%;
-  }
-
   .home-form-card {
-    padding: 18px;
+    padding: 19px 14px;
   }
 
-  .home-form-card h2 {
-    font-size: 19px;
-  }
-
-  .home-section-heading h2,
-  .home-emi-content h2 {
-    font-size: 24px;
-  }
-
-  .home-overview-content h3 {
-    font-size: 21px;
+  .home-form-icon,
+  .home-eligibility-card-icon {
+    width: 46px;
+    height: 46px;
   }
 
   .home-visual-circle {
@@ -2248,55 +2138,19 @@
     height: 190px;
   }
 
-  .home-visual-circle i {
-    width: 65px;
-    height: 65px;
-
-    font-size: 27px;
-  }
-
-  .home-floating-card {
-    transform: scale(0.9);
-  }
-
-  .home-card-one {
-    left: -8px;
-  }
-
-  .home-card-two {
-    right: -8px;
-  }
-
-  .home-eligibility-card {
-    padding: 20px;
+  .home-final-content h2 {
+    font-size: 25px;
   }
 }
 
-
-/* =========================================================
-   360px
-========================================================= */
-
+/* ========================= 360px ========================= */
 @media (max-width: 360px) {
-
-  .home-section-space {
-    padding: 33px 0;
-  }
-
-  .home-hero {
-    padding: 33px 0;
+  .home-loan-page .container {
+    width: calc(100% - 18px);
   }
 
   .home-hero-content h1 {
     font-size: 26px;
-  }
-
-  .home-hero-content > p {
-    font-size: 10.5px;
-  }
-
-  .home-form-card {
-    padding: 17px;
   }
 
   .home-section-heading h2,
@@ -2305,72 +2159,18 @@
   }
 
   .home-form-card h2 {
-    font-size: 18px;
+    font-size: 19px;
   }
 
-  .home-input input,
-  .home-input select {
-    font-size: 11px;
+  .home-btn-primary,
+  .home-btn-outline {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
-  .home-input-group label {
-    font-size: 10px;
-  }
-
-  .home-final-content h2 {
-    font-size: 25px;
-  }
-}
-
-
-/* =========================================================
-   320px
-========================================================= */
-
-@media (max-width: 320px) {
-
-  .home-section-space {
-    padding: 30px 0;
-  }
-
-  .home-hero {
-    padding: 30px 0;
-
-    background-position: 97% center;
-  }
-
-  .home-hero-content h1 {
-    font-size: 24px;
-  }
-
-  .home-hero-content > p {
-    font-size: 10px;
-  }
-
-  .home-hero-points {
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    justify-items: center;
-  }
-
-  .home-section-heading h2,
-  .home-emi-content h2 {
-    font-size: 21px;
-  }
-
-  .home-section-heading p,
-  .home-emi-content > p {
-    font-size: 11px;
-  }
-
-  .home-form-card {
-    padding: 16px;
-  }
-
-  .home-form-card h2 {
-    font-size: 17px;
+  .home-visual-circle {
+    width: 175px;
+    height: 175px;
   }
 
   .home-final-content h2 {
@@ -2378,115 +2178,65 @@
   }
 }
 
-
-/* =========================================================
-   VERY SMALL SCREENS
-========================================================= */
-
-@media (max-width: 280px) {
-
-  .home-section-space {
-    padding: 27px 0;
+/* ========================= 320px ========================= */
+@media (max-width: 320px) {
+  .home-loan-page .container {
+    width: calc(100% - 16px);
   }
 
-  .home-hero {
-    padding: 27px 0;
+  .home-section-space {
+    padding: 34px 0;
   }
 
   .home-hero-content h1 {
-    font-size: 22px;
-  }
-
-  .home-hero-content > p {
-    font-size: 10px;
-  }
-
-  .home-btn-primary,
-  .home-btn-outline {
-    min-height: 41px;
-
-    padding: 0 12px;
-
-    font-size: 10px;
-  }
-
-  .home-form-card {
-    padding: 14px;
-  }
-
-  .home-form-icon {
-    width: 42px;
-    height: 42px;
-
-    font-size: 18px;
-  }
-
-  .home-form-card h2 {
-    font-size: 16px;
-  }
-
-  .home-input {
-    min-height: 40px;
-  }
-
-  .home-input > i {
-    width: 32px;
-
-    font-size: 11px;
-  }
-
-  .home-input input,
-  .home-input select {
-    height: 38px;
-
-    font-size: 10px;
-  }
-
-  .home-form-btn {
-    min-height: 41px;
-
-    font-size: 10px;
+    font-size: 24px;
   }
 
   .home-section-heading h2,
   .home-emi-content h2 {
-    font-size: 19px;
+    font-size: 21px;
   }
 
-  .home-section-heading p,
-  .home-emi-content > p {
-    font-size: 10px;
+  .home-form-card {
+    padding: 17px 12px;
+  }
+
+  .home-input > i {
+    width: 35px;
   }
 
   .home-benefit-card,
   .home-type-card,
   .home-document-card,
-  .home-why-card {
-    padding: 16px;
+  .home-process-item,
+  .home-why-card,
+  .home-eligibility-card,
+  .home-emi-calculator {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
-  .home-benefit-card h3,
-  .home-type-card h3,
-  .home-document-card h3,
-  .home-why-card h3 {
-    font-size: 13px;
+  .home-visual-circle {
+    width: 160px;
+    height: 160px;
   }
 
-  .home-benefit-card p,
-  .home-type-card p,
-  .home-document-card p,
-  .home-why-card p {
-    font-size: 10px;
-  }
-
-  .home-process-number {
-    width: 40px;
-    height: 40px;
-
-    font-size: 20px;
+  .home-floating-card {
+    max-width: 100%;
   }
 
   .home-final-content h2 {
-    font-size: 20px;
+    font-size: 22px;
+  }
+}
+
+/* ==================== REDUCED MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+  .home-loan-page *,
+  .home-loan-page *::before,
+  .home-loan-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }

@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 /* =========================================================
@@ -539,7 +538,7 @@ button {
   margin-bottom: 14px;
 
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
 
   letter-spacing: 2px;
 
@@ -549,7 +548,7 @@ button {
 .hero-content h1 {
   margin-bottom: 20px;
 
-  font-size: clamp(42px, 5vw, 68px);
+  font-size: clamp(32px, 4.5vw, 58px);
 
   line-height: 1.12;
 
@@ -571,7 +570,7 @@ button {
 
   color: rgba(255, 255, 255, 0.9);
 
-  font-size: 17px;
+  font-size: 16px;
 
   line-height: 1.8;
 }
@@ -686,7 +685,7 @@ button {
   width: 100%;
   max-width: 440px;
 
-  margin-left: auto;
+  margin-left: 5.2rem;
 
   padding: 30px;
 
@@ -765,7 +764,7 @@ button {
 
   border-radius: 8px;
 
-  background: var(--loan-blue);
+  background: orange;
 
   color: var(--white);
 
@@ -776,7 +775,7 @@ button {
 }
 
 .hero-form-submit:hover {
-  background: var(--loan-blue-dark);
+  background: orange;
 
   transform: translateY(-2px);
 
@@ -886,7 +885,8 @@ button {
 ========================================================= */
 
 .section-padding {
-  padding: 90px 0;
+  padding: 80px 0;
+
 }
 
 .section-heading {
@@ -917,7 +917,7 @@ button {
 
   color: var(--black);
 
-  font-size: clamp(30px, 4vw, 42px);
+  font-size: clamp(30px, 3.7vw, 42px);
 
   line-height: 1.25;
 
@@ -930,7 +930,7 @@ button {
 
   color: var(--text);
 
-  font-size: 16px;
+  font-size: 15px;
 
   line-height: 1.8;
 }
@@ -1018,6 +1018,7 @@ button {
 
 .loans-section {
   background: var(--light-bg);
+  margin-top: -2rem;
 }
 
 .loan-card {
@@ -1045,8 +1046,8 @@ button {
 }
 
 .loan-icon {
-  width: 58px;
-  height: 58px;
+  width: 55px;
+  height: 55px;
 
   margin-bottom: 20px;
 
@@ -1060,7 +1061,7 @@ button {
 
   color: var(--loan-blue);
 
-  font-size: 24px;
+  font-size: 22px;
 
   transition: var(--transition);
 }
@@ -1164,7 +1165,7 @@ button {
 .why-content > p {
   margin-bottom: 28px;
 
-  font-size: 16px;
+  font-size: 14px;
 
   line-height: 1.8;
 }
@@ -1206,7 +1207,7 @@ button {
 
   color: var(--black);
 
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -1215,7 +1216,7 @@ button {
 
   color: var(--muted);
 
-  font-size: 14px;
+  font-size: 13px;
 }
 
 
@@ -1258,7 +1259,7 @@ button {
 
   color: var(--loan-blue);
 
-  font-size: 42px;
+  font-size: 38px;
 
   line-height: 1;
 
@@ -1272,7 +1273,7 @@ button {
 
   color: var(--black);
 
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
 }
 
@@ -1281,7 +1282,7 @@ button {
 
   color: var(--text);
 
-  font-size: 14px;
+  font-size: 13px;
 
   line-height: 1.75;
 }
@@ -1965,15 +1966,30 @@ button {
 }
 
 
-/* =========================================================
-   LARGE DESKTOP
-========================================================= */
+/* =========================================================================
+   =========================================================================
+   RESPONSIVE DESIGN
+   Clean rebuild — 1200px down to 320px
+   =========================================================================
+========================================================================= */
 
+/* =========================================================
+   1200px AND BELOW — small laptops / large tablets
+========================================================= */
 @media (max-width: 1199px) {
+
+  .container {
+    max-width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .nav-menu {
+    gap: 0;
+  }
 
   .nav-menu > li > a {
     padding: 0 9px;
-
     font-size: 13px;
   }
 
@@ -1981,20 +1997,29 @@ button {
     width: 145px;
   }
 
+  .hero-content {
+    max-width: 560px;
+  }
+
   .hero-content h1 {
-    font-size: 53px;
+    font-size: 46px;
   }
 
   .hero-form-box {
-    max-width: 410px;
+    max-width: 380px;
+    margin-left: 2rem;
+    padding: 26px;
+  }
+
+  .why-image img {
+    min-height: 420px;
   }
 }
 
 
 /* =========================================================
-   TABLET / MOBILE NAV
+   992px AND BELOW — tablets (nav collapses to hamburger)
 ========================================================= */
-
 @media (max-width: 991px) {
 
   .top-bar {
@@ -2011,36 +2036,28 @@ button {
 
   .mobile-toggle {
     display: flex;
-
     align-items: center;
     justify-content: center;
   }
 
-  /* Mobile menu */
-
+  /* ---- Mobile dropdown nav ---- */
   .nav-menu {
     position: absolute;
-
     top: 100%;
     left: 0;
     right: 0;
 
     max-height: calc(100vh - 72px);
-
     overflow-y: auto;
 
     padding: 12px 20px 20px;
 
     display: none;
-
     flex-direction: column;
-
     align-items: stretch;
-
     gap: 0;
 
     background: var(--white);
-
     box-shadow: var(--shadow-md);
   }
 
@@ -2054,27 +2071,15 @@ button {
 
   .nav-menu > li > a {
     width: 100%;
-
     min-height: 50px;
-
     padding: 12px 5px;
-
     justify-content: space-between;
-
     border-bottom: 1px solid var(--border);
-
     font-size: 15px;
   }
 
-
-  /* =====================================================
-     MOBILE MAIN DROPDOWN
-  ===================================================== */
-
   .nav-menu > li.dropdown > .dropdown-menu {
-
     position: static !important;
-
     top: auto !important;
     left: auto !important;
 
@@ -2082,51 +2087,32 @@ button {
     min-width: 100% !important;
 
     margin: 0 !important;
-
     padding: 5px 0 !important;
 
     display: none !important;
 
     opacity: 1 !important;
     visibility: visible !important;
-
     transform: none !important;
 
     border-radius: 0 !important;
-
     box-shadow: none !important;
 
     background: var(--white) !important;
   }
 
-  /* Important:
-     Mobile par hover se dropdown open nahi hoga.
-     JS .open class lagayega.
-  */
-
   .nav-menu > li.dropdown:hover > .dropdown-menu {
     display: none !important;
-
-    opacity: 1 !important;
-    visibility: visible !important;
-
-    transform: none !important;
   }
 
   .nav-menu > li.dropdown.open > .dropdown-menu {
     display: block !important;
   }
 
-
-  /* Main dropdown links */
-
   .nav-menu > li.dropdown > .dropdown-menu > li > a {
     min-height: 44px;
-
     padding: 11px 15px !important;
-
     font-size: 14px !important;
-
     border-bottom: 1px solid #edf2f7;
   }
 
@@ -2134,19 +2120,12 @@ button {
     padding-left: 20px !important;
   }
 
-
-  /* =====================================================
-     MOBILE NESTED DROPDOWN
-  ===================================================== */
-
   .nav-menu .sub-dropdown {
     position: relative !important;
   }
 
   .nav-menu .sub-dropdown > .sub-dropdown-menu {
-
     position: static !important;
-
     top: auto !important;
     left: auto !important;
 
@@ -2154,18 +2133,15 @@ button {
     min-width: 100% !important;
 
     margin: 0 !important;
-
     padding: 5px 0 5px 15px !important;
 
     display: none !important;
 
     opacity: 1 !important;
     visibility: visible !important;
-
     transform: none !important;
 
     border-radius: 0 !important;
-
     box-shadow: none !important;
 
     background: var(--loan-blue-light) !important;
@@ -2181,9 +2157,7 @@ button {
 
   .nav-menu .sub-dropdown-menu li a {
     min-height: 42px;
-
     padding: 10px 15px !important;
-
     font-size: 13px !important;
   }
 
@@ -2191,45 +2165,39 @@ button {
     padding-left: 20px !important;
   }
 
-
-  /* Apply button */
-
   .nav-menu > li > .nav-apply-btn {
     margin: 12px 0 0;
-
     min-height: 48px;
-
     justify-content: center;
-
     border: 0;
   }
 
-
-  /* Hero */
-
+  /* ---- Hero ---- */
   .hero-section,
   .hero-container {
     min-height: auto;
   }
 
   .hero-container {
-    padding-top: 70px;
-
-    padding-bottom: 90px;
+    padding-top: 60px;
+    padding-bottom: 80px;
   }
 
   .hero-content {
-    padding: 0 0 45px;
+    max-width: 100%;
+    padding: 0 0 40px;
   }
 
   .hero-content h1 {
-    font-size: 48px;
+    font-size: 40px;
   }
 
   .hero-form-box {
+    max-width: 460px;
     margin: 0 auto;
   }
 
+  /* ---- Trust strip / sections ---- */
   .trust-strip {
     margin-top: -25px;
   }
@@ -2240,150 +2208,314 @@ button {
 
   .why-content {
     padding-left: 0;
+    margin-top: 35px;
+  }
+
+  .why-image img {
+    min-height: 340px;
   }
 
   .calculator-text {
     padding-right: 0;
+    margin-bottom: 35px;
   }
 
   .footer-bottom-links {
     justify-content: flex-start;
-
     margin-top: 10px;
-
     flex-wrap: wrap;
   }
 }
 
 
 /* =========================================================
-   TABLET
+   768px AND BELOW — large phones / small tablets
 ========================================================= */
-
 @media (max-width: 767px) {
 
   body {
     font-size: 15px;
   }
 
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   .section-padding {
-    padding: 70px 0;
+    padding: 60px 0;
+  }
+
+  /* ---- Header ---- */
+  .navbar-wrapper {
+    min-height: 66px;
+  }
+
+  .brand-logo img {
+    width: 130px;
+  }
+
+  .mobile-toggle {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  /* ---- Hero — slider on top, content below ---- */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    height: auto;
+    overflow: visible;
+  }
+
+  .hero-slider {
+    order: 1;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 280px;
+    min-height: 280px;
+    overflow: hidden;
+  }
+
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-slider-controls {
+    left: 50%;
+    bottom: 14px;
+    transform: translateX(-50%);
+    width: max-content;
+    margin: 0;
+  }
+
+  .slider-arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+    background: rgba(0, 43, 85, 0.55);
+    border-color: rgba(255, 255, 255, 0.85);
+  }
+
+  .slider-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .slider-dot.active {
+    width: 22px;
+  }
+
+  .hero-overlay {
+    display: none;
   }
 
   .hero-container {
-    padding-top: 55px;
+    order: 2;
+    width: 100%;
+    min-height: auto;
+    padding: 36px 0 20px;
+    display: block;
+  }
 
-    padding-bottom: 80px;
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 0 28px;
   }
 
   .hero-content h1 {
-    font-size: 42px;
-
-    letter-spacing: -0.8px;
+    font-size: 34px;
+    letter-spacing: -0.6px;
   }
 
   .hero-content > p {
-    font-size: 15px;
+    font-size: 14.5px;
+  }
+
+  .hero-buttons .btn-primary-loan,
+  .hero-buttons .btn-outline-loan {
+    min-height: 48px;
+    padding: 11px 18px;
+    font-size: 14px;
   }
 
   .hero-trust {
-    gap: 15px;
+    gap: 14px;
+    margin-top: 24px;
   }
 
   .hero-trust .trust-item {
     font-size: 12px;
   }
 
+  .hero-form-box {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 25px;
+    padding: 24px;
+  }
+
+  /* ---- Trust strip ---- */
+  .trust-strip {
+    margin-top: 18px;
+    padding: 18px;
+  }
+
+  .trust-strip .trust-item {
+    border-right: 0;
+  }
+
+  /* ---- Section headings ---- */
   .section-heading {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 
   .section-heading h2,
   .why-content h2,
   .calculator-text h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
+  /* ---- Loans / process / testimonial cards ---- */
+  .loan-card,
+  .process-card,
+  .testimonial-card {
+    margin-bottom: 20px;
+  }
+
+  .loan-card p {
+    min-height: auto;
+  }
+
+  .testimonial-card > p {
+    min-height: auto;
+  }
+
+  /* ---- Why section ---- */
   .why-image img {
-    min-height: 350px;
+    min-height: 280px;
   }
 
+  /* ---- Calculator ---- */
+  .calculator-box {
+    padding: 24px;
+  }
+
+  .emi-result {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  /* ---- Stats ---- */
   .stats-section {
-    padding: 45px 0;
+    padding: 40px 0;
   }
 
   .stat-box {
-    margin-bottom: 25px;
-
+    margin-bottom: 22px;
     border-right: 0;
+    padding: 10px;
   }
 
   .stat-box h3 {
-    font-size: 27px;
+    font-size: 25px;
+  }
+
+  /* ---- CTA ---- */
+  .cta-content {
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   .cta-content h2 {
-    font-size: 29px;
+    font-size: 27px;
+  }
+
+  .cta-section .row {
+    text-align: center;
   }
 
   .cta-button {
-    margin-top: 25px;
+    margin-top: 5px;
   }
 
+  /* ---- Footer ---- */
   .footer-main {
-    padding: 55px 0 35px;
+    padding: 45px 0 25px;
+  }
+
+  .footer-col {
+    margin-bottom: 30px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
   }
 }
 
 
 /* =========================================================
-   SMALL MOBILE
+   576px AND BELOW — phones
 ========================================================= */
-
 @media (max-width: 575px) {
 
   .container {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .brand-logo img {
-    width: 135px;
+    width: 120px;
   }
 
   .mobile-toggle {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+  }
+
+  /* ---- Hero ---- */
+  .hero-slider {
+    height: 230px;
+    min-height: 230px;
   }
 
   .hero-container {
-    padding-top: 45px;
-
-    padding-bottom: 75px;
-  }
-
-  .hero-content h1 {
-    font-size: 36px;
-
-    line-height: 1.18;
+    padding-top: 30px;
+    padding-bottom: 15px;
   }
 
   .hero-small-title {
     font-size: 11px;
+    letter-spacing: 1.2px;
+  }
 
-    letter-spacing: 1.3px;
+  .hero-content h1 {
+    font-size: 28px;
+    line-height: 1.2;
   }
 
   .hero-content > p {
-    font-size: 14px;
-
-    line-height: 1.7;
+    font-size: 13.5px;
+    line-height: 1.65;
   }
 
   .hero-buttons {
     flex-direction: column;
-
     align-items: stretch;
+    gap: 10px;
   }
 
   .btn-primary-loan,
@@ -2393,338 +2525,381 @@ button {
 
   .hero-trust {
     display: grid;
-
     grid-template-columns: 1fr;
-
-    gap: 10px;
+    gap: 9px;
+    margin-top: 20px;
   }
 
   .hero-form-box {
-    padding: 23px 19px;
-
+    padding: 20px 16px;
     border-radius: 14px;
   }
 
   .hero-form-box h3 {
-    font-size: 20px;
+    font-size: 19px;
   }
 
-  .hero-slider-controls {
-    bottom: 18px;
-  }
-
-  .slider-arrow {
-    width: 36px;
-    height: 36px;
-
+  .hero-form-box > p {
     font-size: 13px;
   }
 
-  .trust-strip {
-    padding: 15px;
-  }
-
+  /* ---- Trust strip ---- */
   .trust-strip .trust-item {
-    padding: 7px 3px;
+    padding: 8px 4px;
+    gap: 10px;
   }
 
+  .trust-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .trust-strip strong {
+    font-size: 13px;
+  }
+
+  /* ---- Section heading ---- */
   .section-padding {
-    padding: 60px 0;
+    padding: 50px 0;
   }
 
   .section-heading h2,
   .why-content h2,
   .calculator-text h2 {
-    font-size: 29px;
+    font-size: 24px;
   }
 
+  .section-heading p,
+  .calculator-text > p {
+    font-size: 14px;
+  }
+
+  /* ---- Loan cards ---- */
   .loan-card {
-    padding: 24px 21px;
+    padding: 22px 18px;
   }
 
-  .loan-card p {
-    min-height: auto;
+  .loan-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 19px;
   }
 
+  .loan-card h3 {
+    font-size: 17px;
+  }
+
+  /* ---- Why section ---- */
+  .why-image img {
+    min-height: 230px;
+  }
+
+  .why-item-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+
+  /* ---- Process ---- */
+  .process-card {
+    padding: 24px 20px;
+  }
+
+  .process-number {
+    font-size: 32px;
+  }
+
+  /* ---- Calculator ---- */
   .calculator-box {
-    padding: 23px 18px;
+    padding: 20px 16px;
+    border-radius: 14px;
   }
 
-  .emi-result {
-    align-items: flex-start;
-
-    flex-direction: column;
-
-    gap: 5px;
+  .calculator-box h3 {
+    font-size: 20px;
   }
 
   .emi-result strong {
+    font-size: 20px;
+  }
+
+  /* ---- Stats ---- */
+  .stat-box h3 {
+    font-size: 23px;
+  }
+
+  .stat-box i {
     font-size: 22px;
   }
 
+  /* ---- Testimonials ---- */
   .testimonial-card {
-    padding: 23px;
+    padding: 20px;
   }
 
-  .testimonial-card > p {
-    min-height: auto;
+  .customer-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
   }
 
+  /* ---- FAQ ---- */
+  .faq-section .accordion-button {
+    padding: 15px 16px;
+    font-size: 14px;
+  }
+
+  .faq-section .accordion-body {
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  /* ---- CTA ---- */
   .cta-section {
-    padding: 50px 0;
+    padding: 40px 0;
   }
 
   .cta-content h2 {
-    font-size: 26px;
+    font-size: 22px;
+  }
+
+  .cta-content p {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+
+  /* ---- Footer ---- */
+  .footer-about p {
+    max-width: 100%;
   }
 
   .footer-bottom-links {
     gap: 12px;
+    flex-wrap: wrap;
   }
 
+  /* ---- Floating buttons ---- */
   .floating-buttons {
     right: 14px;
-
-    bottom: 18px;
+    bottom: 16px;
+    gap: 8px;
   }
 
   .floating-buttons a {
-    width: 47px;
-    height: 47px;
-
-    font-size: 18px;
+    width: 44px;
+    height: 44px;
+    font-size: 17px;
   }
 }
+
+
 /* =========================================================
-   MOBILE HERO SLIDER FIX
+   480px AND BELOW — small phones
 ========================================================= */
-
-@media (max-width: 767px) {
-
-  /* Hero ko vertical stack karo */
-  .hero-section {
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
-    height: auto;
-    overflow: visible;
-    position: relative;
-  }
-
-
-  /* ================= SLIDER ================= */
+@media (max-width: 480px) {
 
   .hero-slider {
-    order: 1;
-
-    position: relative;
-    inset: auto;
-
-    width: 100%;
-    height: 300px;
-    min-height: 300px;
-
-    overflow: hidden;
+    height: 200px;
+    min-height: 200px;
   }
 
-
-  .hero-slide {
-    position: absolute;
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  .hero-content h1 {
+    font-size: 25px;
   }
 
+  .hero-line {
+    width: 42px;
+  }
 
-  /* ================= SLIDER CONTROLS ================= */
+  .hero-form-box {
+    padding: 18px 14px;
+  }
+
+  .form-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 19px;
+  }
+
+  .section-heading h2,
+  .why-content h2,
+  .calculator-text h2 {
+    font-size: 21px;
+  }
+
+  .loan-card,
+  .process-card,
+  .testimonial-card {
+    padding: 18px 15px;
+  }
+
+  .why-image img {
+    min-height: 200px;
+  }
+
+  .stat-box h3 {
+    font-size: 20px;
+  }
+
+  .stat-box p {
+    font-size: 12px;
+  }
+
+  .cta-content h2 {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   375px AND BELOW — compact phones
+========================================================= */
+@media (max-width: 375px) {
+
+  .brand-logo img {
+    width: 105px;
+  }
+
+  .hero-slider {
+    height: 180px;
+    min-height: 180px;
+  }
 
   .hero-slider-controls {
-    position: absolute;
-
-    left: 50%;
-    bottom: 15px;
-
-    transform: translateX(-50%);
-
-    width: max-content;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 8px;
-
-    z-index: 20;
-
-    margin: 0;
+    bottom: 10px;
   }
 
-
-  /* Arrows */
-
   .hero-slider-controls .slider-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 22px;
+  }
+
+  .hero-content > p {
+    font-size: 13px;
+  }
+
+  .hero-form-box h3 {
+    font-size: 17px;
+  }
+
+  .calculator-box {
+    padding: 16px 13px;
+  }
+
+  .emi-result strong {
+    font-size: 18px;
+  }
+
+  .stat-box {
+    padding: 8px 10px;
+  }
+
+  .floating-buttons a {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   320px AND BELOW — smallest common phones
+========================================================= */
+@media (max-width: 320px) {
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .brand-logo img {
+    width: 92px;
+  }
+
+  .mobile-toggle {
     width: 36px;
     height: 36px;
-
-    padding: 0;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: rgba(0, 43, 85, 0.55);
-
-    border: 1px solid rgba(255, 255, 255, 0.85);
-
-    color: #fff;
-
     font-size: 15px;
   }
 
-
-  /* Dots */
-
-  .hero-slider-controls .slider-dots {
-    display: flex;
-    align-items: center;
-    gap: 7px;
+  .hero-slider {
+    height: 160px;
+    min-height: 160px;
   }
 
-
-  .hero-slider-controls .slider-dot {
-    width: 8px;
-    height: 8px;
-
-    padding: 0;
-
-    border: 0;
-    border-radius: 50%;
-
-    background: rgba(255, 255, 255, 0.55);
+  .hero-content h1 {
+    font-size: 19px;
+    letter-spacing: -0.3px;
   }
 
-
-  .hero-slider-controls .slider-dot.active {
-    width: 24px;
-
-    border-radius: 10px;
-
-    background: #fff;
+  .hero-content > p {
+    font-size: 12px;
   }
-
-
-  /* ================= OVERLAY ================= */
-
-  .hero-overlay {
-    display: none;
-  }
-
-
-  /* ================= CONTENT ================= */
-
-  .hero-container {
-    order: 2;
-
-    width: 100%;
-
-    min-height: auto;
-
-    padding: 40px 16px 25px;
-
-    display: block;
-  }
-
-
-  .hero-content {
-    width: 100%;
-    max-width: 100%;
-
-    padding: 0 0 30px;
-  }
-
-
-  /* ================= FORM ================= */
 
   .hero-form-box {
-    width: 100%;
-    max-width: 100%;
-
-    margin: 0;
-
-    padding: 25px 18px;
+    padding: 15px 12px;
   }
 
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 575px) {
-
-  .hero-slider {
-    height: 270px;
-    min-height: 270px;
+  .hero-form-box h3 {
+    font-size: 15px;
   }
 
-  .hero-slider-controls {
-    bottom: 14px;
+  .hero-form-box .form-control,
+  .hero-form-box .form-select,
+  .hero-form-submit {
+    font-size: 13px;
+    min-height: 44px;
   }
 
-  .hero-slider-controls .slider-arrow {
-    width: 35px;
-    height: 35px;
+  .section-heading h2,
+  .why-content h2,
+  .calculator-text h2 {
+    font-size: 18px;
   }
 
-}
-
-
-/* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
-
-@media (max-width: 400px) {
-
-  .hero-slider {
-    height: 240px;
-    min-height: 240px;
+  .section-heading p,
+  .calculator-text > p {
+    font-size: 13px;
   }
 
-  .hero-slider-controls {
+  .loan-card h3 {
+    font-size: 15px;
+  }
+
+  .loan-card p {
+    font-size: 13px;
+  }
+
+  .stat-box h3 {
+    font-size: 17px;
+  }
+
+  .cta-content h2 {
+    font-size: 17px;
+  }
+
+  .cta-button {
+    font-size: 13px;
+    padding: 11px 18px;
+  }
+
+  .floating-buttons {
+    right: 10px;
     bottom: 12px;
   }
 
-  .hero-slider-controls .slider-arrow {
-    width: 33px;
-    height: 33px;
+  .floating-buttons a {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
   }
-
-  .hero-container {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-
-}
-/* =========================================================
-   MOBILE - SPACE BETWEEN FORM & TRUST STRIP
-========================================================= */
-
-@media (max-width: 767px) {
-
-  .hero-form-box {
-    margin-bottom: 28px;
-  }
-
-  .trust-strip {
-    margin-top: 20px;
-  }
-
 }

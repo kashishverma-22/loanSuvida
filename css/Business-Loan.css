@@ -1,38 +1,39 @@
 /* =========================================================
-   BUSINESS LOAN PAGE
-   Loan Suvida - Premium Blue Theme
+   ROOT VARIABLES
 ========================================================= */
 
 .business-loan-page {
-  --business-blue: #005baa;
-  --business-blue-dark: #003f78;
-  --business-blue-deep: #002b55;
-  --business-blue-light: #eaf5ff;
-  --business-blue-soft: #f2f8ff;
+  --loan-blue: #005baa;
+  --loan-blue-dark: #003f78;
+  --loan-blue-deep: #002b55;
+  --loan-blue-light: #eaf5ff;
 
-  --business-white: #ffffff;
-  --business-black: #172033;
-  --business-text: #586579;
-  --business-muted: #7b8798;
-  --business-bg: #f7faff;
-  --business-border: #e3eaf2;
+  --loan-orange: #f7941d;
+  --loan-orange-dark: #e87800;
+  --loan-orange-light: #fff4e5;
 
-  --business-success: #16804a;
-  --business-danger: #dc3545;
+  --white: #ffffff;
+  --black: #172033;
 
-  --business-shadow-sm: 0 8px 25px rgba(0, 64, 120, 0.08);
-  --business-shadow-md: 0 15px 40px rgba(0, 64, 120, 0.12);
-  --business-shadow-lg: 0 22px 60px rgba(0, 45, 90, 0.18);
+  --text: #586578;
+  --muted: #7c8797;
+
+  --border: #e4e9ef;
+  --border-light: #edf1f5;
+
+  --section-bg: #f8fafc;
+  --light-bg: #f5f9fd;
+
+  --shadow-sm: 0 4px 15px rgba(0, 43, 85, 0.06);
+  --shadow-md: 0 10px 30px rgba(0, 43, 85, 0.09);
+  --shadow-lg: 0 18px 45px rgba(0, 43, 85, 0.14);
+
+  --transition: all 0.3s ease;
 
   font-family: "Poppins", sans-serif;
-  color: var(--business-black);
-  overflow: hidden;
+  color: var(--text);
+  background: var(--white);
 }
-
-
-/* =========================================================
-   COMMON
-========================================================= */
 
 .business-loan-page *,
 .business-loan-page *::before,
@@ -42,7 +43,7 @@
 
 .business-loan-page img {
   max-width: 100%;
-  display: block;
+  height: auto;
 }
 
 .business-loan-page a {
@@ -55,158 +56,136 @@
   font-family: inherit;
 }
 
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.business-loan-page .container {
+  width: 100%;
+}
+
 .business-loan-page section {
   position: relative;
 }
 
-
-/* =========================================================
-   SECTION HEADING
-========================================================= */
-
-.business-section-tag,
-.business-section-heading > span {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  color: var(--business-blue);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-}
-
-.business-section-tag::before,
-.business-section-heading > span::before {
-  content: "";
-
-  width: 28px;
-  height: 2px;
-
-  background: var(--business-blue);
-  border-radius: 20px;
-}
-
 .business-section-heading {
-  max-width: 720px;
-  margin: 0 auto 45px;
+  max-width: 760px;
+  margin: 0 auto 48px;
   text-align: center;
 }
 
-.business-section-heading h2 {
-  margin: 10px 0 12px;
+.business-section-heading > span,
+.business-section-tag {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--loan-blue);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
 
-  color: var(--business-black);
-  font-size: 35px;
-  line-height: 1.25;
+.business-section-heading h2,
+.business-overview-content h2,
+.business-why-content h2 {
+  margin: 0;
+  color: var(--black);
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.business-section-heading h2 strong,
+.business-overview-content h2 span,
+.business-why-content h2 span {
+  color: var(--loan-blue);
   font-weight: 700;
 }
 
-.business-section-heading h2 strong {
-  color: var(--business-blue);
-}
-
 .business-section-heading p {
-  margin: 0;
-
-  color: var(--business-text);
+  max-width: 680px;
+  margin: 16px auto 0;
+  color: var(--text);
   font-size: 14px;
   line-height: 1.8;
 }
 
 
 /* =========================================================
-   BUTTONS
+   COMMON BUTTONS
 ========================================================= */
 
 .business-loan-page .btn-primary-loan,
 .business-loan-page .btn-outline-loan {
-  min-height: 48px;
-  padding: 0 22px;
-
+  min-height: 52px;
+  padding: 13px 23px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
-
-  border-radius: 7px;
-
-  font-size: 13px;
+  gap: 10px;
+  border-radius: 8px;
+  font-size: 15px;
   font-weight: 600;
-
-  transition: 0.3s ease;
+  transition: var(--transition);
 }
 
 .business-loan-page .btn-primary-loan {
-  background: var(--business-blue);
-  color: #fff;
-  border: 1px solid var(--business-blue);
-
-  box-shadow: 0 8px 20px rgba(0, 91, 170, 0.22);
+  background: var(--loan-blue);
+  color: var(--white);
+  border: 1px solid var(--loan-blue);
 }
 
 .business-loan-page .btn-primary-loan:hover {
-  background: var(--business-blue-dark);
-  border-color: var(--business-blue-dark);
-  color: #fff;
-
-  transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(0, 63, 120, 0.25);
+  background: var(--loan-blue-dark);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 91, 170, 0.3);
 }
 
 .business-loan-page .btn-outline-loan {
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
-
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .business-loan-page .btn-outline-loan:hover {
-  background: #fff;
-  color: var(--business-blue);
-
-  transform: translateY(-2px);
+  background: var(--white);
+  color: var(--loan-blue);
+  border-color: var(--white);
+  transform: translateY(-3px);
 }
 
 
 /* =========================================================
-   HERO
+   HERO SECTION
+   SAME VISUAL SYSTEM AS PERSONAL LOAN HERO
 ========================================================= */
 
 .business-hero {
-  min-height: 590px;
-  padding: 65px 0;
-
+  min-height: 610px;
+  padding: 55px 0 70px;
   display: flex;
   align-items: center;
+  overflow: hidden;
 
   background:
-    linear-gradient(
-      90deg,
-      rgba(0, 43, 85, 0.78) 0%,
-      rgba(0, 63, 120, 0.65) 45%,
-      rgba(0, 91, 170, 0.48) 100%
-    ),
-    url("../image/business-banner.jpeg");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    url("../image/business-banner.png")
+    center center / cover no-repeat;
 }
 
 .business-hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
 
   background:
-    radial-gradient(
-      circle at 78% 45%,
-      rgba(255, 255, 255, 0.08),
-      transparent 32%
+    linear-gradient(
+      90deg,
+      rgba(0, 43, 85, 0.64) 0%,
+      rgba(0, 91, 170, 0.56) 100%
     );
-
-  pointer-events: none;
 }
 
 .business-hero .container {
@@ -216,121 +195,110 @@
 
 .business-hero-grid {
   display: grid;
-
   grid-template-columns:
-    minmax(0, 1.15fr)
-    minmax(350px, 0.85fr);
-
+    minmax(0, 1.2fr)
+    minmax(360px, 0.8fr);
   align-items: center;
-  gap: 55px;
+  gap: 42px;
 }
 
 .business-hero-content {
-  max-width: 650px;
+  max-width: 720px;
 }
 
 .business-badge {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
-  margin-bottom: 15px;
-  padding: 8px 14px;
-
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 50px;
-
-  background: rgba(255, 255, 255, 0.1);
-
-  color: #fff;
-  font-size: 12px;
+  margin-bottom: 18px;
+  color: var(--white);
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.8px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
 
-  backdrop-filter: blur(6px);
+.business-badge::before {
+  content: "";
+  width: 55px;
+  height: 4px;
+  display: inline-block;
+  border-radius: 10px;
+  background: var(--white);
 }
 
 .business-badge i {
-  color: #fff;
+  display: none;
 }
 
 .business-hero-content h1 {
-  margin: 0 0 17px;
-
-  color: #fff;
-  font-size: 48px;
-  line-height: 1.14;
+  margin: 0 0 18px;
+  color: var(--white);
+  font-size: clamp(40px, 4.5vw, 58px);
+  line-height: 1.08;
   font-weight: 700;
+  letter-spacing: -1.2px;
 }
 
 .business-hero-content h1 span {
   display: block;
-  color: #bfe3ff;
+  color: var(--white);
 }
 
 .business-hero-content > p {
-  max-width: 620px;
+  max-width: 690px;
   margin: 0 0 27px;
-
-  color: rgba(255, 255, 255, 0.88);
-
-  font-size: 14px;
-  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  line-height: 1.8;
 }
 
 .business-hero-buttons {
   display: flex;
+  align-items: center;
+  gap: 14px;
   flex-wrap: wrap;
-  gap: 12px;
 }
 
 .business-hero-trust {
+  margin-top: 32px;
   display: flex;
+  align-items: center;
+  gap: 25px;
   flex-wrap: wrap;
-  gap: 24px;
-
-  margin-top: 30px;
 }
 
-.hero-trust-item {
+.business-trust-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
+  color: var(--white);
 }
 
-.hero-trust-item > i {
-  width: 38px;
-  height: 38px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+.business-trust-item > i {
   flex-shrink: 0;
-
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.12);
-
-  color: #fff;
-  font-size: 15px;
+  font-size: 17px;
+  color: var(--white);
 }
 
-.hero-trust-item strong,
-.hero-trust-item span {
-  display: block;
+.business-trust-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.hero-trust-item strong {
-  color: #fff;
-  font-size: 12px;
+.business-trust-item strong {
+  color: var(--white);
+  font-size: 13px;
+  line-height: 1.3;
   font-weight: 600;
 }
 
-.hero-trust-item span {
-  margin-top: 3px;
-
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 10px;
+.business-trust-item span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  line-height: 1.4;
 }
 
 
@@ -339,63 +307,34 @@
 ========================================================= */
 
 .business-form-card {
-  padding: 28px;
-
-  border: 1px solid rgba(255, 255, 255, 0.65);
-  border-radius: 15px;
+  width: 100%;
+  max-width: 440px;
+  margin-left: auto;
+  padding: 25px;
 
   background: rgba(255, 255, 255, 0.98);
+  border-radius: 18px;
 
-  box-shadow: 0 20px 55px rgba(0, 28, 55, 0.28);
-}
-
-.business-form-icon {
-  width: 52px;
-  height: 52px;
-
-  margin-bottom: 13px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 11px;
-
-  background: var(--business-blue-light);
-  color: var(--business-blue);
-
-  font-size: 22px;
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.22);
 }
 
 .business-form-card h2 {
   margin: 0 0 7px;
-
-  color: var(--business-black);
-
-  font-size: 23px;
+  color: var(--black);
+  font-size: 18px;
   line-height: 1.3;
-}
-
-.business-form-card > p {
-  margin: 0 0 20px;
-
-  color: var(--business-text);
-
-  font-size: 12px;
-  line-height: 1.7;
+  font-weight: 700;
 }
 
 .business-form-group {
-  margin-bottom: 14px;
+  margin-bottom: 4px;
 }
 
 .business-form-group label {
   display: block;
-
-  margin-bottom: 6px;
-
-  color: var(--business-black);
-
+  margin-bottom: 5px;
+  color: var(--black);
   font-size: 12px;
   font-weight: 600;
 }
@@ -406,99 +345,78 @@
 
 .business-input-wrap > i {
   position: absolute;
-
   left: 14px;
   top: 50%;
-
+  z-index: 2;
   transform: translateY(-50%);
 
-  color: var(--business-blue);
-
-  font-size: 13px;
-
+  color: var(--loan-blue);
+  font-size: 14px;
   pointer-events: none;
 }
 
 .business-input-wrap input,
 .business-input-wrap select {
   width: 100%;
-  height: 45px;
+  min-height: 50px;
+  padding: 9px 14px 9px 40px;
 
-  padding: 0 13px 0 39px;
-
+  border: 1px solid var(--border);
+  border-radius: 8px;
   outline: none;
 
-  border: 1px solid #dce4ed;
-  border-radius: 7px;
+  background: var(--white);
+  color: var(--black);
 
-  background: #fff;
-  color: var(--business-black);
+  font-size: 14px;
+  transition: var(--transition);
+}
 
-  font-size: 12px;
+.business-input-wrap input::placeholder {
+  color: #9ba5b1;
+}
 
-  transition: 0.25s ease;
+.business-input-wrap select {
+  cursor: pointer;
+  appearance: auto;
 }
 
 .business-input-wrap input:focus,
 .business-input-wrap select:focus {
-  border-color: var(--business-blue);
-
-  box-shadow:
-    0 0 0 3px rgba(0, 91, 170, 0.09);
-}
-
-.business-input-wrap select {
-  appearance: none;
-  cursor: pointer;
-}
-
-.business-input-wrap input::placeholder {
-  color: #9aa6b5;
-}
-
-.business-input-wrap input.input-error,
-.business-input-wrap select.input-error {
-  border-color: var(--business-danger);
+  border-color: var(--loan-blue);
+  box-shadow: 0 0 0 3px rgba(0, 91, 170, 0.1);
 }
 
 .business-form-error {
-  min-height: 0;
-
-  margin-top: 4px;
-
-  color: var(--business-danger);
-
-  font-size: 10px;
+  min-height: 12px;
+  margin-top: 3px;
+  color: #dc3545;
+  font-size: 11px;
+  line-height: 1.3;
 }
 
 .business-submit-btn {
   width: 100%;
-  min-height: 47px;
-
-  margin-top: 7px;
-  padding: 0 16px;
+  min-height: 50px;
+  margin-top: 2px;
 
   border: 0;
-  border-radius: 7px;
+  border-radius: 8px;
 
-  background: var(--business-blue);
+  background: var(--loan-orange);
+  color: var(--white);
 
-  color: #fff;
-
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
 
   cursor: pointer;
-
-  transition: 0.3s ease;
+  transition: var(--transition);
 }
 
 .business-submit-btn:hover {
-  background: var(--business-blue-dark);
-
-  transform: translateY(-1px);
-
-  box-shadow: 0 8px 20px rgba(0, 63, 120, 0.2);
+  background: var(--loan-orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(247, 148, 29, 0.25);
 }
 
 .business-submit-btn i {
@@ -507,46 +425,43 @@
 
 .business-form-success {
   display: none;
+  align-items: center;
+  gap: 8px;
 
-  align-items: flex-start;
-  gap: 9px;
+  margin-top: 14px;
+  padding: 11px 12px;
 
-  margin-top: 13px;
-  padding: 11px;
+  border: 1px solid #c9ecd8;
+  border-radius: 8px;
 
-  border-radius: 7px;
+  background: #f0fbf5;
+  color: #21874f;
 
-  background: #eaf8ef;
-  color: var(--business-success);
-
-  font-size: 11px;
-  line-height: 1.55;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .business-form-success.show {
   display: flex;
 }
 
-.business-form-success i {
-  margin-top: 2px;
-}
-
 .business-form-note {
+  margin-top: 15px;
+
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   gap: 7px;
 
-  margin-top: 12px;
-
-  color: #7f8b9c;
-
-  font-size: 10px;
-  line-height: 1.55;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .business-form-note i {
   margin-top: 2px;
-  color: var(--business-blue);
+  color: var(--loan-blue);
 }
 
 
@@ -555,191 +470,133 @@
 ========================================================= */
 
 .business-overview {
-  padding: 75px 0;
-  background: #fff;
+  padding: 85px 0;
+  background: var(--white);
 }
 
 .business-overview-grid {
   display: grid;
-
-  grid-template-columns: 1fr 0.85fr;
-
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.8fr);
   align-items: center;
-  gap: 60px;
+  gap: 70px;
 }
 
 .business-overview-content {
-  max-width: 600px;
+  max-width: 680px;
 }
 
 .business-overview-content h2 {
-  margin: 10px 0 17px;
-
-  font-size: 36px;
-  line-height: 1.25;
-  font-weight: 700;
-}
-
-.business-overview-content h2 span {
-  color: var(--business-blue);
+  margin: 0 0 20px;
 }
 
 .business-overview-content > p {
-  margin: 0 0 13px;
-
-  color: var(--business-text);
-
+  margin: 0 0 14px;
+  color: var(--text);
   font-size: 14px;
   line-height: 1.85;
 }
 
 .business-check-list {
   display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 12px 22px;
-
-  margin-top: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 24px;
+  margin-top: 25px;
 }
 
-.business-check-list div {
+.business-check-list > div {
   display: flex;
   align-items: flex-start;
   gap: 9px;
 
-  color: var(--business-black);
-
-  font-size: 12px;
-  line-height: 1.55;
+  color: var(--black);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .business-check-list i {
-  margin-top: 3px;
-  color: var(--business-blue);
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--loan-blue);
 }
 
-
-/* =========================================================
-   OVERVIEW VISUAL
-========================================================= */
-
 .business-overview-visual {
-  min-height: 350px;
+  min-height: 390px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  position: relative;
-
-  border-radius: 20px;
+  padding: 35px;
+  border-radius: 22px;
 
   background:
     linear-gradient(
       145deg,
-      #eaf5ff,
-      #f8fbff
+      #eaf5ff 0%,
+      #f8fbff 55%,
+      #fff4e5 100%
     );
-
-  overflow: hidden;
-}
-
-.business-overview-visual::before,
-.business-overview-visual::after {
-  content: "";
-
-  position: absolute;
-
-  border-radius: 50%;
-}
-
-.business-overview-visual::before {
-  width: 200px;
-  height: 200px;
-
-  top: -80px;
-  right: -50px;
-
-  background: rgba(0, 91, 170, 0.08);
-}
-
-.business-overview-visual::after {
-  width: 160px;
-  height: 160px;
-
-  bottom: -65px;
-  left: -40px;
-
-  background: rgba(0, 91, 170, 0.06);
 }
 
 .business-visual-card {
-  width: min(350px, 82%);
+  width: 100%;
+  max-width: 360px;
+  padding: 40px 32px;
 
-  padding: 32px 27px;
+  border: 1px solid rgba(0, 91, 170, 0.08);
+  border-radius: 20px;
 
-  position: relative;
-  z-index: 1;
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
 
   text-align: center;
-
-  border: 1px solid rgba(0, 91, 170, 0.1);
-  border-radius: 16px;
-
-  background: #fff;
-
-  box-shadow: var(--business-shadow-md);
 }
 
 .business-visual-icon {
   width: 68px;
   height: 68px;
-
-  margin: 0 auto 16px;
+  margin: 0 auto 20px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: 50%;
+  border-radius: 18px;
 
-  background: var(--business-blue-light);
-  color: var(--business-blue);
+  background: var(--loan-blue-light);
+  color: var(--loan-blue);
 
-  font-size: 28px;
+  font-size: 26px;
 }
 
 .business-visual-card h3 {
-  margin: 0 0 8px;
-
-  font-size: 20px;
+  margin: 0 0 10px;
+  color: var(--black);
+  font-size: 22px;
+  font-weight: 700;
 }
 
 .business-visual-card p {
   margin: 0;
-
-  color: var(--business-text);
-
-  font-size: 12px;
+  color: var(--text);
+  font-size: 13px;
   line-height: 1.75;
 }
 
 .business-visual-line {
   width: 55px;
-  height: 2px;
+  height: 3px;
+  margin: 22px auto 12px;
 
-  margin: 18px auto 11px;
-
-  background: var(--business-blue);
+  border-radius: 20px;
+  background: var(--loan-orange);
 }
 
 .business-visual-card > span {
-  color: var(--business-blue);
-
+  color: var(--loan-blue);
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.4px;
 }
 
 
@@ -748,76 +605,62 @@
 ========================================================= */
 
 .business-benefits {
-  padding: 75px 0;
-  background: var(--business-bg);
+  padding: 85px 0;
+  background: var(--section-bg);
 }
 
 .business-benefits-grid {
   display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
 }
 
 .business-benefit-card {
-  padding: 27px 23px;
+  padding: 30px 26px;
 
-  border: 1px solid var(--business-border);
-  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  border-radius: 15px;
 
-  background: #fff;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
 
-  transition: 0.3s ease;
+  transition: var(--transition);
 }
 
 .business-benefit-card:hover {
-  border-color: rgba(0, 91, 170, 0.22);
-
-  box-shadow: var(--business-shadow-md);
-
   transform: translateY(-5px);
+  border-color: rgba(0, 91, 170, 0.15);
+  box-shadow: var(--shadow-md);
 }
 
 .business-benefit-icon {
-  width: 50px;
-  height: 50px;
-
-  margin-bottom: 15px;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: 10px;
+  border-radius: 14px;
 
-  background: var(--business-blue-light);
-  color: var(--business-blue);
+  background: var(--loan-blue-light);
+  color: var(--loan-blue);
 
   font-size: 20px;
-
-  transition: 0.3s ease;
-}
-
-.business-benefit-card:hover .business-benefit-icon {
-  background: var(--business-blue);
-  color: #fff;
 }
 
 .business-benefit-card h3 {
-  margin: 0 0 8px;
-
-  color: var(--business-black);
-
-  font-size: 18px;
+  margin: 0 0 9px;
+  color: var(--black);
+  font-size: 17px;
+  font-weight: 700;
 }
 
 .business-benefit-card p {
   margin: 0;
-
-  color: var(--business-text);
-
-  font-size: 12px;
+  color: var(--text);
+  font-size: 13px;
   line-height: 1.75;
 }
 
@@ -827,99 +670,83 @@
 ========================================================= */
 
 .business-types {
-  padding: 75px 0;
-  background: #fff;
+  padding: 85px 0;
+  background: var(--white);
 }
 
 .business-types-grid {
   display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .business-type-card {
-  padding: 27px 22px;
+  padding: 27px 23px;
 
-  border: 1px solid var(--business-border);
-  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  border-radius: 15px;
 
-  background: #fff;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
 
-  transition: 0.3s ease;
+  transition: var(--transition);
 }
 
 .business-type-card:hover {
-  border-color: rgba(0, 91, 170, 0.22);
-
-  box-shadow: var(--business-shadow-md);
-
   transform: translateY(-5px);
+  border-color: rgba(0, 91, 170, 0.16);
+  box-shadow: var(--shadow-md);
 }
 
 .business-type-icon {
-  width: 54px;
-  height: 54px;
-
-  margin-bottom: 16px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 18px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: 10px;
+  border-radius: 13px;
 
-  background: var(--business-blue-light);
-  color: var(--business-blue);
+  background: var(--loan-orange-light);
+  color: var(--loan-orange-dark);
 
-  font-size: 21px;
+  font-size: 19px;
 }
 
 .business-type-card h3 {
-  min-height: 48px;
-
-  margin: 0 0 8px;
-
-  color: var(--business-black);
-
-  font-size: 17px;
+  margin: 0 0 10px;
+  color: var(--black);
+  font-size: 16px;
   line-height: 1.4;
-}
-
-.business-type-card p {
-  min-height: 84px;
-
-  margin: 0 0 16px;
-
-  color: var(--business-text);
-
-  font-size: 12px;
-  line-height: 1.75;
-}
-
-.business-type-card a {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-
-  color: var(--business-blue);
-
-  font-size: 11px;
   font-weight: 700;
 }
 
-.business-type-card a:hover {
-  color: var(--business-blue-dark);
+.business-type-card p {
+  min-height: 72px;
+  margin: 0 0 17px;
+
+  color: var(--text);
+  font-size: 12.5px;
+  line-height: 1.7;
 }
 
-.business-type-card a i {
-  font-size: 10px;
-  transition: 0.2s;
+.business-type-card > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--loan-blue);
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: var(--transition);
 }
 
-.business-type-card a:hover i {
-  transform: translateX(3px);
+.business-type-card > a:hover {
+  color: var(--loan-orange-dark);
+  gap: 11px;
 }
 
 
@@ -928,43 +755,37 @@
 ========================================================= */
 
 .business-eligibility {
-  padding: 75px 0;
-  background: var(--business-bg);
+  padding: 85px 0;
+  background: var(--section-bg);
 }
 
 .business-eligibility-grid {
   display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
 }
 
 .business-eligibility-card {
-  padding: 29px;
+  padding: 32px;
 
-  border: 1px solid var(--business-border);
-  border-radius: 14px;
+  border: 1px solid var(--border-light);
+  border-radius: 17px;
 
-  background: #fff;
-
-  box-shadow: var(--business-shadow-sm);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
 }
 
 .business-card-title {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 13px;
 
-  padding-bottom: 16px;
-  margin-bottom: 17px;
-
-  border-bottom: 1px solid var(--business-border);
+  margin-bottom: 24px;
 }
 
 .business-small-icon {
-  width: 45px;
-  height: 45px;
+  width: 46px;
+  height: 46px;
 
   display: flex;
   align-items: center;
@@ -972,187 +793,177 @@
 
   flex-shrink: 0;
 
-  border-radius: 9px;
+  border-radius: 12px;
+  background: var(--loan-blue-light);
+  color: var(--loan-blue);
 
-  background: var(--business-blue-light);
-  color: var(--business-blue);
-
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .business-card-title h3 {
   margin: 0;
-
+  color: var(--black);
   font-size: 19px;
+  font-weight: 700;
 }
 
 .business-eligibility-card ul {
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
 .business-eligibility-card li {
+  position: relative;
+
   display: flex;
   align-items: flex-start;
   gap: 10px;
 
-  margin-bottom: 12px;
+  padding: 10px 0;
 
-  color: var(--business-text);
+  border-bottom: 1px solid var(--border-light);
 
-  font-size: 14px;
-  line-height: 1.7;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.65;
 }
 
 .business-eligibility-card li:last-child {
-  margin-bottom: 0;
+  border-bottom: 0;
 }
 
 .business-eligibility-card li i {
-  margin-top: 5px;
-
-  color: var(--business-blue);
-
-  font-size: 11px;
+  flex-shrink: 0;
+  margin-top: 4px;
+  color: var(--loan-blue);
+  font-size: 12px;
 }
 
 
 /* =========================================================
-   INTEREST
+   INTEREST RATES
 ========================================================= */
 
 .business-interest {
-  padding: 75px 0;
-  background: #fff;
+  padding: 85px 0;
+  background: var(--white);
 }
 
 .business-interest-grid {
   display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
 }
 
 .business-interest-card {
-  padding: 27px 23px;
+  padding: 30px 26px;
 
-  text-align: center;
+  border: 1px solid var(--border-light);
+  border-radius: 15px;
 
-  border: 1px solid var(--business-border);
-  border-radius: 12px;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
 
-  background: #fff;
-
-  transition: 0.3s ease;
+  transition: var(--transition);
 }
 
 .business-interest-card:hover {
-  border-color: rgba(0, 91, 170, 0.2);
-
-  box-shadow: var(--business-shadow-md);
-
   transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .business-interest-icon {
-  width: 54px;
-  height: 54px;
-
-  margin: 0 auto 15px;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: 50%;
+  border-radius: 14px;
 
-  background: var(--business-blue-light);
-  color: var(--business-blue);
+  background: var(--loan-blue-light);
+  color: var(--loan-blue);
 
-  font-size: 21px;
+  font-size: 20px;
 }
 
 .business-interest-card h3 {
-  margin: 0 0 8px;
-
-  font-size: 18px;
+  margin: 0 0 9px;
+  color: var(--black);
+  font-size: 17px;
+  font-weight: 700;
 }
 
 .business-interest-card p {
   margin: 0;
-
-  color: var(--business-text);
-
-  font-size: 12px;
+  color: var(--text);
+  font-size: 13px;
   line-height: 1.75;
 }
 
 .business-interest-note {
-  max-width: 850px;
-
-  margin: 25px auto 0;
-  padding: 15px 17px;
+  margin-top: 25px;
+  padding: 17px 20px;
 
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
 
-  border-left: 3px solid var(--business-blue);
-  border-radius: 5px;
+  border: 1px solid #dceaf6;
+  border-radius: 10px;
 
-  background: var(--business-blue-soft);
+  background: #f5faff;
 }
 
 .business-interest-note > i {
+  flex-shrink: 0;
   margin-top: 3px;
-  color: var(--business-blue);
+  color: var(--loan-blue);
 }
 
 .business-interest-note p {
   margin: 0;
-
-  color: var(--business-text);
-
-  font-size: 11px;
+  color: var(--text);
+  font-size: 12px;
   line-height: 1.7;
+}
+
+.business-interest-note strong {
+  color: var(--black);
 }
 
 
 /* =========================================================
-   EMI
+   EMI CALCULATOR
 ========================================================= */
 
 .business-emi {
-  padding: 75px 0;
-  background: var(--business-bg);
+  padding: 85px 0;
+  background: var(--section-bg);
 }
 
 .business-emi-wrapper {
   display: grid;
-
-  grid-template-columns: 1.1fr 0.9fr;
-
+  grid-template-columns: minmax(0, 1fr) minmax(330px, 0.72fr);
   gap: 25px;
-
   align-items: stretch;
 }
 
 .business-emi-calculator {
-  padding: 29px;
+  padding: 32px;
 
-  border: 1px solid var(--business-border);
-  border-radius: 14px;
+  border: 1px solid var(--border-light);
+  border-radius: 18px;
 
-  background: #fff;
-
-  box-shadow: var(--business-shadow-sm);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
 }
 
 .business-emi-field {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .business-emi-field:last-child {
@@ -1163,164 +974,188 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 15px;
 
-  margin-bottom: 11px;
+  margin-bottom: 13px;
 }
 
 .emi-field-top label {
-  color: var(--business-black);
-
+  margin: 0;
+  color: var(--black);
   font-size: 13px;
   font-weight: 600;
 }
 
 .emi-field-top strong {
-  color: var(--business-blue);
-
+  color: var(--loan-blue);
   font-size: 14px;
+  font-weight: 700;
 }
 
 .business-emi-field input[type="range"] {
   width: 100%;
-  height: 6px;
-
+  height: 5px;
   padding: 0;
 
-  accent-color: var(--business-blue);
+  appearance: none;
+  -webkit-appearance: none;
+
+  border-radius: 10px;
+  outline: none;
+
+  background: #dce8f2;
+  cursor: pointer;
+}
+
+.business-emi-field input[type="range"]::-webkit-slider-thumb {
+  width: 18px;
+  height: 18px;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: 3px solid var(--white);
+  border-radius: 50%;
+
+  background: var(--loan-blue);
+  box-shadow: 0 2px 8px rgba(0, 91, 170, 0.3);
+
+  cursor: pointer;
+}
+
+.business-emi-field input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+
+  border: 3px solid var(--white);
+  border-radius: 50%;
+
+  background: var(--loan-blue);
+  box-shadow: 0 2px 8px rgba(0, 91, 170, 0.3);
 
   cursor: pointer;
 }
 
 .emi-range-labels {
+  margin-top: 8px;
+
   display: flex;
+  align-items: center;
   justify-content: space-between;
 
-  margin-top: 6px;
-
-  color: var(--business-muted);
-
+  color: var(--muted);
   font-size: 10px;
 }
 
 .business-emi-result {
-  padding: 30px;
+  padding: 32px;
 
-  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 18px;
 
   background:
     linear-gradient(
       145deg,
-      var(--business-blue-dark),
-      var(--business-blue)
+      var(--loan-blue-deep),
+      var(--loan-blue)
     );
 
-  color: #fff;
-
-  box-shadow: var(--business-shadow-md);
+  color: var(--white);
+  box-shadow: var(--shadow-md);
 }
 
 .emi-result-heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 15px;
 
-  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 12px;
+}
 
+.emi-result-heading span {
+  color: rgba(255, 255, 255, 0.78);
   font-size: 12px;
+  font-weight: 500;
 }
 
 .emi-result-heading i {
-  color: #fff;
-  font-size: 19px;
+  font-size: 18px;
 }
 
-.business-emi-result h3 {
-  margin: 9px 0 21px;
+.business-emi-result > h3 {
+  margin: 0 0 25px;
 
-  color: #fff;
-
-  font-size: 36px;
-  line-height: 1.2;
+  color: var(--white);
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 700;
 }
 
 .emi-result-list {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 12px;
-
-  padding: 17px 0;
-
-  margin-bottom: 20px;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  margin-bottom: 25px;
 }
 
-.emi-result-list div span,
-.emi-result-list div strong {
-  display: block;
-}
-
-.emi-result-list span {
-  margin-bottom: 4px;
-
-  color: rgba(255, 255, 255, 0.65);
-
-  font-size: 10px;
-}
-
-.emi-result-list strong {
-  color: #fff;
-
-  font-size: 14px;
-}
-
-.business-emi-btn {
-  width: 100%;
-  min-height: 46px;
+.emi-result-list > div {
+  padding: 12px 0;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 15px;
 
-  gap: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
 
-  border-radius: 7px;
+.emi-result-list > div:last-child {
+  border-bottom: 0;
+}
 
-  background: #fff;
-  color: var(--business-blue);
-
+.emi-result-list span {
+  color: rgba(255, 255, 255, 0.7);
   font-size: 12px;
-  font-weight: 700;
+}
 
-  transition: 0.3s ease;
+.emi-result-list strong {
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.business-emi-btn {
+  min-height: 48px;
+  padding: 12px 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border-radius: 8px;
+
+  background: var(--loan-orange);
+  color: var(--white);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: var(--transition);
 }
 
 .business-emi-btn:hover {
-  background: var(--business-blue-light);
-
-  color: var(--business-blue-dark);
-
+  background: var(--loan-orange-dark);
+  color: var(--white);
   transform: translateY(-2px);
 }
 
 .business-emi-result small {
-  display: block;
+  margin-top: 14px;
 
-  margin-top: 12px;
-
-  color: rgba(255, 255, 255, 0.62);
-
-  font-size: 9px;
-  line-height: 1.5;
-
-  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 10px;
+  line-height: 1.6;
 }
 
 
@@ -1329,81 +1164,78 @@
 ========================================================= */
 
 .business-process {
-  padding: 75px 0;
-  background: #fff;
+  padding: 85px 0;
+  background: var(--white);
 }
 
 .business-process-grid {
   display: grid;
-
-  grid-template-columns: repeat(5, 1fr);
-
-  gap: 16px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .business-process-item {
   position: relative;
 
-  padding: 25px 18px;
+  padding: 25px 20px;
+
+  border: 1px solid var(--border-light);
+  border-radius: 15px;
+
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
 
   text-align: center;
-
-  border: 1px solid var(--business-border);
-  border-radius: 12px;
-
-  background: #fff;
-
-  transition: 0.3s ease;
+  transition: var(--transition);
 }
 
 .business-process-item:hover {
-  box-shadow: var(--business-shadow-sm);
-
-  transform: translateY(-4px);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
 }
 
 .process-number {
   position: absolute;
+  top: 13px;
+  right: 15px;
 
-  top: 10px;
-  right: 12px;
-
-  color: rgba(0, 91, 170, 0.13);
-
+  color: rgba(0, 91, 170, 0.12);
   font-size: 20px !important;
+  line-height: 1;
   font-weight: 800;
 }
 
 .process-icon {
-  width: 52px;
-  height: 52px;
-
-  margin: 0 auto 14px;
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 17px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: 50%;
+  border-radius: 15px;
 
-  background: var(--business-blue-light);
-  color: var(--business-blue);
+  background: var(--loan-blue-light);
+  color: var(--loan-blue);
 
-  font-size: 19px;
+  font-size: 20px;
 }
 
 .business-process-item h3 {
-  margin: 0 0 7px;
+  margin: 0 0 8px;
 
+  color: var(--black);
   font-size: 16px;
+  font-weight: 700;
 }
 
 .business-process-item p {
+  min-height: 63px;
   margin: 0;
 
-  color: var(--business-text);
-
-  font-size: 11px;
+  color: var(--text);
+  font-size: 11.5px;
   line-height: 1.7;
 }
 
@@ -1413,176 +1245,171 @@
 ========================================================= */
 
 .business-why {
-  padding: 75px 0;
-  background: var(--business-bg);
+  padding: 85px 0;
+  background: var(--section-bg);
 }
 
 .business-why-grid {
   display: grid;
-
-  grid-template-columns: 0.8fr 1.2fr;
-
+  grid-template-columns: minmax(360px, 0.85fr) minmax(0, 1.15fr);
   align-items: center;
-
-  gap: 60px;
+  gap: 75px;
 }
 
 .business-why-visual {
-  min-height: 360px;
-
   position: relative;
+  min-height: 430px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(0, 91, 170, 0.13),
+      transparent 62%
+    );
 }
 
 .why-circle-main {
-  width: 270px;
-  height: 270px;
+  width: 240px;
+  height: 240px;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  flex-direction: column;
-
-  border: 15px solid rgba(0, 91, 170, 0.08);
+  border: 1px solid rgba(0, 91, 170, 0.15);
   border-radius: 50%;
 
-  background: #fff;
-
-  box-shadow: var(--business-shadow-md);
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
 
   text-align: center;
 }
 
 .why-circle-main i {
-  margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 13px;
 
-  color: var(--business-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  font-size: 43px;
+  border-radius: 50%;
+
+  background: var(--loan-blue-light);
+  color: var(--loan-blue);
+
+  font-size: 23px;
 }
 
 .why-circle-main strong {
-  color: var(--business-blue);
-
-  font-size: 22px;
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .why-circle-main span {
-  margin-top: 4px;
-
-  color: var(--business-text);
-
+  margin-top: 5px;
+  color: var(--muted);
   font-size: 10px;
 }
 
 .why-floating-card {
   position: absolute;
 
+  min-width: 175px;
+  padding: 12px 15px;
+
   display: flex;
   align-items: center;
+  gap: 9px;
 
-  gap: 8px;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
 
-  padding: 10px 13px;
+  background: var(--white);
+  box-shadow: var(--shadow-md);
 
-  border: 1px solid var(--business-border);
-  border-radius: 8px;
-
-  background: #fff;
-
-  box-shadow: var(--business-shadow-sm);
-
-  color: var(--business-black);
-
-  font-size: 10px;
+  color: var(--black);
+  font-size: 11px;
   font-weight: 600;
 }
 
 .why-floating-card i {
-  color: var(--business-blue);
+  color: var(--loan-blue);
 }
 
 .why-card-one {
-  top: 45px;
-  left: 5px;
+  top: 72px;
+  left: 0;
 }
 
 .why-card-two {
   right: 0;
-  bottom: 45px;
+  bottom: 70px;
+}
+
+.business-why-content {
+  max-width: 680px;
 }
 
 .business-why-content h2 {
-  margin: 10px 0 14px;
-
-  font-size: 36px;
-  line-height: 1.25;
-}
-
-.business-why-content h2 span {
-  display: block;
-
-  color: var(--business-blue);
+  margin: 0 0 18px;
 }
 
 .business-why-content > p {
-  margin: 0 0 24px;
+  margin: 0 0 27px;
 
-  color: var(--business-text);
-
-  font-size: 13px;
+  color: var(--text);
+  font-size: 14px;
   line-height: 1.8;
 }
 
 .business-why-list {
   display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 20px 24px;
+  gap: 18px;
 }
 
 .business-why-list > div {
-  display: flex;
-  align-items: flex-start;
-
-  gap: 11px;
+  display: grid;
+  grid-template-columns: 45px minmax(0, 1fr);
+  gap: 13px;
 }
 
 .why-list-icon {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  flex-shrink: 0;
+  border-radius: 11px;
 
-  border-radius: 8px;
+  background: var(--loan-blue-light);
+  color: var(--loan-blue);
 
-  background: var(--business-blue-light);
-  color: var(--business-blue);
-
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .business-why-list h3 {
   margin: 0 0 4px;
-
-  font-size: 14px;
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .business-why-list p {
   margin: 0;
-
-  color: var(--business-text);
-
-  font-size: 11px;
+  color: var(--text);
+  font-size: 12px;
   line-height: 1.65;
 }
 
@@ -1592,8 +1419,8 @@
 ========================================================= */
 
 .business-faq {
-  padding: 75px 0;
-  background: #fff;
+  padding: 85px 0;
+  background: var(--white);
 }
 
 .business-faq-wrapper {
@@ -1604,111 +1431,107 @@
 .business-faq-item {
   margin-bottom: 10px;
 
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+
+  background: var(--white);
   overflow: hidden;
 
-  border: 1px solid var(--business-border);
-  border-radius: 9px;
-
-  background: #fff;
-
-  transition: 0.25s ease;
+  transition: var(--transition);
 }
 
-.business-faq-item.active {
-  border-color: rgba(0, 91, 170, 0.22);
-
-  box-shadow: var(--business-shadow-sm);
+.business-faq-item:hover {
+  border-color: rgba(0, 91, 170, 0.15);
 }
 
 .business-faq-question {
   width: 100%;
-  min-height: 58px;
-
-  padding: 15px 18px;
+  min-height: 62px;
+  padding: 17px 20px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  gap: 15px;
+  gap: 20px;
 
   border: 0;
   outline: none;
 
-  background: #fff;
+  background: transparent;
+  color: var(--black);
 
-  color: var(--business-black);
-
-  text-align: left;
-
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
 
+  text-align: left;
   cursor: pointer;
 }
 
 .business-faq-question i {
-  width: 27px;
-  height: 27px;
+  flex-shrink: 0;
+
+  width: 28px;
+  height: 28px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  flex-shrink: 0;
-
   border-radius: 50%;
 
-  background: var(--business-blue-light);
-  color: var(--business-blue);
+  background: var(--loan-blue-light);
+  color: var(--loan-blue);
 
-  font-size: 10px;
+  font-size: 11px;
 
-  transition: 0.3s ease;
+  transition: var(--transition);
 }
 
 .business-faq-item.active .business-faq-question i {
-  background: var(--business-blue);
-  color: #fff;
+  transform: rotate(45deg);
+  background: var(--loan-blue);
+  color: var(--white);
 }
 
 .business-faq-answer {
   max-height: 0;
-
   overflow: hidden;
 
-  transition: max-height 0.35s ease;
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease;
+}
+
+.business-faq-item.active .business-faq-answer {
+  max-height: 300px;
 }
 
 .business-faq-answer p {
   margin: 0;
+  padding: 0 20px 19px;
 
-  padding: 0 18px 18px;
-
-  color: var(--business-text);
-
-  font-size: 12px;
+  color: var(--text);
+  font-size: 13px;
   line-height: 1.8;
 }
 
 
 /* =========================================================
-   FINAL APPLY
+   FINAL APPLY CTA
 ========================================================= */
 
 .business-apply {
+  min-height: 390px;
   padding: 75px 0;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 43, 85, 0.95),
-      rgba(0, 91, 170, 0.88)
-    ),
-    url("../image/business-banner.jpg");
+  display: flex;
+  align-items: center;
 
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+
+  background:
+    url("../image/business-banner.png")
+    center center / cover no-repeat;
 }
 
 .business-apply-overlay {
@@ -1716,20 +1539,21 @@
   inset: 0;
 
   background:
-    radial-gradient(
-      circle at 80% 50%,
-      rgba(255, 255, 255, 0.08),
-      transparent 35%
+    linear-gradient(
+      110deg,
+      rgba(0, 43, 85, 0.45),
+      rgba(0, 91, 170, 0.66)
     );
 }
 
-.business-apply-content {
+.business-apply .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+}
 
-  max-width: 780px;
-
-  margin: auto;
+.business-apply-content {
+  max-width: 720px;
+  margin: 0 auto;
 
   text-align: center;
 }
@@ -1739,47 +1563,48 @@
   align-items: center;
   gap: 8px;
 
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 
-  color: #fff;
-
+  color: var(--white);
   font-size: 11px;
   font-weight: 700;
+  letter-spacing: 1.8px;
+}
 
-  letter-spacing: 1.2px;
+.business-apply-badge i {
+  color: var(--loan-orange);
 }
 
 .business-apply-content h2 {
-  margin: 0 0 11px;
+  margin: 0 0 15px;
 
-  color: #fff;
-
-  font-size: 40px;
-  line-height: 1.25;
+  color: var(--white);
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.8px;
 }
 
 .business-apply-content h2 span {
-  color: #bfe3ff;
+  display: block;
+  color: var(--white);
 }
 
 .business-apply-content > p {
-  max-width: 680px;
-
-  margin: 0 auto 24px;
+  max-width: 650px;
+  margin: 0 auto 25px;
 
   color: rgba(255, 255, 255, 0.82);
-
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8;
 }
 
 .business-apply-buttons {
   display: flex;
   justify-content: center;
-
+  align-items: center;
+  gap: 13px;
   flex-wrap: wrap;
-
-  gap: 11px;
 }
 
 
@@ -1788,542 +1613,246 @@
 ========================================================= */
 
 .business-disclaimer {
-  padding: 24px 0;
-
-  background: #f2f5f9;
+  padding: 35px 0;
+  background: var(--white);
 }
 
 .business-disclaimer-box {
+  padding: 22px 25px;
+
   display: flex;
   align-items: flex-start;
+  gap: 15px;
 
-  gap: 13px;
+  border: 1px solid #dfeaf3;
+  border-radius: 12px;
 
-  padding: 17px 19px;
-
-  border: 1px solid #e0e6ed;
-  border-radius: 9px;
-
-  background: #fff;
+  background: #f8fbfd;
 }
 
 .business-disclaimer-box > i {
-  margin-top: 3px;
+  flex-shrink: 0;
+  margin-top: 4px;
 
-  color: var(--business-blue);
-
-  font-size: 16px;
+  color: var(--loan-blue);
+  font-size: 20px;
 }
 
 .business-disclaimer-box h3 {
-  margin: 0 0 6px;
-
-  color: var(--business-black);
-
-  font-size: 13px;
+  margin: 0 0 7px;
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .business-disclaimer-box p {
   margin: 0;
-
-  color: var(--business-text);
-
-  font-size: 10px;
+  color: var(--text);
+  font-size: 11.5px;
   line-height: 1.75;
 }
 
 
 /* =========================================================
-   1199px
+   =========================================================
+   RESPONSIVE SYSTEM  (NEW)
+   Large Desktop → Laptop → Tablet → Mobile → Small Mobile
+   Breakpoints: 1399 / 1199 / 991 / 767 / 575 / 480 / 400 / 360 / 320
+   =========================================================
 ========================================================= */
-
-@media (max-width: 1199px) {
-
-  .business-hero-grid {
-    gap: 38px;
-  }
-
-  .business-hero-content h1 {
-    font-size: 44px;
-  }
-
-  .business-types-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .business-process-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .business-why-grid {
-    gap: 42px;
-  }
-}
 
 
 /* =========================================================
-   991px
+   RESPONSIVE - 1399px  (SMALL DESKTOP / LARGE LAPTOP)
 ========================================================= */
 
-@media (max-width: 991px) {
-
-  .business-hero {
-    min-height: auto;
-    padding: 60px 0;
-
-    background-position: 65% center;
-  }
-
-  .business-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 38px;
-  }
-
-  .business-hero-content {
-    max-width: 720px;
-  }
-
-  .business-form-card {
-    max-width: 570px;
-    width: 100%;
-
-    margin: 0 auto;
-  }
-
-  .business-overview-grid,
-  .business-why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .business-overview-content {
-    max-width: 100%;
-  }
-
-  .business-overview-visual {
-    max-width: 620px;
-    width: 100%;
-
-    margin: 0 auto;
-  }
-
-  .business-benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .business-types-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .business-interest-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .business-emi-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .business-why-visual {
-    max-width: 570px;
-    width: 100%;
-
-    margin: auto;
-  }
-
-  .business-why-content {
-    max-width: 720px;
-
-    margin: auto;
-  }
-}
-
-
-/* =========================================================
-   767px
-========================================================= */
-
-@media (max-width: 767px) {
-
+@media (max-width: 1399px) {
   .business-loan-page .container {
-    width: 100%;
-  }
-
-  .business-hero {
-    padding: 50px 0;
-
-    background-position: 75% center;
-  }
-
-  .business-hero-content {
-    text-align: center;
-  }
-
-  .business-badge {
-    font-size: 10px;
-  }
-
-  .business-hero-content h1 {
-    font-size: 36px;
-    line-height: 1.18;
-  }
-
-  .business-hero-content > p {
-    font-size: 13px;
-    line-height: 1.75;
-  }
-
-  .business-hero-buttons {
-    justify-content: center;
-  }
-
-  .business-hero-trust {
-    justify-content: center;
-    gap: 16px;
-  }
-
-  .hero-trust-item {
-    min-width: 135px;
-  }
-
-  .business-form-card {
-    padding: 24px;
-  }
-
-  .business-section-heading {
-    margin-bottom: 32px;
-  }
-
-  .business-section-heading h2 {
-    font-size: 30px;
-  }
-
-  .business-section-heading p {
-    font-size: 13px;
-  }
-
-  .business-overview,
-  .business-benefits,
-  .business-types,
-  .business-eligibility,
-  .business-interest,
-  .business-emi,
-  .business-process,
-  .business-why,
-  .business-faq,
-  .business-apply {
-    padding: 60px 0;
-  }
-
-  .business-overview-content h2,
-  .business-why-content h2 {
-    font-size: 31px;
-  }
-
-  .business-overview-content > p {
-    font-size: 13px;
-  }
-
-  .business-check-list {
-    grid-template-columns: 1fr;
-  }
-
-  .business-benefits-grid,
-  .business-types-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .business-eligibility-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .business-interest-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .business-process-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .business-why-content {
-    text-align: left;
-  }
-
-  .business-why-list {
-    grid-template-columns: 1fr;
-  }
-
-  .business-apply-content h2 {
-    font-size: 32px;
-  }
-}
-
-
-/* =========================================================
-   575px
-========================================================= */
-
-@media (max-width: 575px) {
-
-  .business-hero {
-    padding: 45px 0;
-
-    background-position: 80% center;
-  }
-
-  .business-hero-content h1 {
-    font-size: 32px;
-  }
-
-  .business-hero-content > p {
-    font-size: 12px;
-  }
-
-  .business-loan-page .btn-primary-loan,
-  .business-loan-page .btn-outline-loan {
-    width: 100%;
-
-    min-height: 46px;
-
-    font-size: 12px;
-  }
-
-  .business-hero-buttons {
-    width: 100%;
-  }
-
-  .business-hero-trust {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 11px;
-
-    text-align: left;
-  }
-
-  .hero-trust-item {
-    min-width: 0;
-  }
-
-  .business-form-card {
-    padding: 21px;
-  }
-
-  .business-form-card h2 {
-    font-size: 20px;
-  }
-
-  .business-benefits-grid,
-  .business-types-grid,
-  .business-process-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .business-benefit-card,
-  .business-type-card {
-    padding: 22px 18px;
-  }
-
-  .business-type-card h3,
-  .business-type-card p {
-    min-height: auto;
-  }
-
-  .business-eligibility-card {
-    padding: 22px;
-  }
-
-  .business-emi-calculator,
-  .business-emi-result {
-    padding: 23px;
-  }
-
-  .business-emi-result h3 {
-    font-size: 30px;
-  }
-
-  .emi-result-list {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .business-why-visual {
-    min-height: 300px;
-  }
-
-  .why-circle-main {
-    width: 220px;
-    height: 220px;
-
-    border-width: 12px;
-  }
-
-  .why-circle-main i {
-    font-size: 35px;
-  }
-
-  .why-circle-main strong {
-    font-size: 19px;
-  }
-
-  .why-card-one {
-    left: 0;
-    top: 20px;
-  }
-
-  .why-card-two {
-    right: 0;
-    bottom: 20px;
-  }
-
-  .business-apply-content h2 {
-    font-size: 29px;
-  }
-
-  .business-disclaimer-box {
-    padding: 14px;
-  }
-}
-
-
-/* =========================================================
-   480px
-========================================================= */
-
-@media (max-width: 480px) {
-
-  .business-hero {
-    background-position: 84% center;
-  }
-
-  .business-hero-content h1 {
-    font-size: 29px;
-  }
-
-  .business-section-heading h2 {
-    font-size: 27px;
-  }
-
-  .business-overview-content h2,
-  .business-why-content h2 {
-    font-size: 28px;
-  }
-
-  .business-section-heading p {
-    font-size: 12px;
-  }
-
-  .business-form-card {
-    border-radius: 11px;
-  }
-
-  .business-input-wrap input,
-  .business-input-wrap select {
-    height: 43px;
-    font-size: 11px;
-  }
-
-  .business-overview-visual {
-    min-height: 280px;
-  }
-
-  .business-visual-card {
-    padding: 25px 20px;
-  }
-
-  .business-visual-icon {
-    width: 58px;
-    height: 58px;
-
-    font-size: 23px;
-  }
-
-  .business-check-list div {
-    font-size: 11px;
-  }
-
-  .business-why-list h3 {
-    font-size: 13px;
-  }
-
-  .business-why-list p {
-    font-size: 10px;
-  }
-
-  .business-faq-question {
-    min-height: 52px;
-
-    padding: 13px 14px;
-
-    font-size: 11px;
-  }
-
-  .business-faq-answer p {
-    padding: 0 14px 15px;
-
-    font-size: 10.5px;
-  }
-}
-
-
-/* =========================================================
-   400px
-========================================================= */
-
-@media (max-width: 400px) {
-
-  .business-hero {
-    padding: 38px 0;
-
-    background-position: 87% center;
-  }
-
-  .business-hero-content h1 {
-    font-size: 27px;
-  }
-
-  .business-hero-content > p {
-    font-size: 11px;
-  }
-
-  .business-badge {
-    font-size: 9px;
-
-    padding: 7px 10px;
-  }
-
-  .business-hero-trust {
-    grid-template-columns: 1fr;
-
-    max-width: 240px;
-
+    width: min(1140px, calc(100% - 40px));
     margin-left: auto;
     margin-right: auto;
   }
 
-  .hero-trust-item {
-    width: 100%;
+  .business-hero-grid { gap: 36px; }
+  .business-hero-content h1 { font-size: clamp(38px, 4.4vw, 52px); }
+
+  .business-overview-grid { gap: 55px; }
+  .business-why-grid { gap: 55px; }
+
+  .business-types-grid { gap: 18px; }
+  .business-process-grid { gap: 16px; }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1199px  (LAPTOP / TABLET LANDSCAPE)
+========================================================= */
+
+@media (max-width: 1199px) {
+  .business-loan-page .container {
+    width: min(960px, calc(100% - 36px));
+    margin-left: auto;
+    margin-right: auto;
   }
 
+  /* HERO */
+  .business-hero { min-height: 560px; padding: 50px 0 60px; }
+  .business-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.9fr);
+    gap: 30px;
+  }
+  .business-hero-content h1 { font-size: clamp(36px, 4.4vw, 46px); }
+  .business-hero-content > p { font-size: 14.5px; }
+  .business-hero-trust { gap: 18px; }
+  .business-form-card { max-width: 400px; padding: 22px 20px; }
+
+  /* SECTION SPACING */
+  .business-overview,
+  .business-benefits,
+  .business-types,
+  .business-eligibility,
+  .business-interest,
+  .business-emi,
+  .business-process,
+  .business-why,
+  .business-faq { padding: 70px 0; }
+
+  .business-section-heading { margin-bottom: 42px; }
+
+  /* OVERVIEW */
+  .business-overview-grid { gap: 45px; }
+  .business-overview-visual { min-height: 350px; padding: 28px; }
+  .business-visual-card { padding: 34px 26px; }
+
+  /* BENEFITS + INTEREST */
+  .business-benefits-grid,
+  .business-interest-grid { gap: 18px; }
+  .business-benefit-card,
+  .business-interest-card { padding: 26px 22px; }
+
+  /* TYPES */
+  .business-types-grid { gap: 16px; }
+  .business-type-card { padding: 24px 18px; }
+  .business-type-card p { min-height: 92px; font-size: 12px; }
+
+  /* ELIGIBILITY */
+  .business-eligibility-grid { gap: 20px; }
+  .business-eligibility-card { padding: 28px 24px; }
+
+  /* EMI */
+  .business-emi-wrapper { gap: 20px; }
+  .business-emi-calculator,
+  .business-emi-result { padding: 26px 22px; }
+  .business-emi-result > h3 { font-size: 30px; }
+
+  /* PROCESS */
+  .business-process-grid { gap: 14px; }
+  .business-process-item { padding: 22px 15px; }
+  .business-process-item h3 { font-size: 15px; }
+  .business-process-item p { min-height: 80px; }
+
+  /* WHY */
+  .business-why-grid { gap: 45px; }
+  .business-why-visual { min-height: 400px; }
+  .why-circle-main { width: 215px; height: 215px; }
+  .why-floating-card { min-width: 160px; }
+
+  /* CTA */
+  .business-apply { min-height: 350px; padding: 65px 0; }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 991px  (TABLET PORTRAIT)
+   All 2-column layouts stack here
+========================================================= */
+
+@media (max-width: 991px) {
+  .business-loan-page { overflow-x: hidden; }
+
+  .business-loan-page .container {
+    width: min(720px, calc(100% - 32px));
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* HERO */
+  .business-hero { min-height: auto; padding: 55px 0 60px; }
+  .business-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+  .business-hero-content { max-width: 100%; }
+  .business-hero-content h1 { font-size: clamp(34px, 5.4vw, 44px); }
+  .business-hero-content > p { max-width: 100%; }
   .business-form-card {
-    padding: 18px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .business-form-card h2 {
-    font-size: 19px;
+  /* OVERVIEW */
+  .business-overview-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 38px;
+  }
+  .business-overview-content { max-width: 100%; }
+  .business-overview-visual {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    min-height: 330px;
   }
 
-  .business-section-tag,
-  .business-section-heading > span {
-    font-size: 10px;
+  /* BENEFITS / TYPES / INTEREST */
+  .business-benefits-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .business-types-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .business-type-card p { min-height: auto; font-size: 12.5px; }
+  .business-interest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  /* ELIGIBILITY */
+  .business-eligibility-grid { grid-template-columns: minmax(0, 1fr); }
+
+  /* EMI */
+  .business-emi-wrapper { grid-template-columns: minmax(0, 1fr); }
+  .business-emi-result { max-width: 100%; }
+
+  /* PROCESS */
+  .business-process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 20px;
+  }
+  .business-process-item p { min-height: auto; }
+
+  /* WHY — content first, visual after */
+  .business-why-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+  .business-why-content { order: 1; max-width: 100%; }
+  .business-why-visual {
+    order: 2;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    min-height: 380px;
   }
 
-  .business-section-heading h2 {
-    font-size: 25px;
-  }
+  /* CTA + HEADINGS */
+  .business-section-heading { margin-bottom: 38px; }
+  .business-apply { min-height: auto; padding: 62px 0; }
+}
 
-  .business-overview-content h2,
-  .business-why-content h2 {
-    font-size: 26px;
+
+/* =========================================================
+   RESPONSIVE - 767px  (LARGE MOBILE / SMALL TABLET)
+========================================================= */
+
+@media (max-width: 767px) {
+  .business-loan-page .container {
+    width: calc(100% - 28px);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .business-overview,
@@ -2334,225 +1863,347 @@
   .business-emi,
   .business-process,
   .business-why,
-  .business-faq,
-  .business-apply {
-    padding: 50px 0;
+  .business-faq { padding: 58px 0; }
+
+  .business-section-heading { margin-bottom: 32px; }
+  .business-section-heading h2,
+  .business-overview-content h2,
+  .business-why-content h2 { font-size: clamp(27px, 5.6vw, 34px); }
+  .business-section-heading p { font-size: 13.5px; }
+
+  /* HERO — centered */
+  .business-hero { padding: 48px 0 52px; }
+  .business-hero-content { text-align: center; margin: 0 auto; }
+  .business-hero-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .business-badge { justify-content: center; }
+  .business-badge::before { width: 34px; }
+  .business-hero-buttons { justify-content: center; }
+  .business-hero-trust {
+    justify-content: center;
+    gap: 16px 22px;
+    margin-top: 26px;
   }
 
-  .business-emi-result h3 {
-    font-size: 27px;
+  /* OVERVIEW */
+  .business-overview-content > p,
+  .business-why-content > p { font-size: 13.5px; }
+  .business-check-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
   }
 
-  .business-why-visual {
-    min-height: 260px;
-  }
+  /* GRIDS */
+  .business-interest-grid { grid-template-columns: minmax(0, 1fr); }
+  .business-process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-  .why-circle-main {
-    width: 185px;
-    height: 185px;
-  }
+  /* ELIGIBILITY */
+  .business-eligibility-card { padding: 24px 20px; }
+  .business-card-title { margin-bottom: 18px; }
 
-  .why-circle-main i {
-    font-size: 29px;
-  }
+  /* EMI */
+  .business-emi-calculator,
+  .business-emi-result { padding: 24px 20px; }
+  .business-emi-field { margin-bottom: 22px; }
 
-  .why-circle-main strong {
-    font-size: 16px;
-  }
-
-  .why-circle-main span {
-    font-size: 9px;
-  }
-
+  /* WHY */
+  .business-why-visual { min-height: 340px; }
+  .why-circle-main { width: 195px; height: 195px; }
+  .why-card-one { top: 26px; left: 0; }
+  .why-card-two { bottom: 26px; right: 0; }
   .why-floating-card {
-    padding: 8px 9px;
-
-    font-size: 8px;
+    min-width: 150px;
+    padding: 10px 12px;
+    font-size: 10.5px;
   }
 
-  .business-apply-content h2 {
-    font-size: 25px;
+  /* FAQ */
+  .business-faq-question {
+    min-height: 56px;
+    padding: 15px 16px;
+    gap: 14px;
+    font-size: 13.5px;
+  }
+  .business-faq-answer p { padding: 0 16px 16px; font-size: 12.5px; }
+  .business-faq-item.active .business-faq-answer { max-height: 480px; }
+
+  /* CTA + DISCLAIMER */
+  .business-apply { padding: 58px 0; }
+  .business-apply-content > p { font-size: 13.5px; }
+  .business-disclaimer-box { padding: 18px; gap: 12px; }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 575px  (MOBILE — SINGLE COLUMN)
+========================================================= */
+
+@media (max-width: 575px) {
+  .business-loan-page .container { width: calc(100% - 24px); }
+
+  .business-overview,
+  .business-benefits,
+  .business-types,
+  .business-eligibility,
+  .business-interest,
+  .business-emi,
+  .business-process,
+  .business-why,
+  .business-faq { padding: 50px 0; }
+
+  /* HERO */
+  .business-hero { padding: 42px 0 46px; }
+  .business-hero-content h1 {
+    font-size: clamp(30px, 8.4vw, 38px);
+    line-height: 1.16;
+    letter-spacing: -0.6px;
+  }
+  .business-hero-content > p { font-size: 13.5px; margin-bottom: 22px; }
+
+  .business-hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+  }
+  .business-hero-buttons .btn-primary-loan,
+  .business-hero-buttons .btn-outline-loan { width: 100%; }
+
+  .business-hero-trust {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .business-trust-item { justify-content: center; }
+
+  /* FORM */
+  .business-form-card { padding: 20px 18px; border-radius: 15px; }
+  .business-input-wrap input,
+  .business-input-wrap select { min-height: 46px; font-size: 13.5px; }
+  .business-submit-btn { min-height: 48px; font-size: 14px; }
+
+  /* OVERVIEW */
+  .business-overview-visual {
+    min-height: auto;
+    padding: 22px;
+    border-radius: 18px;
+  }
+  .business-visual-card { padding: 30px 22px; }
+  .business-visual-icon { width: 60px; height: 60px; font-size: 23px; }
+
+  /* ALL CARD GRIDS → 1 COLUMN */
+  .business-benefits-grid,
+  .business-types-grid,
+  .business-interest-grid,
+  .business-process-grid { grid-template-columns: minmax(0, 1fr); }
+
+  /* EMI */
+  .business-emi-result > h3 { font-size: 27px; margin-bottom: 20px; }
+  .emi-result-list > div { padding: 10px 0; }
+  .business-emi-btn { width: 100%; }
+
+  /* WHY — floating cards stack below the circle */
+  .business-why-visual {
+    flex-direction: column;
+    gap: 14px;
+    min-height: auto;
+    padding: 10px 0;
+    background: none;
+  }
+  .why-circle-main { width: 190px; height: 190px; }
+  .why-floating-card {
+    position: static;
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+  .business-why-list > div { grid-template-columns: 40px minmax(0, 1fr); gap: 11px; }
+  .why-list-icon { width: 40px; height: 40px; font-size: 15px; }
+
+  /* CTA */
+  .business-apply { padding: 50px 0; }
+  .business-apply-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .business-apply-buttons .btn-primary-loan,
+  .business-apply-buttons .btn-outline-loan { width: 100%; }
+
+  .business-disclaimer { padding: 28px 0; }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .business-loan-page .container { width: calc(100% - 20px); }
+
+  .business-section-heading h2,
+  .business-overview-content h2,
+  .business-why-content h2 { font-size: clamp(24px, 7.4vw, 30px); }
+  .business-section-heading p { font-size: 13px; }
+
+  .business-hero-content h1 { font-size: clamp(27px, 8.6vw, 34px); }
+  .business-form-card h2 { font-size: 16.5px; }
+
+  .business-benefit-card,
+  .business-interest-card,
+  .business-type-card { padding: 22px 18px; }
+
+  .business-eligibility-card { padding: 20px 16px; }
+  .business-card-title h3 { font-size: 17px; }
+  .business-small-icon { width: 42px; height: 42px; font-size: 16px; }
+
+  .business-emi-calculator,
+  .business-emi-result { padding: 20px 16px; }
+  .business-emi-result > h3 { font-size: 24px; }
+  .emi-field-top { gap: 10px; }
+
+  .business-visual-card h3 { font-size: 20px; }
+
+  .business-faq-question { font-size: 13px; padding: 14px; }
+  .business-apply-content h2 { font-size: clamp(24px, 7.6vw, 32px); }
+
+  .business-loan-page .btn-primary-loan,
+  .business-loan-page .btn-outline-loan {
+    min-height: 48px;
+    padding: 12px 18px;
+    font-size: 14px;
   }
 }
 
 
 /* =========================================================
-   360px
+   RESPONSIVE - 400px
+========================================================= */
+
+@media (max-width: 400px) {
+  .business-loan-page .container { width: calc(100% - 18px); }
+
+  .business-hero-content h1 { font-size: 26px; }
+  .business-section-heading h2,
+  .business-overview-content h2,
+  .business-why-content h2 { font-size: 23px; }
+
+  .business-form-card { padding: 17px 14px; }
+  .business-input-wrap input,
+  .business-input-wrap select { padding-left: 36px; font-size: 13px; }
+  .business-input-wrap > i { left: 12px; font-size: 13px; }
+
+  .business-emi-result > h3 { font-size: 22px; }
+
+  .why-circle-main { width: 170px; height: 170px; }
+  .why-circle-main i { width: 52px; height: 52px; font-size: 20px; }
+  .why-circle-main strong { font-size: 16px; }
+
+  .business-benefit-card,
+  .business-interest-card,
+  .business-process-item { padding: 20px 15px; }
+
+  .business-interest-note { padding: 14px 15px; }
+  .business-disclaimer-box { flex-direction: column; gap: 10px; }
+}
+
+
+/* =========================================================
+   RESPONSIVE - 360px
 ========================================================= */
 
 @media (max-width: 360px) {
+  .business-loan-page .container { width: calc(100% - 16px); }
 
-  .business-hero {
-    background-position: 90% center;
-  }
-
-  .business-hero-content h1 {
-    font-size: 25px;
-  }
-
-  .business-section-heading h2 {
-    font-size: 23px;
-  }
-
+  .business-hero-content h1 { font-size: 24px; letter-spacing: -0.4px; }
+  .business-hero-content > p,
+  .business-section-heading p { font-size: 12.5px; }
+  .business-section-heading h2,
   .business-overview-content h2,
-  .business-why-content h2 {
-    font-size: 24px;
-  }
+  .business-why-content h2 { font-size: 21px; }
 
-  .business-form-card {
-    padding: 16px;
-  }
+  .business-badge { font-size: 10px; letter-spacing: 1.2px; }
+  .business-badge::before { width: 26px; height: 3px; }
 
-  .business-form-icon {
-    width: 46px;
-    height: 46px;
+  .business-benefit-icon,
+  .business-interest-icon { width: 46px; height: 46px; font-size: 18px; }
+  .business-type-icon { width: 44px; height: 44px; font-size: 17px; }
+  .process-icon { width: 48px; height: 48px; font-size: 18px; }
 
-    font-size: 19px;
-  }
+  .business-emi-result > h3 { font-size: 20px; }
+  .emi-result-list span,
+  .emi-result-list strong { font-size: 11.5px; }
 
-  .business-form-card h2 {
-    font-size: 18px;
-  }
+  .business-faq-question { font-size: 12.5px; gap: 10px; }
+  .business-faq-question i { width: 24px; height: 24px; font-size: 10px; }
+}
 
-  .business-form-card > p {
-    font-size: 10px;
-  }
 
+/* =========================================================
+   RESPONSIVE - 320px  (SMALLEST PHONES)
+========================================================= */
+
+@media (max-width: 320px) {
+  .business-loan-page .container { width: calc(100% - 14px); }
+
+  .business-hero-content h1 { font-size: 22px; }
+  .business-section-heading h2,
+  .business-overview-content h2,
+  .business-why-content h2 { font-size: 19px; }
+
+  .business-form-card { padding: 14px 12px; border-radius: 12px; }
+  .business-form-card h2 { font-size: 15px; }
   .business-input-wrap input,
-  .business-input-wrap select {
-    height: 41px;
+  .business-input-wrap select { min-height: 44px; }
+  .business-submit-btn { min-height: 46px; font-size: 13.5px; }
 
-    padding-left: 34px;
+  .business-visual-card { padding: 24px 16px; }
+  .why-circle-main { width: 155px; height: 155px; }
 
-    font-size: 10px;
-  }
+  .business-emi-result > h3 { font-size: 19px; }
 
-  .business-input-wrap > i {
-    left: 12px;
-
-    font-size: 11px;
-  }
-
-  .business-submit-btn {
-    min-height: 43px;
-
-    font-size: 11px;
-  }
-
-  .business-benefit-card,
-  .business-type-card {
-    padding: 19px 15px;
-  }
-
-  .business-benefit-card h3,
-  .business-type-card h3 {
-    font-size: 16px;
-  }
-
-  .business-benefit-card p,
-  .business-type-card p {
-    font-size: 10px;
-  }
-
-  .business-emi-calculator,
-  .business-emi-result {
-    padding: 18px;
-  }
-
-  .business-emi-result h3 {
-    font-size: 24px;
-  }
-
-  .business-apply-content h2 {
-    font-size: 23px;
+  .business-loan-page .btn-primary-loan,
+  .business-loan-page .btn-outline-loan {
+    min-height: 46px;
+    padding: 11px 14px;
+    font-size: 13px;
   }
 }
 
 
 /* =========================================================
-   320px
+   MOBILE LANDSCAPE FIX
 ========================================================= */
 
-@media (max-width: 320px) {
+@media (max-width: 991px) and (orientation: landscape) {
+  .business-hero { padding: 40px 0 44px; }
+  .business-apply { padding: 45px 0; }
+  .business-why-visual { min-height: auto; }
+}
 
-  .business-hero {
-    background-position: 92% center;
+
+/* =========================================================
+   ACCESSIBILITY / REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .business-loan-page *,
+  .business-loan-page *::before,
+  .business-loan-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 
-  .business-hero-content h1 {
-    font-size: 23px;
-  }
-
-  .business-hero-content > p {
-    font-size: 10px;
-  }
-
-  .business-section-heading h2 {
-    font-size: 21px;
-  }
-
-  .business-section-heading p {
-    font-size: 10px;
-  }
-
-  .business-overview-content h2,
-  .business-why-content h2 {
-    font-size: 22px;
-  }
-
-  .business-check-list div {
-    font-size: 10px;
-  }
-
-  .business-visual-card {
-    width: 90%;
-
-    padding: 20px 15px;
-  }
-
-  .business-visual-card h3 {
-    font-size: 17px;
-  }
-
-  .business-visual-card p {
-    font-size: 10px;
-  }
-
-  .business-interest-note p,
-  .business-disclaimer-box p {
-    font-size: 9px;
-  }
-
-  .business-faq-question {
-    font-size: 10px;
-  }
-
-  .business-faq-answer p {
-    font-size: 9.5px;
-  }
-
-  .business-why-visual {
-    min-height: 225px;
-  }
-
-  .why-circle-main {
-    width: 165px;
-    height: 165px;
-  }
-
-  .why-circle-main i {
-    font-size: 25px;
-  }
-
-  .why-circle-main strong {
-    font-size: 14px;
-  }
-
-  .why-floating-card {
-    font-size: 7.5px;
-  }
-
-  .business-apply-content h2 {
-    font-size: 21px;
-  }
+  .business-loan-page .btn-primary-loan:hover,
+  .business-loan-page .btn-outline-loan:hover,
+  .business-benefit-card:hover,
+  .business-type-card:hover,
+  .business-interest-card:hover,
+  .business-process-item:hover,
+  .business-submit-btn:hover,
+  .business-emi-btn:hover { transform: none; }
 }
