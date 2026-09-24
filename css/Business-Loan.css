@@ -56,7 +56,6 @@
   font-family: inherit;
 }
 
-
 /* =========================================================
    COMMON
 ========================================================= */
@@ -112,7 +111,6 @@
   line-height: 1.8;
 }
 
-
 /* =========================================================
    COMMON BUTTONS
 ========================================================= */
@@ -157,7 +155,6 @@
   transform: translateY(-3px);
 }
 
-
 /* =========================================================
    HERO SECTION
    SAME VISUAL SYSTEM AS PERSONAL LOAN HERO
@@ -170,9 +167,8 @@
   align-items: center;
   overflow: hidden;
 
-  background:
-    url("../image/business-banner.png")
-    center center / cover no-repeat;
+  background: url("../image/business-banner.png") center center / cover
+    no-repeat;
 }
 
 .business-hero-overlay {
@@ -180,12 +176,11 @@
   inset: 0;
   z-index: 1;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 43, 85, 0.64) 0%,
-      rgba(0, 91, 170, 0.56) 100%
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 43, 85, 0.64) 0%,
+    rgba(0, 91, 170, 0.56) 100%
+  );
 }
 
 .business-hero .container {
@@ -301,7 +296,6 @@
   line-height: 1.4;
 }
 
-
 /* =========================================================
    HERO FORM
 ========================================================= */
@@ -315,8 +309,7 @@
   background: rgba(255, 255, 255, 0.98);
   border-radius: 18px;
 
-  box-shadow:
-    0 20px 55px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.22);
 }
 
 .business-form-card h2 {
@@ -464,7 +457,6 @@
   color: var(--loan-blue);
 }
 
-
 /* =========================================================
    OVERVIEW
 ========================================================= */
@@ -529,13 +521,7 @@
   padding: 35px;
   border-radius: 22px;
 
-  background:
-    linear-gradient(
-      145deg,
-      #eaf5ff 0%,
-      #f8fbff 55%,
-      #fff4e5 100%
-    );
+  background: linear-gradient(145deg, #eaf5ff 0%, #f8fbff 55%, #fff4e5 100%);
 }
 
 .business-visual-card {
@@ -598,7 +584,6 @@
   font-weight: 700;
   letter-spacing: 1.4px;
 }
-
 
 /* =========================================================
    BENEFITS
@@ -663,7 +648,6 @@
   font-size: 13px;
   line-height: 1.75;
 }
-
 
 /* =========================================================
    BUSINESS TYPES
@@ -748,7 +732,6 @@
   color: var(--loan-orange-dark);
   gap: 11px;
 }
-
 
 /* =========================================================
    ELIGIBILITY
@@ -839,7 +822,6 @@
   color: var(--loan-blue);
   font-size: 12px;
 }
-
 
 /* =========================================================
    INTEREST RATES
@@ -934,7 +916,6 @@
 .business-interest-note strong {
   color: var(--black);
 }
-
 
 /* =========================================================
    EMI CALCULATOR
@@ -1055,12 +1036,7 @@
 
   border-radius: 18px;
 
-  background:
-    linear-gradient(
-      145deg,
-      var(--loan-blue-deep),
-      var(--loan-blue)
-    );
+  background: linear-gradient(145deg, var(--loan-blue-deep), var(--loan-blue));
 
   color: var(--white);
   box-shadow: var(--shadow-md);
@@ -1158,7 +1134,6 @@
   line-height: 1.6;
 }
 
-
 /* =========================================================
    PROCESS
 ========================================================= */
@@ -1172,6 +1147,15 @@
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 18px;
+}
+
+/* Four application steps on the Working Capital Loan page stay centered. */
+@media (min-width: 992px) {
+  .working-capital-process-grid {
+    max-width: 980px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .business-process-item {
@@ -1239,7 +1223,6 @@
   line-height: 1.7;
 }
 
-
 /* =========================================================
    WHY LOAN SUVIDA
 ========================================================= */
@@ -1266,12 +1249,11 @@
 
   border-radius: 22px;
 
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(0, 91, 170, 0.13),
-      transparent 62%
-    );
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 91, 170, 0.13),
+    transparent 62%
+  );
 }
 
 .why-circle-main {
@@ -1413,7 +1395,6 @@
   line-height: 1.65;
 }
 
-
 /* =========================================================
    FAQ
 ========================================================= */
@@ -1515,7 +1496,6 @@
   line-height: 1.8;
 }
 
-
 /* =========================================================
    FINAL APPLY CTA
 ========================================================= */
@@ -1529,21 +1509,19 @@
 
   overflow: hidden;
 
-  background:
-    url("../image/business-banner.png")
-    center center / cover no-repeat;
+  background: url("../image/business-banner.png") center center / cover
+    no-repeat;
 }
 
 .business-apply-overlay {
   position: absolute;
   inset: 0;
 
-  background:
-    linear-gradient(
-      110deg,
-      rgba(0, 43, 85, 0.45),
-      rgba(0, 91, 170, 0.66)
-    );
+  background: linear-gradient(
+    110deg,
+    rgba(0, 43, 85, 0.45),
+    rgba(0, 91, 170, 0.66)
+  );
 }
 
 .business-apply .container {
@@ -1607,7 +1585,6 @@
   flex-wrap: wrap;
 }
 
-
 /* =========================================================
    DISCLAIMER
 ========================================================= */
@@ -1652,7 +1629,6 @@
   line-height: 1.75;
 }
 
-
 /* =========================================================
    =========================================================
    RESPONSIVE SYSTEM  (NEW)
@@ -1660,7 +1636,6 @@
    Breakpoints: 1399 / 1199 / 991 / 767 / 575 / 480 / 400 / 360 / 320
    =========================================================
 ========================================================= */
-
 
 /* =========================================================
    RESPONSIVE - 1399px  (SMALL DESKTOP / LARGE LAPTOP)
@@ -1673,16 +1648,27 @@
     margin-right: auto;
   }
 
-  .business-hero-grid { gap: 36px; }
-  .business-hero-content h1 { font-size: clamp(38px, 4.4vw, 52px); }
+  .business-hero-grid {
+    gap: 36px;
+  }
+  .business-hero-content h1 {
+    font-size: clamp(38px, 4.4vw, 52px);
+  }
 
-  .business-overview-grid { gap: 55px; }
-  .business-why-grid { gap: 55px; }
+  .business-overview-grid {
+    gap: 55px;
+  }
+  .business-why-grid {
+    gap: 55px;
+  }
 
-  .business-types-grid { gap: 18px; }
-  .business-process-grid { gap: 16px; }
+  .business-types-grid {
+    gap: 18px;
+  }
+  .business-process-grid {
+    gap: 16px;
+  }
 }
-
 
 /* =========================================================
    RESPONSIVE - 1199px  (LAPTOP / TABLET LANDSCAPE)
@@ -1696,15 +1682,27 @@
   }
 
   /* HERO */
-  .business-hero { min-height: 560px; padding: 50px 0 60px; }
+  .business-hero {
+    min-height: 560px;
+    padding: 50px 0 60px;
+  }
   .business-hero-grid {
     grid-template-columns: minmax(0, 1fr) minmax(330px, 0.9fr);
     gap: 30px;
   }
-  .business-hero-content h1 { font-size: clamp(36px, 4.4vw, 46px); }
-  .business-hero-content > p { font-size: 14.5px; }
-  .business-hero-trust { gap: 18px; }
-  .business-form-card { max-width: 400px; padding: 22px 20px; }
+  .business-hero-content h1 {
+    font-size: clamp(36px, 4.4vw, 46px);
+  }
+  .business-hero-content > p {
+    font-size: 14.5px;
+  }
+  .business-hero-trust {
+    gap: 18px;
+  }
+  .business-form-card {
+    max-width: 400px;
+    padding: 22px 20px;
+  }
 
   /* SECTION SPACING */
   .business-overview,
@@ -1715,52 +1713,103 @@
   .business-emi,
   .business-process,
   .business-why,
-  .business-faq { padding: 70px 0; }
+  .business-faq {
+    padding: 70px 0;
+  }
 
-  .business-section-heading { margin-bottom: 42px; }
+  .business-section-heading {
+    margin-bottom: 42px;
+  }
 
   /* OVERVIEW */
-  .business-overview-grid { gap: 45px; }
-  .business-overview-visual { min-height: 350px; padding: 28px; }
-  .business-visual-card { padding: 34px 26px; }
+  .business-overview-grid {
+    gap: 45px;
+  }
+  .business-overview-visual {
+    min-height: 350px;
+    padding: 28px;
+  }
+  .business-visual-card {
+    padding: 34px 26px;
+  }
 
   /* BENEFITS + INTEREST */
   .business-benefits-grid,
-  .business-interest-grid { gap: 18px; }
+  .business-interest-grid {
+    gap: 18px;
+  }
   .business-benefit-card,
-  .business-interest-card { padding: 26px 22px; }
+  .business-interest-card {
+    padding: 26px 22px;
+  }
 
   /* TYPES */
-  .business-types-grid { gap: 16px; }
-  .business-type-card { padding: 24px 18px; }
-  .business-type-card p { min-height: 92px; font-size: 12px; }
+  .business-types-grid {
+    gap: 16px;
+  }
+  .business-type-card {
+    padding: 24px 18px;
+  }
+  .business-type-card p {
+    min-height: 92px;
+    font-size: 12px;
+  }
 
   /* ELIGIBILITY */
-  .business-eligibility-grid { gap: 20px; }
-  .business-eligibility-card { padding: 28px 24px; }
+  .business-eligibility-grid {
+    gap: 20px;
+  }
+  .business-eligibility-card {
+    padding: 28px 24px;
+  }
 
   /* EMI */
-  .business-emi-wrapper { gap: 20px; }
+  .business-emi-wrapper {
+    gap: 20px;
+  }
   .business-emi-calculator,
-  .business-emi-result { padding: 26px 22px; }
-  .business-emi-result > h3 { font-size: 30px; }
+  .business-emi-result {
+    padding: 26px 22px;
+  }
+  .business-emi-result > h3 {
+    font-size: 30px;
+  }
 
   /* PROCESS */
-  .business-process-grid { gap: 14px; }
-  .business-process-item { padding: 22px 15px; }
-  .business-process-item h3 { font-size: 15px; }
-  .business-process-item p { min-height: 80px; }
+  .business-process-grid {
+    gap: 14px;
+  }
+  .business-process-item {
+    padding: 22px 15px;
+  }
+  .business-process-item h3 {
+    font-size: 15px;
+  }
+  .business-process-item p {
+    min-height: 80px;
+  }
 
   /* WHY */
-  .business-why-grid { gap: 45px; }
-  .business-why-visual { min-height: 400px; }
-  .why-circle-main { width: 215px; height: 215px; }
-  .why-floating-card { min-width: 160px; }
+  .business-why-grid {
+    gap: 45px;
+  }
+  .business-why-visual {
+    min-height: 400px;
+  }
+  .why-circle-main {
+    width: 215px;
+    height: 215px;
+  }
+  .why-floating-card {
+    min-width: 160px;
+  }
 
   /* CTA */
-  .business-apply { min-height: 350px; padding: 65px 0; }
+  .business-apply {
+    min-height: 350px;
+    padding: 65px 0;
+  }
 }
-
 
 /* =========================================================
    RESPONSIVE - 991px  (TABLET PORTRAIT)
@@ -1768,7 +1817,9 @@
 ========================================================= */
 
 @media (max-width: 991px) {
-  .business-loan-page { overflow-x: hidden; }
+  .business-loan-page {
+    overflow-x: hidden;
+  }
 
   .business-loan-page .container {
     width: min(720px, calc(100% - 32px));
@@ -1777,14 +1828,23 @@
   }
 
   /* HERO */
-  .business-hero { min-height: auto; padding: 55px 0 60px; }
+  .business-hero {
+    min-height: auto;
+    padding: 55px 0 60px;
+  }
   .business-hero-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 36px;
   }
-  .business-hero-content { max-width: 100%; }
-  .business-hero-content h1 { font-size: clamp(34px, 5.4vw, 44px); }
-  .business-hero-content > p { max-width: 100%; }
+  .business-hero-content {
+    max-width: 100%;
+  }
+  .business-hero-content h1 {
+    font-size: clamp(34px, 5.4vw, 44px);
+  }
+  .business-hero-content > p {
+    max-width: 100%;
+  }
   .business-form-card {
     max-width: 520px;
     margin-left: auto;
@@ -1796,7 +1856,9 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 38px;
   }
-  .business-overview-content { max-width: 100%; }
+  .business-overview-content {
+    max-width: 100%;
+  }
   .business-overview-visual {
     width: 100%;
     max-width: 560px;
@@ -1805,31 +1867,51 @@
   }
 
   /* BENEFITS / TYPES / INTEREST */
-  .business-benefits-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .business-types-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .business-type-card p { min-height: auto; font-size: 12.5px; }
-  .business-interest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .business-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .business-types-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .business-type-card p {
+    min-height: auto;
+    font-size: 12.5px;
+  }
+  .business-interest-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
   /* ELIGIBILITY */
-  .business-eligibility-grid { grid-template-columns: minmax(0, 1fr); }
+  .business-eligibility-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 
   /* EMI */
-  .business-emi-wrapper { grid-template-columns: minmax(0, 1fr); }
-  .business-emi-result { max-width: 100%; }
+  .business-emi-wrapper {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .business-emi-result {
+    max-width: 100%;
+  }
 
   /* PROCESS */
   .business-process-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     row-gap: 20px;
   }
-  .business-process-item p { min-height: auto; }
+  .business-process-item p {
+    min-height: auto;
+  }
 
   /* WHY — content first, visual after */
   .business-why-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 40px;
   }
-  .business-why-content { order: 1; max-width: 100%; }
+  .business-why-content {
+    order: 1;
+    max-width: 100%;
+  }
   .business-why-visual {
     order: 2;
     width: 100%;
@@ -1839,10 +1921,14 @@
   }
 
   /* CTA + HEADINGS */
-  .business-section-heading { margin-bottom: 38px; }
-  .business-apply { min-height: auto; padding: 62px 0; }
+  .business-section-heading {
+    margin-bottom: 38px;
+  }
+  .business-apply {
+    min-height: auto;
+    padding: 62px 0;
+  }
 }
-
 
 /* =========================================================
    RESPONSIVE - 767px  (LARGE MOBILE / SMALL TABLET)
@@ -1863,24 +1949,43 @@
   .business-emi,
   .business-process,
   .business-why,
-  .business-faq { padding: 58px 0; }
+  .business-faq {
+    padding: 58px 0;
+  }
 
-  .business-section-heading { margin-bottom: 32px; }
+  .business-section-heading {
+    margin-bottom: 32px;
+  }
   .business-section-heading h2,
   .business-overview-content h2,
-  .business-why-content h2 { font-size: clamp(27px, 5.6vw, 34px); }
-  .business-section-heading p { font-size: 13.5px; }
+  .business-why-content h2 {
+    font-size: clamp(27px, 5.6vw, 34px);
+  }
+  .business-section-heading p {
+    font-size: 13.5px;
+  }
 
   /* HERO — centered */
-  .business-hero { padding: 48px 0 52px; }
-  .business-hero-content { text-align: center; margin: 0 auto; }
+  .business-hero {
+    padding: 48px 0 52px;
+  }
+  .business-hero-content {
+    text-align: center;
+    margin: 0 auto;
+  }
   .business-hero-content > p {
     margin-left: auto;
     margin-right: auto;
   }
-  .business-badge { justify-content: center; }
-  .business-badge::before { width: 34px; }
-  .business-hero-buttons { justify-content: center; }
+  .business-badge {
+    justify-content: center;
+  }
+  .business-badge::before {
+    width: 34px;
+  }
+  .business-hero-buttons {
+    justify-content: center;
+  }
   .business-hero-trust {
     justify-content: center;
     gap: 16px 22px;
@@ -1889,30 +1994,55 @@
 
   /* OVERVIEW */
   .business-overview-content > p,
-  .business-why-content > p { font-size: 13.5px; }
+  .business-why-content > p {
+    font-size: 13.5px;
+  }
   .business-check-list {
     grid-template-columns: minmax(0, 1fr);
     gap: 10px;
   }
 
   /* GRIDS */
-  .business-interest-grid { grid-template-columns: minmax(0, 1fr); }
-  .business-process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .business-interest-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .business-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
   /* ELIGIBILITY */
-  .business-eligibility-card { padding: 24px 20px; }
-  .business-card-title { margin-bottom: 18px; }
+  .business-eligibility-card {
+    padding: 24px 20px;
+  }
+  .business-card-title {
+    margin-bottom: 18px;
+  }
 
   /* EMI */
   .business-emi-calculator,
-  .business-emi-result { padding: 24px 20px; }
-  .business-emi-field { margin-bottom: 22px; }
+  .business-emi-result {
+    padding: 24px 20px;
+  }
+  .business-emi-field {
+    margin-bottom: 22px;
+  }
 
   /* WHY */
-  .business-why-visual { min-height: 340px; }
-  .why-circle-main { width: 195px; height: 195px; }
-  .why-card-one { top: 26px; left: 0; }
-  .why-card-two { bottom: 26px; right: 0; }
+  .business-why-visual {
+    min-height: 340px;
+  }
+  .why-circle-main {
+    width: 195px;
+    height: 195px;
+  }
+  .why-card-one {
+    top: 26px;
+    left: 0;
+  }
+  .why-card-two {
+    bottom: 26px;
+    right: 0;
+  }
   .why-floating-card {
     min-width: 150px;
     padding: 10px 12px;
@@ -1926,22 +2056,35 @@
     gap: 14px;
     font-size: 13.5px;
   }
-  .business-faq-answer p { padding: 0 16px 16px; font-size: 12.5px; }
-  .business-faq-item.active .business-faq-answer { max-height: 480px; }
+  .business-faq-answer p {
+    padding: 0 16px 16px;
+    font-size: 12.5px;
+  }
+  .business-faq-item.active .business-faq-answer {
+    max-height: 480px;
+  }
 
   /* CTA + DISCLAIMER */
-  .business-apply { padding: 58px 0; }
-  .business-apply-content > p { font-size: 13.5px; }
-  .business-disclaimer-box { padding: 18px; gap: 12px; }
+  .business-apply {
+    padding: 58px 0;
+  }
+  .business-apply-content > p {
+    font-size: 13.5px;
+  }
+  .business-disclaimer-box {
+    padding: 18px;
+    gap: 12px;
+  }
 }
-
 
 /* =========================================================
    RESPONSIVE - 575px  (MOBILE — SINGLE COLUMN)
 ========================================================= */
 
 @media (max-width: 575px) {
-  .business-loan-page .container { width: calc(100% - 24px); }
+  .business-loan-page .container {
+    width: calc(100% - 24px);
+  }
 
   .business-overview,
   .business-benefits,
@@ -1951,16 +2094,23 @@
   .business-emi,
   .business-process,
   .business-why,
-  .business-faq { padding: 50px 0; }
+  .business-faq {
+    padding: 50px 0;
+  }
 
   /* HERO */
-  .business-hero { padding: 42px 0 46px; }
+  .business-hero {
+    padding: 42px 0 46px;
+  }
   .business-hero-content h1 {
     font-size: clamp(30px, 8.4vw, 38px);
     line-height: 1.16;
     letter-spacing: -0.6px;
   }
-  .business-hero-content > p { font-size: 13.5px; margin-bottom: 22px; }
+  .business-hero-content > p {
+    font-size: 13.5px;
+    margin-bottom: 22px;
+  }
 
   .business-hero-buttons {
     flex-direction: column;
@@ -1969,20 +2119,33 @@
     gap: 10px;
   }
   .business-hero-buttons .btn-primary-loan,
-  .business-hero-buttons .btn-outline-loan { width: 100%; }
+  .business-hero-buttons .btn-outline-loan {
+    width: 100%;
+  }
 
   .business-hero-trust {
     flex-direction: column;
     align-items: center;
     gap: 12px;
   }
-  .business-trust-item { justify-content: center; }
+  .business-trust-item {
+    justify-content: center;
+  }
 
   /* FORM */
-  .business-form-card { padding: 20px 18px; border-radius: 15px; }
+  .business-form-card {
+    padding: 20px 18px;
+    border-radius: 15px;
+  }
   .business-input-wrap input,
-  .business-input-wrap select { min-height: 46px; font-size: 13.5px; }
-  .business-submit-btn { min-height: 48px; font-size: 14px; }
+  .business-input-wrap select {
+    min-height: 46px;
+    font-size: 13.5px;
+  }
+  .business-submit-btn {
+    min-height: 48px;
+    font-size: 14px;
+  }
 
   /* OVERVIEW */
   .business-overview-visual {
@@ -1990,19 +2153,34 @@
     padding: 22px;
     border-radius: 18px;
   }
-  .business-visual-card { padding: 30px 22px; }
-  .business-visual-icon { width: 60px; height: 60px; font-size: 23px; }
+  .business-visual-card {
+    padding: 30px 22px;
+  }
+  .business-visual-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 23px;
+  }
 
   /* ALL CARD GRIDS → 1 COLUMN */
   .business-benefits-grid,
   .business-types-grid,
   .business-interest-grid,
-  .business-process-grid { grid-template-columns: minmax(0, 1fr); }
+  .business-process-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 
   /* EMI */
-  .business-emi-result > h3 { font-size: 27px; margin-bottom: 20px; }
-  .emi-result-list > div { padding: 10px 0; }
-  .business-emi-btn { width: 100%; }
+  .business-emi-result > h3 {
+    font-size: 27px;
+    margin-bottom: 20px;
+  }
+  .emi-result-list > div {
+    padding: 10px 0;
+  }
+  .business-emi-btn {
+    width: 100%;
+  }
 
   /* WHY — floating cards stack below the circle */
   .business-why-visual {
@@ -2012,62 +2190,110 @@
     padding: 10px 0;
     background: none;
   }
-  .why-circle-main { width: 190px; height: 190px; }
+  .why-circle-main {
+    width: 190px;
+    height: 190px;
+  }
   .why-floating-card {
     position: static;
     width: 100%;
     max-width: 300px;
     justify-content: center;
   }
-  .business-why-list > div { grid-template-columns: 40px minmax(0, 1fr); gap: 11px; }
-  .why-list-icon { width: 40px; height: 40px; font-size: 15px; }
+  .business-why-list > div {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 11px;
+  }
+  .why-list-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
 
   /* CTA */
-  .business-apply { padding: 50px 0; }
+  .business-apply {
+    padding: 50px 0;
+  }
   .business-apply-buttons {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
   }
   .business-apply-buttons .btn-primary-loan,
-  .business-apply-buttons .btn-outline-loan { width: 100%; }
+  .business-apply-buttons .btn-outline-loan {
+    width: 100%;
+  }
 
-  .business-disclaimer { padding: 28px 0; }
+  .business-disclaimer {
+    padding: 28px 0;
+  }
 }
-
 
 /* =========================================================
    RESPONSIVE - 480px
 ========================================================= */
 
 @media (max-width: 480px) {
-  .business-loan-page .container { width: calc(100% - 20px); }
+  .business-loan-page .container {
+    width: calc(100% - 20px);
+  }
 
   .business-section-heading h2,
   .business-overview-content h2,
-  .business-why-content h2 { font-size: clamp(24px, 7.4vw, 30px); }
-  .business-section-heading p { font-size: 13px; }
+  .business-why-content h2 {
+    font-size: clamp(24px, 7.4vw, 30px);
+  }
+  .business-section-heading p {
+    font-size: 13px;
+  }
 
-  .business-hero-content h1 { font-size: clamp(27px, 8.6vw, 34px); }
-  .business-form-card h2 { font-size: 16.5px; }
+  .business-hero-content h1 {
+    font-size: clamp(27px, 8.6vw, 34px);
+  }
+  .business-form-card h2 {
+    font-size: 16.5px;
+  }
 
   .business-benefit-card,
   .business-interest-card,
-  .business-type-card { padding: 22px 18px; }
+  .business-type-card {
+    padding: 22px 18px;
+  }
 
-  .business-eligibility-card { padding: 20px 16px; }
-  .business-card-title h3 { font-size: 17px; }
-  .business-small-icon { width: 42px; height: 42px; font-size: 16px; }
+  .business-eligibility-card {
+    padding: 20px 16px;
+  }
+  .business-card-title h3 {
+    font-size: 17px;
+  }
+  .business-small-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
 
   .business-emi-calculator,
-  .business-emi-result { padding: 20px 16px; }
-  .business-emi-result > h3 { font-size: 24px; }
-  .emi-field-top { gap: 10px; }
+  .business-emi-result {
+    padding: 20px 16px;
+  }
+  .business-emi-result > h3 {
+    font-size: 24px;
+  }
+  .emi-field-top {
+    gap: 10px;
+  }
 
-  .business-visual-card h3 { font-size: 20px; }
+  .business-visual-card h3 {
+    font-size: 20px;
+  }
 
-  .business-faq-question { font-size: 13px; padding: 14px; }
-  .business-apply-content h2 { font-size: clamp(24px, 7.6vw, 32px); }
+  .business-faq-question {
+    font-size: 13px;
+    padding: 14px;
+  }
+  .business-apply-content h2 {
+    font-size: clamp(24px, 7.6vw, 32px);
+  }
 
   .business-loan-page .btn-primary-loan,
   .business-loan-page .btn-outline-loan {
@@ -2077,92 +2303,182 @@
   }
 }
 
-
 /* =========================================================
    RESPONSIVE - 400px
 ========================================================= */
 
 @media (max-width: 400px) {
-  .business-loan-page .container { width: calc(100% - 18px); }
+  .business-loan-page .container {
+    width: calc(100% - 18px);
+  }
 
-  .business-hero-content h1 { font-size: 26px; }
+  .business-hero-content h1 {
+    font-size: 26px;
+  }
   .business-section-heading h2,
   .business-overview-content h2,
-  .business-why-content h2 { font-size: 23px; }
+  .business-why-content h2 {
+    font-size: 23px;
+  }
 
-  .business-form-card { padding: 17px 14px; }
+  .business-form-card {
+    padding: 17px 14px;
+  }
   .business-input-wrap input,
-  .business-input-wrap select { padding-left: 36px; font-size: 13px; }
-  .business-input-wrap > i { left: 12px; font-size: 13px; }
+  .business-input-wrap select {
+    padding-left: 36px;
+    font-size: 13px;
+  }
+  .business-input-wrap > i {
+    left: 12px;
+    font-size: 13px;
+  }
 
-  .business-emi-result > h3 { font-size: 22px; }
+  .business-emi-result > h3 {
+    font-size: 22px;
+  }
 
-  .why-circle-main { width: 170px; height: 170px; }
-  .why-circle-main i { width: 52px; height: 52px; font-size: 20px; }
-  .why-circle-main strong { font-size: 16px; }
+  .why-circle-main {
+    width: 170px;
+    height: 170px;
+  }
+  .why-circle-main i {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+  .why-circle-main strong {
+    font-size: 16px;
+  }
 
   .business-benefit-card,
   .business-interest-card,
-  .business-process-item { padding: 20px 15px; }
+  .business-process-item {
+    padding: 20px 15px;
+  }
 
-  .business-interest-note { padding: 14px 15px; }
-  .business-disclaimer-box { flex-direction: column; gap: 10px; }
+  .business-interest-note {
+    padding: 14px 15px;
+  }
+  .business-disclaimer-box {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
-
 
 /* =========================================================
    RESPONSIVE - 360px
 ========================================================= */
 
 @media (max-width: 360px) {
-  .business-loan-page .container { width: calc(100% - 16px); }
+  .business-loan-page .container {
+    width: calc(100% - 16px);
+  }
 
-  .business-hero-content h1 { font-size: 24px; letter-spacing: -0.4px; }
+  .business-hero-content h1 {
+    font-size: 24px;
+    letter-spacing: -0.4px;
+  }
   .business-hero-content > p,
-  .business-section-heading p { font-size: 12.5px; }
+  .business-section-heading p {
+    font-size: 12.5px;
+  }
   .business-section-heading h2,
   .business-overview-content h2,
-  .business-why-content h2 { font-size: 21px; }
+  .business-why-content h2 {
+    font-size: 21px;
+  }
 
-  .business-badge { font-size: 10px; letter-spacing: 1.2px; }
-  .business-badge::before { width: 26px; height: 3px; }
+  .business-badge {
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+  .business-badge::before {
+    width: 26px;
+    height: 3px;
+  }
 
   .business-benefit-icon,
-  .business-interest-icon { width: 46px; height: 46px; font-size: 18px; }
-  .business-type-icon { width: 44px; height: 44px; font-size: 17px; }
-  .process-icon { width: 48px; height: 48px; font-size: 18px; }
+  .business-interest-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
+  }
+  .business-type-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 17px;
+  }
+  .process-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
 
-  .business-emi-result > h3 { font-size: 20px; }
+  .business-emi-result > h3 {
+    font-size: 20px;
+  }
   .emi-result-list span,
-  .emi-result-list strong { font-size: 11.5px; }
+  .emi-result-list strong {
+    font-size: 11.5px;
+  }
 
-  .business-faq-question { font-size: 12.5px; gap: 10px; }
-  .business-faq-question i { width: 24px; height: 24px; font-size: 10px; }
+  .business-faq-question {
+    font-size: 12.5px;
+    gap: 10px;
+  }
+  .business-faq-question i {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+  }
 }
-
 
 /* =========================================================
    RESPONSIVE - 320px  (SMALLEST PHONES)
 ========================================================= */
 
 @media (max-width: 320px) {
-  .business-loan-page .container { width: calc(100% - 14px); }
+  .business-loan-page .container {
+    width: calc(100% - 14px);
+  }
 
-  .business-hero-content h1 { font-size: 22px; }
+  .business-hero-content h1 {
+    font-size: 22px;
+  }
   .business-section-heading h2,
   .business-overview-content h2,
-  .business-why-content h2 { font-size: 19px; }
+  .business-why-content h2 {
+    font-size: 19px;
+  }
 
-  .business-form-card { padding: 14px 12px; border-radius: 12px; }
-  .business-form-card h2 { font-size: 15px; }
+  .business-form-card {
+    padding: 14px 12px;
+    border-radius: 12px;
+  }
+  .business-form-card h2 {
+    font-size: 15px;
+  }
   .business-input-wrap input,
-  .business-input-wrap select { min-height: 44px; }
-  .business-submit-btn { min-height: 46px; font-size: 13.5px; }
+  .business-input-wrap select {
+    min-height: 44px;
+  }
+  .business-submit-btn {
+    min-height: 46px;
+    font-size: 13.5px;
+  }
 
-  .business-visual-card { padding: 24px 16px; }
-  .why-circle-main { width: 155px; height: 155px; }
+  .business-visual-card {
+    padding: 24px 16px;
+  }
+  .why-circle-main {
+    width: 155px;
+    height: 155px;
+  }
 
-  .business-emi-result > h3 { font-size: 19px; }
+  .business-emi-result > h3 {
+    font-size: 19px;
+  }
 
   .business-loan-page .btn-primary-loan,
   .business-loan-page .btn-outline-loan {
@@ -2172,17 +2488,21 @@
   }
 }
 
-
 /* =========================================================
    MOBILE LANDSCAPE FIX
 ========================================================= */
 
 @media (max-width: 991px) and (orientation: landscape) {
-  .business-hero { padding: 40px 0 44px; }
-  .business-apply { padding: 45px 0; }
-  .business-why-visual { min-height: auto; }
+  .business-hero {
+    padding: 40px 0 44px;
+  }
+  .business-apply {
+    padding: 45px 0;
+  }
+  .business-why-visual {
+    min-height: auto;
+  }
 }
-
 
 /* =========================================================
    ACCESSIBILITY / REDUCED MOTION
@@ -2205,5 +2525,7 @@
   .business-interest-card:hover,
   .business-process-item:hover,
   .business-submit-btn:hover,
-  .business-emi-btn:hover { transform: none; }
+  .business-emi-btn:hover {
+    transform: none;
+  }
 }
