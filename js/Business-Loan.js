@@ -1,6 +1,6 @@
 /* =========================================================
    BUSINESS LOAN PAGE JS
-   Loan Suvida
+   Loan Suvidha
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {

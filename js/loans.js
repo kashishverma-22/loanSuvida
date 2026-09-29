@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   /* =========================================================
-     LOANSUVIDA
+     LOANSuvidha
      LOANS PAGE JAVASCRIPT
      SINGLE PAGE - ALL LOANS
   ========================================================= */
@@ -524,7 +524,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
       <!-- ==================================================
-           WHY CHOOSE LOANSUVIDA
+           WHY CHOOSE LOANSuvidha
       ================================================== -->
 
       <section class="loan-trust-section">
@@ -534,7 +534,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="section-heading">
 
             <span class="section-label">
-              WHY LOANSUVIDA
+              WHY LOANSuvidha
             </span>
 
             <h2>
