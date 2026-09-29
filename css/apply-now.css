@@ -20,7 +20,9 @@
     font-family: "Poppins", sans-serif;
     color: var(--apply-black);
     background: var(--apply-white);
-    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
 }
 
 .apply-page *,
