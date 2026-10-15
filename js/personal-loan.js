@@ -440,7 +440,7 @@ document.addEventListener("DOMContentLoaded", function () {
         amount: amount,
       };
 
-      console.log("Personal Loan Enquiry:", formData);
+      sendLoanMail("Personal Loan Enquiry", formData);
 
       /* ---------------------------------------
                    SUCCESS

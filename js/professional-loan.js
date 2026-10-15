@@ -337,7 +337,7 @@ document.addEventListener("DOMContentLoaded", function () {
         amount: amount,
       };
 
-      console.log("Professional Loan Form:", formData);
+      sendLoanMail("Professional Loan Enquiry", formData);
 
       /* RESET */
 

@@ -532,7 +532,7 @@ document.addEventListener("DOMContentLoaded", function () {
       consent: consent.checked,
     };
 
-    console.log("Loan Application:", formData);
+    sendLoanMail("Loan Application", formData);
 
     /* =====================================================
        SUCCESS

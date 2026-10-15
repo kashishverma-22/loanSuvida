@@ -387,7 +387,7 @@ document.addEventListener("DOMContentLoaded", function () {
         amount: amountInput ? amountInput.value.trim() : "",
       };
 
-      console.log("Business Loan Application:", formData);
+      sendLoanMail("Business Loan Application", formData);
 
       /* =================================================
                BUTTON LOADING

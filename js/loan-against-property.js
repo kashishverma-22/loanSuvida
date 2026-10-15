@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
        LAP FORM VALIDATION
     ========================================================= */
 
-  const lapForm = document.getElementById("lapLoanForm");
+  const lapForm = document.getElementById("lapForm");
 
   if (lapForm) {
     const nameInput = document.getElementById("lapName");
@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function () {
         amount: amount,
       };
 
-      console.log("LAP Enquiry:", formData);
+      sendLoanMail("Loan Against Property Enquiry", formData);
 
       /* RESET FORM */
 

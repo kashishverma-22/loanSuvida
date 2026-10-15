@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", function () {
         amount: amountNumber,
       };
 
-      console.log("Home Loan Enquiry:", formData);
+      sendLoanMail("Home Loan Enquiry", formData);
 
       /* =====================================================
          SUCCESS MESSAGE

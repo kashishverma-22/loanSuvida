@@ -99,12 +99,12 @@ document.addEventListener("DOMContentLoaded", function () {
   if (educationForm) {
     const nameInput = document.getElementById("educationName");
     const mobileInput = document.getElementById("educationMobile");
-    const loanTypeInput = document.getElementById("educationLoanType");
+    const loanTypeInput = document.getElementById("educationType");
     const amountInput = document.getElementById("educationAmount");
 
     const nameError = document.getElementById("educationNameError");
     const mobileError = document.getElementById("educationMobileError");
-    const loanTypeError = document.getElementById("educationLoanTypeError");
+    const loanTypeError = document.getElementById("educationTypeError");
     const amountError = document.getElementById("educationAmountError");
 
     const successMessage = document.getElementById("educationFormSuccess");
@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", function () {
         amount: amountInput ? amountInput.value : "",
       };
 
-      console.log("Education Loan Enquiry:", formData);
+      sendLoanMail("Education Loan Enquiry", formData);
 
       /* RESET */
 

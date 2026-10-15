@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
         amount: amountValue ? Number(amountValue) : 0,
       };
 
-      console.log("Machinery Loan Enquiry:", machineryFormData);
+      sendLoanMail("Machinery Loan Enquiry", machineryFormData);
 
       /* =====================================================
          SUCCESS
